@@ -1,0 +1,29 @@
+/* ============================================================
+   VinylC 보고서 디자인 시스템 (버전1) — 글로벌 진입점
+   소비 프로젝트는 이 한 파일만 link 한다.
+   SSOT: 컴포넌트 정의·토큰 값은 이 시스템을 따른다.
+   ============================================================ */
+
+/* ── Fonts ── */
+@import url('./tokens/fonts.css');
+
+/* ── Tokens: (1) 공통 원시 → (2) 공통 의미 → (3) 표시유형별 스케일 ── */
+@import url('./tokens/colors.css');
+@import url('./tokens/typography.css');
+@import url('./tokens/spacing.css');
+@import url('./tokens/scales.css');
+
+/* ── Base reset ── */
+@import url('./css/base.css');
+
+/* ── Layout containers (report / slide / 1P / grids) ── */
+@import url('./css/layout.css');
+
+/* ── 통합 컴포넌트 A~H ── */
+@import url('./css/components.css');
+
+/* ── 공통 비통합 컴포넌트 (prose / section / table / figure …) ── */
+@import url('./css/non-integrated.css');
+
+/* ── 유틸리티 ── */
+@import url('./css/utilities.css');

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>로그분석 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">로그분석</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>214 이용로그분석</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.07 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 로그분석 · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>1. 요청 개요</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. 요청 데이터 명세</span></div><div class="toc__item"><span class="toc__num">03</span><span>3. 결손 상태에서 먼저 진행 가능한 것 (데이터 도착 전)</span></div><div class="toc__item"><span class="toc__num">04</span><span>4. 요청·확인 사항 (사용자/PM)</span></div></div>
+
+<div class="callout"><div class="callout__body"><strong>상태: 로그 데이터 미확보 → 표준 규칙(&quot;데이터 없으면 통계를 지어내지 않고 추출을 요청&quot;)에 따라 축소 진행.</strong><br>확인된 보유 자산: GA 이벤트태깅 정의서 2종(PCWEB/MOWEB, 2023.02 고객수급) + 태깅가이드 검수서(UA&amp;GA4) — <strong>지표 체계는 존재, 추출본만 결손.</strong></div></div>
+<h2 class="section__title" id="s0">1. 요청 개요</h2>
+<p>현대백화점 공식 홈페이지(PC·Mobile Web)의 현행 이용 패턴을 정량 근거로 만들기 위해, 고객사 GA 계정에서 아래 데이터의 추출을 요청합니다. <strong>GA 접근권·추출은 고객사 권한</strong>이며, 당사는 제공받은 집계 데이터만 취급합니다(개인 식별자·IP 불요·미취급).</p>
+<h2 class="section__title" id="s1">2. 요청 데이터 명세</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>세부</th><th>형식</th></tr></thead><tbody><tr><td>1</td><td>페이지별 트래픽</td><td>페이지경로별 페이지뷰·세션·평균 체류시간·이탈률</td><td>GA4 탐색 보고서 CSV</td></tr><tr><td>2</td><td>유입 경로</td><td>채널·소스/매체별 세션, 랜딩페이지 상위 50</td><td>CSV</td></tr><tr><td>3</td><td>경로 탐색</td><td>주요 진입점(메인·검색·GNB) 기준 경로탐색(path exploration)</td><td>CSV 또는 스크린샷</td></tr><tr><td>4</td><td>이벤트 통계</td><td><strong>기수급 태깅 정의서(UA&amp;GA4)의 이벤트 체계 기준</strong> 이벤트별 발생 수 — 태깅 정의서와 동일 키로 요청</td><td>CSV</td></tr><tr><td>5</td><td>기기·브라우저</td><td>기기 카테고리·브라우저 분포(호환 기준 IE10+ 결정 근거 재검증용)</td><td>CSV</td></tr></tbody></table></div>
+<ul><li><strong>구간</strong>: 최근 12개월(계절성 포함) + 직전 3개월 상세. 리뉴얼 논의 개시 전 시점 기준.</li><li><strong>세션·이탈 정의</strong>: GA4 기본 정의 사용 여부를 회신에 명시해 주세요(UA 병행 수집 시 어느 속성 기준인지 포함 — 검수서상 UA&amp;GA4 병행 이력 확인됨).</li></ul>
+<h2 class="section__title" id="s2">3. 결손 상태에서 먼저 진행 가능한 것 (데이터 도착 전)</h2>
+<ul><li>태깅 정의서 2종에서 이벤트 분류 체계 역추출 → 분석 프레임(섹션 2·4의 지표 틀) 선구축 ✅ 진행 가능</li><li>AS-IS 화면명세서(V1.5)의 화면ID ↔ 페이지경로 매핑표 골격 ✅ 진행 가능</li><li>페이지별 통계·경로·퍼널 수치 ❌ 데이터 도착 후</li></ul>
+<h2 class="section__title" id="s3">4. 요청·확인 사항 (사용자/PM)</h2>
+<ol><li>GA 계정 접근권 보유자(고객사 담당)와 추출 요청 채널</li><li>추출 예상 소요일 — 수급 리드타임을 일정에 반영 필요</li><li>로그 외 보조 데이터(서버 접속로그·검색어 로그) 존재 여부</li></ol>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 로그분석 V1.0 · 2026.08.07
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

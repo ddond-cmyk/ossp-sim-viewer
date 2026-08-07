@@ -1,0 +1,12 @@
+/* ============================================================
+   VinylC Report DS — Webfonts
+   Pretendard Variable (brand typeface, common / non-branching)
+   ============================================================ */
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url('../fonts/PretendardVariable.ttf') format('truetype-variations');
+}

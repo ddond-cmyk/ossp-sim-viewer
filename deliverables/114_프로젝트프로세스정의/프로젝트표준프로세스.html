@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>프로젝트표준프로세스 (PDP) — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">프로젝트표준프로세스 (PDP)</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>114 프로젝트프로세스정의</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V2.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.07 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 프로젝트표준프로세스 (PDP) · V2.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>1. 테일러링 기준</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. PDP 표 — 작업별 확정</span></div><div class="toc__item"><span class="toc__num">03</span><span>3. 제외 연쇄 점검 — 뺀 대가가 어디서 청구되는가</span></div><div class="toc__item"><span class="toc__num">04</span><span>4. 산출물 흐름 (핵심 체인)</span></div><div class="toc__item"><span class="toc__num">05</span><span>5. 프로젝트표준서식 — 🔧 요구 명세 + 실물 생성 (2026-08-07)</span></div><div class="toc__item"><span class="toc__num">06</span><span>7. [확인필요]</span></div></div>
+
+<div class="callout"><div class="callout__body"><strong>상태: <code>draft</code> — PMO 확정 전.</strong> 확정일·확정자 미기입 (표준 절차 5: 자동 확정 금지)<br>인풋: I7 <code>.ax-project.yaml</code> · OSSP v4.1 태스크 카탈로그(70작업, 유형별 ●◐○ + 책임자)</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">1. 테일러링 기준</h2>
+<div class='tw'><table><thead><tr><th>축</th><th>값</th><th>파생 규칙</th></tr></thead><tbody><tr><td>프로젝트 유형</td><td><strong>개편</strong></td><td>OSSP 카탈로그 <code>개편</code> 컬럼(●필수/◐선택/○제외)을 초기값으로 상속</td></tr><tr><td>담당 범위</td><td>기획 + 디자인 + <strong>프론트엔드(퍼블리싱)</strong></td><td>백엔드·앱 개발 작업 제외. 400은 410·420만</td></tr><tr><td>수행 기간</td><td>2022-09-19 ~ 2023-04-18 (7개월)</td><td>게이트 경량화 여지</td></tr><tr><td><strong>규모</strong></td><td>AS-IS 명세 행 1,344 / 고유 1,003 / 본화면 574 → <strong>In-Scope 고유 965 · 본화면 548</strong> (122 + 240 결정)</td><td><strong>대규모</strong> — 340 상세설계·343 설계리뷰 강화 필요</td></tr><tr><td>시뮬레이션 규약</td><td>종착점 = <strong>423 퍼블리싱</strong></td><td>430·440·500 전체 범위 밖</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>규모 축은 초판에 없었다.</strong> 122 재실행으로 확보. 1,003 고유 화면은 소규모 기준(2~300p)의 3배 이상이라 <strong>tailoring down이 아니라 up</strong> 방향이다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s1">2. PDP 표 — 작업별 확정</h2>
+<p><strong>조작</strong>: 상속(표준 그대로) / 수정 / 추가 / 삭제 / 교체 / 재배열 · <strong>W</strong> = 필수●를 제외한 예외(waiver)</p>
+<h3 class="subsection__title">100 Orientate</h3>
+<div class='tw'><table><thead><tr><th>ID</th><th>작업명</th><th>개편</th><th>포함</th><th>책임자</th><th>산출물</th><th>조작</th><th>사유</th></tr></thead><tbody><tr><td>111</td><td>TFT구성</td><td>●</td><td>제외</td><td>부서장</td><td>—</td><td>삭제 <strong>W</strong></td><td>사람·행정 전담. AI 시뮬레이션 대상 아님</td></tr><tr><td>112</td><td>고객자료수집요청</td><td>●</td><td>포함</td><td>PM</td><td>자료수집요청서</td><td>상속</td><td></td></tr><tr><td>113</td><td>프로젝트승인</td><td>●</td><td>제외</td><td>PMO</td><td>—</td><td>삭제 <strong>W</strong></td><td>내부 행정</td></tr><tr><td>114</td><td>프로젝트프로세스정의</td><td>●</td><td>포함</td><td>PMO</td><td>PDP · 표준서식</td><td>상속</td><td>본 문서</td></tr><tr><td>115</td><td>내부킥오프</td><td>●</td><td>제외</td><td>PM</td><td>—</td><td>삭제 <strong>W</strong></td><td>내부 행정</td></tr><tr><td>121</td><td>제안및거시환경분석</td><td>◐</td><td>포함</td><td>기획PL</td><td>환경분석보고서 · 뉴스클리핑</td><td>수정</td><td>선택◐을 포함으로 — RFP·제안서 분석이 범위 근거</td></tr><tr><td>122</td><td>현시스템기초분석</td><td>●</td><td>포함</td><td>기획PL</td><td>AS-IS 화면덤프 · User Flow</td><td>상속</td><td></td></tr><tr><td>123</td><td>사용자요구기초분석</td><td>●</td><td><strong>제외</strong></td><td>기획PL</td><td>—</td><td>삭제 <strong>W</strong></td><td><strong>VOC 원자료(앱리뷰·CS) 미확보</strong> → §3 연쇄 C-1</td></tr><tr><td>124</td><td>고객요구기초분석</td><td>●</td><td>포함</td><td>기획자</td><td>인터뷰결과서</td><td>수정</td><td>대면 인터뷰 대신 <strong>서면 기초질의 왕복</strong>으로 수행</td></tr><tr><td>125</td><td>경영진인터뷰</td><td>◐</td><td><strong>제외</strong></td><td>PM</td><td>—</td><td>삭제</td><td>선택◐. 수행 흔적 없음 → §3 연쇄 C-2</td></tr><tr><td>126</td><td>기초분석종합</td><td>●</td><td>포함</td><td>PM</td><td>범위정의서</td><td>상속</td><td></td></tr><tr><td>131</td><td>상세분석계획수립</td><td>◐</td><td><strong>제외</strong></td><td>기획PL</td><td>—</td><td>삭제</td><td>리서치 미계약(230 전체 제외와 연동) → §3 연쇄 C-3</td></tr><tr><td>132</td><td>수행계획수립</td><td>●</td><td>포함</td><td>PM</td><td>수행계획서 (+사업성검증=사람)</td><td>수정</td><td>사업성검증은 재무 전담</td></tr><tr><td>133</td><td>내부착수보고</td><td>●</td><td>포함</td><td>대표이사</td><td>회의록</td><td>수정</td><td>932 회의록 표준으로 대체 산출</td></tr><tr><td>134</td><td>계약체결</td><td>●</td><td>제외</td><td>PMO</td><td>—</td><td>삭제 <strong>W</strong></td><td>법무·행정</td></tr></tbody></table></div>
+<h3 class="subsection__title">200 Discover</h3>
+<div class='tw'><table><thead><tr><th>ID</th><th>작업명</th><th>개편</th><th>포함</th><th>책임자</th><th>산출물</th><th>조작</th><th>사유</th></tr></thead><tbody><tr><td>211</td><td>이해관계자인터뷰</td><td>●</td><td>포함</td><td>기획자</td><td>인터뷰결과서</td><td>수정</td><td>124와 동일하게 <strong>기초질의 체계</strong>로 수행</td></tr><tr><td>212</td><td>정책요건분석</td><td>●</td><td>포함</td><td>기획자</td><td>정책요건정의서</td><td>상속</td><td></td></tr><tr><td>213</td><td>시스템요건분석</td><td>●</td><td>포함</td><td>개발PL</td><td>시스템요건정의서</td><td>수정</td><td>담당범위=프론트만 → <strong>「부분」 운용</strong></td></tr><tr><td>214</td><td>이용로그분석</td><td>●</td><td><strong>축소</strong></td><td>기획자</td><td>데이터추출요청서만</td><td>수정 <strong>W</strong></td><td><strong>GA 추출본 미수급</strong> → §3 연쇄 C-4</td></tr><tr><td>215</td><td>요구사항정의</td><td>●</td><td>포함</td><td>기획PL</td><td>요구사항정의서</td><td>상속</td><td></td></tr><tr><td>221</td><td>서비스분석</td><td>●</td><td>축소</td><td>기획자</td><td>서비스비교분석서</td><td>수정</td><td>2022 시점 경쟁사 화면 확보 실패(시점 규율)</td></tr><tr><td>222</td><td>심층벤치마킹</td><td>●</td><td><strong>수행(통합)</strong></td><td>기획자·디자이너</td><td>240 산출물에 통합</td><td>재배열</td><td>⚠️ <strong>2026-08-06 정정</strong> — 원 프로젝트는 수행했다. 별도 파일이 아니라 <code>방향성분석 V0.4</code>에 통합(14개+ 서비스 비교). 시뮬레이션은 시점 제약으로 미수행</td></tr><tr><td>231</td><td>현시스템(간이)UT·심층인터뷰</td><td>◐</td><td>제외</td><td>기획자</td><td>—</td><td>삭제</td><td>리서치 미계약</td></tr><tr><td>232</td><td>감성/이미지조사</td><td>●</td><td><strong>제외</strong></td><td>디자인PL</td><td>—</td><td>삭제 <strong>W</strong></td><td>리서치 미계약 → §3 연쇄 C-6</td></tr><tr><td>233</td><td>사용자심층리서치</td><td>○</td><td>제외</td><td>기획자</td><td>—</td><td>상속</td><td>개편형 표준 제외</td></tr><tr><td>241</td><td>Co-Analysis워크숍</td><td>◐</td><td>포함</td><td>PM</td><td>고객여정맵 · 분석시사점</td><td>수정</td><td>선택◐을 포함으로 — 240 산출 근거</td></tr><tr><td>242</td><td>UX전략및컨셉수립</td><td>●</td><td>포함</td><td>크리에이티브디렉터</td><td>UX컨셉</td><td>상속</td><td><strong>크리에이티브 개입 대상</strong></td></tr><tr><td>243</td><td>UX전략보고</td><td>●</td><td>포함</td><td>기획PL</td><td>UX전략보고서</td><td>상속</td><td><strong>크리에이티브 개입 대상</strong></td></tr></tbody></table></div>
+<h3 class="subsection__title">300 Define</h3>
+<div class='tw'><table><thead><tr><th>ID</th><th>작업명</th><th>개편</th><th>포함</th><th>책임자</th><th>산출물</th><th>조작</th><th>사유</th></tr></thead><tbody><tr><td>311</td><td>퍼소나정의</td><td>○</td><td>제외</td><td>기획PL</td><td>—</td><td>상속</td><td>개편형 표준 제외</td></tr><tr><td>312</td><td>유저플로우설계</td><td>●</td><td>포함</td><td>기획PL</td><td>유저플로우</td><td>수정</td><td>퍼소나 부재 → <strong>122 AS-IS User Flow와 215 요구를 근거로 대체</strong></td></tr><tr><td>321</td><td>기능상세정의</td><td>●</td><td>포함</td><td>기획자</td><td>기능정의서</td><td>상속</td><td></td></tr><tr><td>322</td><td>정보구조설계</td><td>●</td><td>포함</td><td>기획자</td><td>정보구조도(IA)</td><td>상속</td><td></td></tr><tr><td>331</td><td>와이어프레임설계</td><td>●</td><td>포함</td><td>기획자</td><td>와이어프레임</td><td>상속</td><td>크리에이티브 개입 대상</td></tr><tr><td>332</td><td>컨텐츠가이드설계</td><td>●</td><td>포함</td><td>기획PL</td><td>컨텐츠가이드</td><td>상속</td><td></td></tr><tr><td>333</td><td>UI가이드정의</td><td>●</td><td>포함</td><td>기획PL</td><td>UI가이드</td><td>상속</td><td></td></tr><tr><td>334</td><td>시안디자인</td><td>●</td><td>포함</td><td>크리에이티브디렉터</td><td>디자인시안</td><td>수정</td><td>제작=디자이너. 표준은 전략·선별·검토 보조</td></tr><tr><td>335</td><td>프로토타입제작</td><td>●</td><td><strong>제외</strong></td><td>인터랙션디자이너</td><td>—</td><td>삭제 <strong>W</strong></td><td>원 프로젝트 수행 흔적 부재</td></tr><tr><td>341</td><td>화면명세서작성</td><td>●</td><td>포함</td><td>기획자</td><td>화면명세서</td><td>상속</td><td>커버리지 기준 = <strong>In-Scope 고유 965</strong> (2026-08-06 240 결정 반영)</td></tr><tr><td>342</td><td>UI상세설계</td><td>●</td><td>포함</td><td>기획자</td><td>UI상세설계서</td><td>상속</td><td></td></tr><tr><td>343</td><td>설계리뷰및리팩토링</td><td>●</td><td>포함</td><td>기획자</td><td>리팩토링 설계서</td><td><strong>강화</strong></td><td>규모 大 + 채널 불일치 다수(122 H4) → 검토 강화</td></tr><tr><td>344</td><td>설계프로토타입검증</td><td>●</td><td><strong>제외</strong></td><td>기획자</td><td>—</td><td>삭제 <strong>W</strong></td><td>원 프로젝트 수행 흔적 부재</td></tr><tr><td>351</td><td>스타일가이드설계</td><td>●</td><td>포함</td><td>디자인PL</td><td>스타일가이드</td><td>상속</td><td>그룹 WSG 상속</td></tr><tr><td>352</td><td>인터랙션가이드설계</td><td>●</td><td>포함</td><td>인터랙션디자이너</td><td>인터랙션가이드</td><td>상속</td><td></td></tr><tr><td>353</td><td>UI개발가이드설계</td><td>●</td><td>포함</td><td>퍼블리싱PL</td><td>UI개발가이드</td><td>상속</td><td></td></tr><tr><td>354</td><td>접근성가이드설계</td><td>◐</td><td>축소</td><td>접근성디렉터</td><td>접근성가이드(초안)</td><td>수정</td><td><strong>인증 아닌 준수 수준</strong> — 판정 권한 외부</td></tr><tr><td>355</td><td>DB및개발설계</td><td>◐</td><td>제외</td><td>개발PL</td><td>—</td><td>삭제</td><td>담당범위 밖</td></tr></tbody></table></div>
+<h3 class="subsection__title">400 Develop</h3>
+<div class='tw'><table><thead><tr><th>ID</th><th>작업명</th><th>개편</th><th>포함</th><th>책임자</th><th>산출물</th><th>조작</th><th>사유</th></tr></thead><tbody><tr><td>411</td><td>작업계획수립</td><td>●</td><td>포함</td><td>기획PL</td><td>작업관리서</td><td>상속</td><td>132 규모 배분표 전개</td></tr><tr><td>421</td><td>UI디자인</td><td>●</td><td>포함</td><td>디자이너</td><td>UI디자인 원본</td><td>수정</td><td>제작=디자이너. 표준은 QA·인계 보조</td></tr><tr><td>422</td><td>인터랙션디자인</td><td>●</td><td>포함</td><td>인터랙션디자이너</td><td>인터랙션 결과물</td><td>수정</td><td>렌더·합성=사람</td></tr><tr><td>423</td><td><strong>UI개발(퍼블리싱)</strong></td><td>●</td><td>포함</td><td>UI개발자</td><td>마크업·CSS·스크립트</td><td>상속</td><td><strong>시뮬레이션 종착점</strong></td></tr><tr><td>424</td><td>디자인프로토타입UT</td><td>◐</td><td>제외</td><td>인터랙션디자이너</td><td>—</td><td>삭제</td><td>미수행</td></tr><tr><td>431·432·433</td><td>서버·앱개발·데이터이관</td><td>●</td><td>제외</td><td>개발자</td><td>—</td><td>삭제 <strong>W</strong></td><td><strong>담당범위 밖 + 시뮬레이션 범위 밖</strong></td></tr><tr><td>441·442</td><td>테스트준비</td><td>●◐</td><td>제외</td><td>PM·기획자</td><td>—</td><td>삭제 <strong>W</strong></td><td>개발 산출물 의존</td></tr></tbody></table></div>
+<h3 class="subsection__title">500 Deliver — <strong>전체 제외</strong></h3>
+<p>511·512·521·522·531·532·543·541·542 (9작업) 모두 제외. 사유: 개발 산출물 의존 + 시뮬레이션 종착점(423) 이후. <code>.ax-project.yaml</code> <code>activities.&quot;500_Deliver&quot;: []</code>와 정합.</p>
+<h3 class="subsection__title">900 Control (상시)</h3>
+<div class='tw'><table><thead><tr><th>ID</th><th>작업명</th><th>개편</th><th>포함</th><th>책임자</th><th>산출물</th><th>조작</th></tr></thead><tbody><tr><td>911</td><td>변경관리</td><td>●</td><td>포함</td><td>PM</td><td>변경관리대장</td><td>상속</td></tr><tr><td>921</td><td>작업관리</td><td>●</td><td>포함</td><td>PM</td><td>진척현황</td><td>상속</td></tr><tr><td>931</td><td>일회의</td><td>●</td><td>제외</td><td>PM</td><td>—</td><td>삭제 (산출물 없음)</td></tr><tr><td>932</td><td>회의록</td><td>●</td><td>포함</td><td>회의참석자</td><td>회의록</td><td>상속</td></tr><tr><td>941</td><td>주간보고</td><td>●</td><td>포함</td><td>PM</td><td>주간보고서</td><td>상속</td></tr></tbody></table></div>
+<h3 class="subsection__title">집계</h3>
+<div class='tw'><table><thead><tr><th></th><th>작업 수</th></tr></thead><tbody><tr><td>OSSP v4.1 전체</td><td>70</td></tr><tr><td>500 Deliver (범위 밖)</td><td>−9</td></tr><tr><td><strong>테일러링 대상</strong></td><td><strong>61</strong></td></tr><tr><td>포함</td><td><strong>41</strong></td></tr><tr><td>제외·축소</td><td>20</td></tr><tr><td>그중 <strong>필수● 제외 = 예외(waiver)</strong></td><td><strong>14</strong></td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s2">3. 제외 연쇄 점검 — <strong>뺀 대가가 어디서 청구되는가</strong></h2>
+<p>제외 20건 중 <strong>하류 산출물 체인에 실제 영향이 있는 6건</strong>을 추적했다. (행정·범위밖 제외는 체인에 없어 영향 없음.)</p>
+<div class='tw'><table><thead><tr><th>#</th><th>제외</th><th>미생산 산출물</th><th>영향받는 하류</th><th>판정</th><th>결과</th></tr></thead><tbody><tr><td><strong>C-1</strong></td><td><strong>123 사용자요구기초분석</strong> ●</td><td>VOC 분석서</td><td>126 목표·인수기준 / 215 요구 / 241 여정맵 / 242 UX컨셉</td><td><strong>결손 감수</strong></td><td><strong>126 성공기준 작성 불가.</strong> 요구 78건 중 사용자 목소리 기반 <strong>0건</strong></td></tr><tr><td><strong>C-2</strong></td><td><strong>125 경영진인터뷰</strong> ◐</td><td>경영진 인터뷰결과서</td><td>126 목표·성공기준 / 132 제약</td><td><strong>결손 감수</strong></td><td><strong>126 목표 전 항목이 <code>[가정]</code>.</strong> 고객이 확인한 목표 진술 없음</td></tr><tr><td><strong>C-3</strong></td><td><strong>131 상세분석계획수립</strong> ◐</td><td>리서치계획서</td><td>132 일정</td><td><strong>결손 감수</strong></td><td><strong>132 WBS 미작성</strong> — ② 요건분석 단계 소요 배치 근거 없음</td></tr><tr><td><strong>C-4</strong></td><td><strong>214 이용로그분석</strong> ● 축소</td><td>로그분석 (요청서만 산출)</td><td>215 요구 근거 / 241 여정맵 / 322 IA</td><td><strong>축소</strong></td><td>요구 78건 전부가 진술·정책·구조 기반. <strong>행동 데이터 근거 0건</strong></td></tr><tr><td><del>C-5</del></td><td><del>222 심층벤치마킹</del></td><td>—</td><td>—</td><td><strong>판정 취소</strong></td><td>⚠️ <strong>2026-08-06 정정</strong> — 원 프로젝트는 수행했다(<code>방향성분석 V0.4</code>에 통합, 신세계·롯데·CJ ONE·29cm 등 14개+). <strong>시뮬레이션만 미수행</strong>(2022 시점 화면 부재). 스킬 커버리지가 아니라 자료 보존의 문제</td></tr><tr><td><strong>C-6</strong></td><td><strong>232 감성/이미지조사</strong> ●</td><td>무드보드 · 감성이미지질의서</td><td>242 UX컨셉 / 334 시안 / 351 스타일가이드</td><td><strong>결손 감수</strong></td><td><strong>242 UX컨셉의 감성 근거 부재</strong> → 사용자 개입으로 대체(A/B/C 후보안)</td></tr><tr><td>—</td><td>311 퍼소나정의 ○</td><td>퍼소나</td><td>312 유저플로우</td><td><strong>대체근거</strong></td><td>122 AS-IS User Flow + 215 요구로 대체 (표준 제외라 waiver 아님)</td></tr></tbody></table></div>
+<h3 class="subsection__title">⚠️ 계약·검수에 도달하는 연쇄</h3>
+<pre class="dgm">C-1 123 미수행 · C-2 125 미수행 · C-4 214 축소
+   ↓  정량 목표치의 근거가 0
+126 §1 성공기준 작성 불가
+   ↓
+126 §6 인수기준이 정성 항목만
+   ↓
+132 §7 검수조건 3건 검수 불가 (접근성 · 디바이스 · 정량 성과)
+   ↓
+134 계약 별첨 → 인수 시점 분쟁 소지</pre>
+<p><strong>이 연쇄는 PDP 단계에서 잡혔어야 한다.</strong> 제외 3건이 계약의 검수 가능성을 무너뜨린다는 사실이 테일러링 시점에 드러났다면, &quot;리서치 미계약&quot;을 그대로 받아들이는 대신 <strong>최소 대체 수단</strong>(간이 VOC·경영진 서면 확인·로그 수급 요청)을 계약 전에 협의할 수 있었다.</p>
+<p>→ <strong>PMO 확정 시 판단 필요</strong>: C-1·C-2·C-4를 감수할 것인지, 최소 대체 수단을 넣을 것인지.</p>
+<hr class="rule">
+<h2 class="section__title" id="s3">4. 산출물 흐름 (핵심 체인)</h2>
+<pre class="dgm">기초질의서(I3) · 제안서(I1)
+  → 121 환경분석 · 122 AS-IS
+  → 126 범위정의서 ──────────────→ 132 수행계획서 → (134 계약 별첨)
+  → 212 정책요건 · 213 시스템요건 · 214 추출요청
+  → 215 요구사항정의서
+  → 241 여정맵 → 242 UX컨셉 → 243 UX전략
+  → 312 유저플로우 · 321 기능정의
+  → 322 IA
+  → 331 와이어프레임 → 332·333 가이드 → 334 시안
+  → 341 화면명세서 → 342 UI상세설계 → 343 설계리뷰
+  → 351 스타일 · 352 인터랙션 · 353 UI개발가이드
+  → 411 작업계획 → 421 UI디자인 → 422 인터랙션 → **423 퍼블리싱 [종착]**</pre>
+<p><strong>끊긴 사슬</strong>: 없음 — 제외 6건 모두 §3에서 대체근거·축소·결손 감수로 판정 완료. 단 <strong>결손 감수 4건은 하류 산출물의 품질 한계로 남는다.</strong></p>
+<hr class="rule">
+<h2 class="section__title" id="s4">5. 프로젝트표준서식 — 🔧 <strong>요구 명세 + 실물 생성 (2026-08-07)</strong></h2>
+<p>서식 마스터 원본(PPT/워드/엑셀)의 정식 위치는 여전히 미확정이다. 다만 <strong>HTML 계열 서식은 실물을 만들었다</strong> — 바이널씨 문서 디자인 SSOT(<code>vinylc-document-design</code>)를 인스턴스화해 <code>deliverables/</code>에 산출본을 생성한다.</p>
+<div class='tw'><table><thead><tr><th></th><th>상태</th></tr></thead><tbody><tr><td>생성기</td><td><code>scripts/build_deliverables.py</code> — <code>sim-project/**/*.md</code> → <code>deliverables/**/*.html</code></td></tr><tr><td>표시유형</td><td><strong>연속문서형</strong> (가변폭 · 브라우저 인쇄로 A4 PDF)</td></tr><tr><td>적용 SSOT</td><td>모노크롬 팔레트 · Pretendard · radius 0 · 무그림자</td></tr><tr><td>현재 산출</td><td>작업 16개 · 문서 22건</td></tr><tr><td>미해결</td><td><strong>PPT·엑셀 서식 마스터</strong> — 화면설계서(PPT)·화면명세서(엑셀)는 별도 서식 필요</td></tr></tbody></table></div>
+<p>아래 요구 명세는 유지한다 — 실물이 생긴 형식과 아직 없는 형식을 구분하기 위함이다.</p>
+<h3 class="subsection__title">5-1. 필요한 서식 목록 (PDP 포함 작업의 산출물에서 도출)</h3>
+<div class='tw'><table><thead><tr><th>형식</th><th>서식</th><th>해당 작업</th><th>실물</th></tr></thead><tbody><tr><td>워드/한글</td><td>보고서형 (환경분석·정책요건·시스템요건·범위정의·수행계획·UX전략)</td><td>121·126·132·212·213·243</td><td>✅ <strong>HTML 생성</strong> (연속문서형 → PDF). docx는 미생성</td></tr><tr><td>엑셀</td><td>목록·매트릭스형 (요구사항정의서·화면명세서·작업관리서·변경관리대장)</td><td>215·341·411·911</td><td><strong>부분 확보</strong> — AS-IS 명세서 양식이 실물로 존재</td></tr><tr><td>PPT</td><td>설계·제안형 (와이어프레임·화면설계서·시안·UX컨셉)</td><td>331·342·334·242</td><td><code>[미확보]</code> — 고객 합의: 화면설계서=PPT</td></tr><tr><td>워드</td><td>회의록 · 주간보고서</td><td>932·941</td><td><strong>확보</strong> — 프로젝트 실물 양식(I4) + ✅ HTML 생성</td></tr><tr><td>가이드</td><td>스타일·인터랙션·UI개발·컨텐츠·접근성 가이드</td><td>351·352·353·332·354</td><td>✅ <strong>HTML 서식 준비됨</strong> (Phase 300에서 생성)</td></tr></tbody></table></div>
+<h3 class="subsection__title">5-2. 공통 구성요소 명세</h3>
+<div class='tw'><table><thead><tr><th>요소</th><th>내용</th></tr></thead><tbody><tr><td>표지</td><td>고객사 로고 · 프로젝트명 · 문서명 · 버전 · 작성일 · 작성자</td></tr><tr><td>머리말/꼬리말</td><td>프로젝트명 · 문서명 · 페이지 · 보안등급</td></tr><tr><td>버전 이력</td><td><code>V0.x</code>=내부 검토본 / <code>V1.0</code>=고객 확정본 (132 §5)</td></tr><tr><td>변경 간지</td><td>확정 후 변경 시 말미에 간지 추가, 해당 장표만 복제 갱신 (132 §5)</td></tr><tr><td>스타일</td><td><code>vinylc-document-design</code> SSOT — 모노크롬 · Pretendard · radius 0 · 무그림자</td></tr></tbody></table></div>
+<h3 class="subsection__title">5-3. 채울 변수</h3>
+<div class='tw'><table><thead><tr><th>변수</th><th>값</th><th>출처</th></tr></thead><tbody><tr><td>고객사 로고</td><td><code>[미확보]</code> — 현재 표지는 <strong>VinylC 심볼</strong> 사용</td><td>112 고객자료수집요청</td></tr><tr><td>프로젝트명</td><td>현대백화점 자사채널(홈페이지) 개선 프로젝트</td><td>I1</td></tr><tr><td>프로젝트ID</td><td>C2202500</td><td>113</td></tr><tr><td>고객사명</td><td>현대백화점</td><td>I1</td></tr></tbody></table></div>
+<p>→ <code>[확인필요]</code> 서식 마스터 원본 위치 · 고객사 로고 자산</p>
+<hr class="rule">
+<h2 class="section__title" id="s5">7. [확인필요]</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>확인 주체</th><th>막히는 것</th></tr></thead><tbody><tr><td>1</td><td><strong>C-1·C-2·C-4 감수 여부</strong> — 최소 대체 수단을 넣을 것인가</td><td>PMO ↔ PM ↔ 고객</td><td>126 성공기준 · 132 검수조건</td></tr><tr><td>2</td><td>서식 마스터 원본 위치</td><td>PMO</td><td>§5 실물</td></tr><tr><td>3</td><td>고객사 로고 자산</td><td>112 수급</td><td>§5-3</td></tr><tr><td>4</td><td>222 심층벤치마킹 실제 수행 여부 (아카이브 흔적 없음)</td><td>PM</td><td>C-5 판정</td></tr><tr><td>5</td><td>접근성 인증 대상 여부 — 대상이면 <strong>541 접근성심사가 필수화</strong>되어 500 제외 전제가 바뀜</td><td>PM ↔ 고객</td><td>354 축소 · 500 제외</td></tr></tbody></table></div>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 프로젝트표준프로세스 (PDP) V2.0 · 2026.08.07
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

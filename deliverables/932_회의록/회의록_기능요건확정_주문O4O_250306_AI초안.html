@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>회의록 — 기능요건 확정 [타 프로젝트 파일럿] — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">회의록 — 기능요건 확정 [타 프로젝트 파일럿]</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>932 회의록</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>파일럿</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.07 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 회의록 — 기능요건 확정 [타 프로젝트 파일럿] · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>결정 사항</span></div><div class="toc__item"><span class="toc__num">02</span><span>미결 사항</span></div><div class="toc__item"><span class="toc__num">03</span><span>수급 자료 (자료 요청·전달 예정)</span></div><div class="toc__item"><span class="toc__num">04</span><span>이슈 사항</span></div></div>
+
+<div class="callout"><div class="callout__body">입력: 클로바노트 자동 전사 원문(99분, 참석자 익명화). 양식: 현대백화점 프로젝트 회의록 표 양식 준용.<br>⚠️ 발화자가 &quot;참석자 1~8&quot;로 익명화되어 실명·소속 복원 불가 — [확인필요]. 결정/미결 판별은 발화 패턴(수용: &quot;~하도록 하겠습니다&quot; / 스코프아웃: &quot;안 하기로&quot; / 보류: &quot;협의 안 된 상태&quot;) 기준.</div></div>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td>회의 명칭</td><td>기능요건 확정 (주문, O4O)</td></tr><tr><td>회의 일시</td><td>2025-03-06(목) 16:04 ~ 17:43 (99분)</td></tr><tr><td>기록자(녹음)</td><td>고우정</td></tr><tr><td>참석자</td><td>고객사·수행사(바이널씨) 합동 8인 — 실명 [확인필요: 참석자1~8 익명]</td></tr><tr><td>회의 안건</td><td>주문·O4O 영역 프론트 요건 확정 — 2/17 확정분 + RFP 요건 + 3/4~3/6 추가 취합분 합집합 검토</td></tr></tbody></table></div>
+<h2 class="section__title" id="s0">결정 사항</h2>
+<ol><li><strong>요건 통합 원칙</strong>: 2/17 확정분 + RFP + 3/6 오전까지 취합분을 합집합으로 프론트 요건 구성. 개발(백엔드) 수행분은 취소선 처리 후 프론트분만 재취합하여 공유.</li><li><strong>상품 기능 연계</strong>: 계약금·잔금 / 상담 후 접수·결제 / 위약금 건 → 주문 프로세스 프론트 요건에 반영.</li><li><strong>교환·반품·추가배송비</strong>: 취합분 기준 반영. 클레임은 고객사 제시 기준·옵션 상세대로 설계. 온·오프라인 간 교환/반품(오프 주문→온라인 취소 등) 포함.</li><li><strong>셀프 픽업: 스코프 제외</strong> — 이관하지 않기로 확정. 리뷰(매장픽업 리뷰) 요건에서도 제외.</li><li><strong>비회원 주문 없음</strong> — 전면 회원화. 과거 주문내역 조회는 별도 개발 건으로 처리.</li><li><strong>주문서 2종 추가</strong>: 테이블오더(백화점 지하1층 푸드코트, QR 기반) / 식당 예약 보증금 결제(보증금만, 옵션별 가격변동 없음 — 예약 옵션 3뎁스 구조는 축소 확정).</li><li><strong>외국인 예약</strong>: 이메일 주소 수집 추가, 상세 안내는 메일 발송·문자는 &quot;메일 확인&quot; 안내만(문자 글자수 제한 대응). 외국어 3종(영·중·일) 별도 페이지 유지.</li><li><strong>장바구니 그룹핑</strong>: 배송 유형(택배/빠른배송 등) &gt; 협력사 &gt; 배송비 정책 순 그룹핑. 유형 목록은 고객사가 정리 후 전달. 식품관 별도 아님 — 식품 카테고리 내 배송지 기준 처리.</li><li><strong>구독(정기결제)</strong>: 투홈 이관 + ①주결제수단 실패 시 차순위 결제 프로세스 ②회차 가격 변동 시 동의 수취(팝업) ③일괄결제 안내(주문서단) ④종료·미연장 시 취소사유 수집 UI 추가.</li><li><strong>옴니 결제 주문서</strong>: 어드민 생성→고객 발송형 주문서 1종(백화점카드 에누리 적용·결제 가능). 사은품 회수 로직 연동(출고 전 취소 시 안내).</li><li><strong>PG사 변경 대응은 수행 범위 내</strong> 확정.</li></ol>
+<h2 class="section__title" id="s1">미결 사항</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>후속</th></tr></thead><tbody><tr><td>1</td><td>대량주문(엑셀 업로드→URL 발송) 이관 여부</td><td>고객사 확인</td></tr><tr><td>2</td><td>후결제</td><td>전기반 서비스팀 검토 후 방안 제안(화면 추가 가능성)</td></tr><tr><td>3</td><td>카드사 무이자/중도이자 표시</td><td>R&amp;R 미협의 — 보류, 확인 후 공유</td></tr><tr><td>4</td><td>더머니·RSVP 포인트 요건</td><td>요건 산재 — 고객사 재취합</td></tr><tr><td>5</td><td>교차할인 프로모션(SFR-303) 장바구니 상세 요건</td><td>공용파일 누락 의심 — 재확인. 누락분은 설계 단계에서 추적·추가 합의</td></tr><tr><td>6</td><td>장보기관 진입 시 기본배송지 체크</td><td>고객사 내부 협의 중</td></tr></tbody></table></div>
+<h2 class="section__title" id="s2">수급 자료 (자료 요청·전달 예정)</h2>
+<ul><li>[고객사→수행사] 3/4 기준 업데이트 요건 파일(컬러 표기 정리본) — <strong>다음 주 초</strong> / 배송 유형 목록 / 외국인 예약 페이지 URL / 투홈 정기결제 운영 가이드(유무 확인)</li><li>[수행사→고객사] 프론트 요건 합집합 취합본(중복 정리 후)</li></ul>
+<h2 class="section__title" id="s3">이슈 사항</h2>
+<ul><li>요건 원장(공용 파일)에서 항목 누락 발견(교차할인 프로모션 건) — &quot;공수 산정 기준에서 빠진 채 후발 발견&quot; 리스크 제기됨. 대응: 고객사 최종본 전달 + 설계 단계 추적으로 이중 방어.</li></ul>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 회의록 — 기능요건 확정 [타 프로젝트 파일럿] V1.0 · 2026.08.07
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

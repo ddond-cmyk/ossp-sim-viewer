@@ -1,0 +1,18 @@
+/* ============================================================
+   VinylC Report DS — Base reset (모든 보고서 공통, §2.0)
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-tight);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

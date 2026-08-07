@@ -1,0 +1,236 @@
+[
+ {
+  "task": "112",
+  "taskname": "고객자료수집요청",
+  "title": "자료수집요청서",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "112_고객자료수집요청/자료수집요청서.html",
+  "sections": 5
+ },
+ {
+  "task": "114",
+  "taskname": "프로젝트프로세스정의",
+  "title": "프로젝트표준프로세스 (PDP)",
+  "kind": "산출물",
+  "ver": "V2.0",
+  "path": "114_프로젝트프로세스정의/프로젝트표준프로세스.html",
+  "sections": 6
+ },
+ {
+  "task": "121",
+  "taskname": "제안및거시환경분석",
+  "title": "뉴스클리핑",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "121_제안및거시환경분석/뉴스클리핑.html",
+  "sections": 7
+ },
+ {
+  "task": "121",
+  "taskname": "제안및거시환경분석",
+  "title": "환경분석보고서",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "121_제안및거시환경분석/환경분석보고서.html",
+  "sections": 7
+ },
+ {
+  "task": "122",
+  "taskname": "현시스템기초분석",
+  "title": "AS-IS 화면덤프 · User Flow",
+  "kind": "산출물",
+  "ver": "V2.0",
+  "path": "122_현시스템기초분석/AS-IS_화면덤프_UserFlow.html",
+  "sections": 9
+ },
+ {
+  "task": "124",
+  "taskname": "고객요구기초분석",
+  "title": "인터뷰결과서",
+  "kind": "산출물",
+  "ver": "V2.0",
+  "path": "124_고객요구기초분석/인터뷰결과서_기초질의분석.html",
+  "sections": 5
+ },
+ {
+  "task": "124",
+  "taskname": "고객요구기초분석",
+  "title": "인터뷰계획서",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "124_고객요구기초분석/인터뷰계획서.html",
+  "sections": 4
+ },
+ {
+  "task": "126",
+  "taskname": "기초분석종합",
+  "title": "범위정의서",
+  "kind": "산출물",
+  "ver": "V2.0",
+  "path": "126_기초분석종합/범위정의서.html",
+  "sections": 12
+ },
+ {
+  "task": "132",
+  "taskname": "수행계획수립",
+  "title": "프로젝트수행계획서",
+  "kind": "산출물",
+  "ver": "V2.0",
+  "path": "132_수행계획수립/프로젝트수행계획서.html",
+  "sections": 12
+ },
+ {
+  "task": "212",
+  "taskname": "정책요건분석",
+  "title": "정책요건정의서",
+  "kind": "산출물",
+  "ver": "V2.0",
+  "path": "212_정책요건분석/정책요건정의서.html",
+  "sections": 7
+ },
+ {
+  "task": "213",
+  "taskname": "시스템요건분석",
+  "title": "시스템요건정의서",
+  "kind": "산출물",
+  "ver": "V2.0",
+  "path": "213_시스템요건분석/시스템요건정의서.html",
+  "sections": 8
+ },
+ {
+  "task": "214",
+  "taskname": "이용로그분석",
+  "title": "로그분석",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "214_이용로그분석/로그분석_데이터추출요청.html",
+  "sections": 4
+ },
+ {
+  "task": "215",
+  "taskname": "요구사항정의",
+  "title": "요구사항정의서",
+  "kind": "산출물",
+  "ver": "V0.2",
+  "path": "215_요구사항정의/요구사항정의서.html",
+  "sections": 9
+ },
+ {
+  "task": "221",
+  "taskname": "서비스분석",
+  "title": "서비스비교분석서",
+  "kind": "산출물",
+  "ver": "V2.0",
+  "path": "221_서비스분석/서비스비교분석서.html",
+  "sections": 9
+ },
+ {
+  "task": "241",
+  "taskname": "Co-Analysis 워크숍",
+  "title": "고객여정맵 (AS-IS)",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "241_Co-Analysis 워크숍/고객여정맵.html",
+  "sections": 6
+ },
+ {
+  "task": "241",
+  "taskname": "Co-Analysis 워크숍",
+  "title": "분석시사점 · 이슈 정리",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "241_Co-Analysis 워크숍/분석시사점.html",
+  "sections": 5
+ },
+ {
+  "task": "242",
+  "taskname": "UX전략및컨셉수립",
+  "title": "UX 컨셉 방향 후보안 [개입요청]",
+  "kind": "부속 — 의사결정 요청",
+  "ver": "V2.0",
+  "path": "242_UX전략및컨셉수립/개입요청_UX컨셉방향_후보안.html",
+  "sections": 8
+ },
+ {
+  "task": "242",
+  "taskname": "UX전략및컨셉수립",
+  "title": "UX컨셉키워드",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "242_UX전략및컨셉수립/UX컨셉키워드.html",
+  "sections": 8
+ },
+ {
+  "task": "242",
+  "taskname": "UX전략및컨셉수립",
+  "title": "결정 근거 — 회원 영역 68화면 분류",
+  "kind": "부속 — 결정 근거",
+  "ver": "V1.0",
+  "path": "242_UX전략및컨셉수립/결정근거_회원영역_화면분류.html",
+  "sections": 5
+ },
+ {
+  "task": "243",
+  "taskname": "UX전략보고",
+  "title": "UX전략보고서",
+  "kind": "산출물",
+  "ver": "V0.4",
+  "path": "243_UX전략보고/UX전략보고서.html",
+  "sections": 12
+ },
+ {
+  "task": "243",
+  "taskname": "UX전략보고",
+  "title": "봉인 해제 대조 — 방향성분석 V0.4",
+  "kind": "부속 — 봉인 해제 대조",
+  "ver": "V1.0",
+  "path": "243_UX전략보고/대조_방향성분석_V0.4.html",
+  "sections": 9
+ },
+ {
+  "task": "312",
+  "taskname": "유저플로우설계",
+  "title": "유저플로우 (TO-BE)",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "312_유저플로우설계/유저플로우.html",
+  "sections": 12
+ },
+ {
+  "task": "321",
+  "taskname": "기능상세정의",
+  "title": "기능정의서",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "321_기능상세정의/기능정의서.html",
+  "sections": 7
+ },
+ {
+  "task": "322",
+  "taskname": "정보구조설계",
+  "title": "정보구조도 (IA)",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "322_정보구조설계/정보구조도.html",
+  "sections": 11
+ },
+ {
+  "task": "932",
+  "taskname": "회의록",
+  "title": "회의록 — 기능요건 확정 [타 프로젝트 파일럿]",
+  "kind": "파일럿",
+  "ver": "V1.0",
+  "path": "932_회의록/회의록_기능요건확정_주문O4O_250306_AI초안.html",
+  "sections": 4
+ },
+ {
+  "task": "941",
+  "taskname": "주간보고",
+  "title": "주간보고서 11W",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "941_주간보고/주간보고서_11W_221206_AI초안.html",
+  "sections": 7
+ }
+]

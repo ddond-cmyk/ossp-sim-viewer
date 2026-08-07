@@ -1,0 +1,26 @@
+/* ============================================================
+   VinylC Report DS — Spacing (공통 원시 풀, 표시유형 비분기)
+   + 고정 캔버스 치수 (공통 슬라이드 프리미티브)
+   1P 표시유형은 scales.css 에서 일부 여백을 override 한다.
+   ============================================================ */
+
+:root {
+  /* ── Spacing primitive pool ── */
+  --space-3xs: 4px;
+  --space-2xs: 6px;
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  40px;
+  --space-xl:  64px;
+  --space-2xl: 96px;
+
+  /* ── Fixed canvas dimensions (slide primitive) ── */
+  --slide-w:     1280px;
+  --slide-h:     720px;
+  --slide-pad-x: 80px;
+  --slide-pad-y: 60px;
+
+  /* ── Content width (root default; 표시유형별로 scales.css 에서 override) ── */
+  --content-w:   960px; /* @kind other */
+}

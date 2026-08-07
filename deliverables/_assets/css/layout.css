@@ -1,0 +1,88 @@
+/* ============================================================
+   VinylC Report DS — Layout containers (§2)
+   표시유형 ↔ 컨테이너는 1:1.
+   ============================================================ */
+
+@page { margin: 0; }   /* 연속문서형: size 미지정 — 단일 연속 페이지 */
+
+/* ── 2.1 연속문서형 컨테이너 .report (가변폭) ── */
+.report {
+  background: var(--page-bg);            /* gray-50 */
+  font-size: var(--fs-body);             /* 16px */
+  line-height: var(--lh-body);           /* 1.7 */
+  min-height: 100vh;
+}
+.report__content {
+  width: 100%;
+  max-width: var(--content-w);           /* 기준 960px, 가변 상한 */
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--content-bg);         /* 흰 본문 카드 */
+}
+/* 가변폭 모드: HTML 뷰에서 넓은 뷰포트 수용 (PDF는 960px 고정 렌더) */
+@media screen and (min-width: 1200px) {
+  .report { --content-w: min(1200px, 92vw); /* @kind other */ }
+}
+
+/* ── 2.2 프리젠테이션형 컨테이너 .slide (1280×720 고정) ── */
+.slide-doc { background: var(--gray-200); }
+.slide {
+  width: var(--slide-w);
+  height: var(--slide-h);
+  padding: var(--slide-pad-y) var(--slide-pad-x);
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  display: flex;
+  flex-direction: column;
+  background: var(--page-bg);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+.slide:last-child { page-break-after: auto; }
+
+.slide__page-num {
+  position: absolute; bottom: 30px; right: var(--slide-pad-x);
+  font-size: var(--fs-caption); font-weight: var(--fw-medium);
+  color: var(--text-tertiary); letter-spacing: var(--ls-wide);
+}
+.slide__section-label {
+  font-size: var(--fs-overline); font-weight: var(--fw-semibold);
+  text-transform: uppercase; letter-spacing: var(--ls-wider);
+  color: var(--text-tertiary); margin-bottom: var(--space-lg);
+}
+.slide__footer-logo {
+  position: absolute; bottom: 28px; left: var(--slide-pad-x);
+  height: 14px; opacity: 0.35;
+}
+
+/* ── 2.3 1페이지형 컨테이너 .slide.is-onepager + 그리드 ── */
+.slide.is-onepager {
+  display: grid;
+  grid-template-rows: auto 1fr auto;     /* hdr / body / foot */
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--slide-pad-x);
+}
+.onepager__body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-md);
+  align-content: start;
+}
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-6  { grid-column: span 6; }
+.col-8  { grid-column: span 8; }
+.col-12 { grid-column: span 12; }
+
+/* ── 2.4 그리드 프리미티브 .card-grid (가변폭 전환) ── */
+/* 연속문서형: 가변폭 그리드 (좁은 폭에서 자동 줄바꿈) */
+.report .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+/* 슬라이드/1P: 고정 트랙 (캔버스 폭 확정) */
+.slide .card-grid    { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+.slide .card-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.slide.is-onepager .card-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }

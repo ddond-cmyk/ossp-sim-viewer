@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>범위정의서 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">범위정의서</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>126 기초분석종합</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V2.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.07 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 범위정의서 · V2.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>0. 선행 결손 명세</span></div><div class="toc__item"><span class="toc__num">02</span><span>1. 프로젝트 목표 [가정 — 125·123 결손]</span></div><div class="toc__item"><span class="toc__num">03</span><span>2. 시스템범위</span></div><div class="toc__item"><span class="toc__num">04</span><span>3. 업무범위 (In Scope) — 규모 지표 포함</span></div><div class="toc__item"><span class="toc__num">05</span><span>4. 제외 범위 (Out of Scope) — 규모 지표 포함</span></div><div class="toc__item"><span class="toc__num">06</span><span>5. 상충 — PM 판단 필요 (봉합하지 않음)</span></div><div class="toc__item"><span class="toc__num">07</span><span>6. 인수기준 (초안) — 정성 항목만</span></div><div class="toc__item"><span class="toc__num">08</span><span>7. 전제·제약</span></div><div class="toc__item"><span class="toc__num">09</span><span>8. 업무방식</span></div><div class="toc__item"><span class="toc__num">10</span><span>9. 근거 추적</span></div><div class="toc__item"><span class="toc__num">11</span><span>11. 이후 어디에 쓰이나</span></div><div class="toc__item"><span class="toc__num">12</span><span>12. [확인필요]</span></div></div>
+
+<div class="callout"><div class="callout__body"><strong>상태: <code>draft</code> — PM 확정 전.</strong> 확정일·확정자 미기입 (표준 규칙 4: 자동 확정 금지)</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">0. 선행 결손 명세</h2>
+<div class='tw'><table><thead><tr><th>선행 산출물</th><th>확보</th><th>결손 시 약해지는 섹션</th></tr></thead><tbody><tr><td>121 환경분석보고서 · 뉴스클리핑</td><td>✅</td><td>—</td></tr><tr><td>122 AS-IS 화면덤프 · User Flow</td><td>✅ (등급 C)</td><td>—</td></tr><tr><td><strong>123 VOC 분석서</strong></td><td>❌ <strong>미수행</strong></td><td><strong>1 목표</strong>(사용자측 근거) · <strong>6 인수기준</strong></td></tr><tr><td>124 고객요구 인터뷰결과서</td><td>✅</td><td>—</td></tr><tr><td><strong>125 경영진 인터뷰결과서</strong></td><td>❌ <strong>미수행</strong></td><td><strong>1 목표·성공기준</strong> · 5 제약</td></tr><tr><td><code>.ax-project.yaml</code></td><td>✅</td><td>—</td></tr></tbody></table></div>
+<p><strong>결손의 실제 영향</strong>: 이 프로젝트의 고객 접촉은 <strong>서면 기초질의 왕복</strong>(7/20 → 8/1·9/14 → 9/20 미팅) 형태였고, 경영진 대상 별도 인터뷰 기록은 확보하지 못했다. 따라서 <strong>§1 목표는 제안서(I1)에서 역산한 것</strong>이며 고객이 확인한 목표 진술이 아니다 → 전 항목 <code>[가정]</code>. 성공기준의 정량 목표치는 VOC·경영진 근거가 둘 다 없어 <strong>작성 불가</strong>.</p>
+<div class="callout"><div class="callout__body">섹션은 삭제하지 않고 남긴다. 무엇이 비었는지가 132·215에 전달돼야 한다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s1">1. 프로젝트 목표 <code>[가정 — 125·123 결손]</code></h2>
+<div class='tw'><table><thead><tr><th>#</th><th>목표</th><th>근거</th><th>확실도</th></tr></thead><tbody><tr><td>O-1</td><td>현대백화점 공식 홈페이지 PC·MWEB <strong>전 페이지의 UX/UI를 개선</strong>해 브랜드 격에 맞는 경험을 확보한다</td><td>I1 제안서 · 124 #6·#9</td><td>높음(계약 문언)</td></tr><tr><td>O-2</td><td><strong>분산된 자사 채널의 허브</strong> 역할을 강화한다 — 지점·브랜드·문화센터·기업정보가 한 채널에 공존하는 구조를 정리</td><td>121 §3 약점 · 122 §2 영역 분포</td><td>중 <code>[가정]</code></td></tr><tr><td>O-3</td><td><strong>경험형 콘텐츠 흐름</strong>을 채널에 안착시킨다 (Sounds Forest·ALT.1 등 오프라인 자산의 온라인 내재화)</td><td>121 S6</td><td>중 <code>[가정]</code></td></tr><tr><td>O-4</td><td><strong>회원 체계 전환기</strong>(23.1.1 H.Point 통합)에 대응 가능한 구조로 남긴다</td><td>121 S4 · 124 #14</td><td>중 <code>[가정]</code></td></tr></tbody></table></div>
+<h3 class="subsection__title">성공기준 — <strong>작성 불가</strong></h3>
+<p>정량 목표치(이탈률·전환·만족도 등)를 세울 근거가 없다.</p>
+<div class='tw'><table><thead><tr><th>필요한 것</th><th>상태</th></tr></thead><tbody><tr><td>경영진이 말한 성공의 정의</td><td>❌ 125 미수행</td></tr><tr><td>사용자 불만의 정량 분포</td><td>❌ 123 미수행</td></tr><tr><td>현행 이용 지표(GA 등)</td><td>❌ <strong>214 로그 미확보</strong> — 요구 78건 전부가 진술·정책·구조 기반</td></tr></tbody></table></div>
+<p>→ <code>[확인필요 1]</code> 성공기준은 PM이 고객과 별도 합의해야 한다. <strong>인수기준(§6)이 정성 항목만으로 구성된 근본 원인.</strong></p>
+<hr class="rule">
+<h2 class="section__title" id="s2">2. 시스템범위</h2>
+<div class='tw'><table><thead><tr><th>구분</th><th>대상</th><th>규모 (출처)</th></tr></thead><tbody><tr><td><strong>주 대상</strong></td><td>현대백화점 공식 홈페이지 PC</td><td>고유 618 / 본화면 350 (122)</td></tr><tr><td><strong>주 대상</strong></td><td>현대백화점 공식 홈페이지 Mobile Web</td><td>고유 385 / 본화면 224 (122)</td></tr><tr><td><strong>부 대상</strong></td><td>Admin (기획·퍼블리싱 한정, 디자인 제외)</td><td>Admin 연동 고유 <strong>122</strong>화면 (122)</td></tr><tr><td><strong>부 대상</strong></td><td>CMS 연동 화면</td><td>고유 <strong>17</strong>화면 (122)</td></tr><tr><td><strong>부 대상</strong></td><td>App 특화 4건</td><td><code>[규모미상]</code> — 앱 화면 명세 미확보</td></tr><tr><td>경계 밖</td><td>타 ehyundai 도메인 · 솔루션 페이지 · 다국어</td><td>§4 참조</td></tr></tbody></table></div>
+<p><strong>연동 대상</strong>: H.Point(멤버십·바코드) · 현대백화점카드 · 문화센터 수강/결제 · 그룹 WSG. 각 연동의 기술 스펙은 213 시스템요건 소관.</p>
+<hr class="rule">
+<h2 class="section__title" id="s3">3. 업무범위 (In Scope) — 규모 지표 포함</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>업무</th><th>규모 지표</th><th>출처</th><th>추정가능</th></tr></thead><tbody><tr><td>S-1</td><td>PC·MWEB 국문 전 영역 UX·UI 개선 (요건분석→UX설계→디자인→퍼블리싱)</td><td><strong>본화면 574</strong> / 고유 1,003 / 명세 행 1,344</td><td>122 §1</td><td>✅</td></tr><tr><td>S-2</td><td>투자정보·ESG경영 영역 포함</td><td>고유 <strong>76</strong> (PIV 20·PES 17·MIV 22·MES 17)</td><td>122 §2</td><td>✅</td></tr><tr><td>S-3</td><td>App 특화 4건 (메인·메뉴 UX/UI, h.point 바코드, TCP라운지 출입, 개인별 메뉴 커스터마이징)</td><td><strong><code>[규모미상]</code></strong></td><td>—</td><td>❌</td></tr><tr><td>S-4</td><td>UX 개선에 따른 Admin 수정 — 기획·퍼블리싱만</td><td>고유 <strong>122</strong></td><td>122 §2</td><td>✅</td></tr><tr><td>S-5</td><td>웹접근성 지침 <strong>준수 수준</strong> 반영 (인증 심사 대응 아님)</td><td><strong><code>[규모미상]</code></strong></td><td>—</td><td>❌</td></tr><tr><td>S-6</td><td>구현가이드 산출 (설계가이드·스타일가이드·GUI가이드(Zeplin)·UI테스트케이스)</td><td>문서 <strong>4종+</strong></td><td>I1</td><td>◐</td></tr></tbody></table></div>
+<h3 class="subsection__title"><code>[규모미상]</code> 해소에 필요한 것</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>받아야 할 것</th><th>확인 주체</th></tr></thead><tbody><tr><td>S-3 App 특화 4건</td><td>앱 현행 화면 목록 또는 4건 각각의 영향 화면 수</td><td>고객사 App 담당(김수현 선임)</td></tr><tr><td>S-5 접근성 준수 수준</td><td><strong>&quot;준수 수준&quot;의 정의</strong> — 어느 지침의 몇 개 항목을 어느 화면 범위에 적용하는가</td><td>PM ↔ 고객사</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body">이 둘은 <strong>빈칸이 아니라 <code>[규모미상]</code>으로 132에 넘긴다.</strong> 빈칸이면 132가 0으로 취급한다.</div></div>
+<h3 class="subsection__title">담당 범위 (<code>.ax-project.yaml</code> scope)</h3>
+<p>기획 · 디자인 · 프론트엔드(퍼블리싱) — <strong>백엔드·앱 네이티브 개발은 담당 밖</strong>. 213 시스템요건이 「부분」 운용된 근거.</p>
+<hr class="rule">
+<h2 class="section__title" id="s4">4. 제외 범위 (Out of Scope) — 규모 지표 포함</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>제외</th><th>근거</th><th><strong>실제 덜어내는 규모</strong></th><th>판정</th></tr></thead><tbody><tr><td>X-1</td><td>타 ehyundai 도메인(더현대닷컴·그룹·재단)</td><td>124 #6</td><td>자사 명세엔 링크 레이어 2건뿐 (<code>더현대닷컴L</code>)</td><td>실질 0</td></tr><tr><td>X-2</td><td>솔루션 기반 페이지(채팅·ebook·<strong>층별안내</strong>)</td><td>124 #7</td><td><strong>⚠️ 층별안내가 현행 명세에 8건 실재</strong> (PC 3 / MWEB 5)</td><td><strong>상충 → §5 C-3</strong></td></tr><tr><td>X-3</td><td>IR 미팅 예약·기관투자자 가입</td><td>124 #8</td><td><strong>⚠️ <code>IR미팅예약(T1)</code>이 MWEB 명세에 실재</strong></td><td><strong>상충 → §5 C-3</strong></td></tr><tr><td>X-4</td><td>현대백화점 회원 관련 메뉴</td><td>124 #14</td><td><strong>⚠️ 로그인+마이페이지 고유 68화면</strong> (PLO 26·PMY 19·MLO 10·MMY 13) — 경계 미정</td><td><strong>상충 → §5 C-1</strong></td></tr><tr><td>X-5</td><td>영·중·일문</td><td>124 #10</td><td><strong>현행에 0건</strong></td><td><strong>실질 0 — 신규 제작 제외를 뜻함</strong></td></tr><tr><td>X-6</td><td>접근성 심사·인증 주관</td><td>124 #15</td><td>심사 대응 공수만 제외, 설계·구현 반영은 S-5로 포함</td><td>명확</td></tr><tr><td>X-7</td><td>오픈콘텐츠 제작 · 콘텐츠 마이그레이션</td><td>124 #12·#23</td><td>CMS 연동 고유 <strong>17</strong>화면의 콘텐츠는 현행 유지</td><td><strong>상충 → §5 C-4</strong></td></tr><tr><td>X-8</td><td>서버·앱 네이티브 개발 구현</td><td>시뮬레이션 규약</td><td>원 계약은 웹개발 포함 — <strong>본 시뮬레이션 한정 제외</strong></td><td>규약</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>X-5는 제외 선언이 실질 공수를 0 덜어낸다.</strong> 제외 목록을 건수로 세면 8건이지만, 실제 범위를 좁히는 것은 X-6·X-8뿐이고 X-2·X-3·X-4·X-7은 <strong>경계가 확정되지 않아 오히려 리스크 항목</strong>이다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s5">5. 상충 — PM 판단 필요 (봉합하지 않음)</h2>
+<p>표준 §「상충 검출 3축」 적용 결과 <strong>6건</strong>.</p>
+<div class='tw'><table><thead><tr><th>#</th><th>축</th><th>상충</th><th>A쪽</th><th>B쪽</th><th>영향</th></tr></thead><tbody><tr><td><strong>C-1</strong></td><td>③</td><td><strong>회원 메뉴 제외의 경계가 화면 단위로 미정</strong></td><td>124 #14 &quot;현대백화점 회원 관련 메뉴 제외(H.Point 전환 예정)&quot;</td><td>122 실측: 로그인·마이페이지 <strong>고유 68화면</strong>. 게다가 <strong>H.Point 전환 화면이 PC에만 존재</strong>(MWEB 결손)</td><td>최대 68화면(고유의 6.8%)이 범위 안팎으로 흔들림. <strong>최대 리스크</strong></td></tr><tr><td><strong>C-2</strong></td><td>②</td><td><strong>기술 하한선이 채널마다 어긋남</strong></td><td>121 S1: 계약 기준에 <strong>IE10</strong></td><td>124 #2: 모바일은 <strong>갤S22·아이폰13</strong> 기준</td><td>데스크톱은 2012년 브라우저, 모바일은 최신 2세대. 하나의 퍼블리싱 기준을 못 세움</td></tr><tr><td><strong>C-3</strong></td><td>③</td><td><strong>제외 선언한 화면이 현행 명세에 실재</strong></td><td>124 #7 층별안내 제외 / #8 IR 예약 제외</td><td>122 실측: 층별안내 8건 · <code>IR미팅예약(T1)</code> 1건</td><td>개선 대상인지 존치인지 미정. IA 재편 시 충돌</td></tr><tr><td><strong>C-4</strong></td><td>③</td><td><strong>전 페이지 개선 vs 콘텐츠 마이그레이션 제외</strong></td><td>S-1 전 영역 UX/UI 개선</td><td>X-7 콘텐츠 마이그레이션·CMS 개선 없음</td><td>CMS 연동 17화면은 <strong>껍데기만 바뀌고 내용은 현행</strong>. IA 재편 시 정합 문제</td></tr><tr><td><strong>C-5</strong></td><td>①</td><td><strong>타겟 인식 불일치</strong></td><td>업계 담론 MZ(2030)</td><td>124 #22 실측 <strong>30~40대 70% · 여성 69.2%</strong></td><td>242 UX컨셉·334 시안의 근거 선택. 121 S2에서 이미 경고</td></tr><tr><td><strong>C-6</strong></td><td>①</td><td><strong>목표는 채널 통일을 지향하나 현행은 채널이 갈라져 있다</strong></td><td>O-1·O-2</td><td>122 H4·A3: 진입 모델 상이 · 채널 동등성 결손 <strong>9건</strong>(비밀번호 변경이 모바일에 없음 등)</td><td>통일 범위를 어디까지로 할지가 322 IA 최대 분기점</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body">6건 모두 <strong>임의 봉합 금지</strong>. C-1·C-3은 <strong>범위 확정 전 고객 합의가 필요한 항목</strong>이다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s6">6. 인수기준 (초안) — 정성 항목만</h2>
+<p>성공기준(§1)이 부재하므로 <strong>정량 인수기준을 세울 수 없다.</strong> 현재 세울 수 있는 것은 산출물 기반 정성 기준뿐이다.</p>
+<div class='tw'><table><thead><tr><th>#</th><th>인수기준</th><th>검증 방법</th><th>유형</th></tr></thead><tbody><tr><td>A-1</td><td>In-Scope 화면(<strong>본화면 574</strong> 기준)의 UI 디자인·퍼블리싱 산출물이 화면명세서 커버리지 100%</td><td>341 화면명세서 ↔ 411 작업관리서 대조</td><td>정성(커버리지)</td></tr><tr><td>A-2</td><td>Admin 고유 122화면의 기획·퍼블리싱 산출물 완비 (디자인 산출물 없음이 정상)</td><td>산출물 체인 점검</td><td>정성</td></tr><tr><td>A-3</td><td>스타일가이드가 그룹 WSG를 상속하고 해피니스 산스를 적용</td><td>351 스타일가이드 검토</td><td>정성</td></tr><tr><td>A-4</td><td>접근성 <strong>준수 수준</strong> 충족 — <code>[확인필요]</code> 기준 미정으로 검증 불가</td><td>—</td><td><strong>미정</strong></td></tr><tr><td>A-5</td><td>퍼블리싱 결과가 타겟 디바이스에서 정상 동작 — <code>[확인필요]</code> C-2로 기준 미정</td><td>—</td><td><strong>미정</strong></td></tr><tr><td>—</td><td><strong>정량 인수기준 (이탈률·전환·만족도 등)</strong></td><td>—</td><td><strong>작성 불가</strong></td></tr></tbody></table></div>
+<p>→ <code>[확인필요 2]</code> A-4·A-5는 기준이 정해져야 인수 판정이 가능하다. 이대로 계약에 들어가면 <strong>인수 시점에 분쟁 소지</strong>.</p>
+<hr class="rule">
+<h2 class="section__title" id="s7">7. 전제·제약</h2>
+<div class='tw'><table><thead><tr><th>구분</th><th>내용</th><th>근거</th></tr></thead><tbody><tr><td>일정</td><td>2022-09-19 ~ 2023-04-18 (7개월) · <strong>23.1Q 오픈 목표</strong></td><td>121 §5-3</td></tr><tr><td>기술</td><td>IE10+ · 해피니스 산스 필수(대체 불가) · 그룹 WSG 준수 · JSP 기반 레거시</td><td>121 §5-3 · 124 #20·#5</td></tr><tr><td>툴</td><td>화면설계서=PPT / 디자인=Figma (딜리버리 권한 별도 협의)</td><td>124 #1</td></tr><tr><td>디바이스</td><td>갤S22·아이폰13 기준 — 고객 제시 하한(갤S8·아이폰4s)은 재협의 중</td><td>124 #2 <code>[확인필요]</code></td></tr><tr><td>사용자</td><td>30대 36.5% + 40대 33% = <strong>약 70%</strong>, 여성 <strong>69.2%</strong> (고객 실측)</td><td>124 #22</td></tr><tr><td>조직</td><td>총괄 PM 김희진 책임 / PC·MW 김희진 책임 / App 김수현 선임 · 정기 보고 일정 없음</td><td>124 #4·#3</td></tr><tr><td>운영</td><td>진행 중 산출물의 운영사(펜타브리드) <strong>비공개 원칙</strong></td><td>124</td></tr><tr><td>자원</td><td><code>[확인필요]</code> 인력·M/M은 영업·원가 산정 소관</td><td>121 §5-3</td></tr><tr><td>회원</td><td><strong>23.1.1 H.Point 통합회원 전환</strong> — 오픈 시점과 근접</td><td>121 S4 · 124 #14</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s8">8. 업무방식</h2>
+<p>114 프로젝트표준프로세스(PDP)를 인용한다 — <strong>여기서 다시 정의하지 않는다</strong>(표준 경계 규칙).</p>
+<ul><li>방법론: 자사 표준프로세스 <strong>OSSP 4.1</strong> 테일러링 (개편 유형)</li><li>단계: 요건분석 → 전략+와이어프레임 → 디자인전략(시안) → 공통 UX설계(App/MW) → 공통 UI디자인 → PC UX설계 → PC UI디자인 → 퍼블리싱 → (개발·테스트·오픈: 본 시뮬레이션 범위 외)</li><li>협업: 서면 기초질의 왕복 + 워크샵(1차 9/23 · 2차 9/29) · 정기 보고 일정 없음(현업 자율 공유)</li><li>산출물 서식: 114 프로젝트표준서식</li></ul>
+<hr class="rule">
+<h2 class="section__title" id="s9">9. 근거 추적</h2>
+<div class='tw'><table><thead><tr><th>섹션</th><th>근거 산출물</th><th>결손</th></tr></thead><tbody><tr><td>1 목표</td><td>I1 제안서 · 121 §3·S4·S6</td><td><strong>125·123 → 전 항목 <code>[가정]</code></strong></td></tr><tr><td>1 성공기준</td><td>—</td><td><strong>125·123·214 → 작성 불가</strong></td></tr><tr><td>2 시스템범위</td><td>122 §1·§2 · 124 #6·#9·#11·#13</td><td>App 규모 미상</td></tr><tr><td>3 업무범위</td><td>124 #6·#9·#11·#13·#15 · 122 §1·§2 · <code>.ax-project.yaml</code></td><td>S-3·S-5 <code>[규모미상]</code></td></tr><tr><td>4 제외범위</td><td>124 #6·#7·#8·#10·#12·#14·#15·#23 · <strong>122 실측 대조</strong></td><td>—</td></tr><tr><td>5 상충</td><td>121 S1·S2·S4 · 122 H4·A3·§1 · 124 #2·#7·#8·#14·#22·#23</td><td>—</td></tr><tr><td>6 인수기준</td><td>§1에서 도출 · 122 §1 · 124 #5·#20</td><td><strong>성공기준 부재로 정량 불가</strong></td></tr><tr><td>7 제약</td><td>121 §5-3 · 124 #1·#2·#3·#4·#20·#22</td><td>자원 <code>[확인필요]</code></td></tr><tr><td>8 업무방식</td><td>114 PDP · I1</td><td>—</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s10">11. 이후 어디에 쓰이나</h2>
+<div class='tw'><table><thead><tr><th>작업</th><th>무엇을 가져가나</th></tr></thead><tbody><tr><td><strong>132 수행계획</strong></td><td>규모 지표 — <strong>본화면 574 기준으로 재산정</strong>. <code>[규모미상]</code> 2건은 미결로 명기</td></tr><tr><td><strong>215 요구사항정의</strong></td><td>상충 6건 → 요구 후보. 채널 동등성 결손 9건</td></tr><tr><td><strong>322 정보구조설계</strong></td><td>제외 경계 4축(도메인·솔루션·회원·언어) + C-1·C-3의 화면 단위 경계</td></tr><tr><td><strong>341 화면명세서</strong></td><td>커버리지 기준 = 고유 1,003</td></tr><tr><td><strong>351 스타일가이드</strong></td><td>그룹 WSG 상속 · 해피니스 산스</td></tr><tr><td><strong>911 변경관리</strong></td><td>C-1~C-4를 변경 리스크 등록 항목으로</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s11">12. [확인필요]</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>확인 주체</th><th>막히는 것</th></tr></thead><tbody><tr><td>1</td><td><strong>성공기준(정량)</strong></td><td>PM ↔ 고객 경영진</td><td>§6 인수기준 정량화</td></tr><tr><td>2</td><td><strong>접근성 &quot;준수 수준&quot;의 정의</strong></td><td>PM ↔ 고객사</td><td>S-5 규모 · A-4 인수</td></tr><tr><td>3</td><td><strong>회원 메뉴 제외의 화면 단위 경계</strong> (C-1)</td><td>고객사</td><td>최대 68화면</td></tr><tr><td>4</td><td><strong>층별안내·IR예약의 존치/개선 여부</strong> (C-3)</td><td>고객사</td><td>9화면</td></tr><tr><td>5</td><td>타겟 디바이스 호환 하한선 최종 (C-2)</td><td>PM ↔ 고객사</td><td>퍼블리싱 기준</td></tr><tr><td>6</td><td>App 특화 4건의 영향 화면 수</td><td>고객사 App 담당</td><td>S-3 규모</td></tr><tr><td>7</td><td>산출물 목록 최종 합의본</td><td>PM</td><td>S-6</td></tr><tr><td>8</td><td>인력·M/M</td><td>영업·원가</td><td>§7 자원</td></tr></tbody></table></div>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 범위정의서 V2.0 · 2026.08.07
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
