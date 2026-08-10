@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 454" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-01 지점 선택 · 양 채널 · 전역 오버레이</text>
+<rect x="1" y="34" width="720" height="320" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
+<rect x="2.0" y="38" width="531.0" height="44" fill="#F4F4F4" stroke="#111111" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="267.5" y="64.0" font-size="11" fill="#111111" text-anchor="middle">지점 선택</text>
+<text x="528.0" y="49" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="543.0" y="38" width="177.0" height="44" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="631.5" y="64.0" font-size="11" fill="#111111" text-anchor="middle">닫기</text>
+<text x="-5" y="105" font-size="9" fill="#767676" text-anchor="end">분류 표시축</text>
+<rect x="2.0" y="92" width="718.0" height="38" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="115.0" font-size="11" fill="#111111" text-anchor="middle">전체 / 더현대 / 백화점 / 아울렛  (필터 — 게이트 아님)</text>
+<text x="-5" y="153" font-size="9" fill="#767676" text-anchor="end">지점 목록</text>
+<rect x="2.0" y="140" width="172.0" height="150" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="144" width="172.0" height="150" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="88.0" y="219.0" font-size="11" fill="#111111" text-anchor="middle">지점카드</text>
+<rect x="184.0" y="140" width="172.0" height="150" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="270.0" y="219.0" font-size="11" fill="#111111" text-anchor="middle">지점카드</text>
+<rect x="366.0" y="140" width="172.0" height="150" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="452.0" y="219.0" font-size="11" fill="#111111" text-anchor="middle">지점카드</text>
+<rect x="548.0" y="140" width="172.0" height="150" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="634.0" y="219.0" font-size="11" fill="#111111" text-anchor="middle">지점카드</text>
+<text x="-5" y="313" font-size="9" fill="#767676" text-anchor="end">재방문</text>
+<rect x="2.0" y="300" width="718.0" height="46" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="327.0" font-size="11" fill="#111111" text-anchor="middle">최근 선택 지점+  [가정]</text>
+<text x="1" y="367" font-size="10.5" fill="#767676">· 선정축 ①분기(B1 지점 선택됨?) ③신설 ④전역</text>
+<text x="1" y="386" font-size="10.5" fill="#767676">· REQ-SI-002 "분류 게이트 화면을 만들지 않는다" — 분류를 별도 단계로 두지 않고 목록 내 필터로</text>
+<text x="1" y="405" font-size="10.5" fill="#767676">· 확정 즉시 C1 컨텍스트 → UF-02·03·04로 전달</text>
+<text x="1" y="424" font-size="10.5" fill="#767676">· 최근 선택 지점은 FN-A06 [가정] — 개인화 정책·동의 근거 미확보(미정의 D1-2)</text></svg>

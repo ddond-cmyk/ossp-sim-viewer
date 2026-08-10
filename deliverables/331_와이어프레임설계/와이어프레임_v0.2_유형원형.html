@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>와이어프레임 v0.2 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">와이어프레임 v0.2</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>331 와이어프레임설계</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 와이어프레임 v0.2 · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>1. 왜 v0.2가 필요한가 — v0.1이 유형 사전보다 앞섰다</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. 유형 원형 7종</span></div><div class="toc__item"><span class="toc__num">03</span><span>3. 공통 모듈 3종 — 343(설계리뷰및리팩토링) §4 정의의 골격</span></div><div class="toc__item"><span class="toc__num">04</span><span>4. 커버리지</span></div><div class="toc__item"><span class="toc__num">05</span><span>5. 미결 · 확인 필요</span></div><div class="toc__item"><span class="toc__num">06</span><span>6. 다음 단계 핸드오프</span></div><div class="toc__item"><span class="toc__num">07</span><span>7. 도출 인사이트</span></div></div>
+
+<div class='tw'><table><thead><tr><th>항목</th><th>값</th></tr></thead><tbody><tr><td>프로젝트</td><td>현대백화점 자사채널(PC·MWEB) 개선</td></tr><tr><td>문서</td><td>와이어프레임 v0.2 (v0.1 주요화면 15에 추가)</td></tr><tr><td>작성일</td><td>2026-08-10</td></tr><tr><td>작성자</td><td>기획자</td></tr><tr><td>상태</td><td>초안 — <code>343(설계리뷰및리팩토링)</code> 반영본</td></tr></tbody></table></div>
+<h3 class="subsection__title">개정이력</h3>
+<div class='tw'><table><thead><tr><th>버전</th><th>일자</th><th>변경 내역</th><th>작성자</th></tr></thead><tbody><tr><td>v0.1</td><td>2026-08-07</td><td>초안작성 — 주요화면 15 · 원형 6 · 저충실도 12칼럼</td><td>기획자</td></tr><tr><td>v0.2</td><td>2026-08-10</td><td><strong>유형 원형 7종 · 공통 모듈 3종 추가.</strong> v0.1은 유형 사전(342) 이전이라 「목록형·상세형 원형」 2종만 있었다</td><td>기획자</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">1. 왜 v0.2가 필요한가 — v0.1이 유형 사전보다 앞섰다</h2>
+<p><code>331(와이어프레임설계)</code> v0.1은 주요화면 15개를 <strong>4축 판정</strong>(의사결정·원형·신설·전역)으로 골랐고 원형은 <code>W-05</code> 목록형·<code>W-06</code> 상세형 <strong>2종</strong>뿐이었다. 그때는 그게 최선이었다 — 유형 사전이 없었으니 원형이 몇 종인지 알 방법이 없었다.</p>
+<p>이후 세 단계가 답을 만들었다.</p>
+<div class='tw'><table><thead><tr><th>단계</th><th>확정한 것</th></tr></thead><tbody><tr><td><code>342(UI상세설계)</code></td><td>백화점 도메인 <strong>유형 7종</strong> + modifier 2축. 표본 1,014건 전량 분류</td></tr><tr><td><code>343(설계리뷰및리팩토링)</code></td><td><strong>유형 골격 ↔ 컴포넌트 매핑표</strong> · <strong>공통 모듈 3종</strong> 정의</td></tr><tr><td><code>353(UI개발가이드설계)</code></td><td>「유형 템플릿 7종을 만들고 화면은 데이터로 채운다」</td></tr></tbody></table></div>
+<p><strong>원형이 2종에서 10종(유형 7 + 공통 모듈 3)으로 확정됐다.</strong> v0.1을 고치지 않고 v0.2로 <strong>추가</strong>한다 — v0.1의 판단은 그 시점에서 옳았고, 지운다면 「왜 2종이었나」가 사라진다.</p>
+<p><strong>대응 관계</strong></p>
+<div class='tw'><table><thead><tr><th>v0.2 원형</th><th>v0.1 대응</th><th>관계</th></tr></thead><tbody><tr><td>목록형</td><td><code>W-01</code>·<code>W-05</code>·<code>W-07</code></td><td>v0.1 원형 승계 · 필터축 일반화</td></tr><tr><td>콘텐츠 상세형</td><td><code>W-06</code></td><td>v0.1 원형 승계</td></tr><tr><td>허브·서브메인형</td><td><code>W-02</code>·<code>W-11</code></td><td>두 화면에서 골격 추출</td></tr><tr><td>프로세스형</td><td><code>W-08</code>·<code>W-09</code>·<code>W-10</code></td><td>3단을 단일 골격 + 단계 변수로 압축</td></tr><tr><td>정보·안내형</td><td><code>W-04</code></td><td>지점축을 modifier로 분리</td></tr><tr><td>조회·결과형</td><td>—</td><td><strong>신규</strong> — v0.1에 원형 없었다(<code>W-03</code> 검색 결과가 부분 대응)</td></tr><tr><td>예외·안내형</td><td><code>W-14</code></td><td>v0.1 승계</td></tr><tr><td>공통 모듈 3종</td><td>—</td><td><strong>신규</strong> — <code>343(설계리뷰및리팩토링)</code> 정의</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s1">2. 유형 원형 7종</h2>
+<h3 class="subsection__title">2-1. 허브·서브메인형 — 본화면 21 / 전체 21</h3>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 607" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 A 허브·서브메인형</text>
+<rect x="1" y="34" width="720" height="492" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">전역 헤더</text>
+<rect x="2.0" y="38" width="172.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="88.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">로고</text>
+<rect x="184.0" y="38" width="286.7" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="327.3" y="62.0" font-size="11" fill="#111111" text-anchor="middle">GNB 6종</text>
+<text x="465.7" y="49" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<rect x="480.7" y="38" width="114.7" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="538.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">통합검색</text>
+<rect x="605.3" y="38" width="114.7" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="662.7" y="62.0" font-size="11" fill="#111111" text-anchor="middle">로그인</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">지점 컨텍스트</text>
+<rect x="2.0" y="88" width="472.0" height="30" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="238.0" y="107.0" font-size="11" fill="#FFFFFF" text-anchor="middle">지금 보는 점포 + 지점명</text>
+<rect x="484.0" y="88" width="236.0" height="30" fill="#F4F4F4" stroke="#111111" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="602.0" y="107.0" font-size="11" fill="#111111" text-anchor="middle">변경</text>
+<text x="715.0" y="99" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<text x="-5" y="141" font-size="9" fill="#767676" text-anchor="end">대표 비주얼</text>
+<rect x="2.0" y="128" width="718.0" height="150" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="207.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 배너~  (최대 10 · 초과 시 등록 차단)</text>
+<text x="-5" y="301" font-size="9" fill="#767676" text-anchor="end">안내·현황 모듈</text>
+<rect x="2.0" y="288" width="354.0" height="90" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="292" width="354.0" height="90" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="179.0" y="337.0" font-size="11" fill="#111111" text-anchor="middle">진행 중 행사</text>
+<rect x="366.0" y="288" width="354.0" height="90" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="337.0" font-size="11" fill="#111111" text-anchor="middle">카드·멤버십 현황  (상태축 가변)</text>
+<text x="-5" y="401" font-size="9" fill="#767676" text-anchor="end">주요기능 모듈</text>
+<rect x="2.0" y="388" width="172.0" height="80" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="392" width="172.0" height="80" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="88.0" y="432.0" font-size="11" fill="#111111" text-anchor="middle">퀵링크</text>
+<rect x="184.0" y="388" width="172.0" height="80" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="270.0" y="432.0" font-size="11" fill="#111111" text-anchor="middle">퀵링크</text>
+<rect x="366.0" y="388" width="172.0" height="80" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="452.0" y="432.0" font-size="11" fill="#111111" text-anchor="middle">퀵링크</text>
+<rect x="548.0" y="388" width="172.0" height="80" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="634.0" y="432.0" font-size="11" fill="#111111" text-anchor="middle">퀵링크</text>
+<text x="-5" y="491" font-size="9" fill="#767676" text-anchor="end">푸터</text>
+<rect x="2.0" y="478" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="502.0" font-size="11" fill="#111111" text-anchor="middle">사이트맵 · 웹접근성 · 개인정보처리방침</text>
+<text x="715.0" y="489" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<text x="1" y="539" font-size="10.5" fill="#767676">· 상태축 4단(비회원/회원/카드보유Y/VIP) — 안내·현황 모듈만 가변, 골격은 불변</text>
+<text x="1" y="558" font-size="10.5" fill="#767676">· 컨셉키워드 K1 — 지점 컨텍스트가 콘텐츠보다 위에 상주한다</text>
+<text x="1" y="577" font-size="10.5" fill="#767676">· 컴포넌트: N-01 · N-02 · T-03 · T-06 · C-01 (343 매핑표)</text></svg></div>
+<h3 class="subsection__title">2-2. 정보·안내형 — 본화면 399 / 전체 399 · <strong>최다</strong></h3>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 709" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 B 정보·안내형 · 지점축 modifier</text>
+<rect x="1" y="34" width="720" height="594" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">전역 헤더</text>
+<rect x="2.0" y="38" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">헤더</text>
+<text x="715.0" y="49" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">지점 컨텍스트</text>
+<rect x="2.0" y="88" width="472.0" height="30" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="238.0" y="107.0" font-size="11" fill="#FFFFFF" text-anchor="middle">지점명</text>
+<rect x="484.0" y="88" width="236.0" height="30" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="107.0" font-size="11" fill="#111111" text-anchor="middle">변경</text>
+<text x="-5" y="141" font-size="9" fill="#767676" text-anchor="end">대표 비주얼</text>
+<rect x="2.0" y="128" width="718.0" height="110" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="187.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 지점 이미지  (미등록 시 기본 이미지)</text>
+<text x="-5" y="261" font-size="9" fill="#767676" text-anchor="end">절 구분 탭</text>
+<rect x="2.0" y="248" width="718.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="269.0" font-size="11" fill="#111111" text-anchor="middle">층별안내 / 식당가 / 오시는길 / 이용안내  (지점별 제공 항목만)</text>
+<text x="-5" y="305" font-size="9" fill="#767676" text-anchor="end">영업 정보</text>
+<rect x="2.0" y="292" width="232.7" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="118.3" y="326.0" font-size="11" fill="#111111" text-anchor="middle">영업시간</text>
+<rect x="244.7" y="292" width="232.7" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="326.0" font-size="11" fill="#111111" text-anchor="middle">휴점일</text>
+<rect x="487.3" y="292" width="232.7" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="603.7" y="326.0" font-size="11" fill="#111111" text-anchor="middle">임시 휴점 안내</text>
+<text x="-5" y="375" font-size="9" fill="#767676" text-anchor="end">본문 블록</text>
+<rect x="2.0" y="362" width="232.7" height="120" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="366" width="232.7" height="120" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="118.3" y="426.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 본문</text>
+<rect x="244.7" y="362" width="232.7" height="120" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="426.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 본문</text>
+<rect x="487.3" y="362" width="232.7" height="120" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="603.7" y="426.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 본문</text>
+<text x="-5" y="505" font-size="9" fill="#767676" text-anchor="end">지점 특성 모듈</text>
+<rect x="2.0" y="492" width="718.0" height="70" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="531.0" font-size="11" fill="#111111" text-anchor="middle">지점 특성 모듈+  (미등록 시 영역 비노출)</text>
+<text x="-5" y="585" font-size="9" fill="#767676" text-anchor="end">미제공 서비스</text>
+<rect x="2.0" y="572" width="718.0" height="48" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="600.0" font-size="11" fill="#111111" text-anchor="middle">지점 미제공 안내?  (332 §6-2 빈 상태 2행)</text>
+<text x="1" y="641" font-size="10.5" fill="#767676">· 이 골격 1개가 본화면 399건 중 지점축 198건을 담당한다 — 컨셉키워드 K2</text>
+<text x="1" y="660" font-size="10.5" fill="#767676">· 탭은 같은 화면 안 전환(N-04) — LNB(N-03)와 행동이 다르다</text>
+<text x="1" y="679" font-size="10.5" fill="#767676">· 컴포넌트: N-01 · N-02 · N-03/N-04 · T-04</text></svg></div>
+<h3 class="subsection__title">2-3. 목록형 — 본화면 25 / 전체 25</h3>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 572" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 C 목록형</text>
+<rect x="1" y="34" width="720" height="476" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">전역 헤더</text>
+<rect x="2.0" y="38" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">헤더</text>
+<text x="715.0" y="49" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">화면 제목</text>
+<rect x="2.0" y="88" width="472.0" height="44" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="238.0" y="114.0" font-size="11" fill="#FFFFFF" text-anchor="middle">목록 제목 + 총 N건</text>
+<rect x="484.0" y="88" width="236.0" height="44" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="114.0" font-size="11" fill="#111111" text-anchor="middle">정렬 드롭다운</text>
+<text x="-5" y="155" font-size="9" fill="#767676" text-anchor="end">1단 필터</text>
+<rect x="2.0" y="142" width="718.0" height="38" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="165.0" font-size="11" fill="#111111" text-anchor="middle">조건 칩 N종  (선택 즉시 목록 갱신 · 페이지 재호출 없음)</text>
+<text x="-5" y="203" font-size="9" fill="#767676" text-anchor="end">검색</text>
+<rect x="2.0" y="190" width="354.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="179.0" y="211.0" font-size="11" fill="#111111" text-anchor="middle">지역 검색 입력</text>
+<rect x="366.0" y="190" width="354.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="211.0" font-size="11" fill="#111111" text-anchor="middle">(여백)</text>
+<text x="-5" y="247" font-size="9" fill="#767676" text-anchor="end">카드·리스트 반복</text>
+<rect x="2.0" y="234" width="172.0" height="160" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="238" width="172.0" height="160" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="88.0" y="318.0" font-size="11" fill="#111111" text-anchor="middle">카드</text>
+<rect x="184.0" y="234" width="172.0" height="160" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="270.0" y="318.0" font-size="11" fill="#111111" text-anchor="middle">카드</text>
+<rect x="366.0" y="234" width="172.0" height="160" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="452.0" y="318.0" font-size="11" fill="#111111" text-anchor="middle">카드</text>
+<rect x="548.0" y="234" width="172.0" height="160" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="634.0" y="318.0" font-size="11" fill="#111111" text-anchor="middle">카드</text>
+<text x="-5" y="417" font-size="9" fill="#767676" text-anchor="end">빈 상태</text>
+<rect x="2.0" y="404" width="718.0" height="48" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="432.0" font-size="11" fill="#111111" text-anchor="middle">결과 없음 — 범위 확장 제안?  (332 §6-2 빈 상태 1행)</text>
+<text x="-5" y="475" font-size="9" fill="#767676" text-anchor="end">더보기</text>
+<rect x="2.0" y="462" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="486.0" font-size="11" fill="#111111" text-anchor="middle">더보기 · 페이지네이션</text>
+<text x="1" y="523" font-size="10.5" fill="#767676">· 테이블 없음 — 백화점 도메인은 카드·리스트만 쓴다(유형 사전 §2-5)</text>
+<text x="1" y="542" font-size="10.5" fill="#767676">· 컴포넌트: N-01 · C-02 · C-03 · C-06 · T-01/T-02 · N-07 · T-04</text></svg></div>
+<h3 class="subsection__title">2-4. 콘텐츠 상세형 — 본화면 196 / 전체 196</h3>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 689" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 D 콘텐츠 상세형</text>
+<rect x="1" y="34" width="720" height="574" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">목록 복귀</text>
+<rect x="2.0" y="38" width="718.0" height="36" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="60.0" font-size="11" fill="#111111" text-anchor="middle">← 목록으로!  (필터·스크롤 위치 보존)</text>
+<text x="-5" y="97" font-size="9" fill="#767676" text-anchor="end">대표 이미지</text>
+<rect x="2.0" y="84" width="718.0" height="140" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="158.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 대표 이미지  (미등록 시 기본 이미지)</text>
+<text x="-5" y="247" font-size="9" fill="#767676" text-anchor="end">제목·메타</text>
+<rect x="2.0" y="234" width="472.0" height="56" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="266.0" font-size="11" fill="#111111" text-anchor="middle">제목 + 카테고리</text>
+<rect x="484.0" y="234" width="236.0" height="56" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="266.0" font-size="11" fill="#111111" text-anchor="middle">부가 메타  (최대 2줄 · 초과 시 말줄임)</text>
+<text x="-5" y="313" font-size="9" fill="#767676" text-anchor="end">본문</text>
+<rect x="2.0" y="300" width="718.0" height="150" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="379.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 본문  (화면은 그릇 · 본문은 운영 콘텐츠)</text>
+<text x="-5" y="473" font-size="9" fill="#767676" text-anchor="end">미등록</text>
+<rect x="2.0" y="460" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="484.0" font-size="11" fill="#111111" text-anchor="middle">준비 중 안내?  (332 §6-2 빈 상태 3행)</text>
+<text x="-5" y="523" font-size="9" fill="#767676" text-anchor="end">관련 목록</text>
+<rect x="2.0" y="510" width="232.7" height="90" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="514" width="232.7" height="90" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="118.3" y="559.0" font-size="11" fill="#111111" text-anchor="middle">관련 항목</text>
+<rect x="244.7" y="510" width="232.7" height="90" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="559.0" font-size="11" fill="#111111" text-anchor="middle">관련 항목</text>
+<rect x="487.3" y="510" width="232.7" height="90" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="603.7" y="559.0" font-size="11" fill="#111111" text-anchor="middle">관련 항목</text>
+<text x="1" y="621" font-size="10.5" fill="#767676">· 반복 인스턴스 — 브랜드 24 · 친환경 활동 32 · 강좌 17 이 이 골격 하나</text>
+<text x="1" y="640" font-size="10.5" fill="#767676">· 화면명이 고유명사라 어휘로 못 잡는다 — 구조(형제 3+ 말단)로 판정했다</text>
+<text x="1" y="659" font-size="10.5" fill="#767676">· 컴포넌트: N-01 · T-01(관련 목록) · C-01(복귀)</text></svg></div>
+<h3 class="subsection__title">2-5. 조회·결과형 — 본화면 73 / 전체 73 · <strong>v0.1에 원형 없었음</strong></h3>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 603" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 E 조회·결과형</text>
+<rect x="1" y="34" width="720" height="488" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">전역 헤더</text>
+<rect x="2.0" y="38" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">헤더</text>
+<text x="715.0" y="49" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">화면 제목</text>
+<rect x="2.0" y="88" width="718.0" height="44" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="114.0" font-size="11" fill="#111111" text-anchor="middle">조회 제목</text>
+<text x="-5" y="155" font-size="9" fill="#767676" text-anchor="end">조건 입력부</text>
+<rect x="2.0" y="142" width="232.7" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="118.3" y="176.0" font-size="11" fill="#111111" text-anchor="middle">상태 필터</text>
+<rect x="244.7" y="142" width="232.7" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="169.5" font-size="11" fill="#111111" text-anchor="middle">기간 입력  (최대 12개월 · 초과 시 안내</text>
+<text x="361.0" y="182.5" font-size="11" fill="#111111" text-anchor="middle">)</text>
+<rect x="487.3" y="142" width="232.7" height="60" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="603.7" y="176.0" font-size="11" fill="#FFFFFF" text-anchor="middle">조회 실행</text>
+<text x="-5" y="225" font-size="9" fill="#767676" text-anchor="end">결과 건수</text>
+<rect x="2.0" y="212" width="718.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="233.0" font-size="11" fill="#111111" text-anchor="middle">총 N건  (조회 전 미노출 — 빈 상태와 구분)</text>
+<text x="-5" y="269" font-size="9" fill="#767676" text-anchor="end">결과 목록</text>
+<rect x="2.0" y="256" width="718.0" height="150" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="260" width="718.0" height="150" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="335.0" font-size="11" fill="#111111" text-anchor="middle">결과 행</text>
+<text x="-5" y="429" font-size="9" fill="#767676" text-anchor="end">결과 0건</text>
+<rect x="2.0" y="416" width="718.0" height="48" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="444.0" font-size="11" fill="#111111" text-anchor="middle">목록 비어 있음 + 대안 행동</text>
+<text x="715.0" y="427" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="-5" y="487" font-size="9" fill="#767676" text-anchor="end">페이징</text>
+<rect x="2.0" y="474" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="498.0" font-size="11" fill="#111111" text-anchor="middle">페이지네이션</text>
+<text x="1" y="535" font-size="10.5" fill="#767676">· ⚠ 「조회 전 미노출」과 「결과 0건 빈 상태」는 다른 상태다 — v0.1이 놓친 구분</text>
+<text x="1" y="554" font-size="10.5" fill="#767676">· 조회는 목록형의 특수 케이스(입력이 선행) — 그래서 판별 우선순위가 목록형보다 앞</text>
+<text x="1" y="573" font-size="10.5" fill="#767676">· 컴포넌트: N-01 · C-02 · C-04 · C-01 · T-02 · T-04</text></svg></div>
+<h3 class="subsection__title">2-6. 프로세스형 — 본화면 283 / 전체 283</h3>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 670" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 F 프로세스형</text>
+<rect x="1" y="34" width="720" height="536" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">서브 헤더</text>
+<rect x="2.0" y="38" width="472.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">신청 상품명</text>
+<rect x="484.0" y="38" width="236.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">닫기  (중단 경고 → 입력 소실 안내)</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">단계바</text>
+<rect x="2.0" y="88" width="718.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="109.0" font-size="11" fill="#111111" text-anchor="middle">N단계 중 n!  (완료=표기 · 이후=비활성 · 이전=입력값 보존 이동)</text>
+<text x="-5" y="145" font-size="9" fill="#767676" text-anchor="end">승계 정보</text>
+<rect x="2.0" y="132" width="718.0" height="90" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="181.0" font-size="11" fill="#111111" text-anchor="middle">상류 단계 인증값  (읽기전용 · 수정 시 재인증 안내)</text>
+<text x="-5" y="245" font-size="9" fill="#767676" text-anchor="end">입력 블록</text>
+<rect x="2.0" y="232" width="718.0" height="120" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="296.0" font-size="11" fill="#111111" text-anchor="middle">입력 필드~  (필수 표기 · blur 1차 검증)</text>
+<text x="-5" y="375" font-size="9" fill="#767676" text-anchor="end">선택 블록</text>
+<rect x="2.0" y="362" width="354.0" height="70" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="179.0" y="401.0" font-size="11" fill="#111111" text-anchor="middle">라디오·체크 선택</text>
+<rect x="366.0" y="362" width="354.0" height="70" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="401.0" font-size="11" fill="#111111" text-anchor="middle">조건부 활성 영역</text>
+<text x="-5" y="455" font-size="9" fill="#767676" text-anchor="end">밸리데이션</text>
+<rect x="2.0" y="442" width="718.0" height="60" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="476.0" font-size="11" fill="#111111" text-anchor="middle">Validation Check — 필드 하단 오류 문구</text>
+<text x="715.0" y="453" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="-5" y="525" font-size="9" fill="#767676" text-anchor="end">단일 액션</text>
+<rect x="2.0" y="512" width="718.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="541.0" font-size="11" fill="#111111" text-anchor="middle">다음!  (Default 비활성 → 필수·유효성 충족 시 활성)</text>
+<text x="1" y="583" font-size="10.5" fill="#767676">· 완료 화면은 Header 비제공 · History back 불가 — 별 화면으로 그린다</text>
+<text x="1" y="602" font-size="10.5" fill="#767676">· 결제 실패 시 예외는 레이어다 — 본화면 전환이면 "신청 내용은 그대로 있습니다"가 거짓</text>
+<text x="1" y="621" font-size="10.5" fill="#767676">· 공통 모듈 3종을 여기서 호출한다 — §3</text>
+<text x="1" y="640" font-size="10.5" fill="#767676">· 컴포넌트: N-05 · C-04 · C-05 · C-01(3종) · T-07</text></svg></div>
+<h3 class="subsection__title">2-7. 예외·안내형 — 본화면 4 / 전체 23 · <strong>22건이 신설</strong></h3>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 532" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 G 예외·안내형</text>
+<rect x="1" y="34" width="720" height="398" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">(Header 비제공)</text>
+<rect x="2.0" y="38" width="718.0" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="72.0" font-size="11" fill="#111111" text-anchor="middle">헤더 없음 — 화면 자체가 상태다</text>
+<text x="-5" y="121" font-size="9" fill="#767676" text-anchor="end">상태 표시</text>
+<rect x="2.0" y="108" width="718.0" height="70" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="147.0" font-size="11" fill="#111111" text-anchor="middle">상태 아이콘</text>
+<text x="715.0" y="119" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="-5" y="201" font-size="9" fill="#767676" text-anchor="end">무엇이 잘못됐나</text>
+<rect x="2.0" y="188" width="718.0" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="222.0" font-size="11" fill="#111111" text-anchor="middle">332(컨텐츠가이드설계) §6 사전 정본 문구!  (주어는 시스템·상황 — 비난 금지)</text>
+<text x="-5" y="271" font-size="9" fill="#767676" text-anchor="end">왜</text>
+<rect x="2.0" y="258" width="718.0" height="46" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="285.0" font-size="11" fill="#111111" text-anchor="middle">사유  (전달 불가 시 영역 비노출 · 「알 수 없는 오류」 금지)</text>
+<text x="-5" y="327" font-size="9" fill="#767676" text-anchor="end">다음 행동</text>
+<rect x="2.0" y="314" width="718.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="343.0" font-size="11" fill="#111111" text-anchor="middle">다음 행동 안내</text>
+<text x="-5" y="387" font-size="9" fill="#767676" text-anchor="end">행동 버튼</text>
+<rect x="2.0" y="374" width="354.0" height="50" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="179.0" y="403.0" font-size="11" fill="#FFFFFF" text-anchor="middle">주 행동</text>
+<rect x="366.0" y="374" width="354.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="403.0" font-size="11" fill="#111111" text-anchor="middle">보조 행동</text>
+<text x="1" y="445" font-size="10.5" fill="#767676">· 문구를 이 문서에서 만들지 않는다 — 332(컨텐츠가이드설계) §6 사전값 6종 고정</text>
+<text x="1" y="464" font-size="10.5" fill="#767676">· 버튼 1개 이상 필수 — 「막다른 화면 0」</text>
+<text x="1" y="483" font-size="10.5" fill="#767676">· 코드·상태값 노출 0 · History back 불가</text>
+<text x="1" y="502" font-size="10.5" fill="#767676">· 컴포넌트: T-05 · C-01</text></svg></div>
+<hr class="rule">
+<h2 class="section__title" id="s2">3. 공통 모듈 3종 — <code>343(설계리뷰및리팩토링)</code> §4 정의의 골격</h2>
+<p>정의는 1곳, 호출은 N곳이다. <strong>오버레이(<code>T-07</code>) 계약을 전부 상속한다</strong> — 닫힘 3경로 · 명시적 완료만 값 반환 · 포커스 트랩·복귀 · 중첩 금지.</p>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 1236" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">공통모듈 1 본인인증(L)</text>
+<rect x="1" y="34" width="720" height="298" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">오버레이 헤더</text>
+<rect x="2.0" y="38" width="472.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">본인인증</text>
+<rect x="484.0" y="38" width="236.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="55.5" font-size="11" fill="#111111" text-anchor="middle">닫기  (중단 경고 · 호출 화면 입력값 보</text>
+<text x="602.0" y="68.5" font-size="11" fill="#111111" text-anchor="middle">존)</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">수단 선택</text>
+<rect x="2.0" y="88" width="354.0" height="100" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="92" width="354.0" height="100" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="179.0" y="142.0" font-size="11" fill="#111111" text-anchor="middle">인증 수단</text>
+<rect x="366.0" y="88" width="354.0" height="100" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="142.0" font-size="11" fill="#111111" text-anchor="middle">인증 수단  (종류·우선순위 213(시스템요건분석) 미결)</text>
+<text x="-5" y="211" font-size="9" fill="#767676" text-anchor="end">고지</text>
+<rect x="2.0" y="198" width="718.0" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="232.0" font-size="11" fill="#111111" text-anchor="middle">인증 목적·수집 항목  (212 정책요건 문구)</text>
+<text x="-5" y="281" font-size="9" fill="#767676" text-anchor="end">실패</text>
+<rect x="2.0" y="268" width="718.0" height="56" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="300.0" font-size="11" fill="#111111" text-anchor="middle">실패 안내 + 다시 시도</text>
+<text x="715.0" y="279" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="1" y="345" font-size="10.5" fill="#767676">· 호출처: 카드신청 S1 · 마이페이지 개인정보 관리 · 문화센터 접수</text>
+<text x="1" y="364" font-size="10.5" fill="#767676">· 모듈 내부 전환이지 화면 이동이 아니다 — 오버레이 중첩 금지</text>
+<text x="1" y="408" font-size="12.5" font-weight="700" fill="#111111">공통모듈 2 주소검색(L)</text>
+<rect x="1" y="420" width="720" height="364" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="437" font-size="9" fill="#767676" text-anchor="end">오버레이 헤더</text>
+<rect x="2.0" y="424" width="472.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="448.0" font-size="11" fill="#111111" text-anchor="middle">주소 검색</text>
+<rect x="484.0" y="424" width="236.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="448.0" font-size="11" fill="#111111" text-anchor="middle">닫기  (값 반환 없음 · 기존 값 유지)</text>
+<text x="-5" y="487" font-size="9" fill="#767676" text-anchor="end">검색 입력</text>
+<rect x="2.0" y="474" width="531.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="267.5" y="503.0" font-size="11" fill="#111111" text-anchor="middle">도로명·지번 입력  (최대 50자 · 초과 시 입력 차단)</text>
+<rect x="543.0" y="474" width="177.0" height="50" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="631.5" y="503.0" font-size="11" fill="#FFFFFF" text-anchor="middle">검색</text>
+<text x="-5" y="547" font-size="9" fill="#767676" text-anchor="end">결과 건수</text>
+<rect x="2.0" y="534" width="718.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="555.0" font-size="11" fill="#111111" text-anchor="middle">총 N건  (검색 전 미노출)</text>
+<text x="-5" y="591" font-size="9" fill="#767676" text-anchor="end">결과 목록</text>
+<rect x="2.0" y="578" width="718.0" height="140" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="652.0" font-size="11" fill="#111111" text-anchor="middle">주소 행~  (선택 시 우편번호·기본주소 반환 후 닫힘)</text>
+<text x="-5" y="741" font-size="9" fill="#767676" text-anchor="end">결과 없음</text>
+<rect x="2.0" y="728" width="718.0" height="48" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="756.0" font-size="11" fill="#111111" text-anchor="middle">결과 없음 안내</text>
+<text x="715.0" y="739" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="1" y="797" font-size="10.5" fill="#767676">· 호출처: 카드 배송지 · 상품권 배송 · 마이페이지 주소 관리</text>
+<text x="1" y="816" font-size="10.5" fill="#767676">· 조회·결과형 골격을 오버레이 안에서 그대로 쓴다</text>
+<text x="1" y="860" font-size="12.5" font-weight="700" fill="#111111">공통모듈 3 약관 상세(L)</text>
+<rect x="1" y="872" width="720" height="302" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="889" font-size="9" fill="#767676" text-anchor="end">오버레이 헤더</text>
+<rect x="2.0" y="876" width="472.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="900.0" font-size="11" fill="#111111" text-anchor="middle">약관명</text>
+<rect x="484.0" y="876" width="236.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="900.0" font-size="11" fill="#111111" text-anchor="middle">닫기  (동의 상태 변경 없음)</text>
+<text x="-5" y="939" font-size="9" fill="#767676" text-anchor="end">약관 전문</text>
+<rect x="2.0" y="926" width="718.0" height="180" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="1020.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 전문  (스크롤 · 본문 내 링크 없음)</text>
+<text x="-5" y="1129" font-size="9" fill="#767676" text-anchor="end">동의 반환</text>
+<rect x="2.0" y="1116" width="718.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="1145.0" font-size="11" fill="#111111" text-anchor="middle">동의하고 닫기!  (호출 화면 체크 반영)</text>
+<text x="1" y="1187" font-size="10.5" fill="#767676">· 호출처: 카드신청 약관 동의 · 회원 · 문화센터 접수</text>
+<text x="1" y="1206" font-size="10.5" fill="#767676">· 개정 시 Admin 버전 관리 — 재동의 요구 조건은 212(정책요건분석) 미결</text></svg></div>
+<hr class="rule">
+<h2 class="section__title" id="s3">4. 커버리지</h2>
+<div class='tw'><table><thead><tr><th>점검</th><th>결과</th></tr></thead><tbody><tr><td>유형 7종에 원형 배정</td><td><strong>7/7</strong></td></tr><tr><td>공통 모듈 3종 골격</td><td><strong>3/3</strong></td></tr><tr><td>원장 In-Scope 1,020행이 원형 10종으로 환원</td><td><strong>미커버 0</strong></td></tr><tr><td><code>333(UI가이드정의)</code> 컴포넌트 20종이 원형에 출현</td><td><strong>20/20</strong> — <code>343(설계리뷰및리팩토링)</code> §5 매핑표와 1:1</td></tr><tr><td>v0.1 주요화면 15와의 관계 명시</td><td><strong>8/8 대응 + 조회형 신규 1</strong></td></tr><tr><td><code>332(컨텐츠가이드설계)</code> 빈 상태 3종 배치</td><td><strong>3/3</strong> (목록형·상세형·조회형)</td></tr><tr><td>저충실도 규율 — 색·타이포·아이콘·실제 문구 0</td><td>✅ 문법상 불가능</td></tr></tbody></table></div>
+<h2 class="section__title" id="s4">5. 미결 · 확인 필요</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>대상</th></tr></thead><tbody><tr><td>1</td><td>인증 수단 종류·우선순위</td><td><code>213(시스템요건분석)</code></td></tr><tr><td>2</td><td>약관 개정 시 재동의 요구 조건</td><td><code>212(정책요건분석)</code></td></tr><tr><td>3</td><td>지점 특성 모듈 종류 확정</td><td>기획PL — <code>333(UI가이드정의)</code> 미결 4와 동일</td></tr><tr><td>4</td><td>조회 기간 상한 12개월 <code>[가정]</code></td><td>고객사</td></tr></tbody></table></div>
+<h2 class="section__title" id="s5">6. 다음 단계 핸드오프</h2>
+<div class='tw'><table><thead><tr><th>단계</th><th>받는 것</th></tr></thead><tbody><tr><td><code>421(UI디자인)</code></td><td>원형 10종 — 시안은 화면이 아니라 <strong>원형</strong>에 얹는다</td></tr><tr><td><code>423(UI개발퍼블리싱)</code></td><td>유형 템플릿 7종 + 공통 모듈 3종의 마크업 골격</td></tr></tbody></table></div>
+<h2 class="section__title" id="s6">7. 도출 인사이트</h2>
+<h3 class="subsection__title">관찰 57 — 원형의 개수는 유형 사전이 나온 뒤에야 알 수 있다</h3>
+<p><code>331(와이어프레임설계)</code> v0.1은 원형을 2종으로 봤고 그건 그 시점에서 최선이었다 — <strong>몇 종이 필요한지 알 방법이 없었다.</strong> 유형 사전(<code>342(UI상세설계)</code>)이 7종을 확정하고 <code>343(설계리뷰및리팩토링)</code>이 공통 모듈 3종을 뽑은 뒤에야 원형이 10종임이 정해졌다.</p>
+<p><strong>v0.1을 고치지 않고 v0.2로 추가한 이유</strong>도 여기 있다. 덮어쓰면 「왜 2종이었나」가 사라지고, 그러면 <strong>원형 수를 하류가 정해준다는 사실 자체가 기록에서 없어진다.</strong></p>
+<div class="callout"><div class="callout__body"><code>관찰 23</code>(상류의 정직한 보류가 하류의 작업 범위를 정해준다)의 역방향이다 — 여기서는 <strong>하류의 확정이 상류의 산출 범위를 정했다.</strong> 설계 체인은 한 방향으로만 흐르지 않는다.</div></div>
+<h3 class="subsection__title">관찰 58 — v0.1이 놓친 것은 「상태 하나」였다</h3>
+<p>조회·결과형에 원형이 없었던 대가가 v0.2에서 드러났다 — <strong>「조회 전 미노출」과 「결과 0건 빈 상태」는 다른 상태</strong>인데 v0.1엔 그 구분이 없었다. <code>W-03</code> 검색 결과가 부분 대응했지만 조건 입력부가 없어서 이 구분이 필요한 줄 몰랐다.</p>
+<div class="callout"><div class="callout__body">원형이 없는 유형은 <strong>화면이 빠지는 게 아니라 상태가 빠진다.</strong> 화면은 어차피 그려지는데, 그 화면이 가질 수 있는 상태 목록이 불완전해진다.</div></div>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 와이어프레임 v0.2 V1.0 · 2026.08.10
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

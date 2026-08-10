@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 566" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-04 지점 템플릿 · 양 채널 · 지점 16개가 이 골격 하나를 상속</text>
+<rect x="1" y="34" width="720" height="432" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
+<rect x="2.0" y="38" width="718.0" height="46" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="65.0" font-size="11" fill="#111111" text-anchor="middle">전역 헤더</text>
+<text x="-5" y="107" font-size="9" fill="#767676" text-anchor="end">컨텍스트</text>
+<rect x="2.0" y="94" width="718.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="115.0" font-size="11" fill="#111111" text-anchor="middle">지점명 · 지점 전환</text>
+<text x="-5" y="151" font-size="9" fill="#767676" text-anchor="end">지점 LNB</text>
+<rect x="2.0" y="138" width="172.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="88.0" y="162.0" font-size="11" fill="#111111" text-anchor="middle">층별안내</text>
+<text x="169.0" y="149" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<rect x="184.0" y="138" width="172.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="270.0" y="162.0" font-size="11" fill="#111111" text-anchor="middle">행사안내</text>
+<text x="351.0" y="149" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="366.0" y="138" width="172.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="452.0" y="162.0" font-size="11" fill="#111111" text-anchor="middle">오시는길·시설</text>
+<text x="533.0" y="149" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<rect x="548.0" y="138" width="172.0" height="40" fill="#F4F4F4" stroke="#111111" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="634.0" y="162.0" font-size="11" fill="#111111" text-anchor="middle">특성 모듈</text>
+<text x="715.0" y="149" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<text x="-5" y="201" font-size="9" fill="#767676" text-anchor="end">본문</text>
+<rect x="2.0" y="188" width="718.0" height="180" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="192" width="718.0" height="180" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="282.0" font-size="11" fill="#111111" text-anchor="middle">선택 탭 콘텐츠</text>
+<text x="-5" y="391" font-size="9" fill="#767676" text-anchor="end">미제공</text>
+<rect x="2.0" y="378" width="718.0" height="80" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="422.0" font-size="11" fill="#111111" text-anchor="middle">이 지점에 없는 서비스 안내 — 다른 지점 보기</text>
+<text x="715.0" y="389" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="1" y="479" font-size="10.5" fill="#767676">· 선정축 ②레이아웃 원형 (지점 16개 · IA-010~018)</text>
+<text x="1" y="498" font-size="10.5" fill="#767676">· REQ-SI-004 행사안내를 층별안내 다음 상단 배치 — LNB 순서가 요구로 확정</text>
+<text x="1" y="517" font-size="10.5" fill="#767676">· ⛔ 이 템플릿이 성립하지 않으면 컨셉키워드 K2 실패. 지점마다 다른 골격을 만들면 L1-1이 16배로 불어난다</text>
+<text x="1" y="536" font-size="10.5" fill="#767676">· 특성 모듈(FN-B06)이 "구조는 통일, 특성은 모듈" 의 실행 장치 — 더현대 서울 같은 플래그십의 표현 여지</text></svg>

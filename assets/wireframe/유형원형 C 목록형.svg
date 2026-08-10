@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 572" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 C 목록형</text>
+<rect x="1" y="34" width="720" height="476" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">전역 헤더</text>
+<rect x="2.0" y="38" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">헤더</text>
+<text x="715.0" y="49" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">화면 제목</text>
+<rect x="2.0" y="88" width="472.0" height="44" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="238.0" y="114.0" font-size="11" fill="#FFFFFF" text-anchor="middle">목록 제목 + 총 N건</text>
+<rect x="484.0" y="88" width="236.0" height="44" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="114.0" font-size="11" fill="#111111" text-anchor="middle">정렬 드롭다운</text>
+<text x="-5" y="155" font-size="9" fill="#767676" text-anchor="end">1단 필터</text>
+<rect x="2.0" y="142" width="718.0" height="38" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="165.0" font-size="11" fill="#111111" text-anchor="middle">조건 칩 N종  (선택 즉시 목록 갱신 · 페이지 재호출 없음)</text>
+<text x="-5" y="203" font-size="9" fill="#767676" text-anchor="end">검색</text>
+<rect x="2.0" y="190" width="354.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="179.0" y="211.0" font-size="11" fill="#111111" text-anchor="middle">지역 검색 입력</text>
+<rect x="366.0" y="190" width="354.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="211.0" font-size="11" fill="#111111" text-anchor="middle">(여백)</text>
+<text x="-5" y="247" font-size="9" fill="#767676" text-anchor="end">카드·리스트 반복</text>
+<rect x="2.0" y="234" width="172.0" height="160" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="238" width="172.0" height="160" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="88.0" y="318.0" font-size="11" fill="#111111" text-anchor="middle">카드</text>
+<rect x="184.0" y="234" width="172.0" height="160" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="270.0" y="318.0" font-size="11" fill="#111111" text-anchor="middle">카드</text>
+<rect x="366.0" y="234" width="172.0" height="160" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="452.0" y="318.0" font-size="11" fill="#111111" text-anchor="middle">카드</text>
+<rect x="548.0" y="234" width="172.0" height="160" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="634.0" y="318.0" font-size="11" fill="#111111" text-anchor="middle">카드</text>
+<text x="-5" y="417" font-size="9" fill="#767676" text-anchor="end">빈 상태</text>
+<rect x="2.0" y="404" width="718.0" height="48" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="432.0" font-size="11" fill="#111111" text-anchor="middle">결과 없음 — 범위 확장 제안?  (332 §6-2 빈 상태 1행)</text>
+<text x="-5" y="475" font-size="9" fill="#767676" text-anchor="end">더보기</text>
+<rect x="2.0" y="462" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="486.0" font-size="11" fill="#111111" text-anchor="middle">더보기 · 페이지네이션</text>
+<text x="1" y="523" font-size="10.5" fill="#767676">· 테이블 없음 — 백화점 도메인은 카드·리스트만 쓴다(유형 사전 §2-5)</text>
+<text x="1" y="542" font-size="10.5" fill="#767676">· 컴포넌트: N-01 · C-02 · C-03 · C-06 · T-01/T-02 · N-07 · T-04</text></svg>

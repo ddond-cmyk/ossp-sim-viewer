@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1351 458" width="1351" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><rect x="1" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="80.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">지점</text>
+<rect x="1" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="42" x2="8" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="59" font-size="10.5" fill="#111111" font-weight="400">지점안내</text>
+<rect x="1" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="68" x2="8" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="85" font-size="10.5" fill="#111111" font-weight="400">층별안내</text>
+<rect x="1" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="94" x2="8" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="111" font-size="10.5" fill="#111111" font-weight="700">행사안내</text>
+<text x="154" y="111" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="1" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="19" y1="120" x2="19" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="30" y="137" font-size="10.5" fill="#111111" font-weight="400">행사 상세</text>
+<rect x="1" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="146" x2="8" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="163" font-size="10.5" fill="#111111" font-weight="400">오시는길·시설</text>
+<rect x="1" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="172" x2="8" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="189" font-size="10.5" fill="#111111" font-weight="700">지점 특성 모듈</text>
+<text x="154" y="189" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="19" y1="198" x2="19" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="30" y="215" font-size="10.5" fill="#111111" font-weight="700">Sounds Forest·ALT…</text>
+<text x="154" y="215" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="224" x2="8" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="241" font-size="10.5" fill="#111111" font-weight="700">U-PLEX</text>
+<text x="154" y="241" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="1" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="250" x2="8" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="267" font-size="10.5" fill="#111111" font-weight="700">더현대 대구</text>
+<text x="154" y="267" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="171" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="250.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">브랜드·매장</text>
+<rect x="171" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="42" x2="178" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="59" font-size="10.5" fill="#111111" font-weight="400">브랜드·매장</text>
+<rect x="171" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="68" x2="178" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="85" font-size="10.5" fill="#111111" font-weight="400">브랜드 목록</text>
+<rect x="171" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="94" x2="178" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="111" font-size="10.5" fill="#111111" font-weight="400">브랜드 상세</text>
+<rect x="171" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="189" y1="120" x2="189" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="200" y="137" font-size="10.5" fill="#111111" font-weight="400">매장 위치·층</text>
+<rect x="171" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="146" x2="178" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="163" font-size="10.5" fill="#111111" font-weight="700">패션·뷰티 브랜드</text>
+<text x="324" y="163" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="171" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="172" x2="178" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="189" font-size="10.5" fill="#111111" font-weight="700">오프웍스</text>
+<text x="324" y="189" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="171" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="198" x2="178" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="215" font-size="10.5" fill="#111111" font-weight="700">최근본·즐겨찾기</text>
+<text x="324" y="215" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="341" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="420.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">문화센터·공연·전시</text>
+<rect x="341" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="42" x2="348" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="59" font-size="10.5" fill="#111111" font-weight="400">CH 1985</text>
+<rect x="341" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="68" x2="359" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="85" font-size="10.5" fill="#111111" font-weight="400">지점 안내</text>
+<text x="494" y="85" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="341" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="94" x2="348" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="111" font-size="10.5" fill="#111111" font-weight="400">문화센터</text>
+<rect x="341" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="120" x2="348" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="137" font-size="10.5" fill="#111111" font-weight="700">문화센터 서브메인</text>
+<text x="494" y="137" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="341" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="146" x2="348" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="163" font-size="10.5" fill="#111111" font-weight="400">강좌 찾기</text>
+<rect x="341" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="172" x2="359" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="189" font-size="10.5" fill="#111111" font-weight="400">강좌 상세</text>
+<rect x="341" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="198" x2="348" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="215" font-size="10.5" fill="#111111" font-weight="400">수강신청 S1→S3</text>
+<rect x="341" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="224" x2="348" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="241" font-size="10.5" fill="#111111" font-weight="400">대기 신청</text>
+<rect x="341" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="250" x2="359" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="267" font-size="10.5" fill="#111111" font-weight="700">대기 상태 조회</text>
+<text x="494" y="267" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="341" y="276" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="276" x2="348" y2="302" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="293" font-size="10.5" fill="#111111" font-weight="400">지점 안내</text>
+<text x="494" y="293" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="341" y="302" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="302" x2="359" y2="328" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="319" font-size="10.5" fill="#111111" font-weight="400">강좌 취소·변경</text>
+<rect x="341" y="328" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="328" x2="359" y2="354" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="345" font-size="10.5" fill="#111111" font-weight="700">자주하는 질문</text>
+<text x="494" y="345" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="341" y="354" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="354" x2="359" y2="380" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="371" font-size="10.5" fill="#111111" font-weight="400">온라인 강사지원</text>
+<rect x="341" y="380" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="380" x2="348" y2="406" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="397" font-size="10.5" fill="#111111" font-weight="400">공연·전시</text>
+<rect x="341" y="406" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="406" x2="348" y2="432" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="423" font-size="10.5" fill="#111111" font-weight="700">공식 SNS 채널</text>
+<text x="494" y="423" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="511" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="590.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">카드·상품권·멤버십</text>
+<rect x="511" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="42" x2="518" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="59" font-size="10.5" fill="#111111" font-weight="700">카드·멤버십 허브</text>
+<text x="664" y="59" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="511" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="68" x2="518" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="85" font-size="10.5" fill="#111111" font-weight="400">현대백화점카드</text>
+<rect x="511" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="94" x2="529" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="111" font-size="10.5" fill="#111111" font-weight="400">카드 종류·혜택</text>
+<rect x="511" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="120" x2="529" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="137" font-size="10.5" fill="#111111" font-weight="400">카드 신청 S1→S3</text>
+<rect x="511" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="146" x2="529" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="163" font-size="10.5" fill="#111111" font-weight="700">신청 취소</text>
+<text x="664" y="163" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="511" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="172" x2="529" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="189" font-size="10.5" fill="#111111" font-weight="400">카드 이벤트</text>
+<rect x="511" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="198" x2="529" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="215" font-size="10.5" fill="#111111" font-weight="400">ARS 카드 상담</text>
+<rect x="511" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="224" x2="518" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="241" font-size="10.5" fill="#111111" font-weight="400">마이카드</text>
+<rect x="511" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="250" x2="518" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="267" font-size="10.5" fill="#111111" font-weight="400">상품권</text>
+<rect x="511" y="276" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="276" x2="518" y2="302" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="293" font-size="10.5" fill="#111111" font-weight="400">VIP프로그램</text>
+<text x="664" y="293" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="511" y="302" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="302" x2="529" y2="328" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="319" font-size="10.5" fill="#111111" font-weight="400">등급·혜택</text>
+<rect x="511" y="328" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="328" x2="529" y2="354" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="345" font-size="10.5" fill="#111111" font-weight="400">마일리지</text>
+<rect x="511" y="354" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="354" x2="518" y2="380" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="371" font-size="10.5" fill="#111111" font-weight="400">포인트·마일리지 조회</text>
+<rect x="511" y="380" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="380" x2="518" y2="406" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="397" font-size="10.5" fill="#111111" font-weight="700">더클럽웨딩</text>
+<text x="664" y="397" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="681" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="760.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">서비스·이벤트</text>
+<rect x="681" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="42" x2="688" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="59" font-size="10.5" fill="#111111" font-weight="400">서비스/이벤트</text>
+<text x="834" y="59" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="681" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="68" x2="688" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="85" font-size="10.5" fill="#111111" font-weight="700">이벤트</text>
+<text x="834" y="85" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="681" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="94" x2="688" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="111" font-size="10.5" fill="#111111" font-weight="700">공지사항</text>
+<text x="834" y="111" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="681" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="120" x2="688" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="137" font-size="10.5" fill="#111111" font-weight="400">배송조회</text>
+<rect x="681" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="146" x2="688" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="163" font-size="10.5" fill="#111111" font-weight="400">서비스제도</text>
+<rect x="681" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="172" x2="688" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="189" font-size="10.5" fill="#111111" font-weight="400">챗봇 상담</text>
+<rect x="681" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="198" x2="688" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="215" font-size="10.5" fill="#767676" font-weight="700" text-decoration="line-through">VOC 위원회</text>
+<text x="834" y="215" font-size="8" fill="#767676" text-anchor="end">제거</text>
+<rect x="681" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="224" x2="688" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="241" font-size="10.5" fill="#767676" font-weight="700" text-decoration="line-through">콘텐츠·채널</text>
+<text x="834" y="241" font-size="8" fill="#767676" text-anchor="end">제거</text>
+<rect x="851" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="930.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">마이페이지</text>
+<rect x="851" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="42" x2="858" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="59" font-size="10.5" fill="#111111" font-weight="400">마이페이지</text>
+<rect x="851" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="68" x2="858" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="85" font-size="10.5" fill="#111111" font-weight="400">회원정보 변경</text>
+<rect x="851" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="94" x2="858" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="111" font-size="10.5" fill="#111111" font-weight="400">비밀번호 변경</text>
+<rect x="851" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="120" x2="858" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="137" font-size="10.5" fill="#111111" font-weight="400">나의 차량 번호</text>
+<text x="1004" y="137" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="851" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="146" x2="858" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="163" font-size="10.5" fill="#111111" font-weight="400">개인정보 관리</text>
+<rect x="851" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="172" x2="858" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="189" font-size="10.5" fill="#111111" font-weight="400">로그인 기록</text>
+<rect x="851" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="198" x2="858" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="215" font-size="10.5" fill="#111111" font-weight="400">회원탈퇴</text>
+<rect x="851" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="224" x2="858" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="241" font-size="10.5" fill="#111111" font-weight="400">H.Point 전환</text>
+<rect x="851" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="250" x2="858" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="267" font-size="10.5" fill="#111111" font-weight="400">나의 VIP 등급</text>
+<text x="1004" y="267" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="851" y="276" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="276" x2="858" y2="302" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="293" font-size="10.5" fill="#111111" font-weight="400">나의 강좌</text>
+<text x="1004" y="293" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="851" y="302" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="302" x2="858" y2="328" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="319" font-size="10.5" fill="#111111" font-weight="400">카드 할인 쿠폰</text>
+<text x="1004" y="319" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="1021" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="1100.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">기업정보</text>
+<rect x="1021" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1028" y1="42" x2="1028" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1039" y="59" font-size="10.5" fill="#111111" font-weight="400">투자정보(IR)</text>
+<rect x="1021" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1028" y1="68" x2="1028" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1039" y="85" font-size="10.5" fill="#111111" font-weight="400">ESG 경영</text>
+<rect x="1021" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1039" y1="94" x2="1039" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1050" y="111" font-size="10.5" fill="#111111" font-weight="700">그린 경영활동</text>
+<text x="1174" y="111" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1191" y="8" width="158" height="34" fill="#EDEDED" stroke="#111111" stroke-width="1"/>
+<text x="1270.0" y="30" font-size="11.5" font-weight="700" fill="#111111" text-anchor="middle">전역 — 계층 밖</text>
+<rect x="1191" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="42" x2="1198" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="59" font-size="10.5" fill="#111111" font-weight="700">지점 선택</text>
+<text x="1344" y="59" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1191" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="68" x2="1198" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="85" font-size="10.5" fill="#111111" font-weight="700">통합검색</text>
+<text x="1344" y="85" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="1191" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="94" x2="1198" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="111" font-size="10.5" fill="#111111" font-weight="400">GNB·전체메뉴</text>
+<rect x="1191" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="120" x2="1198" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="137" font-size="10.5" fill="#111111" font-weight="400">사이트맵</text>
+<rect x="1191" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="146" x2="1198" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="163" font-size="10.5" fill="#111111" font-weight="700">고객센터</text>
+<text x="1344" y="163" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1191" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="172" x2="1198" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="189" font-size="10.5" fill="#111111" font-weight="400">로그인</text>
+<rect x="1191" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="198" x2="1198" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="215" font-size="10.5" fill="#111111" font-weight="700">예외·복구</text>
+<text x="1344" y="215" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1191" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="224" x2="1198" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="241" font-size="10.5" fill="#111111" font-weight="400">Footer·약관</text>
+<rect x="1191" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="250" x2="1198" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="267" font-size="10.5" fill="#111111" font-weight="400">메인</text>
+<text x="1" y="449" font-size="9.5" fill="#767676">굵게 = 변경분 · 접미 배지: 신설 · 이동 · 개명 · 제거 · 들여쓰기 = 하위 계층</text></svg>

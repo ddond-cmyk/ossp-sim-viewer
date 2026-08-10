@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 622" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-12 VIP프로그램 · 양 채널 동일 2Tab</text>
+<rect x="1" y="34" width="720" height="488" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
+<rect x="2.0" y="38" width="718.0" height="46" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="65.0" font-size="11" fill="#111111" text-anchor="middle">전역 헤더</text>
+<text x="-5" y="107" font-size="9" fill="#767676" text-anchor="end">나의 등급</text>
+<rect x="2.0" y="94" width="718.0" height="90" fill="#F4F4F4" stroke="#111111" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="361.0" y="143.0" font-size="11" fill="#111111" text-anchor="middle">로그인 시 나의 VIP 등급 · 다음 등급까지</text>
+<text x="715.0" y="105" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<text x="-5" y="207" font-size="9" fill="#767676" text-anchor="end">탭</text>
+<rect x="2.0" y="194" width="354.0" height="40" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="179.0" y="218.0" font-size="11" fill="#FFFFFF" text-anchor="middle">등급 안내</text>
+<rect x="366.0" y="194" width="354.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="218.0" font-size="11" fill="#111111" text-anchor="middle">혜택 안내</text>
+<text x="-5" y="257" font-size="9" fill="#767676" text-anchor="end">탭 콘텐츠</text>
+<rect x="2.0" y="244" width="718.0" height="180" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="248" width="718.0" height="180" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="338.0" font-size="11" fill="#111111" text-anchor="middle">등급 6종 · 혜택 12종 — 템플릿 1종 + 데이터</text>
+<text x="-5" y="447" font-size="9" fill="#767676" text-anchor="end">마일리지</text>
+<rect x="2.0" y="434" width="718.0" height="80" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="478.0" font-size="11" fill="#111111" text-anchor="middle">마일리지 적립 기준 (고밀도 표)</text>
+<text x="1" y="535" font-size="10.5" fill="#767676">· 선정축 ①분기(로그인 여부로 초기 노출 등급이 갈림) ②원형</text>
+<text x="1" y="554" font-size="10.5" fill="#767676">· 240 결정 D-3 — PC도 2Tab으로 통일. PC 작업 등급 스킨변경 → 개선 상향</text>
+<text x="1" y="573" font-size="10.5" fill="#767676">· P-MBR-06 "선정 기준·서비스 기간은 매년 변경" → 화면에 하드코딩하지 않고 어드민 값 표시</text>
+<text x="1" y="592" font-size="10.5" fill="#767676">· ⛔ 마일리지 계산 주체 미정(212(정책요건분석) G4 · 미정의 D1-10) — 표만 그리고 산출 로직은 비워 둔다</text></svg>

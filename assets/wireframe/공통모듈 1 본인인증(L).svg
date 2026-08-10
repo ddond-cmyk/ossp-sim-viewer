@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 394" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">공통모듈 1 본인인증(L)</text>
+<rect x="1" y="34" width="720" height="298" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">오버레이 헤더</text>
+<rect x="2.0" y="38" width="472.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">본인인증</text>
+<rect x="484.0" y="38" width="236.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="55.5" font-size="11" fill="#111111" text-anchor="middle">닫기  (중단 경고 · 호출 화면 입력값 보</text>
+<text x="602.0" y="68.5" font-size="11" fill="#111111" text-anchor="middle">존)</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">수단 선택</text>
+<rect x="2.0" y="88" width="354.0" height="100" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="92" width="354.0" height="100" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="179.0" y="142.0" font-size="11" fill="#111111" text-anchor="middle">인증 수단</text>
+<rect x="366.0" y="88" width="354.0" height="100" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="142.0" font-size="11" fill="#111111" text-anchor="middle">인증 수단  (종류·우선순위 213(시스템요건분석) 미결)</text>
+<text x="-5" y="211" font-size="9" fill="#767676" text-anchor="end">고지</text>
+<rect x="2.0" y="198" width="718.0" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="232.0" font-size="11" fill="#111111" text-anchor="middle">인증 목적·수집 항목  (212 정책요건 문구)</text>
+<text x="-5" y="281" font-size="9" fill="#767676" text-anchor="end">실패</text>
+<rect x="2.0" y="268" width="718.0" height="56" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="300.0" font-size="11" fill="#111111" text-anchor="middle">실패 안내 + 다시 시도</text>
+<text x="715.0" y="279" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="1" y="345" font-size="10.5" fill="#767676">· 호출처: 카드신청 S1 · 마이페이지 개인정보 관리 · 문화센터 접수</text>
+<text x="1" y="364" font-size="10.5" fill="#767676">· 모듈 내부 전환이지 화면 이동이 아니다 — 오버레이 중첩 금지</text></svg>

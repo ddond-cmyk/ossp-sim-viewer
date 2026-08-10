@@ -1,0 +1,83 @@
+/* comp.css — 시안 공통 골격. 변형 차이는 tokens-{A,B,C}.css 가 전담한다.
+   ⚠️ 시안은 발산 단계다 — 완결 디자인시스템을 강제하지 않는다(OSSP 334 명시).
+      여기서는 351 토큰 이름 체계만 상속하고 값은 변형이 덮는다. */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--hd-font);background:var(--hd-bg);color:var(--hd-ink);
+  font-size:calc(1rem * var(--t-scale));line-height:1.6}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+.s{max-width:1200px;margin:0 auto;padding:0 calc(var(--hd-sp-4) * var(--sp))}
+/* 헤더 */
+.hd{border-bottom:1px solid var(--hd-line);background:var(--hd-bg)}
+.hd__in{display:flex;align-items:center;gap:calc(var(--hd-sp-5) * var(--sp));
+  padding:calc(var(--hd-sp-3) * var(--sp)) 0}
+.hd__logo{font-weight:700;font-size:calc(var(--hd-t-section) * var(--t-scale))}
+.gnb{display:flex;gap:calc(var(--hd-sp-4) * var(--sp));list-style:none;font-size:.88em}
+/* 지점 컨텍스트 바 — accent-mode 가 갈리는 첫 지점 */
+.ctx{background:var(--hd-bg-alt);border-bottom:1px solid var(--hd-line)}
+.ctx__in{display:flex;align-items:center;gap:calc(var(--hd-sp-3) * var(--sp));
+  padding:calc(var(--hd-sp-2) * var(--sp)) 0;font-size:.88em}
+.ctx__store{font-weight:700}
+.v-line .ctx__store{border-left:2px solid var(--hd-store-accent);padding-left:8px}
+.v-fill .ctx{background:var(--hd-store-accent);color:#fff;border-bottom:0}
+.v-fill .ctx__store{font-size:1.15em}
+.v-state .ctx__store{border-bottom:2px solid var(--hd-ink)}
+/* 히어로 */
+.hero{height:var(--hero-h);background:
+  repeating-linear-gradient(45deg,#E8E6E1,#E8E6E1 10px,#EFEDE9 10px,#EFEDE9 20px);
+  border-radius:var(--radius);display:flex;align-items:flex-end;
+  padding:calc(var(--hd-sp-4) * var(--sp));margin:calc(var(--hd-sp-4) * var(--sp)) 0}
+.v-fill .hero{align-items:center;justify-content:center}
+.hero__t{font-weight:700;font-size:calc(var(--hd-t-title) * var(--t-scale));
+  background:var(--hd-bg);padding:4px 10px;border-radius:var(--radius)}
+/* 블록·카드 */
+h1{font-size:calc(var(--hd-t-title) * var(--t-scale));font-weight:700}
+h2{font-size:calc(var(--hd-t-section) * var(--t-scale));font-weight:700;
+  margin-bottom:calc(var(--hd-sp-3) * var(--sp))}
+.g{display:grid;gap:calc(var(--hd-sp-3) * var(--sp))}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.c{border:1px solid var(--hd-line);border-radius:var(--radius);
+  padding:calc(var(--hd-sp-4) * var(--sp));background:var(--hd-bg)}
+.c__t{font-weight:700;margin-bottom:4px}
+.c__m{font-size:.82em;color:var(--hd-ink-muted)}
+.v-fill .c{border:0;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.sec{padding:calc(var(--hd-sp-5) * var(--sp)) 0}
+.mut{color:var(--hd-ink-muted);font-size:.85em}
+/* 컨트롤 */
+.b{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:0 calc(var(--hd-sp-5) * var(--sp));border-radius:var(--radius);border:1px solid transparent}
+.b--p{background:var(--hd-ink);color:var(--hd-bg);font-weight:700}
+.v-fill .b--p{background:var(--hd-store-accent)}
+.v-state .b--p{background:var(--hd-ink)}
+.b--s{background:var(--hd-bg);border-color:var(--hd-ink)}
+.b--c{background:none;color:var(--hd-ink-muted);text-decoration:underline;padding:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;list-style:none;margin-bottom:calc(var(--hd-sp-4) * var(--sp))}
+.chips b{border:1px solid var(--hd-line-strong);border-radius:999px;padding:6px 14px;
+  font-weight:400;font-size:.85em}
+.chips b.on{background:var(--hd-ink);color:var(--hd-bg);border-color:var(--hd-ink);font-weight:700}
+.v-fill .chips b.on{background:var(--hd-store-accent);border-color:var(--hd-store-accent)}
+.f{margin-bottom:calc(var(--hd-sp-4) * var(--sp))}
+.f label{display:block;font-weight:700;margin-bottom:4px;font-size:.9em}
+.f i{display:block;border:1px solid var(--hd-line-strong);border-radius:var(--radius);
+  min-height:44px;padding:11px 12px;color:var(--hd-ink-muted);font-style:normal;font-size:.92em}
+/* 단계 — C안에서 위계가 올라간다 */
+.steps{display:flex;gap:8px;list-style:none;font-size:.8em;margin:calc(var(--hd-sp-4) * var(--sp)) 0}
+.steps li{flex:1;border-top:3px solid var(--hd-line);padding-top:8px;color:var(--hd-ink-muted)}
+.steps li.on{border-top-color:var(--hd-ink);color:var(--hd-ink);font-weight:700}
+.v-state .steps li{border-top-width:5px}
+.v-state .steps li.on{border-top-color:var(--hd-state-info)}
+/* 예외 */
+.exc{text-align:center;padding:calc(var(--hd-sp-8) * var(--sp)) calc(var(--hd-sp-4) * var(--sp))}
+.exc__i{font-size:2.2em;color:var(--hd-state-error);font-weight:700}
+.exc__t{font-size:calc(var(--hd-t-section) * var(--t-scale));font-weight:700;margin:12px 0 8px}
+.exc__b{color:var(--hd-ink-muted);margin-bottom:calc(var(--hd-sp-5) * var(--sp))}
+.exc__a{display:flex;gap:12px;justify-content:center}
+.v-state .exc{border:2px solid var(--hd-state-error);border-radius:var(--radius);
+  background:var(--hd-bg-alt)}
+/* 시안 라벨 — 산출물이 시안임을 화면 안에서 밝힌다 */
+.tag{position:fixed;right:0;top:0;background:var(--hd-ink);color:var(--hd-bg);
+  font-size:11px;padding:5px 12px;z-index:99;font-family:ui-monospace,monospace}
+.ft{border-top:1px solid var(--hd-line);margin-top:calc(var(--hd-sp-7) * var(--sp))}
+.ft p{padding:calc(var(--hd-sp-5) * var(--sp)) 0}

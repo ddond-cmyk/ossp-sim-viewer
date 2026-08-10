@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 467" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-13 마이페이지 · MWEB</text>
+<rect x="1" y="34" width="720" height="390" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
+<rect x="2.0" y="38" width="718.0" height="44" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="64.0" font-size="11" fill="#111111" text-anchor="middle">전역 헤더</text>
+<text x="-5" y="105" font-size="9" fill="#767676" text-anchor="end">요약</text>
+<rect x="2.0" y="92" width="232.7" height="84" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="118.3" y="138.0" font-size="11" fill="#111111" text-anchor="middle">나의 VIP 등급</text>
+<text x="229.7" y="103" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="244.7" y="92" width="232.7" height="84" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="138.0" font-size="11" fill="#111111" text-anchor="middle">H.Point</text>
+<text x="472.3" y="103" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<rect x="487.3" y="92" width="232.7" height="84" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="603.7" y="138.0" font-size="11" fill="#111111" text-anchor="middle">카드 할인 쿠폰</text>
+<text x="715.0" y="103" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<text x="-5" y="199" font-size="9" fill="#767676" text-anchor="end">관리 메뉴</text>
+<rect x="2.0" y="186" width="718.0" height="150" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="265.0" font-size="11" fill="#111111" text-anchor="middle">회원정보 / 비밀번호+ / 차량번호+ / 개인정보 / 회원탈퇴  (세로 리스트)</text>
+<text x="-5" y="359" font-size="9" fill="#767676" text-anchor="end">연결</text>
+<rect x="2.0" y="346" width="354.0" height="70" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="179.0" y="385.0" font-size="11" fill="#111111" text-anchor="middle">나의 강좌</text>
+<text x="351.0" y="357" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="366.0" y="346" width="354.0" height="70" fill="#F4F4F4" stroke="#111111" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="543.0" y="385.0" font-size="11" fill="#111111" text-anchor="middle">H.Point 전환</text>
+<text x="715.0" y="357" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<text x="1" y="437" font-size="10.5" fill="#767676">· MWEB에는 로그인 기록이 없다 — 항목 수가 PC보다 1개 적은 유일한 차이</text></svg>

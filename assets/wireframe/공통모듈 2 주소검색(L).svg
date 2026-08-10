@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 460" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">공통모듈 2 주소검색(L)</text>
+<rect x="1" y="34" width="720" height="364" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">오버레이 헤더</text>
+<rect x="2.0" y="38" width="472.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">주소 검색</text>
+<rect x="484.0" y="38" width="236.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">닫기  (값 반환 없음 · 기존 값 유지)</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">검색 입력</text>
+<rect x="2.0" y="88" width="531.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="267.5" y="117.0" font-size="11" fill="#111111" text-anchor="middle">도로명·지번 입력  (최대 50자 · 초과 시 입력 차단)</text>
+<rect x="543.0" y="88" width="177.0" height="50" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="631.5" y="117.0" font-size="11" fill="#FFFFFF" text-anchor="middle">검색</text>
+<text x="-5" y="161" font-size="9" fill="#767676" text-anchor="end">결과 건수</text>
+<rect x="2.0" y="148" width="718.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="169.0" font-size="11" fill="#111111" text-anchor="middle">총 N건  (검색 전 미노출)</text>
+<text x="-5" y="205" font-size="9" fill="#767676" text-anchor="end">결과 목록</text>
+<rect x="2.0" y="192" width="718.0" height="140" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="266.0" font-size="11" fill="#111111" text-anchor="middle">주소 행~  (선택 시 우편번호·기본주소 반환 후 닫힘)</text>
+<text x="-5" y="355" font-size="9" fill="#767676" text-anchor="end">결과 없음</text>
+<rect x="2.0" y="342" width="718.0" height="48" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="370.0" font-size="11" fill="#111111" text-anchor="middle">결과 없음 안내</text>
+<text x="715.0" y="353" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="1" y="411" font-size="10.5" fill="#767676">· 호출처: 카드 배송지 · 상품권 배송 · 마이페이지 주소 관리</text>
+<text x="1" y="430" font-size="10.5" fill="#767676">· 조회·결과형 골격을 오버레이 안에서 그대로 쓴다</text></svg>

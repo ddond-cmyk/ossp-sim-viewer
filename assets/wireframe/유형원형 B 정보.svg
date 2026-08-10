@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 709" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 B 정보·안내형 · 지점축 modifier</text>
+<rect x="1" y="34" width="720" height="594" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">전역 헤더</text>
+<rect x="2.0" y="38" width="718.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">헤더</text>
+<text x="715.0" y="49" font-size="8" fill="#767676" text-anchor="end">유지</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">지점 컨텍스트</text>
+<rect x="2.0" y="88" width="472.0" height="30" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="238.0" y="107.0" font-size="11" fill="#FFFFFF" text-anchor="middle">지점명</text>
+<rect x="484.0" y="88" width="236.0" height="30" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="107.0" font-size="11" fill="#111111" text-anchor="middle">변경</text>
+<text x="-5" y="141" font-size="9" fill="#767676" text-anchor="end">대표 비주얼</text>
+<rect x="2.0" y="128" width="718.0" height="110" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="187.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 지점 이미지  (미등록 시 기본 이미지)</text>
+<text x="-5" y="261" font-size="9" fill="#767676" text-anchor="end">절 구분 탭</text>
+<rect x="2.0" y="248" width="718.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="269.0" font-size="11" fill="#111111" text-anchor="middle">층별안내 / 식당가 / 오시는길 / 이용안내  (지점별 제공 항목만)</text>
+<text x="-5" y="305" font-size="9" fill="#767676" text-anchor="end">영업 정보</text>
+<rect x="2.0" y="292" width="232.7" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="118.3" y="326.0" font-size="11" fill="#111111" text-anchor="middle">영업시간</text>
+<rect x="244.7" y="292" width="232.7" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="326.0" font-size="11" fill="#111111" text-anchor="middle">휴점일</text>
+<rect x="487.3" y="292" width="232.7" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="603.7" y="326.0" font-size="11" fill="#111111" text-anchor="middle">임시 휴점 안내</text>
+<text x="-5" y="375" font-size="9" fill="#767676" text-anchor="end">본문 블록</text>
+<rect x="2.0" y="362" width="232.7" height="120" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="366" width="232.7" height="120" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="118.3" y="426.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 본문</text>
+<rect x="244.7" y="362" width="232.7" height="120" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="426.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 본문</text>
+<rect x="487.3" y="362" width="232.7" height="120" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="603.7" y="426.0" font-size="11" fill="#111111" text-anchor="middle">Admin 등록 본문</text>
+<text x="-5" y="505" font-size="9" fill="#767676" text-anchor="end">지점 특성 모듈</text>
+<rect x="2.0" y="492" width="718.0" height="70" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="531.0" font-size="11" fill="#111111" text-anchor="middle">지점 특성 모듈+  (미등록 시 영역 비노출)</text>
+<text x="-5" y="585" font-size="9" fill="#767676" text-anchor="end">미제공 서비스</text>
+<rect x="2.0" y="572" width="718.0" height="48" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="600.0" font-size="11" fill="#111111" text-anchor="middle">지점 미제공 안내?  (332 §6-2 빈 상태 2행)</text>
+<text x="1" y="641" font-size="10.5" fill="#767676">· 이 골격 1개가 본화면 399건 중 지점축 198건을 담당한다 — 컨셉키워드 K2</text>
+<text x="1" y="660" font-size="10.5" fill="#767676">· 탭은 같은 화면 안 전환(N-04) — LNB(N-03)와 행동이 다르다</text>
+<text x="1" y="679" font-size="10.5" fill="#767676">· 컴포넌트: N-01 · N-02 · N-03/N-04 · T-04</text></svg>

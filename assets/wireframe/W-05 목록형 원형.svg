@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 518" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-05 목록형 원형 · 브랜드·강좌·카드·행사 공통</text>
+<rect x="1" y="34" width="720" height="422" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">필터</text>
+<rect x="2.0" y="38" width="472.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">조건 필터 (영역별 상이)</text>
+<rect x="484.0" y="38" width="236.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">정렬</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">결과 수</text>
+<rect x="2.0" y="88" width="718.0" height="34" fill="#F4F4F4" stroke="#111111" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="361.0" y="109.0" font-size="11" fill="#111111" text-anchor="middle">N건 · 선택 지점 문맥 표시</text>
+<text x="715.0" y="99" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<text x="-5" y="145" font-size="9" fill="#767676" text-anchor="end">목록</text>
+<rect x="2.0" y="132" width="718.0" height="170" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<rect x="6.0" y="136" width="718.0" height="170" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="221.0" font-size="11" fill="#111111" text-anchor="middle">항목 카드</text>
+<text x="-5" y="325" font-size="9" fill="#767676" text-anchor="end">더보기</text>
+<rect x="2.0" y="312" width="718.0" height="46" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="339.0" font-size="11" fill="#111111" text-anchor="middle">페이지네이션 / 더보기</text>
+<text x="-5" y="381" font-size="9" fill="#767676" text-anchor="end">빈 상태</text>
+<rect x="2.0" y="368" width="718.0" height="80" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="412.0" font-size="11" fill="#111111" text-anchor="middle">결과 없음 — 대안 제안</text>
+<text x="715.0" y="379" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="1" y="469" font-size="10.5" fill="#767676">· 선정축 ②레이아웃 원형</text>
+<text x="1" y="488" font-size="10.5" fill="#767676">· 목록마다 화면을 새로 그리지 않는다 — 필터 항목과 카드 구성만 데이터로 갈린다</text></svg>

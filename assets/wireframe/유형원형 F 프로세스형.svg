@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 670" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 F 프로세스형</text>
+<rect x="1" y="34" width="720" height="536" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">서브 헤더</text>
+<rect x="2.0" y="38" width="472.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="238.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">신청 상품명</text>
+<rect x="484.0" y="38" width="236.0" height="40" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="602.0" y="62.0" font-size="11" fill="#111111" text-anchor="middle">닫기  (중단 경고 → 입력 소실 안내)</text>
+<text x="-5" y="101" font-size="9" fill="#767676" text-anchor="end">단계바</text>
+<rect x="2.0" y="88" width="718.0" height="34" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="109.0" font-size="11" fill="#111111" text-anchor="middle">N단계 중 n!  (완료=표기 · 이후=비활성 · 이전=입력값 보존 이동)</text>
+<text x="-5" y="145" font-size="9" fill="#767676" text-anchor="end">승계 정보</text>
+<rect x="2.0" y="132" width="718.0" height="90" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="181.0" font-size="11" fill="#111111" text-anchor="middle">상류 단계 인증값  (읽기전용 · 수정 시 재인증 안내)</text>
+<text x="-5" y="245" font-size="9" fill="#767676" text-anchor="end">입력 블록</text>
+<rect x="2.0" y="232" width="718.0" height="120" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="296.0" font-size="11" fill="#111111" text-anchor="middle">입력 필드~  (필수 표기 · blur 1차 검증)</text>
+<text x="-5" y="375" font-size="9" fill="#767676" text-anchor="end">선택 블록</text>
+<rect x="2.0" y="362" width="354.0" height="70" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="179.0" y="401.0" font-size="11" fill="#111111" text-anchor="middle">라디오·체크 선택</text>
+<rect x="366.0" y="362" width="354.0" height="70" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="401.0" font-size="11" fill="#111111" text-anchor="middle">조건부 활성 영역</text>
+<text x="-5" y="455" font-size="9" fill="#767676" text-anchor="end">밸리데이션</text>
+<rect x="2.0" y="442" width="718.0" height="60" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="476.0" font-size="11" fill="#111111" text-anchor="middle">Validation Check — 필드 하단 오류 문구</text>
+<text x="715.0" y="453" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="-5" y="525" font-size="9" fill="#767676" text-anchor="end">단일 액션</text>
+<rect x="2.0" y="512" width="718.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="541.0" font-size="11" fill="#111111" text-anchor="middle">다음!  (Default 비활성 → 필수·유효성 충족 시 활성)</text>
+<text x="1" y="583" font-size="10.5" fill="#767676">· 완료 화면은 Header 비제공 · History back 불가 — 별 화면으로 그린다</text>
+<text x="1" y="602" font-size="10.5" fill="#767676">· 결제 실패 시 예외는 레이어다 — 본화면 전환이면 "신청 내용은 그대로 있습니다"가 거짓</text>
+<text x="1" y="621" font-size="10.5" fill="#767676">· 공통 모듈 3종을 여기서 호출한다 — §3</text>
+<text x="1" y="640" font-size="10.5" fill="#767676">· 컴포넌트: N-05 · C-04 · C-05 · C-01(3종) · T-07</text></svg>

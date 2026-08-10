@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 532" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">유형원형 G 예외·안내형</text>
+<rect x="1" y="34" width="720" height="398" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">(Header 비제공)</text>
+<rect x="2.0" y="38" width="718.0" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="72.0" font-size="11" fill="#111111" text-anchor="middle">헤더 없음 — 화면 자체가 상태다</text>
+<text x="-5" y="121" font-size="9" fill="#767676" text-anchor="end">상태 표시</text>
+<rect x="2.0" y="108" width="718.0" height="70" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="147.0" font-size="11" fill="#111111" text-anchor="middle">상태 아이콘</text>
+<text x="715.0" y="119" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="-5" y="201" font-size="9" fill="#767676" text-anchor="end">무엇이 잘못됐나</text>
+<rect x="2.0" y="188" width="718.0" height="60" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="222.0" font-size="11" fill="#111111" text-anchor="middle">332(컨텐츠가이드설계) §6 사전 정본 문구!  (주어는 시스템·상황 — 비난 금지)</text>
+<text x="-5" y="271" font-size="9" fill="#767676" text-anchor="end">왜</text>
+<rect x="2.0" y="258" width="718.0" height="46" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="285.0" font-size="11" fill="#111111" text-anchor="middle">사유  (전달 불가 시 영역 비노출 · 「알 수 없는 오류」 금지)</text>
+<text x="-5" y="327" font-size="9" fill="#767676" text-anchor="end">다음 행동</text>
+<rect x="2.0" y="314" width="718.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="343.0" font-size="11" fill="#111111" text-anchor="middle">다음 행동 안내</text>
+<text x="-5" y="387" font-size="9" fill="#767676" text-anchor="end">행동 버튼</text>
+<rect x="2.0" y="374" width="354.0" height="50" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="179.0" y="403.0" font-size="11" fill="#FFFFFF" text-anchor="middle">주 행동</text>
+<rect x="366.0" y="374" width="354.0" height="50" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="403.0" font-size="11" fill="#111111" text-anchor="middle">보조 행동</text>
+<text x="1" y="445" font-size="10.5" fill="#767676">· 문구를 이 문서에서 만들지 않는다 — 332(컨텐츠가이드설계) §6 사전값 6종 고정</text>
+<text x="1" y="464" font-size="10.5" fill="#767676">· 버튼 1개 이상 필수 — 「막다른 화면 0」</text>
+<text x="1" y="483" font-size="10.5" fill="#767676">· 코드·상태값 노출 0 · History back 불가</text>
+<text x="1" y="502" font-size="10.5" fill="#767676">· 컴포넌트: T-05 · C-01</text></svg>

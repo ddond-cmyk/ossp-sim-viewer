@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 722 482" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-14 예외 화면 원형 · 6종 공통 · 양 채널</text>
+<rect x="1" y="34" width="720" height="348" fill="none" stroke="#D8D8D8" stroke-width="1"/>
+<text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
+<rect x="2.0" y="38" width="718.0" height="46" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="361.0" y="65.0" font-size="11" fill="#111111" text-anchor="middle">전역 헤더 (예외 화면에서도 유지 — 갇히지 않게)</text>
+<text x="-5" y="107" font-size="9" fill="#767676" text-anchor="end">안내</text>
+<rect x="2.0" y="94" width="718.0" height="120" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="361.0" y="158.0" font-size="11" fill="#111111" text-anchor="middle">무슨 일이 일어났는가 + 왜  (404 / 권한 / 세션 / 결제실패 / 정원초과 / 자격미달)</text>
+<text x="715.0" y="105" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
+<text x="-5" y="237" font-size="9" fill="#767676" text-anchor="end">복구</text>
+<rect x="2.0" y="224" width="354.0" height="80" fill="#111111" stroke="#111111" stroke-width="1.4"/>
+<text x="179.0" y="268.0" font-size="11" fill="#FFFFFF" text-anchor="middle">직전 맥락으로 돌아가기</text>
+<rect x="366.0" y="224" width="354.0" height="80" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
+<text x="543.0" y="268.0" font-size="11" fill="#111111" text-anchor="middle">대안 행동 (유형별)</text>
+<text x="-5" y="327" font-size="9" fill="#767676" text-anchor="end">최후</text>
+<rect x="2.0" y="314" width="718.0" height="60" fill="#F4F4F4" stroke="#111111" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="361.0" y="348.0" font-size="11" fill="#111111" text-anchor="middle">통합 고객센터</text>
+<text x="715.0" y="325" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<text x="1" y="395" font-size="10.5" fill="#767676">· 선정축 ③신설 ④전역</text>
+<text x="1" y="414" font-size="10.5" fill="#767676">· 122 H9 — AS-IS 명세에 오류·404 화면이 0건. 통째로 신설</text>
+<text x="1" y="433" font-size="10.5" fill="#767676">· 원형 1개 + 유형별 문구·대안 행동만 갈린다 → 6종을 6화면으로 그리지 않는다</text>
+<text x="1" y="452" font-size="10.5" fill="#767676">· ⚠️ 이 화면군의 실제 화면 수는 여기서 확정하지 않는다 — §7-1</text></svg>
