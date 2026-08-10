@@ -288,6 +288,33 @@
   "sections": 10
  },
  {
+  "task": "342",
+  "taskname": "UI상세설계",
+  "title": "UI상세설계서",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "342_UI상세설계/UI상세설계서.html",
+  "sections": 14
+ },
+ {
+  "task": "342",
+  "taskname": "UI상세설계",
+  "title": "`342(UI상세설계)` 검수 리포트",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "342_UI상세설계/검수리포트.html",
+  "sections": 5
+ },
+ {
+  "task": "342",
+  "taskname": "UI상세설계",
+  "title": "백화점 자사채널 화면 유형 사전",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "342_UI상세설계/화면유형사전.html",
+  "sections": 8
+ },
+ {
   "task": "932",
   "taskname": "회의록",
   "title": "회의록 — 기능요건 확정 [타 프로젝트 파일럿]",

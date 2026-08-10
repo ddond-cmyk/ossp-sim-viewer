@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>백화점 자사채널 화면 유형 사전 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">백화점 자사채널 화면 유형 사전</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>342 UI상세설계</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 백화점 자사채널 화면 유형 사전 · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>0. 이 사전이 왜 필요했나</span></div><div class="toc__item"><span class="toc__num">02</span><span>1. 시드 4종 대조 결과</span></div><div class="toc__item"><span class="toc__num">03</span><span>2. 유형 정의 — 7종</span></div><div class="toc__item"><span class="toc__num">04</span><span>3. modifier — 유형이 아니라 축</span></div><div class="toc__item"><span class="toc__num">05</span><span>4. 화면목록 화면유형 컬럼 열거값</span></div><div class="toc__item"><span class="toc__num">06</span><span>5. 검토 플래그 — 13건 (본화면의 1.3%)</span></div><div class="toc__item"><span class="toc__num">07</span><span>6. 주의·금지</span></div><div class="toc__item"><span class="toc__num">08</span><span>7. 적립 이력</span></div></div>
+
+<div class="callout"><div class="callout__body"><strong>근거 프로젝트</strong>: 현대백화점 자사채널 개선(2022). <strong>표본 1,014건</strong>(본화면 577) — <code>341(화면명세서작성)</code> 원장의 In-Scope 전량.<br><strong>시드</strong>: <code>spec-harness/patterns/05-디스크립션.md</code> D절 도메인 비종속 4종.<br><strong>왜 이 문서가 <code>342(UI상세설계)</code> 본문보다 먼저 나오는가</strong> — 화면을 그리기 전에 유형을 판별해야 한다. 사전이 없으면 화면마다 골격을 새로 발명하고, 그러면 577개 화면이 577개 레이아웃이 된다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">0. 이 사전이 왜 필요했나</h2>
+<p><code>spec-harness</code>가 3개 실프로젝트(올댓·m.ALL·mPOP)에서 증류한 화면 유형 <strong>7종</strong>이 이미 있다. 그런데 그 문서가 스스로 적용 범위를 좁혀 놨다.</p>
+<div class="callout"><div class="callout__body"><em>&quot;아래 7종은 <strong>증권(MTS) 도메인 특화</strong> 유형이다. 보편 규칙은 유형 목록 자체가 아니라 <strong>「화면을 그리기 전에 서비스 도메인별 레이아웃 패턴을 판별·적용한다」는 메타 규칙</strong>이다.&quot;</em> — D절 머리글(검수 확정 2026-07-22)</div></div>
+<p>백화점 자사채널은 증권이 아니다. <strong>그래서 목록을 베끼는 대신 사전을 새로 도출했다.</strong> 절차는 <code>spec-harness/.claude/skills/layout-pattern-extractor/SKILL.md</code>를 그대로 따랐다.</p>
+<div class='tw'><table><thead><tr><th>절차</th><th>이 프로젝트에서</th></tr></thead><tbody><tr><td>① 도메인 확정</td><td>백화점 자사채널(점포 안내 · 문화센터 · 카드·멤버십 · 고객서비스)</td></tr><tr><td>② 화면 표본 수집</td><td><strong>1,014건</strong>(본화면 577) — 표본 10개 미만 신뢰도 경고 조건에 해당하지 않음</td></tr><tr><td>③ 레이아웃 군집화</td><td>비종속 시드 4종 먼저 대조 → 3 상속·1 병합 · 증권 종속 3종은 유추 참고만</td></tr><tr><td>④ 유형별 정의</td><td><strong>7종 확정</strong> + <strong>modifier 2축</strong></td></tr><tr><td>⑤ 산출</td><td>이 문서</td></tr><tr><td>⑥ 완료 보고</td><td>검토 플래그 <strong>13건</strong>(1.3%) 명시(§5)</td></tr></tbody></table></div>
+<p><strong>표본의 출처를 좁혀 둔다.</strong> 유형 정의의 근거는 이 프로젝트 인풋(AS-IS 원장 + <code>322(정보구조설계)</code> IA + <code>331(와이어프레임설계)</code> 원형)뿐이다. 같은 고객사의 3년 후 프로젝트(<code>spec-harness/inputs/ncp-2025</code>, 2025 커머스)는 <strong>서식만</strong> 참조하고 내용은 쓰지 않았다 — TO-BE 결정이 역류할 수 있다.</p>
+<hr class="rule">
+<h2 class="section__title" id="s1">1. 시드 4종 대조 결과</h2>
+<div class='tw'><table><thead><tr><th>시드(증권 도메인 비종속)</th><th>백화점에서</th><th>판정</th></tr></thead><tbody><tr><td>목록/테이블형</td><td><strong>목록형</strong> — 테이블은 없다. 백화점은 카드·리스트만 쓴다</td><td><strong>상속 + 축소</strong></td></tr><tr><td>신청/동의형</td><td><strong>프로세스형에 흡수</strong> — 약관동의가 신청 플로우의 한 단계일 뿐, 별 유형이 될 만큼 반복되지 않는다</td><td><strong>병합</strong></td></tr><tr><td>프로세스형</td><td><strong>프로세스형</strong> 그대로</td><td><strong>상속</strong></td></tr><tr><td>서브메인형</td><td><strong>허브·서브메인형</strong> 그대로</td><td><strong>상속</strong></td></tr></tbody></table></div>
+<p>증권 종속 3종은 유추만 했다.</p>
+<div class='tw'><table><thead><tr><th>증권 종속</th><th>백화점 대응</th><th>왜 그대로 못 쓰나</th></tr></thead><tbody><tr><td>현재가형</td><td><strong>콘텐츠 상세형</strong> 상당</td><td>실시간 시세 스트림이 없다. 본문이 <strong>Admin 등록 콘텐츠</strong>라 상단 Summary가 축약·고정될 이유가 없다</td></tr><tr><td>주문형</td><td><strong>프로세스형</strong> 상당</td><td>호가창·계좌선택·주문 키패드가 없다. 고정 5탭 구조도 없다</td></tr><tr><td>차트형(modifier)</td><td><strong>대응물 없음</strong></td><td>시각화 모듈을 쓰는 화면이 표본에 없다</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>차트형이 유형이 아니라 modifier라는 판정은 살렸다.</strong> 목록은 못 쓰지만 <strong>「유형에 얹히는 축은 유형이 아니다」는 구조가 이 도메인에서 훨씬 크게 작동한다</strong> — §3.</div></div>
+<h3 class="subsection__title">1-1. 시드에 없던 유형 하나 — 예외·안내형</h3>
+<p><strong>AS-IS 표본만 보면 이 유형은 나오지 않는다.</strong> 23건 중 <strong>22건이 신설</strong>이고, AS-IS에 있던 것은 <code>HDP-CRD0131 카드배송불가지역L</code> <strong>1건</strong>뿐이다.</p>
+<p><code>331(와이어프레임설계)</code>이 <code>W-14</code> 예외 원형을 <strong>공통 골격 1개 + 유형별 문구</strong>로 설계하고, <code>332(컨텐츠가이드설계)</code> §6이 6종 문구를 확정했고, <code>132(수행계획수립)</code> 재산정이 규모를 닫았다. <strong>세 산출물이 같은 대상을 가리키고 있었는데 유형 목록에는 없었다.</strong></p>
+<div class="callout"><div class="callout__body"><strong>개편형 프로젝트에서 AS-IS로만 유형을 뽑으면 「이번에 처음 만드는 것」의 유형이 빠진다.</strong> AS-IS는 있는 것만 보여 준다. 유형 사전의 표본은 <strong>AS-IS + 상류 설계 산출물</strong> 둘 다여야 한다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s2">2. 유형 정의 — 7종</h2>
+<h3 class="subsection__title">판별 우선순위 (first match wins)</h3>
+<p>순서 근거는 증권 도메인 규칙 22의 <strong>논리</strong>를 가져왔다(순서 자체가 아니라 순서를 정하는 이유).</p>
+<pre class="dgm">① 실패·부재·차단을 알리는가                    →  예외·안내형
+② 이름이 메인·홈·마이페이지·허브로 확정            →  허브·서브메인형
+③ 상태를 바꾸는가 (신청·등록·변경·해지·결제·인증)   →  프로세스형
+④ 조건 입력이 결과를 만드는가                    →  조회·결과형
+⑤ 동질 데이터가 반복되는가                      →  목록형
+⑥ 단건 콘텐츠를 펼치는가 (말단 전용)              →  콘텐츠 상세형
+⑦ 정적·준정적 설명인가                         →  정보·안내형
+⑧ 어휘가 침묵하면 —
+     신설(경로 없음)  →  331 원형 매핑 참조, 없으면 검토 플래그
+     형제 3+ 말단     →  콘텐츠 상세형 (반복 인스턴스)
+     자식 3+          →  허브·서브메인형
+     그 외            →  검토 플래그</pre>
+<p><strong>왜 이 순서인가</strong></p>
+<div class='tw'><table><thead><tr><th>순서</th><th>이유</th></tr></thead><tbody><tr><td>예외·안내형을 맨 앞에</td><td>골격이 다른 6종과 <strong>완전히 다르다</strong> — Header 비제공, 메시지 + 행동 버튼만, History back 불가. 「결제 실패」는 결제 어휘를 갖지만 프로세스형 골격이 아니다</td></tr><tr><td>프로세스형을 앞쪽에</td><td>상태 변경 화면은 <strong>이탈 방지·검증·완료 처리</strong>가 레이아웃 전체를 지배한다</td></tr><tr><td>조회·결과형을 목록형보다 먼저</td><td>조회는 <strong>목록형의 특수 케이스</strong>(입력이 선행하는 목록)다. 특수 케이스를 일반보다 먼저 검사한다</td></tr><tr><td>콘텐츠 상세형을 말단 전용으로</td><td>자식이 있으면 상세가 아니라 허브다. 「상세」라는 말이 이름에 있어도 자식이 있으면 상세가 아니다</td></tr><tr><td>허브를 ②에 예외 배치</td><td>원칙은 맨 뒤(이질 모듈 조합일 때만)인데, <strong>「메인」이 목록·안내 어휘를 거의 항상 함께 갖는다.</strong> 뒤로 두면 전건 오분류된다</td></tr></tbody></table></div>
+<h3 class="subsection__title">2-1. 정보·안내형 — 본화면 196건 (34%) · 전체 410건</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>판별</strong></td><td>정적·준정적 설명 콘텐츠. <code>안내 · 소개 · 이용방법 · 제도 · 규정 · 오시는길 · 층별 · 주차 · 혜택</code></td></tr><tr><td><strong>수직 구조</strong></td><td><code>Header → (지점 컨텍스트 바) → 탭(절 구분) → 본문 블록 N → 관련 링크 → Footer</code></td></tr><tr><td><strong>고정 요소·문형</strong></td><td>본문은 <strong>Admin 등록값</strong> — <code>Admin에서 등록한 {항목} 노출</code> 필수. 탭 전환은 <strong>같은 화면 안</strong>(<code>333(UI가이드정의)</code> <code>N-04</code> 탭 ≠ <code>N-03</code> LNB — 행동이 다르다)</td></tr><tr><td><strong>대표 표본</strong></td><td><code>HDP-STR0102</code> 더현대 서울 · 오시는길(40건 반복) · <code>HDP-SVC0101</code> VIP 프로그램</td></tr><tr><td><strong>채널</strong></td><td>PC 119 / MWEB 77</td></tr><tr><td><strong>영역</strong></td><td>STR 126 · SVC 26 · CRD 16</td></tr><tr><td><strong>modifier</strong></td><td><strong>지점축 128건(65%)</strong> — 이 유형의 3분의 2가 지점 복제다</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>이 유형이 최다이고, 그 안의 3분의 2가 지점축이다.</strong> 컨셉키워드 K1「어느 점포인가로 시작한다」·컨셉키워드 K2「한 번 만들고 지점마다 붙인다」가 <strong>가장 크게 먹히는 자리</strong>가 정량으로 확인됐다. <code>331(와이어프레임설계)</code> <code>W-04</code> 지점 템플릿 하나가 128건을 담당한다.</div></div>
+<h3 class="subsection__title">2-2. 프로세스형 — 본화면 167건 (29%) · 전체 278건</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>판별</strong></td><td>상태를 바꾸는 단계 화면. <code>신청 · 등록 · 변경 · 해지 · 탈퇴 · 결제 · 접수 · 예약 · 인증 · 발급 · 완료S · S1~S9</code></td></tr><tr><td><strong>수직 구조</strong></td><td><code>(Sub Header) → 단계바 → 입력·확인 블록 → 밸리데이션 → 단일 액션 버튼</code></td></tr><tr><td><strong>고정 요소·문형</strong></td><td>①단계바 <code>{N}단계 중 {n}</code> ②실행 버튼 <code>Default : 비활성 → 필수값·유효성 충족 시 활성 → Tap &gt; {대상 화면ID}</code> ③<strong>중단 경고</strong> — 취소 시 입력 소실 알림 ④<strong>완료 화면은 Header 비제공 · History back 불가</strong></td></tr><tr><td><strong>대표 표본</strong></td><td><code>HDP-CRD0126</code> 현대백화점카드 신청 · <code>HDP-CRD0149</code> 본인회원인증(S1) · <code>HDP-CRD0145</code> 카드신청완료(S3)</td></tr><tr><td><strong>채널</strong></td><td>PC 110 / MWEB 57</td></tr><tr><td><strong>영역</strong></td><td><strong>CRD(카드) 112건 = 67%</strong> · CUL 32 · MYP 12</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>프로세스형의 3분의 2가 카드다.</strong> 카드 신청·명세서·포인트가 이 채널의 거래 중심이다. <code>331(와이어프레임설계)</code> <code>W-08·09·10</code> 거래 3단이 여기 대응한다.</div></div>
+<h3 class="subsection__title">2-3. 콘텐츠 상세형 — 본화면 122건 (21%) · 전체 191건</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>판별</strong></td><td>단건 콘텐츠를 펼치는 말단. <code>상세 · 자세히 · …보기</code> <strong>또는 형제 3+ 반복 인스턴스</strong>(고유명사가 화면명)</td></tr><tr><td><strong>수직 구조</strong></td><td><code>Header → 대표 이미지 → 제목·메타 → 본문(Admin) → 관련 목록 → 목록으로</code></td></tr><tr><td><strong>고정 요소·문형</strong></td><td>화면은 <strong>그릇</strong>이고 본문은 Admin 등록값이다. 목록 복귀 동선 필수</td></tr><tr><td><strong>대표 표본</strong></td><td><code>HDP-BRD0101</code> FOURM(브랜드 24건) · 친환경 활동(32건) · 강좌 상세(17건)</td></tr><tr><td><strong>채널</strong></td><td>PC 61 / MWEB 61 — <strong>정확히 대칭.</strong> 반복 인스턴스라 채널이 갈릴 이유가 없다</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>이 유형은 어휘로 잡을 수 없다.</strong> 화면명이 <code>FOURM</code>·<code>톰그레이하운드</code>·<code>위마켓</code> 같은 <strong>고유명사</strong>라 사전에 있을 수가 없다. <strong>구조로 잡았다</strong> — 형제 3개 이상 + 자식 0. 이 규칙 하나로 미결 28건이 13건으로 줄었다.</div></div>
+<h3 class="subsection__title">2-4. 조회·결과형 — 본화면 54건 (9%) · 전체 70건</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>판별</strong></td><td>조건 입력이 결과를 만든다. <code>조회 · 검색 결과 · 내역 · 현황 · 찾기</code></td></tr><tr><td><strong>수직 구조</strong></td><td><code>Header → 조건 입력부 → 조회 버튼 → 결과 영역(결과 N / 빈 상태) → 페이징</code></td></tr><tr><td><strong>고정 요소·문형</strong></td><td>①조건 미입력 시 결과 영역 <strong>미노출</strong>(빈 상태와 구분) ②<strong>빈 상태 문구는 <code>332(컨텐츠가이드설계)</code> §6-2 사전값 고정</strong> ③결과 건수 상단 표기</td></tr><tr><td><strong>대표 표본</strong></td><td><code>HDP-CRD0181</code> 이용내역조회 · 배송조회 · <code>HDP-CUL0186</code> 대기 상태 조회</td></tr><tr><td><strong>채널</strong></td><td>PC 40 / MWEB 14 — <strong>PC 편중.</strong> 조건 입력이 많아 좁은 화면에서 밀린다</td></tr></tbody></table></div>
+<h3 class="subsection__title">2-5. 목록형 — 본화면 18건 (3%) · 전체 24건</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>판별</strong></td><td>동질 데이터 반복. <code>목록 · 리스트 · 전체보기 · 모아보기</code></td></tr><tr><td><strong>수직 구조</strong></td><td><code>Header → 필터(1단) → 정렬 → 카드·리스트 반복 → 더보기·페이징</code></td></tr><tr><td><strong>고정 요소·문형</strong></td><td><strong>테이블 없음</strong> — 카드·리스트만. 빈 상태 필수. 필터 즉시 갱신(<code>333(UI가이드정의)</code> <code>C-02</code>)</td></tr><tr><td><strong>대표 표본</strong></td><td><code>HDP-COM0114</code> 지점 선택(331 <code>W-01</code>) · <code>HDP-BRD0120</code> 패션·뷰티 브랜드(331 <code>W-05</code>) · 공지사항</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>목록형이 18건뿐인 게 이 도메인의 특징이다.</strong> 증권에서 목록/테이블형이 주력인데 여기서는 최소다. 이유 — 백화점 채널은 <strong>콘텐츠가 계층에 직접 박혀 있다.</strong> 브랜드 24개가 「목록 1 + 상세 24」가 아니라 <strong>IA 노드 24개</strong>로 존재한다. <code>322(정보구조설계)</code>가 관찰한 「깊고 넓은 계층」이 여기서 유형 분포로 드러난다.</div></div>
+<h3 class="subsection__title">2-6. 허브·서브메인형 — 본화면 16건 (3%) · 전체 18건</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>판별</strong></td><td><strong>이질 모듈 조합</strong>(동질 반복이면 목록형). 이름이 <code>메인 · 홈 · 마이페이지 · 전체메뉴 · 허브 · 서브메인</code></td></tr><tr><td><strong>수직 구조</strong></td><td><code>Header → 지점 컨텍스트 → 안내·현황 모듈 → 주요기능 모듈(상태별 가변) → 퀵링크 → Footer</code></td></tr><tr><td><strong>고정 요소·문형</strong></td><td><strong>상태 분기로 모듈이 가변</strong>한다 — 비회원 / 회원 / 카드보유Y / VIP등급. <code>Case 분기</code> 표기 필수</td></tr><tr><td><strong>대표 표본</strong></td><td>메인 · <code>HDP-MYP0127</code> 마이페이지 · <code>HDM-CRD0187</code> 카드·멤버십 허브(MWEB 신설)</td></tr><tr><td><strong>채널</strong></td><td>PC 5 / MWEB 11 — <strong>MWEB 편중.</strong> <code>331(와이어프레임설계)</code> <code>W-11</code> 카드 허브가 MWEB 신설인 것과 맞물린다</td></tr></tbody></table></div>
+<h3 class="subsection__title">2-7. 예외·안내형 — 본화면 4건 · 레이어 19건 · 전체 23건</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>판별</strong></td><td>실패·부재·차단을 알린다. <code>404 · 권한 없음 · 세션 만료 · 결제 실패 · 정원·재고 초과 · 자격 미달 · 미제공 · 결과 없음 · 배송 불가</code></td></tr><tr><td><strong>수직 구조</strong></td><td><code>(Header 비제공) → 상태 아이콘 → 무엇이 잘못됐나 → 왜 → 다음 행동 → 버튼 1~2</code></td></tr><tr><td><strong>고정 요소·문형</strong></td><td>①<strong>문구는 <code>332(컨텐츠가이드설계)</code> §6 사전값 고정</strong> — 여기서 새로 쓰지 않는다 ②<strong>버튼 1개 이상 필수</strong>(<code>331(와이어프레임설계)</code> 「막다른 화면 0」) ③<strong>History back 불가</strong> ④비난 금지 — 주어는 시스템·상황</td></tr><tr><td><strong>대표 표본</strong></td><td><code>HDP-COM0118</code> 404(본화면) · <code>HDP-COM0121</code> 결제 실패(레이어) · <code>HDP-STR0196</code> 지점 미제공 안내</td></tr><tr><td><strong>본화면/레이어</strong></td><td>본화면 4(404 ×2 · 검색 결과 없음 ×2) / 레이어 19</td></tr><tr><td><strong>변경등급</strong></td><td><strong>신설 22 · 유지 1</strong></td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>⚠️ <code>132(수행계획수립)</code> 재산정 값(본화면 2 + 레이어 10)과 숫자가 다르다.</strong> 틀린 게 아니라 <strong>세는 대상이 다르다.</strong><br><code>132(수행계획수립)</code>는 「<code>332(컨텐츠가이드설계)</code> 예외 6종 문구 사전이 적용되는 화면」을 셌고(404 ×2 + 5종 ×2 = 12), 이 사전은 「<strong>골격이 같은 화면</strong>」을 센다(23). 빈 상태 3종(검색 결과 없음 ×2), 지점 미선택·미제공(4), 배송 불가(2), H.Point 전환 예외(2), AS-IS 배송불가(1)가 추가로 들어온다.<br><strong>유형은 골격 기준이고 문구 사전은 메시지 기준이다.</strong> 둘을 같은 수로 맞추려 하면 안 된다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s3">3. modifier — 유형이 아니라 축</h2>
+<p><strong>증권 도메인의 차트형이 유형이 아니라 modifier였던 것과 같은 구조</strong>인데, 이 도메인에서는 훨씬 크게 작동한다.</p>
+<h3 class="subsection__title">3-1. 지점축 — 본화면 156건 (27%)</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>무엇</strong></td><td>같은 유형의 화면이 <strong>지점 수만큼 복제</strong>된다. 레이아웃은 하나, 데이터가 지점별로 갈린다</td></tr><tr><td><strong>분포</strong></td><td>정보·안내형 128 · 조회·결과형 17 · 콘텐츠 상세형 7 · 프로세스형 4</td></tr><tr><td><strong>표기</strong></td><td>화면명·경로에 <code>%지점명%</code> 치환 슬롯. <strong>지점별 슬라이드를 따로 만들지 않는다</strong></td></tr><tr><td><strong>미제공 처리</strong></td><td>지점이 해당 서비스를 안 하면 <code>332(컨텐츠가이드설계)</code> §6-2 빈 상태 2행 — <code>{지점명}에서는 제공하지 않는 서비스입니다.</code></td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>이걸 유형으로 세면 유형이 지점 수만큼 늘어난다.</strong> 「오시는길」 40건은 40개 화면이 아니라 <strong>화면 1개 × 지점 40</strong>이다. 컨셉키워드 K2「한 번 만들고 지점마다 붙인다」가 곧 이 modifier의 설계 선언이다.</div></div>
+<h3 class="subsection__title">3-2. 상태축 — 본화면 40건 (7%)</h3>
+<div class='tw'><table><thead><tr><th>항목</th><th>내용</th></tr></thead><tbody><tr><td><strong>무엇</strong></td><td>회원·보유 상태가 화면 내용을 가른다. <code>비회원 / 로그인 / 카드보유Y·N / VIP등급</code></td></tr><tr><td><strong>분포</strong></td><td>프로세스형 12 · 정보·안내형 12 · 콘텐츠 상세형 11 · 조회·결과형 5</td></tr><tr><td><strong>표기</strong></td><td>CASE 프레임 병렬 + 상태 라벨. <strong>차이만 기술</strong>한다(같은 부분 반복 금지)</td></tr><tr><td><strong>문구</strong></td><td><code>332(컨텐츠가이드설계)</code> §6 예외 6종 중 <strong>권한 없음 · 세션 만료 · 자격 미달</strong> 3종이 이 축의 산출물</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s4">4. 화면목록 <code>화면유형</code> 컬럼 열거값</h2>
+<p><code>341(화면명세서작성)</code> 원장에 두 컬럼을 추가했다(컬럼 19 → 21).</p>
+<pre class="dgm">화면유형  ::= 정보·안내형 | 프로세스형 | 콘텐츠 상세형 | 조회·결과형
+            | 목록형 | 허브·서브메인형 | 예외·안내형
+modifier ::= (빈값) | 지점축 | 상태축 | 지점축·상태축</pre>
+<div class='tw'><table><thead><tr><th>유형</th><th>본화면</th><th>PC</th><th>MWEB</th><th>In-Scope 전체</th></tr></thead><tbody><tr><td>정보·안내형</td><td>196</td><td>119</td><td>77</td><td>410</td></tr><tr><td>프로세스형</td><td>167</td><td>110</td><td>57</td><td>278</td></tr><tr><td>콘텐츠 상세형</td><td>122</td><td>61</td><td>61</td><td>191</td></tr><tr><td>조회·결과형</td><td>54</td><td>40</td><td>14</td><td>70</td></tr><tr><td>목록형</td><td>18</td><td>11</td><td>7</td><td>24</td></tr><tr><td>허브·서브메인형</td><td>16</td><td>5</td><td>11</td><td>18</td></tr><tr><td>예외·안내형</td><td>4</td><td>2</td><td>2</td><td>23</td></tr><tr><td><strong>계</strong></td><td><strong>577</strong></td><td><strong>348</strong></td><td><strong>229</strong></td><td><strong>1,014</strong></td></tr><tr><td><strong>미분류</strong></td><td><strong>0</strong></td><td></td><td></td><td><strong>0</strong></td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s5">5. 검토 플래그 — 13건 (본화면의 1.3%)</h2>
+<p>어휘도 구조도 판정하지 못해 <strong>최근접 유형에 임시 배정</strong>한 화면이다. 규칙을 늘려 0으로 맞추지 않았다 — 그건 과적합이다.</p>
+<div class='tw'><table><thead><tr><th>화면ID</th><th>화면명</th><th>형제·자식</th><th>임시 배정</th><th>왜 미결인가</th></tr></thead><tbody><tr><td><code>HDP-BRD0101</code></td><td>FOURM</td><td>6·1</td><td>정보·안내형</td><td>반복 인스턴스인데 <strong>자식이 1개 있어</strong> 말단 조건 탈락</td></tr><tr><td><code>HDP-BRD0112</code></td><td>명인명촌</td><td>2·0</td><td>정보·안내형</td><td>형제 2건 — 반복 인스턴스 임계(3) 미달</td></tr><tr><td><code>HDP-BRD0117</code></td><td>원테이블</td><td>2·0</td><td>정보·안내형</td><td>동일</td></tr><tr><td><code>HDP-BRD0118</code></td><td>오프웍스</td><td>1·1</td><td>정보·안내형</td><td>형제 없음 + 자식 1 — 허브도 상세도 아니다</td></tr><tr><td><code>HDP-BRD0119</code></td><td>송도점</td><td>1·0</td><td>정보·안내형</td><td>⚠ <strong>브랜드 계층 아래 지점명</strong> — 계층 오류 의심</td></tr><tr><td><code>HDP-CRD0101</code></td><td>현대백화점카드</td><td>1·1</td><td>정보·안내형</td><td>영역 랜딩인데 자식 3 미달</td></tr><tr><td><code>HDP-CUL0101</code></td><td>CH 1985·문화센터</td><td>1·2</td><td>정보·안내형</td><td>동일</td></tr><tr><td><code>HDP-CUL0103</code></td><td>e-카달로그</td><td>1·1</td><td>정보·안내형</td><td>⚠ 뷰어 화면 — 7종 어디에도 없는 성격</td></tr><tr><td><code>HDP-CRP0101</code></td><td>Green Friends</td><td>3·1</td><td>정보·안내형</td><td>자식 1로 말단 조건 탈락</td></tr><tr><td><code>HDP-MYP0129</code></td><td>로그인 기록보기</td><td>4·1</td><td>정보·안내형</td><td>동일 — 실제로는 조회·결과형</td></tr><tr><td><code>HDP-MYP0133</code></td><td>개인정보 관리</td><td>4·1</td><td>정보·안내형</td><td>동일 — 실제로는 프로세스형</td></tr><tr><td><code>HDP-COM0113</code></td><td>지점선택L</td><td>0·1</td><td>정보·안내형</td><td>레이어 — 실제로는 목록형</td></tr><tr><td><code>HDM-COM0107</code></td><td>검색</td><td>3·2</td><td>정보·안내형</td><td>자식 3 미달 — 실제로는 조회·결과형</td></tr></tbody></table></div>
+<p><strong>셋으로 갈린다.</strong></p>
+<ol><li><strong>임계 미달 10건</strong> — 실제 유형이 눈에 보이는데 형제·자식 수가 규칙 임계에 한두 표 모자란다. <strong>임계를 낮추면 다른 곳이 오분류되므로 건드리지 않았다.</strong> <code>343(설계리뷰및리팩토링)</code>에서 사람이 확정.</li><li><strong><code>HDP-BRD0119</code> 송도점</strong> — 브랜드 계층 아래에 지점명이 있다. <strong>AS-IS 계층 오류일 가능성</strong>이 있어 <code>343(설계리뷰및리팩토링)</code>에 이관.</li><li><strong><code>HDP-CUL0103</code> e-카달로그</strong> — 7종 어디에도 안 걸린다. 뷰어(문서 열람) 성격이라 <strong>8번째 유형 후보</strong>다. 표본 1건이라 유형으로 세우지 않았다 — 1건으로 유형을 만들면 유형 사전이 화면 목록이 된다.</li></ol>
+<div class="callout"><div class="callout__body"><strong>13건(1.3%)을 미결로 남긴 게 이 사전의 정직한 부분이다.</strong> 규칙을 8개 더 넣으면 0이 되지만, 그건 577건에 맞춘 과적합이라 다음 프로젝트에서 안 먹힌다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s6">6. 주의·금지</h2>
+<ol><li><strong>증권 종속 3종(현재가형·주문형·차트형)을 이 프로젝트 산출물에 쓰지 않는다.</strong> <code>scripts/check_slide.py</code>가 결정형으로 검사한다.</li><li><strong>증류 원천(올댓·m.ALL·mPOP)의 고유명사·메뉴명을 유형 정의에 복사하지 않는다.</strong> 반전 blocklist로 검사한다 — 우리에겐 현대백화점이 고객사라 차단 대상이 아니고, 차단할 것은 원천 쪽과 NCP-2025다.</li><li><strong>유형 사전 없이 화면을 그리지 않는다.</strong> 사전이 없으면 「유추 참고 + 검토 플래그」가 유일한 대체 경로다.</li><li><strong>지점축·상태축을 유형으로 승격하지 않는다.</strong> 승격하면 유형이 지점·상태 수만큼 늘어난다.</li><li><strong>신설 화면의 유형은 발명하지 않는다.</strong> <code>331(와이어프레임설계)</code> 원형 매핑에서 가져오고, 원형이 없으면 검토 플래그로 남긴다.</li></ol>
+<hr class="rule">
+<h2 class="section__title" id="s7">7. 적립 이력</h2>
+<div class='tw'><table><thead><tr><th>버전</th><th>일자</th><th>근거 프로젝트</th><th>변경 내용</th></tr></thead><tbody><tr><td>v0.1</td><td>2026-08-10</td><td>현대백화점 자사채널 개선(2022)</td><td>초안 작성 — 시드 4종 대조(3 상속·1 병합), <strong>유형 7종</strong>(예외·안내형 신설)·modifier 2축 확정, 표본 1,014건 전량 분류, 검토 플래그 13건</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>전사 환류 판단</strong>: 이 사전은 <strong>백화점·유통 자사채널 도메인</strong>에 유효하다. 다른 도메인에 그대로 쓰지 말고 같은 절차로 각자 도출할 것. <strong>절차 자체(시드 대조 → 군집화 → modifier 분리 → 신설 원형 매핑 → 검토 플래그)는 도메인 무관하게 유효</strong>하므로 그것을 규칙으로 올린다.</div></div>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 백화점 자사채널 화면 유형 사전 V1.0 · 2026.08.10
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

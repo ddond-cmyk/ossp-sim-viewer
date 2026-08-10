@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>`342(UI상세설계)` 검수 리포트 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">`342(UI상세설계)` 검수 리포트</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>342 UI상세설계</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · `342(UI상세설계)` 검수 리포트 · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>1. 판정</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. 슬라이드별 정량</span></div><div class="toc__item"><span class="toc__num">03</span><span>3. 검증기 ↔ 작성자 왕복 기록</span></div><div class="toc__item"><span class="toc__num">04</span><span>4. 규칙 공백 (FAIL이 아니라 보완 대상)</span></div><div class="toc__item"><span class="toc__num">05</span><span>5. 재현</span></div></div>
+
+<div class="callout"><div class="callout__body"><strong>작성자와 검증자를 분리했다.</strong> <code>spec-harness/.claude/agents/99-verifier.md</code>가 못 박은 규율이다 — <em>&quot;당신은 합격 판정만 담당한다. <strong>산출물을 고치지 않는다</strong> — 결함을 찾아 목록으로 반환하면 총괄이 작성 에이전트에게 재작업시킨다.&quot;</em><br><strong>결정형으로 셀 수 있는 것을 먼저 검사한다.</strong> 개수·ID 문법·1:1 대응이 먼저고 정성 판단은 그다음이다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">1. 판정</h2>
+<pre class="dgm">check_slide: 슬라이드 7건 검사
+판정: PASS
+결함 0건 · 경고 0건</pre>
+<div class='tw'><table><thead><tr><th>검사</th><th>근거 규칙</th><th>결과</th></tr></thead><tbody><tr><td>① 헤더 최소 필수 3필드(화면ID·화면명·구현구분) 빈칸 없음</td><td>A절 규칙 2</td><td><strong>7/7</strong></td></tr><tr><td>② 화면ID 문법 <code>HD{채널}-{영역3}{그룹2}{순번2}</code></td><td><code>341(화면명세서작성)</code> 규칙</td><td><strong>7/7</strong></td></tr><tr><td>③ 화면유형 병기 · 증권 종속 유형(현재가형·주문형·차트형) 미사용</td><td>D절 규칙 21</td><td><strong>검출 0</strong></td></tr><tr><td>④ 마커 ↔ 디스크립션 행 <strong>1:1</strong> (누락·고아)</td><td>A절 규칙 5 · H절 38-2</td><td><strong>마커 51 = 항목 51 · 누락 0 · 고아 0</strong></td></tr><tr><td>⑤ 디스크립션 번호 중복</td><td>H절 38-2</td><td><strong>0</strong></td></tr><tr><td>⑥ 화면 전제(무번호 첫 행) 존재</td><td>B절 규칙 7</td><td><strong>7/7</strong></td></tr><tr><td>⑦ 컴포넌트 선언 형식 <code>[컴포넌트]</code> / <code>{영역명}(필수·선택)</code></td><td>B절 규칙 8</td><td><strong>51/51</strong></td></tr><tr><td>⑧ 명사형 종결 — 존댓말·서술형 금지(따옴표 UI 카피 예외)</td><td>C절 규칙 12</td><td><strong>위반 0</strong></td></tr><tr><td>⑨ <code>Default :</code> 문형</td><td>C절 규칙 14</td><td><strong>위반 0</strong></td></tr><tr><td>⑩ 이동·호출에 대상 화면ID 병기</td><td>C절 규칙 17</td><td><strong>위반 0</strong></td></tr><tr><td>⑪ 제한 문형 — 최대치에 초과 처리 병기</td><td>C절 규칙 15</td><td><strong>위반 0</strong></td></tr><tr><td>⑫ 추적성 — 전 항목 <code>ref</code> 또는 <code>[가정]</code></td><td>342(UI상세설계) 작성규칙 4</td><td><strong>51/51</strong></td></tr><tr><td>⑬ 입력 요소에 밸리데이션 항목 존재</td><td>342(UI상세설계) 작성규칙 5</td><td><strong>해당 2건 모두 충족</strong></td></tr><tr><td>⑭ 개정이력 최소 1행</td><td>G절 규칙 31 · H절 38-5</td><td><strong>1행(<code>초안작성</code>)</strong></td></tr><tr><td>⑮ 반전 blocklist — 증류 원천 고유명사</td><td><code>00-blocklist.md</code> 반전</td><td><strong>검출 0</strong></td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s1">2. 슬라이드별 정량</h2>
+<div class='tw'><table><thead><tr><th>화면ID</th><th>유형</th><th>프레임</th><th>마커</th><th>항목</th><th>미결</th></tr></thead><tbody><tr><td><code>HDP-COM0106</code></td><td>허브·서브메인형</td><td>2</td><td>9</td><td>9</td><td>2</td></tr><tr><td><code>HDP-COM0114</code></td><td>목록형</td><td>2</td><td>6</td><td>6</td><td>1</td></tr><tr><td><code>HDP-STR0102</code></td><td>정보·안내형</td><td>2</td><td>8</td><td>8</td><td>1</td></tr><tr><td><code>HDP-BRD0103</code></td><td>콘텐츠 상세형</td><td>2</td><td>7</td><td>7</td><td>1</td></tr><tr><td><code>HDP-CRD0150</code></td><td>프로세스형</td><td>2</td><td>9</td><td>9</td><td>1</td></tr><tr><td><code>HDP-CUL0186</code></td><td>조회·결과형</td><td>2</td><td>6</td><td>6</td><td>1</td></tr><tr><td><code>HDP-COM0121</code></td><td>예외·안내형</td><td>2</td><td>6</td><td>6</td><td>1</td></tr><tr><td><strong>계</strong></td><td><strong>7종</strong></td><td><strong>14</strong></td><td><strong>51</strong></td><td><strong>51</strong></td><td><strong>8</strong></td></tr></tbody></table></div>
+<p><strong>CASE 프레임이 전건 2개</strong>다 — Default + 분기 1종. 상태 분기를 프레임 병렬로 표현하고 <strong>차이만 기술</strong>하는 규칙(E절 규칙 26)을 지켰다.</p>
+<hr class="rule">
+<h2 class="section__title" id="s2">3. 검증기 ↔ 작성자 왕복 기록</h2>
+<p><strong>1차 검사에서 결함 5 · 경고 5가 나왔다.</strong> 셋으로 갈렸다.</p>
+<h3 class="subsection__title">3-1. 진짜 결함 2건 — 산출물을 고쳤다</h3>
+<div class='tw'><table><thead><tr><th>위치</th><th>결함</th><th>수정</th></tr></thead><tbody><tr><td><code>HDP-COM0106</code> 항목 1</td><td><code>선택 시 &gt; 해당 영역 랜딩으로 이동</code> — 대상 화면ID 없음</td><td>GNB 6종의 랜딩 화면ID <strong>6개 전건 병기</strong></td></tr><tr><td><code>HDP-BRD0103</code> 항목 6</td><td><code>해당 브랜드 상세로 이동</code> — 대상 화면ID 없음</td><td><code>화면 ID : HDP-BRD0103</code> 병기(같은 골격 재귀)</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>둘 다 「해당 ~로 이동」이었다.</strong> C절 규칙 17이 <em>&quot;「해당 페이지로 이동」만 쓰고 끝내지 않는다&quot;</em> 고 콕 집어 금지한 문형인데, 규칙을 알고 쓰면서도 두 번 썼다. <strong>「해당」은 사람이 읽으면 자연스럽고 기계가 읽으면 미정의다.</strong></div></div>
+<h3 class="subsection__title">3-2. 검증기 오탐 2건 — 검증기를 고쳤다</h3>
+<div class='tw'><table><thead><tr><th>위치</th><th>오탐 내용</th><th>원인</th></tr></thead><tbody><tr><td><code>HDP-COM0114</code> 항목 2</td><td><code>목록 즉시 갱신 — 페이지 재호출 <strong>없음</strong></code></td><td>「호출」을 부정문 안에서 잡았다</td></tr><tr><td><code>HDP-STR0102</code> 항목 4</td><td><code>같은 화면 안에서 본문 블록 전환 — 화면 이동 <strong>없음</strong></code></td><td>「이동」을 부정문 안에서 잡았다</td></tr></tbody></table></div>
+<p><strong>둘 다 「이동을 안 한다」는 선언인데 「이동」으로 잡혔다.</strong> 탭 전환처럼 같은 화면 안에서 끝나는 동작을 명시하는 자리다 — <code>333(UI가이드정의)</code>이 <code>N-04</code> 탭과 <code>N-03</code> LNB를 별 컴포넌트로 판정한 근거(<em>&quot;탭은 같은 화면 안에서 전환하고 LNB는 다른 화면으로 이동한다&quot;</em>)가 여기서 문형으로 나타난다.</p>
+<p>부정문 제외 + 동적 대상(<code>직전 화면</code>·<code>유입경로</code>) 허용을 추가했다.</p>
+<h3 class="subsection__title">3-3. 검사 단위 오류 1건 — 검증기를 고쳤다</h3>
+<p><code>HDP-BRD0103</code> 항목 6에서 <code>최대 6건 노출</code>(불릿 1)과 <code>6건 초과 시 &gt; 상위 6건만 노출</code>(불릿 2)이 <strong>다른 줄</strong>이라 초과 처리가 있는데도 결함으로 잡혔다.</p>
+<p><strong>속성 순서 규칙(C절 규칙 9) 자체가 이걸 두 줄로 갈라 놓는다</strong> — ②노출 항목과 ④제한이 다른 순서 자리다. 그래서 <strong>검사 단위를 불릿에서 항목으로 올렸다.</strong></p>
+<div class="callout"><div class="callout__body"><strong>규칙이 규칙을 어기게 만드는 구조였다.</strong> 문형 규칙(속성 순서)과 검사 규칙(불릿 단위)이 서로 맞지 않았다.</div></div>
+<h3 class="subsection__title">3-4. 경고 4건 — 산출물을 고쳤다</h3>
+<p><code>최대 N</code>만 쓰고 초과 처리를 안 밝힌 항목 4건에 초과 처리를 넣었다.</p>
+<div class='tw'><table><thead><tr><th>위치</th><th>추가한 처리</th></tr></thead><tbody><tr><td><code>HDP-COM0106</code> 항목 3 배너</td><td><code>10개 초과 시 &gt; Admin 등록 차단 처리</code></td></tr><tr><td><code>HDP-COM0106</code> 항목 4 행사</td><td><code>3건 초과 시 &gt; 「전체 보기」 링크 노출</code></td></tr><tr><td><code>HDP-STR0102</code> 항목 3 대표 이미지</td><td><code>초과 등록 시 &gt; 최신 1건만 노출 처리</code></td></tr><tr><td><code>HDP-STR0102</code> 항목 7 행사</td><td><code>3건 초과 시 &gt; 「전체 보기」 링크 노출</code></td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>초과 처리를 안 쓰면 개발이 임의로 정한다.</strong> 「최대 3건」만 있으면 4번째가 잘리는지 스크롤되는지 더보기가 붙는지 아무도 모른다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s3">4. 규칙 공백 (FAIL이 아니라 보완 대상)</h2>
+<p>검증기가 <strong>판정할 수 없어서 검사하지 않은</strong> 항목이다. <code>99-verifier.md</code> 원칙 — <em>&quot;판정 불가(규칙 부재)면 FAIL이 아니라 「규칙 공백」으로 보고한다.&quot;</em></p>
+<div class='tw'><table><thead><tr><th>#</th><th>공백</th><th>왜 판정 불가인가</th><th>보완 위치</th></tr></thead><tbody><tr><td>1</td><td><strong>유형별 수직 구조 일치</strong></td><td><code>struct</code> 문자열이 자유 서술이라 유형 사전의 구조와 기계 대조가 안 된다. H절 38-4가 요구하는 검사인데 못 했다</td><td>유형 사전에 구조를 열거값으로 고정</td></tr><tr><td>2</td><td><strong>속성 순서 준수</strong></td><td>①Default → ②노출 → ③인터랙션 → ④제한 → ⑤이동 순서를 셀 수 없다. 불릿의 종류를 판별하는 규칙이 없다</td><td>불릿 접두 표기 도입 검토</td></tr><tr><td>3</td><td><strong>마커 좌상→우하 순서</strong></td><td>HTML 프레임이 흐름 배치라 좌표가 없다. <code>342(UI상세설계)</code> 스킬 검사 항목인데 못 했다</td><td>프레임 내 순서 = 마커 순서로 대체 판정</td></tr><tr><td>4</td><td><strong>골격 상속의 정합성</strong></td><td>대표 화면 7건은 검사했지만 <strong>나머지 1,007행이 골격을 제대로 상속하는지</strong>는 검사 대상이 아니다</td><td><strong><code>343(설계리뷰및리팩토링)</code> 본체</strong></td></tr><tr><td>5</td><td><strong>문구 사전 일치</strong></td><td><code>332(컨텐츠가이드설계)</code> 정본 문구를 그대로 썼는지 문자열 대조를 안 했다</td><td>사전 정본을 기계 판독 형식으로</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>4번이 가장 크다.</strong> 이 검수는 <strong>슬라이드 7건의 내부 정합</strong>만 봤다. 「7건이 1,014행을 대표한다」는 주장 자체는 검증되지 않았다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s4">5. 재현</h2>
+<pre>python3 scripts/check_slide.py sim-project/300_Define/340_상세설계/342_UI상세설계/UI상세설계서.md</pre>
+<p>유형 분류를 다시 돌리려면(원장 갱신 포함):</p>
+<pre>python3 scripts/classify_screen_type.py --write</pre>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · `342(UI상세설계)` 검수 리포트 V1.0 · 2026.08.10
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
