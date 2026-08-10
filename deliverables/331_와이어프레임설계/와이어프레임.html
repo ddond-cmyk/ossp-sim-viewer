@@ -20,7 +20,7 @@
         <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
         <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
         <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
-        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.07 · VinylC</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@
     <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 와이어프레임 (TO-BE) · V1.0</div>
     <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>1. 주요화면 선정 — 4축 판정</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. 공통 골격 — 전역 영역이 먼저다</span></div><div class="toc__item"><span class="toc__num">03</span><span>3. 주요화면</span></div><div class="toc__item"><span class="toc__num">04</span><span>4. 원형 상속 — 15화면이 무엇을 대신하나</span></div><div class="toc__item"><span class="toc__num">05</span><span>5. ⚖️ 보류 선택 4건 — 대안을 만들고 골랐다. 확정이 아니다</span></div><div class="toc__item"><span class="toc__num">06</span><span>6. 커버리지 점검</span></div><div class="toc__item"><span class="toc__num">07</span><span>7. 하류로 넘기는 것</span></div></div>
 
-<div class="callout"><div class="callout__body">입력: 322 정보구조도(노드 74) · 321 기능정의서(기능 106·컨텐츠 24) · 312 유저플로우(7흐름) · 242 UX컨셉 K1~K4 · 215 요구 78 · 122 AS-IS · 240 결정 D-2·D-3·D-4<br>충실도: <strong>저충실도</strong> — 색·타이포·아이콘·실제 문구 없음. Description 없음(341의 몫)<br>표기: <code>sim-project/_와이어프레임-표기규약.md</code><br>⚠️ <strong>332 컨텐츠가이드·333 UI가이드·334 시안·341 화면명세의 상류 SSOT.</strong> 바뀌면 하류가 상속한다</div></div>
+<div class="callout"><div class="callout__body">입력: 322 정보구조도(노드 74) · 321 기능정의서(기능 106·컨텐츠 24) · 312 유저플로우(7흐름) · 242 UX컨셉 컨셉키워드 K1~K4 · 215 요구 78 · 122 AS-IS · 240 결정 D-2·D-3·D-4<br>충실도: <strong>저충실도</strong> — 색·타이포·아이콘·실제 문구 없음. Description 없음(341(화면명세서작성)의 몫)<br>표기: <code>sim-project/_와이어프레임-표기규약.md</code><br>⚠️ <strong>332 컨텐츠가이드·333 UI가이드·334 시안·341 화면명세의 상류 SSOT.</strong> 바뀌면 하류가 상속한다</div></div>
 <hr class="rule">
 <h2 class="section__title" id="s0">1. 주요화면 선정 — <strong>4축 판정</strong></h2>
 <p>전 화면(In-Scope 965)이 아니라 <strong>의사결정·원형·신설·전역</strong>이 걸리는 화면만 고른다.</p>
@@ -39,11 +39,11 @@
 <h3 class="subsection__title">1-1. 주요화면 목록</h3>
 <div class='tw'><table><thead><tr><th>ID</th><th>화면</th><th>선정축</th><th>IA 노드</th><th>변경</th></tr></thead><tbody><tr><td><strong>W-01</strong></td><td>지점 선택 (전역)</td><td>①③④</td><td>IA-001</td><td><strong>신설</strong></td></tr><tr><td><strong>W-02</strong></td><td>메인 (지점 반영)</td><td>①④</td><td>IA-009</td><td>개선</td></tr><tr><td><strong>W-03</strong></td><td>검색 결과</td><td>①③</td><td>IA-002</td><td>개선</td></tr><tr><td><strong>W-04</strong></td><td><strong>지점 템플릿</strong></td><td>②</td><td>IA-010~018</td><td>개선</td></tr><tr><td><strong>W-05</strong></td><td><strong>목록형 원형</strong></td><td>②</td><td>IA-021·034·052 등</td><td>개선</td></tr><tr><td><strong>W-06</strong></td><td><strong>상세형 원형</strong></td><td>②</td><td>IA-022·035·052 등</td><td>개선</td></tr><tr><td><strong>W-07</strong></td><td>문화센터 강좌 목록</td><td>①②</td><td>IA-034</td><td>개선</td></tr><tr><td><strong>W-08</strong></td><td>거래 S1 — 정보 확인</td><td>①②</td><td>IA-036·053</td><td>개선</td></tr><tr><td><strong>W-09</strong></td><td>거래 S2 — 결제·입력</td><td>①②</td><td>IA-036·053</td><td>개선</td></tr><tr><td><strong>W-10</strong></td><td>거래 S3 — 완료</td><td>②</td><td>IA-036·053</td><td>유지</td></tr><tr><td><strong>W-11</strong></td><td>카드·멤버십 허브</td><td>②③</td><td>IA-050</td><td><strong>신설</strong>(MWEB)</td></tr><tr><td><strong>W-12</strong></td><td>VIP프로그램 2Tab</td><td>①②</td><td>IA-059</td><td>개선</td></tr><tr><td><strong>W-13</strong></td><td>마이페이지</td><td>①④</td><td>IA-080</td><td>개선</td></tr><tr><td><strong>W-14</strong></td><td>예외·복구 화면군</td><td>③④</td><td>IA-007</td><td><strong>신설</strong></td></tr><tr><td><strong>W-15</strong></td><td>통합 고객센터</td><td>③④</td><td>IA-005</td><td><strong>신설</strong></td></tr></tbody></table></div>
 <h3 class="subsection__title">1-2. 채널 — <strong>대부분 공통</strong></h3>
-<p>K1·K3이 채널 통일이므로 <strong>15개 중 13개가 양 채널 공통 골격</strong>이다. 갈리는 2개만 따로 그린다.</p>
+<p>컨셉키워드 K1·K3이 채널 통일이므로 <strong>15개 중 13개가 양 채널 공통 골격</strong>이다. 갈리는 2개만 따로 그린다.</p>
 <div class='tw'><table><thead><tr><th>화면</th><th>사유</th></tr></thead><tbody><tr><td><code>W-02</code> 메인</td><td>PC는 가로 폭이 넓어 지점 정보와 배너가 병렬, MWEB은 세로 스택</td></tr><tr><td><code>W-13</code> 마이페이지</td><td><code>IA-085</code> 로그인 기록이 PC 전용(D-4) — 항목 수가 다름</td></tr></tbody></table></div>
 <hr class="rule">
 <h2 class="section__title" id="s1">2. 공통 골격 — <strong>전역 영역이 먼저다</strong></h2>
-<p>322가 전역 8개를 계층 밖에 뒀다. <strong>모든 화면이 이 골격을 상속하므로 여기부터 그린다.</strong></p>
+<p>322(정보구조설계)가 전역 8개를 계층 밖에 뒀다. <strong>모든 화면이 이 골격을 상속하므로 여기부터 그린다.</strong></p>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 497" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">전역 골격 · 양 채널 공통</text>
 <rect x="1" y="34" width="720" height="382" fill="none" stroke="#D8D8D8" stroke-width="1"/>
 <text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
@@ -77,7 +77,7 @@
 <rect x="487.3" y="368" width="232.7" height="40" fill="#F4F4F4" stroke="#111111" stroke-width="1.4" stroke-dasharray="4 3"/>
 <text x="603.7" y="392.0" font-size="11" fill="#111111" text-anchor="middle">사이트맵 (MWEB 신설)</text>
 <text x="715.0" y="379" font-size="8" fill="#767676" text-anchor="end">신설</text>
-<text x="1" y="429" font-size="10.5" fill="#767676">· 지점 선택(IA-001)은 GNB 항목이 아니라 헤더 상시 노출 — K1 "진입의 기준"</text>
+<text x="1" y="429" font-size="10.5" fill="#767676">· 지점 선택(IA-001)은 GNB 항목이 아니라 헤더 상시 노출 — 컨셉키워드 K1 "진입의 기준"</text>
 <text x="1" y="448" font-size="10.5" fill="#767676">· 컨텍스트 바는 신설. 지금 어느 점포를 보고 있는지가 항상 보인다</text>
 <text x="1" y="467" font-size="10.5" fill="#767676">· 통합검색은 영역 하위 → 전역 승격(IA-002 이동). AS-IS는 21개 진입경로가 같은 화면이었다</text></svg></div>
 <p><strong>AS-IS 대비</strong>: PC GNB 1st depth <strong>32개 평면</strong> → <strong>7개</strong>. MWEB <code>전체메뉴</code> 단일 허브 경유 → <strong>양 채널 동일 헤더</strong>.</p>
@@ -112,9 +112,9 @@
 <text x="1" y="386" font-size="10.5" fill="#767676">· REQ-SI-002 "분류 게이트 화면을 만들지 않는다" — 분류를 별도 단계로 두지 않고 목록 내 필터로</text>
 <text x="1" y="405" font-size="10.5" fill="#767676">· 확정 즉시 C1 컨텍스트 → UF-02·03·04로 전달</text>
 <text x="1" y="424" font-size="10.5" fill="#767676">· 최근 선택 지점은 FN-A06 [가정] — 개인화 정책·동의 근거 미확보(미정의 D1-2)</text></svg></div>
-<div class='tw'><table><thead><tr><th>구획</th><th>내용</th></tr></thead><tbody><tr><td><strong>AS-IS 대비</strong></td><td><strong>신설.</strong> MWEB <code>MSS</code> 지점선택만 있었고 PC엔 없었다</td></tr><tr><td><strong>추적</strong></td><td><code>IA-001</code> · <code>FN-A01·A02·A04</code> · <code>REQ-SI-002·015·016</code> · <strong>K1</strong></td></tr><tr><td><strong>⚖️ 보류 선택 1</strong></td><td>표현 방식 — §5-1</td></tr></tbody></table></div>
+<div class='tw'><table><thead><tr><th>구획</th><th>내용</th></tr></thead><tbody><tr><td><strong>AS-IS 대비</strong></td><td><strong>신설.</strong> MWEB <code>MSS</code> 지점선택만 있었고 PC엔 없었다</td></tr><tr><td><strong>추적</strong></td><td><code>IA-001</code> · <code>FN-A01·A02·A04</code> · <code>REQ-SI-002·015·016</code> · <strong>컨셉키워드 K1</strong></td></tr><tr><td><strong>⚖️ 보류 선택 1</strong></td><td>표현 방식 — §5-1</td></tr></tbody></table></div>
 <h3 class="subsection__title">W-02 메인 <code>개선</code> — 지점이 반영된 첫 화면</h3>
-<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 707" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-02 메인 · PC</text>
+<div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 724" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-02 메인 · PC</text>
 <rect x="1" y="34" width="720" height="592" fill="none" stroke="#D8D8D8" stroke-width="1"/>
 <text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
 <rect x="2.0" y="38" width="113.0" height="46" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
@@ -155,7 +155,8 @@
 <text x="361.0" y="602.0" font-size="11" fill="#111111" text-anchor="middle">약관 · 고객센터 · 사이트맵</text>
 <text x="1" y="639" font-size="10.5" fill="#767676">· 선정축 ①분기(지점 유무) ④전역</text>
 <text x="1" y="658" font-size="10.5" fill="#767676">· REQ-MA-002 메인에 지점 정보 노출 · REQ-MA-001 배너 최대 5개 · REQ-MA-003 채널 메뉴 삭제 후 메인 소구</text>
-<text x="1" y="677" font-size="10.5" fill="#767676">· ⚠️ 242 R-2 "메인 콘텐츠 구성"은 분석 공백으로 남아 있다 — 이 배치는 요구에서만 도출됐고 사용자 근거가 없다</text></svg></div>
+<text x="1" y="677" font-size="10.5" fill="#767676">· ⚠️ 242(UX전략및컨셉수립) R-2 "메인 콘텐츠 구성"은 분석 공백으로 남아 있다 — 이 배치는 요구에서만 도출됐고 사용자 근거가 없</text>
+<text x="1" y="694" font-size="10.5" fill="#767676">다</text></svg></div>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 694" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-02 메인 · MWEB</text>
 <rect x="1" y="34" width="720" height="598" fill="none" stroke="#D8D8D8" stroke-width="1"/>
 <text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
@@ -189,7 +190,7 @@
 <text x="603.7" y="578.0" font-size="11" fill="#111111" text-anchor="middle">서비스</text>
 <text x="1" y="645" font-size="10.5" fill="#767676">· MWEB 하단 내비게이션 바 삭제(REQ-CM-003) — PC와 톤&amp;매너 통일</text>
 <text x="1" y="664" font-size="10.5" fill="#767676">· 세로 스택이라 PC의 병렬 배치가 순차가 된다. 순서 = 지점 → 전사</text></svg></div>
-<div class='tw'><table><thead><tr><th>구획</th><th>내용</th></tr></thead><tbody><tr><td><strong>AS-IS 대비</strong></td><td>개선 — <strong>지점 컨텍스트 바·지점 요약·특성 모듈이 신설</strong></td></tr><tr><td><strong>추적</strong></td><td><code>IA-009</code> · <code>FN-A03·A06·G09</code> · <code>REQ-MA-001·002·003</code> · <code>REQ-CM-003</code> · <strong>K1</strong></td></tr><tr><td><strong>⚖️ 보류 선택 2</strong></td><td>지점 정보 배치 — §5-2</td></tr></tbody></table></div>
+<div class='tw'><table><thead><tr><th>구획</th><th>내용</th></tr></thead><tbody><tr><td><strong>AS-IS 대비</strong></td><td>개선 — <strong>지점 컨텍스트 바·지점 요약·특성 모듈이 신설</strong></td></tr><tr><td><strong>추적</strong></td><td><code>IA-009</code> · <code>FN-A03·A06·G09</code> · <code>REQ-MA-001·002·003</code> · <code>REQ-CM-003</code> · <strong>컨셉키워드 K1</strong></td></tr><tr><td><strong>⚖️ 보류 선택 2</strong></td><td>지점 정보 배치 — §5-2</td></tr></tbody></table></div>
 <h3 class="subsection__title">W-03 검색 결과 <code>개선</code> — 문맥을 잃지 않는다</h3>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 539" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-03 검색 결과 · 양 채널</text>
 <rect x="1" y="34" width="720" height="424" fill="none" stroke="#D8D8D8" stroke-width="1"/>
@@ -219,8 +220,8 @@
 <text x="361.0" y="409.0" font-size="11" fill="#111111" text-anchor="middle">결과 없음 — 범위 확장 제안</text>
 <text x="715.0" y="371" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
 <text x="1" y="471" font-size="10.5" fill="#767676">· 선정축 ①분기(0건 여부) ③신설(범위 확장)</text>
-<text x="1" y="490" font-size="10.5" fill="#767676">· 122 H2 "검색결과가 진입 문맥 무반영, 21경로 → 화면 1" 해소 — 선택 지점을 결과에 반영</text>
-<text x="1" y="509" font-size="10.5" fill="#767676">· FN-C02 검색 범위 확장(312 신규발견 ③) · FN-C03 빈 상태</text></svg></div>
+<text x="1" y="490" font-size="10.5" fill="#767676">· 122(현시스템기초분석) H2 "검색결과가 진입 문맥 무반영, 21경로 → 화면 1" 해소 — 선택 지점을 결과에 반영</text>
+<text x="1" y="509" font-size="10.5" fill="#767676">· FN-C02 검색 범위 확장(312(유저플로우설계) 신규발견 ③) · FN-C03 빈 상태</text></svg></div>
 <h3 class="subsection__title">W-04 지점 템플릿 <code>개선</code> — <strong>K2의 검증 지점</strong></h3>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 566" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-04 지점 템플릿 · 양 채널 · 지점 16개가 이 골격 하나를 상속</text>
 <rect x="1" y="34" width="720" height="432" fill="none" stroke="#D8D8D8" stroke-width="1"/>
@@ -253,9 +254,9 @@
 <text x="715.0" y="389" font-size="8" fill="#767676" text-anchor="end">빈 상태</text>
 <text x="1" y="479" font-size="10.5" fill="#767676">· 선정축 ②레이아웃 원형 (지점 16개 · IA-010~018)</text>
 <text x="1" y="498" font-size="10.5" fill="#767676">· REQ-SI-004 행사안내를 층별안내 다음 상단 배치 — LNB 순서가 요구로 확정</text>
-<text x="1" y="517" font-size="10.5" fill="#767676">· ⛔ 이 템플릿이 성립하지 않으면 K2 실패. 지점마다 다른 골격을 만들면 L1-1이 16배로 불어난다</text>
+<text x="1" y="517" font-size="10.5" fill="#767676">· ⛔ 이 템플릿이 성립하지 않으면 컨셉키워드 K2 실패. 지점마다 다른 골격을 만들면 L1-1이 16배로 불어난다</text>
 <text x="1" y="536" font-size="10.5" fill="#767676">· 특성 모듈(FN-B06)이 "구조는 통일, 특성은 모듈" 의 실행 장치 — 더현대 서울 같은 플래그십의 표현 여지</text></svg></div>
-<div class='tw'><table><thead><tr><th>구획</th><th>내용</th></tr></thead><tbody><tr><td><strong>상속 범위</strong></td><td>지점 16개 × 층별·행사·시설 = AS-IS <strong>192화면</strong>의 골격</td></tr><tr><td><strong>추적</strong></td><td><code>IA-010~018</code> · <code>FN-B01~B10</code> · <code>REQ-SI-003·004·005·006·012·014</code> · <strong>K2</strong></td></tr><tr><td><strong>⚖️ 보류 선택 3</strong></td><td>LNB vs 탭 — §5-3</td></tr></tbody></table></div>
+<div class='tw'><table><thead><tr><th>구획</th><th>내용</th></tr></thead><tbody><tr><td><strong>상속 범위</strong></td><td>지점 16개 × 층별·행사·시설 = AS-IS <strong>192화면</strong>의 골격</td></tr><tr><td><strong>추적</strong></td><td><code>IA-010~018</code> · <code>FN-B01~B10</code> · <code>REQ-SI-003·004·005·006·012·014</code> · <strong>컨셉키워드 K2</strong></td></tr><tr><td><strong>⚖️ 보류 선택 3</strong></td><td>LNB vs 탭 — §5-3</td></tr></tbody></table></div>
 <h3 class="subsection__title">W-05 목록형 원형 <code>개선</code> · W-06 상세형 원형 <code>개선</code></h3>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 1068" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-05 목록형 원형 · 브랜드·강좌·카드·행사 공통</text>
 <rect x="1" y="34" width="720" height="422" fill="none" stroke="#D8D8D8" stroke-width="1"/>
@@ -329,11 +330,11 @@
 <text x="361.0" y="366.0" font-size="11" fill="#111111" text-anchor="middle">정원 초과 강좌 — 대기 신청 / 대기 상태 조회</text>
 <text x="715.0" y="343" font-size="8" fill="#767676" text-anchor="end">신설</text>
 <text x="1" y="413" font-size="10.5" fill="#767676">· 선정축 ①분기(B3 정원 여유?) ②원형(W-05 파생)</text>
-<text x="1" y="432" font-size="10.5" fill="#767676">· 122 H5 "정원 초과가 사후 처리" → 목록 단계에서 잔여 정원 사전 표시 (FN-D02)</text>
+<text x="1" y="432" font-size="10.5" fill="#767676">· 122(현시스템기초분석) H5 "정원 초과가 사후 처리" → 목록 단계에서 잔여 정원 사전 표시 (FN-D02)</text>
 <text x="1" y="451" font-size="10.5" fill="#767676">· ⛔ 실시간 정원 데이터 연동이 전제 — 미정의 D1-4. 연동 불가 시 이 화면의 핵심이 무너진다</text>
 <text x="1" y="470" font-size="10.5" fill="#767676">· 대기 상태 조회(FN-D09)는 신설 — AS-IS는 대기 신청 후 막다른 길이었다</text></svg></div>
 <h3 class="subsection__title">W-08 · W-09 · W-10 거래 스텝 원형 <code>개선</code></h3>
-<p>문화센터 수강신청과 카드 신청이 <strong>같은 3스텝 골격</strong>을 쓴다. AS-IS도 <code>S1→S2→S3</code> 관례가 있었다(122 표본).</p>
+<p>문화센터 수강신청과 카드 신청이 <strong>같은 3스텝 골격</strong>을 쓴다. AS-IS도 <code>S1→S2→S3</code> 관례가 있었다(122(현시스템기초분석) 표본).</p>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 1379" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-08 거래 S1 · 정보 확인 · 문화센터·카드 공통</text>
 <rect x="1" y="34" width="720" height="378" fill="none" stroke="#D8D8D8" stroke-width="1"/>
 <text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">스텝</text>
@@ -356,8 +357,8 @@
 <rect x="366.0" y="348" width="354.0" height="56" fill="#111111" stroke="#111111" stroke-width="1.4"/>
 <text x="543.0" y="380.0" font-size="11" fill="#FFFFFF" text-anchor="middle">다음</text>
 <text x="1" y="425" font-size="10.5" fill="#767676">· 선정축 ①분기(B4 로그인 상태 · B6 자격 충족) ②원형</text>
-<text x="1" y="444" font-size="10.5" fill="#767676">· 122 H3·H5 "S1 중간에 나의회원추가L이 끼어듦" → 로그인 분기를 이 화면 앞으로 이동</text>
-<text x="1" y="463" font-size="10.5" fill="#767676">· 취소 경로 신설 — AS-IS 카드신청 64화면 중 취소·이전 0건(241 I-9)</text>
+<text x="1" y="444" font-size="10.5" fill="#767676">· 122(현시스템기초분석) H3·H5 "S1 중간에 나의회원추가L이 끼어듦" → 로그인 분기를 이 화면 앞으로 이동</text>
+<text x="1" y="463" font-size="10.5" fill="#767676">· 취소 경로 신설 — AS-IS 카드신청 64화면 중 취소·이전 0건(241(분석종합) I-9)</text>
 <text x="1" y="507" font-size="12.5" font-weight="700" fill="#111111">W-09 거래 S2 · 결제·입력</text>
 <rect x="1" y="519" width="720" height="438" fill="none" stroke="#D8D8D8" stroke-width="1"/>
 <text x="-5" y="536" font-size="9" fill="#767676" text-anchor="end">스텝</text>
@@ -386,7 +387,7 @@
 <rect x="366.0" y="893" width="354.0" height="56" fill="#111111" stroke="#111111" stroke-width="1.4"/>
 <text x="543.0" y="925.0" font-size="11" fill="#FFFFFF" text-anchor="middle">결제·제출</text>
 <text x="1" y="970" font-size="10.5" fill="#767676">· 선정축 ①분기(B5 유료?) ②원형</text>
-<text x="1" y="989" font-size="10.5" fill="#767676">· 122 H9 오류 화면 0건 → 결제 실패 복구 신설(FN-D07) · 배송 불가 안내 신설(FN-E06)</text>
+<text x="1" y="989" font-size="10.5" fill="#767676">· 122(현시스템기초분석) H9 오류 화면 0건 → 결제 실패 복구 신설(FN-D07) · 배송 불가 안내 신설(FN-E06)</text>
 <text x="1" y="1033" font-size="12.5" font-weight="700" fill="#111111">W-10 거래 S3 · 완료</text>
 <rect x="1" y="1045" width="720" height="272" fill="none" stroke="#D8D8D8" stroke-width="1"/>
 <text x="-5" y="1062" font-size="9" fill="#767676" text-anchor="end">스텝</text>
@@ -405,7 +406,7 @@
 <rect x="366.0" y="1219" width="354.0" height="90" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
 <text x="543.0" y="1268.0" font-size="11" fill="#111111" text-anchor="middle">계속 둘러보기</text>
 <text x="1" y="1330" font-size="10.5" fill="#767676">· 선정축 ②원형</text>
-<text x="1" y="1349" font-size="10.5" fill="#767676">· 막다른 화면을 만들지 않는다 — 완료 후 갈 곳 2개를 항상 둔다(K4)</text></svg></div>
+<text x="1" y="1349" font-size="10.5" fill="#767676">· 막다른 화면을 만들지 않는다 — 완료 후 갈 곳 2개를 항상 둔다(컨셉키워드 K4)</text></svg></div>
 <h3 class="subsection__title">W-11 카드·멤버십 허브 <code>신설</code>(MWEB) — 최대 영역 343화면의 입구</h3>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 593" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-11 카드·멤버십 허브 · 양 채널</text>
 <rect x="1" y="34" width="720" height="478" fill="none" stroke="#D8D8D8" stroke-width="1"/>
@@ -439,7 +440,7 @@
 <text x="715.0" y="445" font-size="8" fill="#767676" text-anchor="end">유지</text>
 <text x="1" y="525" font-size="10.5" fill="#767676">· 선정축 ②원형 ③신설(MWEB 서브메인 REQ-CA-005·006)</text>
 <text x="1" y="544" font-size="10.5" fill="#767676">· 더클럽웨딩은 서비스 → 카드·멤버십으로 이동(REQ-CA-002)</text>
-<text x="1" y="563" font-size="10.5" fill="#767676">· 카드 목록은 화면이 아니라 혜택 데이터를 소비한다 — K2. 카드가 늘어도 화면이 안 는다</text></svg></div>
+<text x="1" y="563" font-size="10.5" fill="#767676">· 카드 목록은 화면이 아니라 혜택 데이터를 소비한다 — 컨셉키워드 K2. 카드가 늘어도 화면이 안 는다</text></svg></div>
 <h3 class="subsection__title">W-12 VIP프로그램 2Tab <code>개선</code> — 240 결정 D-3</h3>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 622" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-12 VIP프로그램 · 양 채널 동일 2Tab</text>
 <rect x="1" y="34" width="720" height="488" fill="none" stroke="#D8D8D8" stroke-width="1"/>
@@ -465,9 +466,9 @@
 <text x="1" y="535" font-size="10.5" fill="#767676">· 선정축 ①분기(로그인 여부로 초기 노출 등급이 갈림) ②원형</text>
 <text x="1" y="554" font-size="10.5" fill="#767676">· 240 결정 D-3 — PC도 2Tab으로 통일. PC 작업 등급 스킨변경 → 개선 상향</text>
 <text x="1" y="573" font-size="10.5" fill="#767676">· P-MBR-06 "선정 기준·서비스 기간은 매년 변경" → 화면에 하드코딩하지 않고 어드민 값 표시</text>
-<text x="1" y="592" font-size="10.5" fill="#767676">· ⛔ 마일리지 계산 주체 미정(212 G4 · 미정의 D1-10) — 표만 그리고 산출 로직은 비워 둔다</text></svg></div>
+<text x="1" y="592" font-size="10.5" fill="#767676">· ⛔ 마일리지 계산 주체 미정(212(정책요건분석) G4 · 미정의 D1-10) — 표만 그리고 산출 로직은 비워 둔다</text></svg></div>
 <div class='tw'><table><thead><tr><th><strong>⚖️ 보류 선택 4</strong></th><th>2Tab 구성 축 — §5-4</th></tr></thead><tbody></tbody></table></div>
-<h3 class="subsection__title">W-13 마이페이지 <code>개선</code> — K3 채널 동등</h3>
+<h3 class="subsection__title">W-13 마이페이지 <code>개선</code> — 컨셉키워드 K3 채널 동등</h3>
 <div class="wf" style="overflow-x:auto"><svg viewBox="0 0 722 1081" width="100%" style="max-width:722px;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><text x="1" y="22" font-size="12.5" font-weight="700" fill="#111111">W-13 마이페이지 · PC</text>
 <rect x="1" y="34" width="720" height="488" fill="none" stroke="#D8D8D8" stroke-width="1"/>
 <text x="-5" y="51" font-size="9" fill="#767676" text-anchor="end">헤더</text>
@@ -511,8 +512,8 @@
 <text x="543.0" y="478.0" font-size="11" fill="#111111" text-anchor="middle">H.Point 통합회원 전환</text>
 <text x="715.0" y="445" font-size="8" fill="#767676" text-anchor="end">신설</text>
 <text x="1" y="535" font-size="10.5" fill="#767676">· 선정축 ①분기(B7 통합회원 전환됨?) ④전역</text>
-<text x="1" y="554" font-size="10.5" fill="#767676">· K3 채널 결손 해소 — 비밀번호 변경(AS-IS PC만) · 차량번호(MWEB만) · H.Point 전환(PC만) → 전부 양 채널</text>
-<text x="1" y="573" font-size="10.5" fill="#767676">· 로그인 기록만 PC 전용 유지(D-4) — ⚖️ 차이를 남기는 결정이므로 341에 사유 기록 의무</text>
+<text x="1" y="554" font-size="10.5" fill="#767676">· 컨셉키워드 K3 채널 결손 해소 — 비밀번호 변경(AS-IS PC만) · 차량번호(MWEB만) · H.Point 전환(PC만) → 전부 양 채널</text>
+<text x="1" y="573" font-size="10.5" fill="#767676">· 로그인 기록만 PC 전용 유지(D-4) — ⚖️ 차이를 남기는 결정이므로 341(화면명세서작성)에 사유 기록 의무</text>
 <text x="1" y="592" font-size="10.5" fill="#767676">· 용어 통일 7건 적용 — 나의 VIP 등급 · 나의 차량 번호 · 나의 강좌 · 카드 할인 쿠폰</text>
 <text x="1" y="636" font-size="12.5" font-weight="700" fill="#111111">W-13 마이페이지 · MWEB</text>
 <rect x="1" y="648" width="720" height="390" fill="none" stroke="#D8D8D8" stroke-width="1"/>
@@ -594,23 +595,23 @@
 <rect x="487.3" y="434" width="232.7" height="70" fill="#F4F4F4" stroke="#D8D8D8" stroke-width="1"/>
 <text x="603.7" y="473.0" font-size="11" fill="#111111" text-anchor="middle">1:1 문의</text>
 <text x="1" y="525" font-size="10.5" fill="#767676">· 선정축 ③신설 ④전역</text>
-<text x="1" y="544" font-size="10.5" fill="#767676">· 122 H10 "도움말 산재 PC 4곳 · MWEB 3곳" → 단일 진입점(FN-H08)</text>
+<text x="1" y="544" font-size="10.5" fill="#767676">· 122(현시스템기초분석) H10 "도움말 산재 PC 4곳 · MWEB 3곳" → 단일 진입점(FN-H08)</text>
 <text x="1" y="563" font-size="10.5" fill="#767676">· 원 위치에도 링크를 남긴다 — 문화센터 이용안내에서 FAQ를 찾던 사용자를 잃지 않게</text>
-<text x="1" y="582" font-size="10.5" fill="#767676">· ⚠️ 통합 범위가 미정이었다(322 D3-3) — 여기서 FAQ·챗봇·ARS·1:1 4종으로 확정</text></svg></div>
+<text x="1" y="582" font-size="10.5" fill="#767676">· ⚠️ 통합 범위가 미정이었다(322(정보구조설계) D3-3) — 여기서 FAQ·챗봇·ARS·1:1 4종으로 확정</text></svg></div>
 <hr class="rule">
 <h2 class="section__title" id="s3">4. 원형 상속 — <strong>15화면이 무엇을 대신하나</strong></h2>
 <div class='tw'><table><thead><tr><th>원형</th><th>상속 대상</th><th>AS-IS 화면 규모</th></tr></thead><tbody><tr><td><code>W-04</code> 지점 템플릿</td><td>지점 16개 × 층별·행사·시설·특성</td><td><strong>192</strong></td></tr><tr><td><code>W-05</code> 목록형</td><td>브랜드·강좌·카드·행사·이벤트 목록</td><td>다수</td></tr><tr><td><code>W-06</code> 상세형</td><td>브랜드·강좌·카드 상세</td><td>다수</td></tr><tr><td><code>W-08~10</code> 거래 3스텝</td><td>문화센터 수강신청 + 카드 신청</td><td><strong>거래 2계열</strong></td></tr><tr><td><code>W-14</code> 예외 원형</td><td>404·권한·세션·결제실패·정원초과·자격미달</td><td><strong>6종</strong></td></tr></tbody></table></div>
 <div class="callout"><div class="callout__body"><strong>원형 6개가 안 잡혔으면 주요화면이 수십 개로 발산했을 것이다.</strong> 선정 4축의 ②가 한 일이다.</div></div>
 <hr class="rule">
 <h2 class="section__title" id="s4">5. ⚖️ 보류 선택 4건 — <strong>대안을 만들고 골랐다. 확정이 아니다</strong></h2>
-<p>OSSP 331은 <em>&quot;다양한 대안을 협력적으로 설계해 최적안을 도출&quot;</em> 하는 Co-Creative 과정이다. <strong>워크숍을 열 수 없었다</strong>(312 워크숍·322 카드소팅에 이어 3연속).</p>
+<p>OSSP 331(와이어프레임설계)은 <em>&quot;다양한 대안을 협력적으로 설계해 최적안을 도출&quot;</em> 하는 Co-Creative 과정이다. <strong>워크숍을 열 수 없었다</strong>(312(유저플로우설계) 워크숍·322(정보구조설계) 카드소팅에 이어 3연속).</p>
 <p>임의 확정도 공백도 오답이므로 <strong>대안을 실제로 만들고, 작업자가 고르되 <code>보류 선택</code>으로 표기</strong>한다. 하류는 가정으로 상속하고 진행한다.</p>
 <h3 class="subsection__title">5-1. W-01 지점 선택의 표현 방식</h3>
-<div class='tw'><table><thead><tr><th>안</th><th>트레이드오프</th></tr></thead><tbody><tr><td><strong>A. 전면 오버레이</strong> ✅ <strong>보류 선택</strong></td><td>지점 선택이 &quot;진입의 기준&quot;임을 형태로 말한다(K1). 단 매 진입 시 뜨면 재방문자에게 마찰</td></tr><tr><td>B. 헤더 드롭다운</td><td>마찰 최소. 단 <strong>지점이 부차적 필터처럼 보여 K1이 약해진다</strong></td></tr><tr><td>C. 별도 페이지</td><td>명확하나 단계가 하나 늘고 뒤로가기 문제</td></tr></tbody></table></div>
-<p><strong>선택 근거</strong>: K1이 주축이고 AS-IS의 병이 &quot;지점 컨텍스트 없이 헤매는 것&quot;이므로 <strong>처음 한 번은 강하게</strong> 물어야 한다. 재방문 마찰은 <code>FN-A06</code> 최근 지점 제안으로 완화. <strong>되돌림 비용</strong>: 낮음 — 332·333까지. 341 착수 전이면 B로 전환 가능. <strong>결정권자·시점</strong>: 기획PL·크리에이티브디렉터 / 334 시안 착수 전</p>
+<div class='tw'><table><thead><tr><th>안</th><th>트레이드오프</th></tr></thead><tbody><tr><td><strong>A. 전면 오버레이</strong> ✅ <strong>보류 선택</strong></td><td>지점 선택이 &quot;진입의 기준&quot;임을 형태로 말한다(컨셉키워드 K1). 단 매 진입 시 뜨면 재방문자에게 마찰</td></tr><tr><td>B. 헤더 드롭다운</td><td>마찰 최소. 단 <strong>지점이 부차적 필터처럼 보여 K1이 약해진다</strong></td></tr><tr><td>C. 별도 페이지</td><td>명확하나 단계가 하나 늘고 뒤로가기 문제</td></tr></tbody></table></div>
+<p><strong>선택 근거</strong>: K1이 주축이고 AS-IS의 병이 &quot;지점 컨텍스트 없이 헤매는 것&quot;이므로 <strong>처음 한 번은 강하게</strong> 물어야 한다. 재방문 마찰은 <code>FN-A06</code> 최근 지점 제안으로 완화. <strong>되돌림 비용</strong>: 낮음 — 332(컨텐츠가이드설계)·333(UI가이드정의)까지. 341(화면명세서작성) 착수 전이면 B로 전환 가능. <strong>결정권자·시점</strong>: 기획PL·크리에이티브디렉터 / 334 시안 착수 전</p>
 <h3 class="subsection__title">5-2. W-02 메인의 지점 정보 배치</h3>
 <div class='tw'><table><thead><tr><th>안</th><th>트레이드오프</th></tr></thead><tbody><tr><td><strong>A. 컨텍스트 바(상시) + 요약 카드</strong> ✅ <strong>보류 선택</strong></td><td>어느 지점인지 항상 보임. 단 상단 고정 영역이 하나 늘어 콘텐츠 면적 감소</td></tr><tr><td>B. 히어로 영역에 통합</td><td>면적 효율. 단 스크롤하면 지점이 사라진다</td></tr><tr><td>C. 요약 카드만</td><td>가장 가벼움. 단 하위 화면에서 컨텍스트가 안 보인다</td></tr></tbody></table></div>
-<p><strong>선택 근거</strong>: 122 H2·241 I-6이 &quot;문맥 상실&quot;을 지적했다. <strong>하위 화면까지 따라가는 바</strong>가 그 해소책이다. <strong>⚠️ 근거 한계</strong>: <strong>242 R-2가 「메인 콘텐츠 구성」을 분석 공백으로 남겼다.</strong> 이 배치는 요구(REQ-MA-001·002·003)에서만 나왔고 <strong>사용자 근거가 없다.</strong> 봉인 해제 대조에서 원본이 메인에 5슬라이드를 쓴 것과 대비된다 — <strong>이 화면은 재검토 1순위</strong>. <strong>되돌림 비용</strong>: 중간 — 전역 골격이라 전 화면에 영향. <strong>결정권자·시점</strong>: 크리에이티브디렉터 / 334 시안</p>
+<p><strong>선택 근거</strong>: 122(현시스템기초분석) H2·241(분석종합) I-6이 &quot;문맥 상실&quot;을 지적했다. <strong>하위 화면까지 따라가는 바</strong>가 그 해소책이다. <strong>⚠️ 근거 한계</strong>: <strong>242(UX전략및컨셉수립) R-2가 「메인 콘텐츠 구성」을 분석 공백으로 남겼다.</strong> 이 배치는 요구(REQ-MA-001·002·003)에서만 나왔고 <strong>사용자 근거가 없다.</strong> 봉인 해제 대조에서 원본이 메인에 5슬라이드를 쓴 것과 대비된다 — <strong>이 화면은 재검토 1순위</strong>. <strong>되돌림 비용</strong>: 중간 — 전역 골격이라 전 화면에 영향. <strong>결정권자·시점</strong>: 크리에이티브디렉터 / 334 시안</p>
 <h3 class="subsection__title">5-3. W-04 지점 템플릿의 내비게이션</h3>
 <div class='tw'><table><thead><tr><th>안</th><th>트레이드오프</th></tr></thead><tbody><tr><td><strong>A. 지점 LNB (좌측/상단 고정)</strong> ✅ <strong>보류 선택</strong></td><td>지점 내 이동이 빠르고 REQ-SI-004의 &quot;순서&quot; 요구를 형태로 표현 가능</td></tr><tr><td>B. 탭</td><td>가볍고 MWEB 친화. 단 항목이 늘면(특성 모듈 추가) 탭이 넘친다</td></tr><tr><td>C. 세로 스택 (한 페이지)</td><td>스크롤로 전부 봄. 단 층별안내처럼 무거운 콘텐츠엔 부적합</td></tr></tbody></table></div>
 <p><strong>선택 근거</strong>: <code>REQ-SI-004</code>가 <em>&quot;행사안내를 층별안내 다음 순서로 상단 배치&quot;</em> 라고 <strong>순서 자체를 요구</strong>했다. 순서를 표현하려면 항목이 나열돼야 한다. <strong>되돌림 비용</strong>: 낮음 — W-04 단일 화면. <strong>결정권자·시점</strong>: 기획PL / 334 시안</p>
@@ -624,20 +625,20 @@
 <div class='tw'><table><thead><tr><th>흐름</th><th>커버 화면</th><th>미커버</th></tr></thead><tbody><tr><td>UF-01 지점 정하고 들어가기</td><td>W-01 · W-02</td><td>0</td></tr><tr><td>UF-02 지점 정보 확인</td><td>W-04</td><td>0</td></tr><tr><td>UF-03 브랜드·매장 찾기</td><td>W-03 · W-05 · W-06</td><td>0</td></tr><tr><td>UF-04 문화센터 강좌 신청</td><td>W-07 · W-08 · W-09 · W-10</td><td>0</td></tr><tr><td>UF-05 카드·멤버십</td><td>W-11 · W-06 · W-08~10 · W-12</td><td>0</td></tr><tr><td>UF-06 회원정보 관리</td><td>W-13</td><td>0</td></tr><tr><td>UF-07 막혔을 때</td><td>W-14 · W-15</td><td>0</td></tr></tbody></table></div>
 <p><strong>미커버 경로 0.</strong></p>
 <h3 class="subsection__title">6-2. IA 노드 → 화면</h3>
-<p>74 노드 중 <strong>주요화면으로 직접 그린 것 15</strong>, <strong>원형이 상속하는 것 41</strong>, <strong>원형 없이 341로 넘기는 것 18</strong>(단순 콘텐츠 페이지 — 약관·IR·ESG 등 골격 판단이 필요 없는 것).</p>
+<p>74 노드 중 <strong>주요화면으로 직접 그린 것 15</strong>, <strong>원형이 상속하는 것 41</strong>, <strong>원형 없이 341(화면명세서작성)로 넘기는 것 18</strong>(단순 콘텐츠 페이지 — 약관·IR·ESG 등 골격 판단이 필요 없는 것).</p>
 <h3 class="subsection__title">6-3. 막다른 화면 점검</h3>
 <div class='tw'><table><thead><tr><th>화면</th><th>나가는 경로</th></tr></thead><tbody><tr><td>W-10 거래 완료</td><td>2 (내역 / 계속) ✅</td></tr><tr><td>W-14 예외</td><td>2 (복귀 / 고객센터) ✅</td></tr><tr><td>W-03 빈 상태</td><td>2 (범위 확장 / 재검색) ✅</td></tr><tr><td>W-04 미제공 안내</td><td>1 (다른 지점) ✅</td></tr></tbody></table></div>
 <p><strong>막다른 화면 0.</strong></p>
 <hr class="rule">
 <h2 class="section__title" id="s6">7. 하류로 넘기는 것</h2>
 <div class='tw'><table><thead><tr><th>대상</th><th>내용</th></tr></thead><tbody><tr><td><strong>332 컨텐츠가이드</strong></td><td>플레이스홀더 라벨 → 실제 문구 규칙 · 예외 6종의 메시지 사전(CT-21) · 명칭 사전(CT-20)</td></tr><tr><td><strong>333 UI가이드</strong></td><td>반복 컴포넌트 후보 — 카드 · 필터 · 스텝 인디케이터 · 컨텍스트 바 · 빈 상태 · 탭</td></tr><tr><td><strong>334 시안디자인</strong></td><td>보류 선택 4건 · <strong>W-02 메인 재검토 1순위</strong></td></tr><tr><td><strong>341 화면명세</strong></td><td>원형이 상속하는 41노드의 화면 단위 전개 · <code>W-13</code> PC 전용 사유 기록</td></tr><tr><td><strong>132</strong></td><td>§7-1</td></tr></tbody></table></div>
-<h3 class="subsection__title">7-1. ⚠️ 132 재산정 — 4회째 이월</h3>
-<p>예외 화면군 규모를 312 → 321 → 322 → <strong>331에서도 확정하지 못했다.</strong></p>
-<p><code>W-14</code>를 <strong>원형 1개</strong>로 잡았지만, 그것이 <strong>실제 화면 몇 개가 되는지는 341의 판정</strong>이다. 유형별 문구만 갈리면 1화면(파라미터)이고, 레이아웃이 갈리면 6화면이다. 그 판단은 332가 메시지 사전을 만든 뒤에 가능하다.</p>
-<div class="callout"><div class="callout__body"><strong>회신 시점을 341로 이관한다.</strong> 다만 <strong>4회째 이월</strong>이므로, 341에서도 못 닫히면 132는 미확정을 안고 계약 종료까지 간다. <strong>이 사실 자체를 리스크로 등재해야 한다.</strong></div></div>
+<h3 class="subsection__title">7-1. ⚠️ 132(수행계획수립) 재산정 — 4회째 이월</h3>
+<p>예외 화면군 규모를 312(유저플로우설계) → 321(기능상세정의) → 322(정보구조설계) → <strong>331(와이어프레임설계)에서도 확정하지 못했다.</strong></p>
+<p><code>W-14</code>를 <strong>원형 1개</strong>로 잡았지만, 그것이 <strong>실제 화면 몇 개가 되는지는 341(화면명세서작성)의 판정</strong>이다. 유형별 문구만 갈리면 1화면(파라미터)이고, 레이아웃이 갈리면 6화면이다. 그 판단은 332(컨텐츠가이드설계)가 메시지 사전을 만든 뒤에 가능하다.</p>
+<div class="callout"><div class="callout__body"><strong>회신 시점을 341(화면명세서작성)로 이관한다.</strong> 다만 <strong>4회째 이월</strong>이므로, 341(화면명세서작성)에서도 못 닫히면 132(수행계획수립)는 미확정을 안고 계약 종료까지 간다. <strong>이 사실 자체를 리스크로 등재해야 한다.</strong></div></div>
 <hr class="rule">
     <div class="report__footer">
-      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 와이어프레임 (TO-BE) V1.0 · 2026.08.07
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 와이어프레임 (TO-BE) V1.0 · 2026.08.10
       <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
     </div>
   </div>

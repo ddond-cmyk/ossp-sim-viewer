@@ -20,7 +20,7 @@
         <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
         <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
         <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
-        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.07 · VinylC</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@
     <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 워킹프로토타입 동선맵 · V1.0</div>
     <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>1. 이 문서가 하는 일</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. 화면 연결 맵</span></div><div class="toc__item"><span class="toc__num">03</span><span>3. 동선 점검 체크리스트</span></div><div class="toc__item"><span class="toc__num">04</span><span>4. 시연 시나리오 3종</span></div><div class="toc__item"><span class="toc__num">05</span><span>5. [확인필요]</span></div><div class="toc__item"><span class="toc__num">06</span><span>6. ⚠️ 한계</span></div></div>
 
-<div class="callout"><div class="callout__body">입력: 331 와이어프레임(주요화면 15) · 312 유저플로우(7흐름) · 322 정보구조도<br>⚠️ <strong>이 문서는 준비물이지 프로토타입이 아니다.</strong> 실제 툴 배치·링크 연결·시연은 <strong>사람(기획자)</strong> 이 한다 — OSSP 331 산출물 #2의 부분 작업 구분</div></div>
+<div class="callout"><div class="callout__body">입력: 331 와이어프레임(주요화면 15) · 312 유저플로우(7흐름) · 322 정보구조도<br>⚠️ <strong>이 문서는 준비물이지 프로토타입이 아니다.</strong> 실제 툴 배치·링크 연결·시연은 <strong>사람(기획자)</strong> 이 한다 — OSSP 331(와이어프레임설계) 산출물 #2의 부분 작업 구분</div></div>
 <hr class="rule">
 <h2 class="section__title" id="s0">1. 이 문서가 하는 일</h2>
 <p>OSSP는 워킹프로토타입의 목적을 <strong>동선 점검</strong>으로 규정한다 — <em>&quot;작성된 와이어프레임에 대해서 동선점검을 위해 inVision·POP·marvelapp 등의 툴로 작성하는 동작 가능한 프로토타입.&quot;</em></p>
@@ -55,7 +55,7 @@
                                  │        │
                                  │        ├─ 결제 실패 → W-14 → [재시도] → W-09
                                  └─ 취소 → W-07 (목록 복귀)</pre>
-<p><strong>점검 포인트</strong>: 로그인 분기가 <code>W-08</code> <strong>앞</strong>에 있는가. AS-IS는 S1 중간에 끼어들었다(122 H3).</p>
+<p><strong>점검 포인트</strong>: 로그인 분기가 <code>W-08</code> <strong>앞</strong>에 있는가. AS-IS는 S1 중간에 끼어들었다(122(현시스템기초분석) H3).</p>
 <h3 class="subsection__title">2-4. UF-05 카드·멤버십</h3>
 <pre class="dgm">W-02 → [카드·멤버십] → W-11 허브
                           ├─ 카드 종류 → W-06 상세 → [신청] → W-08 → W-09 → W-10
@@ -73,9 +73,9 @@
 <p>시연 시 항목별로 ✅/⛔를 기록한다.</p>
 <h3 class="subsection__title">3-1. 폐포 — 막다른 화면이 없는가</h3>
 <div class='tw'><table><thead><tr><th>#</th><th>점검</th><th>대상</th></tr></thead><tbody><tr><td>C-1</td><td>거래 완료 후 갈 곳이 2개 이상인가</td><td><code>W-10</code></td></tr><tr><td>C-2</td><td>모든 예외에서 복귀·고객센터로 나갈 수 있는가</td><td><code>W-14</code></td></tr><tr><td>C-3</td><td>검색 0건에서 대안이 제시되는가</td><td><code>W-03</code></td></tr><tr><td>C-4</td><td>지점 미제공 안내에서 다른 지점으로 가는가</td><td><code>W-04</code></td></tr><tr><td>C-5</td><td><strong>대기 신청 후 상태를 조회할 수 있는가</strong></td><td><code>W-07</code> — AS-IS 막다른 길</td></tr><tr><td>C-6</td><td><strong>거래 중 취소하면 목록으로 돌아오는가</strong></td><td><code>W-08</code>·<code>W-09</code> — AS-IS 0건</td></tr></tbody></table></div>
-<h3 class="subsection__title">3-2. 컨텍스트 — 지점을 잃지 않는가 (K1)</h3>
-<div class='tw'><table><thead><tr><th>#</th><th>점검</th></tr></thead><tbody><tr><td>C-7</td><td>지점 선택 후 하위 전 영역에서 컨텍스트 바가 보이는가</td></tr><tr><td>C-8</td><td>검색 결과가 선택 지점을 반영하는가</td></tr><tr><td>C-9</td><td>컨텍스트 없이 지점 종속 화면에 도달하면 <code>W-01</code>로 유도되는가</td></tr><tr><td>C-10</td><td>지점 무관 영역(기업정보)에서 <strong>억지로 지점을 요구하지 않는가</strong> — K1 축 밖</td></tr></tbody></table></div>
-<h3 class="subsection__title">3-3. 채널 동등 — 같은 일을 양쪽에서 할 수 있는가 (K3)</h3>
+<h3 class="subsection__title">3-2. 컨텍스트 — 지점을 잃지 않는가 (컨셉키워드 K1)</h3>
+<div class='tw'><table><thead><tr><th>#</th><th>점검</th></tr></thead><tbody><tr><td>C-7</td><td>지점 선택 후 하위 전 영역에서 컨텍스트 바가 보이는가</td></tr><tr><td>C-8</td><td>검색 결과가 선택 지점을 반영하는가</td></tr><tr><td>C-9</td><td>컨텍스트 없이 지점 종속 화면에 도달하면 <code>W-01</code>로 유도되는가</td></tr><tr><td>C-10</td><td>지점 무관 영역(기업정보)에서 <strong>억지로 지점을 요구하지 않는가</strong> — 컨셉키워드 K1 축 밖</td></tr></tbody></table></div>
+<h3 class="subsection__title">3-3. 채널 동등 — 같은 일을 양쪽에서 할 수 있는가 (컨셉키워드 K3)</h3>
 <div class='tw'><table><thead><tr><th>#</th><th>점검</th></tr></thead><tbody><tr><td>C-11</td><td>비밀번호 변경이 MWEB에서 되는가 (AS-IS PC만)</td></tr><tr><td>C-12</td><td>차량번호 등록이 PC에서 되는가 (AS-IS MWEB만)</td></tr><tr><td>C-13</td><td>H.Point 전환이 MWEB에서 되는가 (AS-IS PC만)</td></tr><tr><td>C-14</td><td>VIP프로그램이 양 채널 2Tab 동일한가 (D-3)</td></tr><tr><td>C-15</td><td><strong>차이가 남은 2건에 사유가 붙어 있는가</strong> — 로그인 기록·배송조회</td></tr></tbody></table></div>
 <h3 class="subsection__title">3-4. 순환 — 되돌이표가 없는가</h3>
 <div class='tw'><table><thead><tr><th>#</th><th>점검</th></tr></thead><tbody><tr><td>C-16</td><td><code>W-01</code> ↔ <code>W-02</code> 사이를 오가며 갇히지 않는가</td></tr><tr><td>C-17</td><td>로그인 → 복귀가 원래 지점으로 정확히 돌아오는가</td></tr><tr><td>C-18</td><td>예외 → 복귀 → 같은 예외 재발 시 무한 반복되지 않는가</td></tr></tbody></table></div>
@@ -90,9 +90,9 @@
 <h2 class="section__title" id="s5">6. ⚠️ 한계</h2>
 <p><strong>이 문서는 프로토타입이 아니다.</strong> 동선맵과 체크리스트까지다.</p>
 <p>동선 점검의 본질은 <em>&quot;눌러보니 이상하더라&quot;</em> 를 발견하는 것인데, 그건 <strong>실제로 눌러봐야 나온다.</strong> 문서상 폐포 점검(§3-1)은 논리적 누락만 잡고, <strong>감각적 어색함</strong>(단계가 많다·되돌아가기 번거롭다)은 잡지 못한다.</p>
-<p>→ <strong>§4 시나리오 3종을 실제로 시연하기 전까지 331은 완료로 보지 않는 것이 맞다.</strong></p>
+<p>→ <strong>§4 시나리오 3종을 실제로 시연하기 전까지 331(와이어프레임설계)은 완료로 보지 않는 것이 맞다.</strong></p>
     <div class="report__footer">
-      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 워킹프로토타입 동선맵 V1.0 · 2026.08.07
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 워킹프로토타입 동선맵 V1.0 · 2026.08.10
       <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
     </div>
   </div>
