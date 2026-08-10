@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI가이드 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">UI가이드</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>333 UI가이드정의</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · UI가이드 · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>1. ⛔ 먼저 — 인용된 그룹 표준은 이 프로젝트를 위한 문서가 아니다</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. 출현 패턴 스캔 — 화면에서 나온 것만</span></div><div class="toc__item"><span class="toc__num">03</span><span>3. 컴포넌트 후보 — 3분류 · 20종</span></div><div class="toc__item"><span class="toc__num">04</span><span>4. 영역 정의</span></div><div class="toc__item"><span class="toc__num">05</span><span>5. 텍스트 슬롯 — 332(컨텐츠가이드설계) 연결</span></div><div class="toc__item"><span class="toc__num">06</span><span>6. 50% 완성도 — 지금 쓴 것과 남긴 것</span></div><div class="toc__item"><span class="toc__num">07</span><span>7. 커버리지 점검</span></div><div class="toc__item"><span class="toc__num">08</span><span>8. [확인필요]</span></div><div class="toc__item"><span class="toc__num">09</span><span>9. 하류로 넘기는 것</span></div></div>
+
+<div class="callout"><div class="callout__body">입력: 331(와이어프레임설계) 주요화면 15 · 332(컨텐츠가이드설계) 텍스트 8종·사전 2종 · 322(정보구조설계) 노드 74 · 215(요구사항정의) 요구 78 · <strong>현대백화점그룹 사내시스템 웹 UI/UX 가이드라인(2022.01)</strong><br>완성도: <strong>50%</strong> — 컴포넌트 후보·분류·구조·행동까지. 시각 토큰·전 variant는 <code>351(스타일가이드설계)</code>·<code>334(시안디자인)</code>에서 보강<br>⚠️ <strong>living document.</strong> 시안·상세설계를 거치며 갱신된다(대체 아님)</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">1. ⛔ 먼저 — 인용된 그룹 표준은 <strong>이 프로젝트를 위한 문서가 아니다</strong></h2>
+<p><code>212(정책요건분석)</code> <strong>P-BRD-03</strong>이 <em>&quot;현대백화점그룹 웹 UI/UX 가이드라인(2022.01) 준수&quot;</em> 를 <strong>확정 정책</strong>으로 걸어뒀다. 실물을 확인했다.</p>
+<h3 class="subsection__title">1-1. 표준이 스스로 선언한 범위</h3>
+<div class="callout"><div class="callout__body"><strong>원문 (p.4 개요)</strong> — <em>&quot;본 가이드라인은 현대백화점그룹에서 <strong>사내시스템</strong> 개발 시 적용해야 할 사용자경험 표준안을 제시하기 위해 작성되었으며, <strong>PC버전에 한하여</strong> 가이드를 제공한다.&quot;</em></div></div>
+<p>문서 제목도 <strong>「현대백화점그룹 </strong>사내시스템<strong> 웹 UI/UX 가이드라인」</strong> 이다.</p>
+<h3 class="subsection__title">1-2. 범위 대조 — 3축 다 어긋난다</h3>
+<div class='tw'><table><thead><tr><th>축</th><th>그룹 표준</th><th><strong>이 프로젝트</strong></th><th>판정</th></tr></thead><tbody><tr><td><strong>적용 대상</strong></td><td><strong>사내시스템</strong> (임직원 업무용)</td><td><strong>고객 대면</strong> 자사채널</td><td>⛔ 불일치</td></tr><tr><td><strong>채널</strong></td><td><strong>PC 전용</strong> (&quot;PC버전에 한하여&quot;)</td><td><strong>PC + MWEB</strong> — 채널 통일이 컨셉</td><td>⛔ 불일치</td></tr><tr><td><strong>목적</strong></td><td>업무 효율 (과업 완수 속도)</td><td>탐색·방문 유도·거래</td><td>⛔ 불일치</td></tr></tbody></table></div>
+<p><strong>세 축이 전부 어긋난다.</strong> 그대로 상속하면 <strong>고객 채널에 업무 시스템 기준을 적용</strong>하게 된다.</p>
+<div class="callout"><div class="callout__body">⚠️ <strong>정책 자체를 재확인 대상으로 올린다.</strong> 이 가이드가 임의로 정책을 무효화하지 않는다. <code>P-BRD-03</code>을 쓴 시점에 <strong>어느 문서를 가리킨 것인지</strong> 고객 확인이 필요하다 — 고객 대면 채널용 별도 가이드가 있는데 파일명이 비슷해 잘못 인용됐을 가능성도 있다.</div></div>
+<h3 class="subsection__title">1-3. 그래도 버리지 않는다 — <strong>구간별 판정</strong></h3>
+<p>문서 구조(Ⅲ. 설계가이드 7개 절)를 구간별로 판정했다. <strong>보편 규칙은 채택하고, 업무 시스템 전제 규칙만 걷어낸다.</strong></p>
+<div class='tw'><table><thead><tr><th>구간</th><th>판정</th><th>근거</th></tr></thead><tbody><tr><td><strong>Ⅱ. 설계기준 5원칙</strong> (탐색 용이·일관성·접근성·안정성·피드백)</td><td><strong>채택</strong></td><td>채널 무관 보편 원칙. 접근성·오류 피드백은 우리 <code>컨셉키워드 K4(막혔을 때 갈 곳을 먼저 만든다)</code>와 정합</td></tr><tr><td><strong>2. 탐색</strong> — 메인/서브 메뉴</td><td><strong>조건부</strong></td><td><code>[필수] 링크 활성화 상태를 명확히 구분</code> <strong>채택</strong>. <code>[권장] 링크 개수 최소화</code> <strong>채택</strong>(우리 GNB 32→7과 정합). 단 <strong>사이드바 서브메뉴 전제는 불채택</strong> — PC 전용 가정</td></tr><tr><td><strong>3. 검색</strong></td><td><strong>조건부</strong></td><td>보편 규칙 채택. 단 <strong>지점 컨텍스트 반영</strong>(<code>컨셉키워드 K1</code>)은 표준에 없는 우리 요건</td></tr><tr><td><strong>4. 게시판</strong></td><td><strong>조건부</strong></td><td>목록·페이징 규칙 채택. <strong>업무 게시판 특유의 결재·첨부 규칙은 불채택</strong></td></tr><tr><td><strong>5. 데이터 작업</strong></td><td><strong>조건부</strong></td><td>폼 입력·검증 규칙 채택. <strong>대량 그리드·엑셀 다운로드는 불채택</strong>(업무 시스템 전제)</td></tr><tr><td><strong>6. 안내</strong> — 모달·알림·오류</td><td><strong>채택</strong></td><td><code>[필수] 모달과 주변 영역을 분명히 구분</code> 등 보편. <strong><code>332(컨텐츠가이드설계)</code> 메시지 사전과 정합</strong></td></tr><tr><td><strong>7. 지원/기타</strong></td><td><strong>조건부</strong></td><td>도움말 규칙 채택</td></tr><tr><td><strong>1. 브랜드 영역</strong></td><td><strong>불채택</strong></td><td>사내시스템 헤더 전제. 우리는 <code>P-BRD-01·02</code>(해피니스 산스·더현대 로고)를 따른다</td></tr><tr><td><strong>모바일 컴포넌트</strong></td><td><strong>공백</strong></td><td>표준이 PC만 다룬다. <strong>MWEB은 우리가 정의한다</strong></td></tr></tbody></table></div>
+<p><strong>채택 2 · 조건부 5 · 불채택 1 · 공백 1.</strong></p>
+<div class="callout"><div class="callout__body"><strong>불채택·조건부에 사유를 적었다.</strong> 고객이 <em>&quot;그룹 표준 준수하기로 했는데 왜 다르냐&quot;</em> 고 물으면 <strong>「적용 범위가 사내시스템·PC 전용이라 명시돼 있다」</strong> 가 답이다. 문서에 적혀 있어야 답이 된다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s1">2. 출현 패턴 스캔 — <strong>화면에서 나온 것만</strong></h2>
+<p>라이브러리를 먼저 설계하지 않는다. <code>331(와이어프레임설계)</code> 15화면(+채널 변형 3)에서 <strong>실제로 출현한</strong> 요소를 세고, <strong>2개 이상 화면에서 반복될 때만</strong> 컴포넌트로 승격한다.</p>
+<h3 class="subsection__title">2-1. ⚠️ 원형이 상속하는 화면은 몇 번으로 세나</h3>
+<p><code>331(와이어프레임설계)</code>이 <strong>레이아웃 원형 6개</strong>를 잡았다. <code>W-04(지점 템플릿)</code>는 <strong>AS-IS 192화면</strong>의 골격이다. 그 안의 LNB는 와이어프레임 상 <strong>1회 출현</strong>이지만 실제로는 <strong>지점 16개에서 반복</strong>된다.</p>
+<p><strong>판정: 원형이 상속하는 실제 화면 수로 센다.</strong> 와이어프레임 등장 횟수가 아니라 <strong>런타임 반복</strong>이 승격 근거다.</p>
+<div class='tw'><table><thead><tr><th>요소</th><th>와이어프레임 출현</th><th><strong>실질 반복</strong></th><th>승격</th></tr></thead><tbody><tr><td>지점 LNB</td><td>1 (<code>W-04</code>)</td><td><strong>지점 16개</strong></td><td>✅</td></tr><tr><td>스텝 인디케이터</td><td>3 (<code>W-08~10</code>)</td><td>문화센터 + 카드 <strong>2계열 × 3스텝</strong></td><td>✅</td></tr><tr><td>마일리지 데이터 표</td><td>1 (<code>W-12</code>)</td><td><strong>1</strong> — 이 화면에만</td><td>❌ 로컬 유지</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>이 판정이 없으면 원형 안의 컴포넌트가 전부 「1회 출현」으로 잡혀 승격에서 탈락한다.</strong> 원형 설계와 컴포넌트 승격은 같이 봐야 한다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s2">3. 컴포넌트 후보 — 3분류 · 20종</h2>
+<p><strong>동일성 판정</strong>: 구조(구성 요소·배치) + 행동(인터랙션 결과)이 둘 다 같으면 같은 컴포넌트, 일부 속성만 다르면 variant, <strong>행동이 다르면 별도 컴포넌트</strong>.</p>
+<h3 class="subsection__title">3-1. 내비게이션 컴포넌트 (7)</h3>
+<div class='tw'><table><thead><tr><th>ID</th><th>컴포넌트</th><th>구조</th><th>행동</th><th>출현</th><th>변경</th><th>필수 variant</th></tr></thead><tbody><tr><td><strong>N-01</strong></td><td>전역 헤더</td><td>로고 · GNB(7) · 통합검색 · 지점 선택 · 로그인</td><td>전 화면 고정. 스크롤 시 유지</td><td><strong>전 화면</strong></td><td>개선</td><td>PC / MWEB</td></tr><tr><td><strong>N-02</strong></td><td><strong>컨텍스트 바</strong></td><td>지점명 · <code>변경</code></td><td>누르면 <code>T-07</code> 오버레이로 지점 선택</td><td><strong>전 화면</strong>(지점종속)</td><td><strong>신설</strong></td><td>지점 선택됨 / 미선택</td></tr><tr><td><strong>N-03</strong></td><td>지점 LNB</td><td>항목 4~5 · 활성 표시</td><td>같은 화면 내 콘텐츠 전환</td><td>지점 16개</td><td>개선</td><td>—</td></tr><tr><td><strong>N-04</strong></td><td>탭</td><td>라벨 2~4 · 활성 표시</td><td><strong>같은 화면 안에서</strong> 콘텐츠 전환</td><td><code>W-03</code>·<code>W-06</code>·<code>W-12</code></td><td>유지</td><td>2탭 / 3탭 이상</td></tr><tr><td><strong>N-05</strong></td><td>스텝 인디케이터</td><td>단계 3 · 현재 단계 강조</td><td><strong>표시 전용</strong> — 누르지 않는다</td><td>거래 2계열</td><td>개선</td><td>—</td></tr><tr><td><strong>N-06</strong></td><td>푸터</td><td>약관·정책 · 고객센터 · 사이트맵</td><td>외부·하위 이동</td><td>전 화면</td><td>개선</td><td>—</td></tr><tr><td><strong>N-07</strong></td><td>더보기·페이지네이션</td><td>버튼 또는 번호</td><td>목록 추가 로드</td><td><code>W-05</code> 계열</td><td>유지</td><td>더보기 / 번호</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong><code>N-04</code> 탭과 <code>N-03</code> LNB는 겉이 비슷하지만 별도 컴포넌트다.</strong> 탭은 <strong>같은 화면 안</strong>에서 전환하고 LNB는 <strong>다른 화면으로 이동</strong>한다 — <strong>행동이 다르다.</strong><br><strong><code>N-05</code> 스텝 인디케이터는 누르지 않는다.</strong> 거래 중 임의 단계 이동을 허용하면 검증 순서가 깨진다. 이동은 <code>이전</code>·<code>다음</code> 버튼으로만.</div></div>
+<h3 class="subsection__title">3-2. 컨트롤 컴포넌트 (6)</h3>
+<div class='tw'><table><thead><tr><th>ID</th><th>컴포넌트</th><th>구조</th><th>행동</th><th>출현</th><th>필수 variant</th></tr></thead><tbody><tr><td><strong>C-01</strong></td><td>버튼</td><td>라벨(동사)</td><td>행동 실행</td><td>전 화면</td><td><strong>주요 / 보조 / 취소</strong> — 3종</td></tr><tr><td><strong>C-02</strong></td><td>필터</td><td>조건 항목 N · 선택 상태</td><td>목록 즉시 갱신</td><td><code>W-01</code>·<code>W-05</code>·<code>W-07</code></td><td>단일 선택 / 다중 선택</td></tr><tr><td><strong>C-03</strong></td><td>검색 입력</td><td>입력 필드 · 실행</td><td><code>W-03</code> 결과로 이동</td><td>전역 · <code>W-15</code></td><td>전역 / 지역(도움말)</td></tr><tr><td><strong>C-04</strong></td><td>입력 필드</td><td>라벨 · 입력 · 헬퍼 · 오류</td><td>입력·검증</td><td>거래 · 마이페이지</td><td>기본 / 오류</td></tr><tr><td><strong>C-05</strong></td><td>선택 컨트롤</td><td>라디오 · 체크박스</td><td>값 선택</td><td><code>W-09</code> 결제수단 등</td><td>라디오 / 체크</td></tr><tr><td><strong>C-06</strong></td><td>정렬</td><td>드롭다운</td><td>목록 순서 변경</td><td><code>W-05</code>·<code>W-07</code></td><td>—</td></tr></tbody></table></div>
+<p><strong><code>C-01</code> 버튼 3종의 구분 기준</strong> — <code>332(컨텐츠가이드설계)</code> §4-1과 짝이다.</p>
+<div class='tw'><table><thead><tr><th>variant</th><th>언제</th><th>예</th></tr></thead><tbody><tr><td><strong>주요</strong></td><td>화면당 <strong>1개.</strong> 이 화면의 목적 행동</td><td><code>신청하기</code> · <code>다음</code></td></tr><tr><td>보조</td><td>대안 행동</td><td><code>다른 지점 보기</code> · <code>대기 신청</code></td></tr><tr><td><strong>취소</strong></td><td><strong>진행 중단.</strong> <code>닫기</code>와 구별한다</td><td><code>신청 취소</code></td></tr></tbody></table></div>
+<h3 class="subsection__title">3-3. 컨텐츠 컴포넌트 (7)</h3>
+<div class='tw'><table><thead><tr><th>ID</th><th>컴포넌트</th><th>구조</th><th>행동</th><th>출현</th><th>변경</th><th>필수 variant</th></tr></thead><tbody><tr><td><strong>T-01</strong></td><td>카드</td><td>썸네일 · 제목 · 속성 2~4 · 상태</td><td>상세로 이동</td><td><code>W-01</code>·<code>W-05</code>·<code>W-07</code>·<code>W-11</code> <strong>4화면 + 원형 상속</strong></td><td>개선</td><td>지점 / 강좌 / 브랜드 / 카드상품</td></tr><tr><td><strong>T-02</strong></td><td>목록 아이템</td><td>제목 · 부가정보 · 진입 표시</td><td>상세로 이동</td><td><code>W-05</code>·<code>W-13</code>·<code>W-15</code></td><td>유지</td><td>—</td></tr><tr><td><strong>T-03</strong></td><td>배너</td><td>이미지 · 링크</td><td>지정 대상 이동</td><td><code>W-02</code> (최대 5)</td><td>개선</td><td>—</td></tr><tr><td><strong>T-04</strong></td><td><strong>빈 상태</strong></td><td>상황 문구 · 대안 행동</td><td>대안으로 유도</td><td><code>W-03</code>·<code>W-04</code>·<code>W-05</code></td><td><strong>신설</strong></td><td>검색 0건 / 미제공 / 목록 없음</td></tr><tr><td><strong>T-05</strong></td><td><strong>예외 안내</strong></td><td>무엇 · 왜 · 다음 행동 · 버튼</td><td>복귀 또는 고객센터</td><td><code>W-14</code> <strong>6종</strong> · <code>W-09</code></td><td><strong>신설</strong></td><td>6종</td></tr><tr><td><strong>T-06</strong></td><td>요약 패널</td><td>라벨 · 값 · 이동</td><td>상세로 이동</td><td><code>W-02</code>·<code>W-13</code></td><td>개선</td><td>—</td></tr><tr><td><strong>T-07</strong></td><td>오버레이</td><td>헤더 · 본문 · 닫기</td><td>배경 조작 차단</td><td><code>W-01</code> 지점 선택</td><td><strong>신설</strong></td><td>—</td></tr></tbody></table></div>
+<p><strong>로컬 유지(승격 안 함)</strong></p>
+<div class='tw'><table><thead><tr><th>요소</th><th>왜</th></tr></thead><tbody><tr><td>마일리지 고밀도 표 (<code>W-12</code>)</td><td><strong>1화면 전용.</strong> 적립처×결제수단 매트릭스는 이 화면에만 존재 — rule of two 미달</td></tr><tr><td>지점 특성 모듈 (<code>W-04</code>)</td><td>종류가 미확정(<code>331(와이어프레임설계)</code> D3-2). 확정 후 재판정</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s3">4. 영역 정의</h2>
+<h3 class="subsection__title">4-1. 프레임 영역</h3>
+<pre class="dgm">┌─ 전역 헤더 (N-01) ────────────────────────┐  고정
+├─ 컨텍스트 바 (N-02) ──────────────────────┤  지점종속 화면만
+├─ ┌ 지역 내비 (N-03/N-04) ┬ 콘텐츠 컨테이너 ┐│
+│  └───────────────────────┴────────────────┘│
+├─ 푸터 (N-06) ─────────────────────────────┤
+└───────────────────────────────────────────┘
+   전역 오버레이 (T-07) · 예외 안내 (T-05)  ← 계층 밖</pre>
+<p><code>322(정보구조설계)</code>가 <strong>전역 8노드를 계층 밖에 뒀고</strong>, 그것이 여기서 <strong>프레임 영역</strong>이 된다. 화면별 콘텐츠는 컨테이너 안에서만 바뀐다.</p>
+<h3 class="subsection__title">4-2. 내비게이션 영역 — 3층</h3>
+<div class='tw'><table><thead><tr><th>층</th><th>컴포넌트</th><th>범위</th></tr></thead><tbody><tr><td>전역</td><td><code>N-01</code> GNB(7) · <code>N-02</code> 컨텍스트 바 · 통합검색</td><td>전 화면</td></tr><tr><td>지역</td><td><code>N-03</code> LNB / <code>N-04</code> 탭</td><td>도메인 내</td></tr><tr><td>흐름</td><td><code>N-05</code> 스텝 · <code>N-07</code> 더보기</td><td>특정 흐름</td></tr></tbody></table></div>
+<p><strong>⚠️ <code>N-02</code> 컨텍스트 바가 이 구조의 특이점이다.</strong> 일반적인 웹에 없는 층인데, <code>322(정보구조설계)</code>가 <strong>지점을 트리에 안 넣고 전역 컨텍스트로</strong> 두기로 한 결과 <strong>화면에서 그것을 보여줄 자리</strong>가 필요해졌다. <code>컨셉키워드 K1(어느 점포인가로 시작한다)</code>의 유일한 실물이다.</p>
+<hr class="rule">
+<h2 class="section__title" id="s4">5. 텍스트 슬롯 — <code>332(컨텐츠가이드설계)</code> 연결</h2>
+<p>컴포넌트마다 문구가 들어갈 자리가 있다. <strong>여기서는 슬롯 위치만 정하고 문구는 <code>332(컨텐츠가이드설계)</code>의 사전을 가져다 쓴다.</strong></p>
+<div class='tw'><table><thead><tr><th>컴포넌트</th><th>텍스트 슬롯</th><th>문구 출처</th></tr></thead><tbody><tr><td><code>N-01</code> 전역 헤더</td><td>GNB 라벨 7</td><td><code>322(정보구조설계)</code> L1 명칭</td></tr><tr><td><code>N-02</code> 컨텍스트 바</td><td><strong><code>지금 보는 점포</code></strong> + 지점명</td><td><strong><code>332(컨텐츠가이드설계)</code> P-TERM-01</strong></td></tr><tr><td><code>C-01</code> 버튼</td><td>라벨(동사)</td><td><code>332(컨텐츠가이드설계)</code> §4-1</td></tr><tr><td><code>C-04</code> 입력 필드</td><td>라벨 · 헬퍼 · <strong>플레이스홀더(예시값)</strong> · 오류</td><td><code>332(컨텐츠가이드설계)</code> §4-3</td></tr><tr><td><code>T-04</code> 빈 상태</td><td>상황 + 대안</td><td><strong><code>332(컨텐츠가이드설계)</code> §6-2 3종</strong></td></tr><tr><td><code>T-05</code> 예외 안내</td><td>무엇 / 왜 / 다음 행동</td><td><strong><code>332(컨텐츠가이드설계)</code> §6 6종</strong></td></tr><tr><td><code>T-01</code> 카드</td><td>제목 · 속성 라벨</td><td><code>332(컨텐츠가이드설계)</code> §5 명칭 사전</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>컴포넌트가 문구를 새로 만들지 않는다.</strong> 사전에 없는 상황이 나오면 <code>332(컨텐츠가이드설계)</code>로 되돌려 사전을 늘린다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s5">6. 50% 완성도 — 지금 쓴 것과 남긴 것</h2>
+<div class='tw'><table><thead><tr><th>지금 썼다</th><th>남겼다 (보강 대상)</th><th>어디서</th></tr></thead><tbody><tr><td>컴포넌트 20종 목록·분류</td><td>시각 토큰(색·타이포·간격)</td><td><code>351(스타일가이드설계)</code></td></tr><tr><td>구조 — 무엇으로 구성되나</td><td>픽셀 스펙 · 반응형 브레이크포인트</td><td><code>351(스타일가이드설계)</code></td></tr><tr><td>행동 — 무엇이 일어나나</td><td>모션·트랜지션</td><td><code>352(인터랙션가이드설계)</code></td></tr><tr><td><strong>필수 variant</strong> (없으면 화면을 못 그림)</td><td>전 variant 조합</td><td><code>334(시안디자인)</code></td></tr><tr><td>주요 상태 (빈/오류)</td><td>hover·focus·disabled 등</td><td><code>334(시안디자인)</code>·<code>351(스타일가이드설계)</code></td></tr><tr><td>텍스트 슬롯 위치</td><td>— (문구는 <code>332(컨텐츠가이드설계)</code>에서 확정)</td><td>—</td></tr></tbody></table></div>
+<p><strong>판정</strong>: <code>334(시안디자인)</code>·<code>341(화면명세서작성)</code>이 착수 가능한 수준이다. 그 이상은 <code>351(스타일가이드설계)</code> 침범이라 쓰지 않았다.</p>
+<hr class="rule">
+<h2 class="section__title" id="s6">7. 커버리지 점검</h2>
+<div class='tw'><table><thead><tr><th>점검</th><th>결과</th></tr></thead><tbody><tr><td><code>331(와이어프레임설계)</code> 주요화면 15개가 정의된 영역·컴포넌트 조합으로 표현되나</td><td><strong>미커버 0</strong></td></tr><tr><td>고아 컴포넌트(사용 화면 0)</td><td><strong>0</strong></td></tr><tr><td>승격 탈락(로컬 유지)</td><td>2 — 사유 기재</td></tr><tr><td><code>332(컨텐츠가이드설계)</code> 사전 항목이 슬롯에 연결되나</td><td>예외 6종·빈 상태 3종 <strong>전건 연결</strong></td></tr><tr><td>그룹 표준 구간 판정</td><td>9구간 <strong>전건 판정</strong> (채택 2·조건부 5·불채택 1·공백 1)</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s7">8. [확인필요]</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>확인 주체</th><th>시점</th><th>⛔</th></tr></thead><tbody><tr><td>1</td><td><strong><code>P-BRD-03</code>이 가리키는 가이드라인이 맞나</strong> — 실물은 「사내시스템·PC 전용」</td><td>고객사</td><td>요건 클로징</td><td><strong>⛔</strong></td></tr><tr><td>2</td><td><strong>고객 대면 채널용 그룹 가이드가 따로 있나</strong></td><td>고객사</td><td>요건 클로징</td><td></td></tr><tr><td>3</td><td>기존 컴포넌트 라이브러리(코드·디자인 파일) 보유 여부</td><td>고객사·개발PL</td><td><code>334(시안디자인)</code> 전</td><td></td></tr><tr><td>4</td><td>지점 특성 모듈 종류 확정 시 컴포넌트 재판정</td><td>기획PL</td><td><code>334(시안디자인)</code></td><td></td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s8">9. 하류로 넘기는 것</h2>
+<div class='tw'><table><thead><tr><th>대상</th><th>내용</th></tr></thead><tbody><tr><td><strong>334(시안디자인)</strong></td><td>컴포넌트 20종에 스타일 적용 · 전 variant 전개 · <strong>그룹 표준 채택 구간 반영</strong></td></tr><tr><td><strong>341(화면명세서작성)</strong></td><td>화면별 컴포넌트 조합 · 텍스트 슬롯</td></tr><tr><td><strong>351(스타일가이드설계)</strong></td><td>시각 토큰 · 픽셀 스펙 · 컴포넌트 ID 체계 확정</td></tr><tr><td><strong>352(인터랙션가이드설계)</strong></td><td><code>N-05</code> 스텝 전이 · <code>T-07</code> 오버레이 진입/이탈 · <code>C-02</code> 필터 즉시 갱신</td></tr><tr><td><strong>353(UI개발가이드설계)</strong></td><td>컴포넌트 마크업 표준코드</td></tr><tr><td><strong>332(컨텐츠가이드설계)</strong></td><td>사전에 없는 상황 발견 시 역방향 추가</td></tr><tr><td><strong>212(정책요건분석)</strong></td><td><strong><code>P-BRD-03</code> 재확인 요청</strong> — 인용 문서의 적용 범위 불일치</td></tr></tbody></table></div>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · UI가이드 V1.0 · 2026.08.10
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

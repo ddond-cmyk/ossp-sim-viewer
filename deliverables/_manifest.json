@@ -243,6 +243,15 @@
   "sections": 12
  },
  {
+  "task": "333",
+  "taskname": "UI가이드정의",
+  "title": "UI가이드",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "333_UI가이드정의/UI가이드.html",
+  "sections": 9
+ },
+ {
   "task": "932",
   "taskname": "회의록",
   "title": "회의록 — 기능요건 확정 [타 프로젝트 파일럿]",
