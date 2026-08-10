@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>컨텐츠가이드 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">컨텐츠가이드</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>332 컨텐츠가이드설계</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 컨텐츠가이드 · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>0. 이 문서의 세 축</span></div><div class="toc__item"><span class="toc__num">02</span><span>1. Voice — 관측에서 역추출했다. 발명이 아니다</span></div><div class="toc__item"><span class="toc__num">03</span><span>2. 타이틀 계층 — 논리 위계이지 타이포 스케일이 아니다</span></div><div class="toc__item"><span class="toc__num">04</span><span>3. Tone — 맥락별 좌표</span></div><div class="toc__item"><span class="toc__num">05</span><span>4. 마이크로카피 규칙</span></div><div class="toc__item"><span class="toc__num">06</span><span>5. 명칭 사전 — 정본 1개만 남긴다 CT-20</span></div><div class="toc__item"><span class="toc__num">07</span><span>6. 메시지 사전 — 예외 6종 CT-21</span></div><div class="toc__item"><span class="toc__num">08</span><span>7. 플레이스홀더 → 실제 문구 대응</span></div><div class="toc__item"><span class="toc__num">09</span><span>8. 커버리지 점검</span></div><div class="toc__item"><span class="toc__num">10</span><span>9. ⚠️ 범위 자가점검 — 컨텐츠 전략으로 넘어갔나</span></div><div class="toc__item"><span class="toc__num">11</span><span>10. [확인필요] · 미정의</span></div><div class="toc__item"><span class="toc__num">12</span><span>11. 하류로 넘기는 것</span></div></div>
+
+<div class="callout"><div class="callout__body">입력: 331(와이어프레임설계) 주요화면 15 · 322(정보구조설계) 노드 74 · 321(기능상세정의) CT-20·CT-21 · 212(정책요건분석) P-TERM 9건 · 215(요구사항정의) REQ-CM-004·REQ-MY-001 · 122(현시스템기초분석) H4<br>범위: <strong>일관성 규칙 + 사전.</strong> 컨텐츠 전략(독자 세분·주제 기획·전환 카피)은 다루지 않는다 — OSSP 332 명시 제외<br>⚠️ <strong>334(시안디자인)·341(화면명세서작성)·423(UI개발퍼블리싱)의 컨텐츠 SSOT.</strong> 규칙이 바뀌면 하류 문구가 상속한다</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">0. 이 문서의 세 축</h2>
+<div class='tw'><table><thead><tr><th>축</th><th>답하는 질문</th><th>절</th></tr></thead><tbody><tr><td><strong>① 구조</strong></td><td>타이틀·텍스트가 어떤 위계로 놓이나</td><td>§2</td></tr><tr><td><strong>② 규칙</strong></td><td>어떤 말투로 쓰나</td><td>§3·§4</td></tr><tr><td><strong>③ 사전</strong></td><td><strong>무슨 문구를 쓰나</strong></td><td>§5·§6</td></tr></tbody></table></div>
+<p>③이 없으면 하류가 규칙을 읽고 문구를 <strong>각자 창작한다.</strong> <code>341(화면명세서작성)</code>·<code>423(UI개발퍼블리싱)</code>은 확정 문구를 가져다 쓰는 작업이지 쓰기 작업이 아니다.</p>
+<hr class="rule">
+<h2 class="section__title" id="s1">1. Voice — <strong>관측에서 역추출했다. 발명이 아니다</strong></h2>
+<h3 class="subsection__title">1-1. ⚠️ 브랜드 보이스 원천이 없다</h3>
+<p><code>212(정책요건분석)</code>의 브랜드 정책 4건을 확인한 결과 <strong>전부 시각 자산</strong>이다.</p>
+<div class='tw'><table><thead><tr><th>정책</th><th>내용</th><th>말투 관련</th></tr></thead><tbody><tr><td>P-BRD-01 서체</td><td>해피니스 산스 필수</td><td>✕</td></tr><tr><td>P-BRD-02 BI·로고</td><td>더현대 로고타입 사용 가이드</td><td>✕</td></tr><tr><td>P-BRD-03 그룹 가이드</td><td>현대백화점그룹 웹 UI/UX 가이드라인(2022.01)</td><td>✕ (UI 규격)</td></tr><tr><td>P-BRD-04 캐릭터</td><td>&#x27;흰디&#x27; 활용 검토</td><td>✕</td></tr></tbody></table></div>
+<p><strong>말투는 문서화된 적이 없다.</strong> 상속할 Voice가 없다.</p>
+<h3 class="subsection__title">1-2. 그래서 확정된 언어 결정에서 읽었다</h3>
+<p>지어내지 않고, <strong>이미 굳은 결정들이 무엇을 택하고 무엇을 버렸는지</strong>를 관측했다.</p>
+<div class='tw'><table><thead><tr><th>관측 대상</th><th>버린 것 → 택한 것</th><th>읽히는 경향</th></tr></thead><tbody><tr><td>P-TERM-01</td><td><code>주 이용 백화점</code>·<code>자주 찾는 지점</code> → <strong><code>지금 보는 점포</code></strong></td><td>추정·이력 표현을 버리고 <strong>현재 상태</strong>를 말한다</td></tr><tr><td>P-TERM-04</td><td><code>자동정산 차량번호</code> → <strong><code>나의 차량 번호</code></strong></td><td><strong>시스템 용어를 버리고 소유격</strong>을 택한다</td></tr><tr><td>P-TERM-05</td><td><code>수강 내역</code> → <strong><code>나의 강좌</code></strong></td><td>행정 용어(<code>내역</code>)를 버리고 <strong>사용자 관점</strong>으로</td></tr><tr><td>P-TERM-02</td><td><code>나의 등급</code> → <strong><code>나의 VIP 등급</code></strong></td><td>모호한 축약을 피하고 <strong>무엇의 등급인지 밝힌다</strong></td></tr><tr><td>P-TERM-06</td><td><code>사용 가능한 H.Point</code> → <strong><code>H.Point</code></strong></td><td>자명한 수식을 덜어낸다 — <strong>군더더기 제거</strong></td></tr><tr><td>P-TERM-07</td><td><code>연락처</code>·<code>휴대폰</code> → <strong><code>휴대전화</code></strong></td><td>구어·약칭보다 <strong>표준 표기</strong></td></tr></tbody></table></div>
+<h3 class="subsection__title">1-3. 역추출한 Voice <code>[관측 기반 추정]</code></h3>
+<div class="callout"><div class="callout__body"><strong>사용자의 지금 상태를 사용자의 말로, 군더더기 없이.</strong></div></div>
+<div class='tw'><table><thead><tr><th>성분</th><th>서술</th><th>근거</th></tr></thead><tbody><tr><td><strong>소유격을 쓴다</strong></td><td>사용자에게 속한 것은 <code>나의 ~</code>로 부른다</td><td>P-TERM-02·04·05 (3건 일관)</td></tr><tr><td><strong>시스템 용어를 쓰지 않는다</strong></td><td><code>자동정산</code>·<code>내역</code> 같은 운영 어휘를 사용자 화면에 노출하지 않는다</td><td>P-TERM-04·05</td></tr><tr><td><strong>현재를 말한다</strong></td><td>추정·이력(<code>주 이용</code>·<code>자주 찾는</code>)보다 지금 상태(<code>지금 보는</code>)</td><td>P-TERM-01</td></tr><tr><td><strong>덜어낸다</strong></td><td>자명한 수식어를 붙이지 않는다</td><td>P-TERM-06</td></tr><tr><td><strong>표준 표기를 따른다</strong></td><td>구어·약칭보다 공식 표기</td><td>P-TERM-07</td></tr></tbody></table></div>
+<p><strong>⚠️ 이건 가설이다.</strong> 브랜드 담당자가 <em>&quot;우리는 그런 말투가 아니다&quot;</em> 라고 하면 즉시 뒤집힌다.</p>
+<div class='tw'><table><thead><tr><th>확정 절차</th><th></th></tr></thead><tbody><tr><td>확정 주체</td><td>고객사 브랜드 담당 · 크리에이티브디렉터</td></tr><tr><td>확정 시점</td><td><strong><code>334(시안디자인)</code> 착수 전</strong></td></tr><tr><td>뒤집히면</td><td>§3 Tone 좌표 · §4 마이크로카피 규칙이 함께 재검토</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s2">2. 타이틀 계층 — <strong>논리 위계이지 타이포 스케일이 아니다</strong></h2>
+<p><code>331(와이어프레임설계)</code>의 주요화면 15개에서 실제로 나타난 텍스트 슬롯을 수집해 유형화했다. 시각 크기·굵기는 <code>351(스타일가이드설계)</code>의 몫이다.</p>
+<h3 class="subsection__title">2-1. 타이틀 4단</h3>
+<div class='tw'><table><thead><tr><th>단계</th><th>역할</th><th>어디에</th><th>형식</th></tr></thead><tbody><tr><td><strong>T1 화면 타이틀</strong></td><td>이 화면이 무엇인가</td><td>화면당 1개</td><td>명사구. 마침표 없음</td></tr><tr><td><strong>T2 섹션 타이틀</strong></td><td>화면 안의 묶음</td><td>섹션당 1개</td><td>명사구</td></tr><tr><td><strong>T3 서브 타이틀</strong></td><td>섹션 내 하위 묶음</td><td>필요 시</td><td>명사구</td></tr><tr><td><strong>T4 라벨</strong></td><td>개별 항목·필드 이름</td><td>항목마다</td><td>명사. 조사 없음</td></tr></tbody></table></div>
+<p><strong>T4 아래로 내려가지 않는다.</strong> 더 필요하면 화면을 나눈다(<code>331(와이어프레임설계)</code> §2-3 뎁스 범례와 같은 규율).</p>
+<h3 class="subsection__title">2-2. 텍스트 요소 8종</h3>
+<div class='tw'><table><thead><tr><th>요소</th><th>용도</th><th>길이</th><th>형식</th></tr></thead><tbody><tr><td><strong>본문</strong></td><td>설명·안내</td><td>제한 없음</td><td>문장. 마침표</td></tr><tr><td><strong>설명(헬퍼)</strong></td><td>입력 보조</td><td>1줄</td><td>문장 또는 구</td></tr><tr><td><strong>플레이스홀더</strong></td><td>입력 예시</td><td>짧게</td><td><strong>예시값</strong>. 지시문 금지</td></tr><tr><td><strong>버튼 라벨</strong></td><td>행동</td><td>2~6자</td><td><strong>동사</strong>. 마침표 없음</td></tr><tr><td><strong>빈 상태</strong></td><td>결과 없음</td><td>1~2줄</td><td>상황 + 대안</td></tr><tr><td><strong>오류 메시지</strong></td><td>실패</td><td>1~3줄</td><td>§4-2 공식</td></tr><tr><td><strong>캡션</strong></td><td>부연·출처</td><td>1줄</td><td>구</td></tr><tr><td><strong>고지</strong></td><td>법정·정책</td><td>원문</td><td><strong>수정 금지</strong> — 법무 원문</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>고지는 손대지 않는다.</strong> 약관·개인정보처리방침은 <code>IA-008</code>·회원 A 법정고지 17건에 속하고 <strong>이번 개편 대상이 아니다</strong>(<code>240</code> 결정 D-2).</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s3">3. Tone — 맥락별 좌표</h2>
+<p>NN/g 4축으로 기본 좌표를 잡고 맥락별로 변주한다. <strong>단일 톤을 전 화면에 일괄 적용하지 않는다.</strong></p>
+<h3 class="subsection__title">3-1. 기본 좌표</h3>
+<div class='tw'><table><thead><tr><th>축</th><th>좌표</th><th>근거</th></tr></thead><tbody><tr><td>재미 ↔ <strong>진지</strong></td><td><strong>진지 쪽 70%</strong></td><td>백화점·카드·개인정보를 다룬다. 거래 흐름이 절반</td></tr><tr><td><strong>격식</strong> ↔ 캐주얼</td><td><strong>격식 쪽 65%</strong></td><td>P-TERM-07이 구어(<code>휴대폰</code>)를 표준어(<code>휴대전화</code>)로 바꿨다</td></tr><tr><td><strong>정중</strong> ↔ 무례</td><td><strong>정중 100%</strong></td><td>협상 대상 아님</td></tr><tr><td>열정 ↔ <strong>담담</strong></td><td><strong>담담 쪽 70%</strong></td><td>정보 전달이 주. 과장은 신뢰를 깎는다</td></tr></tbody></table></div>
+<h3 class="subsection__title">3-2. 맥락별 변주</h3>
+<div class='tw'><table><thead><tr><th>맥락</th><th>진지</th><th>격식</th><th>담담</th><th>비고</th></tr></thead><tbody><tr><td><strong>거래</strong>(신청·결제)</td><td>90</td><td>75</td><td>85</td><td>실수 비용이 크다. 가장 건조하게</td></tr><tr><td><strong>오류·실패</strong></td><td>85</td><td>70</td><td>80</td><td><strong>비난 금지.</strong> 사용자를 탓하지 않는다</td></tr><tr><td>정보 탐색(지점·브랜드)</td><td>60</td><td>60</td><td>60</td><td>기본</td></tr><tr><td><strong>행사·이벤트</strong></td><td>45</td><td>50</td><td>45</td><td>유일하게 온도를 올리는 맥락</td></tr><tr><td>빈 상태</td><td>60</td><td>60</td><td>55</td><td>막다른 느낌을 주지 않게</td></tr><tr><td>완료</td><td>55</td><td>65</td><td>60</td><td>축하보다 <strong>다음 행동 안내</strong></td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>행사·이벤트만 톤이 갈린다.</strong> <code>331(와이어프레임설계)</code> <code>W-04</code> 지점 특성 모듈·<code>IA-015</code>가 그 자리다. 나머지는 담담하게 유지한다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s4">4. 마이크로카피 규칙</h2>
+<h3 class="subsection__title">4-1. 버튼 라벨 — <strong>동사로, 결과를 말한다</strong></h3>
+<div class='tw'><table><thead><tr><th>✅</th><th>❌</th><th>왜</th></tr></thead><tbody><tr><td><code>신청하기</code></td><td><code>확인</code></td><td>무엇이 일어나는지 말한다</td></tr><tr><td><code>지점 선택</code></td><td><code>선택</code></td><td>무엇을 고르는지</td></tr><tr><td><code>다른 지점 보기</code></td><td><code>뒤로</code></td><td>어디로 가는지</td></tr><tr><td><code>대기 신청</code></td><td><code>예</code></td><td>예/아니오는 질문을 다시 읽게 만든다</td></tr></tbody></table></div>
+<p><strong>취소 계열은 결과를 밝힌다</strong> — <code>신청 취소</code>(진행 중단)와 <code>닫기</code>(화면만 닫음)를 구별한다. <code>331(와이어프레임설계)</code>이 <code>W-08</code>·<code>W-09</code>에 취소 경로를 신설했으므로 여기서 갈린다.</p>
+<h3 class="subsection__title">4-2. 오류 메시지 — <strong>3요소 공식</strong></h3>
+<pre class="dgm">(1) 무엇이 잘못됐나   (2) 왜 — 알 수 있을 때만   (3) 다음에 무엇을 하면 되나</pre>
+<p><strong>금지 3가지</strong></p>
+<div class='tw'><table><thead><tr><th>금지</th><th>예</th></tr></thead><tbody><tr><td>사용자 탓</td><td><del>&quot;잘못 입력하셨습니다&quot;</del> → &quot;입력한 형식과 다릅니다&quot;</td></tr><tr><td>시스템 코드 노출</td><td><del>&quot;Error 500&quot;</del> · <del>&quot;null&quot;</del></td></tr><tr><td>다음 행동 없음</td><td><del>&quot;오류가 발생했습니다.&quot;</del> 로 끝나는 문장</td></tr></tbody></table></div>
+<h3 class="subsection__title">4-3. 플레이스홀더</h3>
+<p><strong>예시값을 넣는다. 지시문을 넣지 않는다.</strong></p>
+<div class='tw'><table><thead><tr><th>✅ <code>010-0000-0000</code></th><th>❌ <code>휴대전화를 입력하세요</code></th></tr></thead><tbody></tbody></table></div>
+<p>지시가 필요하면 <strong>라벨(T4)이나 헬퍼</strong>에 쓴다 — 플레이스홀더는 입력하면 사라지므로 지시를 담으면 안 된다.</p>
+<h3 class="subsection__title">4-4. 채널 표기 — <strong>같은 문구를 쓴다</strong></h3>
+<p><code>컨셉키워드 K3(계정으로 할 수 있는 일을 채널이 가르지 않는다)</code>가 문구에도 적용된다. <strong>PC와 MWEB의 같은 기능은 같은 라벨을 쓴다.</strong></p>
+<p><code>122(현시스템기초분석)</code> H4가 브랜드 표기 불일치 4건을 지적했는데, 그건 <strong>표기 문제이자 채널 문제</strong>다 → §5에서 정본을 고정한다.</p>
+<hr class="rule">
+<h2 class="section__title" id="s5">5. 명칭 사전 — <strong>정본 1개만 남긴다</strong> <code>CT-20</code></h2>
+<h3 class="subsection__title">5-1. ⚠️ 브랜드 표기 — 채널마다 다르게 불리고 있다</h3>
+<p><code>122(현시스템기초분석)</code> H4 실측. <strong>정본을 하나로 고정한다.</strong></p>
+<div class='tw'><table><thead><tr><th>#</th><th>PC 현행</th><th>MWEB 현행</th><th><strong>정본</strong></th><th>판정</th></tr></thead><tbody><tr><td>1</td><td><code>PEER</code></td><td><code>피어</code></td><td><strong><code>[확인필요]</code></strong></td><td>영문/국문 중 어느 쪽인지 <strong>브랜드사 확인 필요</strong></td></tr><tr><td>2</td><td><code>BASH</code></td><td><code>바쉬 (BASH)</code></td><td><strong><code>[확인필요]</code></strong></td><td>병기 형식이 MWEB에만</td></tr><tr><td>3</td><td><code>LABELS</code></td><td><code>레이블스</code></td><td><strong><code>[확인필요]</code></strong></td><td>영문/국문</td></tr><tr><td>4</td><td><strong><code>위마켓</code></strong></td><td><strong><code>위마캣</code></strong></td><td><strong>⛔ <code>[확인필요]</code></strong></td><td><strong>둘 중 하나가 오기.</strong> 표기 선택이 아니라 <strong>오류</strong></td></tr><tr><td>5</td><td><code>르쁠라H</code></td><td><code>르쁠라</code></td><td><strong><code>[확인필요]</code></strong></td><td><code>H</code> 접미 유무</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><strong>5건 다 확정할 수 없다.</strong> 브랜드 정식 명칭은 <strong>입점 브랜드사의 자산</strong>이라 우리가 정할 수 없다. <code>112(고객자료수집요청)</code> 경로로 <strong>입점 브랜드 정식 명칭 목록</strong>을 요청해야 한다.<br><strong>4번은 성격이 다르다</strong> — 표기 선택이 아니라 <strong>오기</strong>다. 어느 쪽이 맞는지만 확인하면 끝난다. <strong>우선 확인 대상.</strong></div></div>
+<h3 class="subsection__title">5-2. 지점 명칭</h3>
+<div class='tw'><table><thead><tr><th>대상</th><th>정본</th><th>근거</th></tr></thead><tbody><tr><td>지점 분류</td><td><strong><code>더현대</code> / <code>백화점</code> / <code>아울렛</code></strong></td><td>REQ-SI-001 · <code>331(와이어프레임설계)</code> <code>W-01</code> 필터</td></tr><tr><td>대구 지점</td><td><strong><code>더현대 대구</code></strong> (구 <code>현대백화점 대구점</code>)</td><td>P-TERM-09 · REQ-SI-001</td></tr><tr><td>아울렛</td><td><strong><code>현대시티아울렛</code></strong> 명칭 변경분 적용</td><td>P-TERM-09</td></tr><tr><td>신촌 U-PLEX</td><td><strong><code>U-PLEX</code></strong> — 지점 하위 명칭으로만</td><td>REQ-SI-014</td></tr></tbody></table></div>
+<h3 class="subsection__title">5-3. 메뉴·기능 명칭 — <strong>정책 확정분 9건</strong></h3>
+<p><code>212(정책요건분석)</code> P-TERM 전건. <strong>REQ-CM-004가 「전 채널 적용」을 Must로 요구</strong>하므로 1급 항목이다.</p>
+<div class='tw'><table><thead><tr><th>#</th><th>구 표기</th><th><strong>정본</strong></th><th>적용 대상</th><th>검증</th></tr></thead><tbody><tr><td>P-TERM-01</td><td><code>주 이용 백화점</code> · <code>자주 찾는 지점</code></td><td><strong><code>지금 보는 점포</code></strong></td><td>마이페이지 · <strong><code>331(와이어프레임설계)</code> 컨텍스트 바</strong></td><td>화면명세 대조</td></tr><tr><td>P-TERM-02</td><td><code>나의 등급</code></td><td><strong><code>나의 VIP 등급</code></strong></td><td>마이페이지 · <code>W-12</code> VIP</td><td>화면명세 대조</td></tr><tr><td>P-TERM-03</td><td><code>할인 쿠폰</code></td><td><strong><code>카드 할인 쿠폰</code></strong></td><td>마이페이지</td><td>화면명세 대조</td></tr><tr><td>P-TERM-04</td><td><code>자동정산 차량번호</code></td><td><strong><code>나의 차량 번호</code></strong></td><td>마이페이지 · 주차</td><td>화면명세 대조</td></tr><tr><td>P-TERM-05</td><td><code>수강 내역</code></td><td><strong><code>나의 강좌</code></strong></td><td>문화센터 · 마이페이지</td><td>화면명세 대조</td></tr><tr><td>P-TERM-06</td><td><code>사용 가능한 H.Point</code></td><td><strong><code>H.Point</code></strong></td><td>마이페이지</td><td>화면명세 대조</td></tr><tr><td>P-TERM-07</td><td><code>연락처</code> · <code>휴대폰</code></td><td><strong><code>휴대전화</code></strong></td><td>회원정보</td><td>화면명세 대조</td></tr><tr><td>P-TERM-08</td><td>(띄어쓰기 규칙)</td><td><strong><code>[확인필요]</code></strong></td><td>전 채널</td><td>⛔ <strong>세부 규칙 미기재</strong> — 212(정책요건분석) 공백 G1</td></tr><tr><td>P-TERM-09</td><td>(지점 명칭·날짜 표기)</td><td>§5-2 · §5-4</td><td>지점안내</td><td>화면명세 대조</td></tr></tbody></table></div>
+<p><strong>8건 확정 · 1건 미확정(P-TERM-08).</strong></p>
+<h3 class="subsection__title">5-4. 날짜·시간·수량 표기</h3>
+<div class='tw'><table><thead><tr><th>대상</th><th>정본</th><th>예</th></tr></thead><tbody><tr><td>날짜</td><td><code>YYYY.MM.DD</code></td><td><code>2023.04.18</code></td></tr><tr><td>기간</td><td><code>YYYY.MM.DD ~ YYYY.MM.DD</code></td><td>물결 앞뒤 공백</td></tr><tr><td>요일</td><td>괄호 병기</td><td><code>2023.04.18(화)</code></td></tr><tr><td>시간</td><td>24시간 <code>HH:MM</code></td><td><code>10:30 ~ 20:00</code></td></tr><tr><td>금액</td><td>천 단위 콤마 + <code>원</code></td><td><code>1,200,000원</code></td></tr><tr><td>잔여 수량</td><td><code>N명</code> · <code>마감</code></td><td><code>331(와이어프레임설계)</code> <code>W-07</code> 잔여 정원</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body">⚠️ <strong><code>[가정]</code></strong> — 날짜·금액 표기 규칙은 정책에 없다. <strong>한국 실무 관행에서 잡았고 P-TERM-09가 &quot;날짜 표기 규칙&quot;을 언급하나 세부는 미수급</strong>이다. 수급 시 대체한다.</div></div>
+<hr class="rule">
+<h2 class="section__title" id="s6">6. 메시지 사전 — 예외 6종 <code>CT-21</code></h2>
+<p><code>331(와이어프레임설계)</code> <code>W-14</code> 예외 원형이 <strong>6종 공통 골격 1개 + 유형별 문구</strong>로 설계됐다. <strong>그 문구가 여기서 확정된다.</strong></p>
+<p>§4-2 3요소 공식(무엇 / 왜 / 다음 행동)을 적용했다. 톤은 §3-2 「오류·실패」 좌표.</p>
+<div class='tw'><table><thead><tr><th>유형</th><th>무엇이 잘못됐나</th><th>왜</th><th>다음 행동</th><th>버튼</th></tr></thead><tbody><tr><td><strong>404</strong> 없는 페이지</td><td>요청하신 페이지를 찾을 수 없습니다.</td><td>주소가 바뀌었거나 삭제된 페이지입니다.</td><td>검색으로 다시 찾아보실 수 있습니다.</td><td><code>직전 화면으로</code> · <code>검색하기</code></td></tr><tr><td><strong>권한 없음</strong></td><td>이 페이지는 로그인 후 이용할 수 있습니다.</td><td>—</td><td>로그인하시면 이어서 진행됩니다.</td><td><code>로그인</code> · <code>직전 화면으로</code></td></tr><tr><td><strong>세션 만료</strong></td><td>일정 시간 활동이 없어 자동으로 로그아웃되었습니다.</td><td>안전을 위한 조치입니다.</td><td>다시 로그인하시면 <strong>보시던 화면으로 돌아갑니다.</strong></td><td><code>다시 로그인</code></td></tr><tr><td><strong>결제 실패</strong></td><td>결제가 완료되지 않았습니다.</td><td><em>(사유 전달 가능 시 표시)</em></td><td><strong>신청 내용은 그대로 있습니다.</strong> 다시 시도해 주세요.</td><td><code>다시 시도</code> · <code>신청 취소</code></td></tr><tr><td><strong>정원 초과</strong></td><td>신청 가능 인원이 모두 찼습니다.</td><td>—</td><td>대기 신청을 하시면 자리가 났을 때 안내드립니다.</td><td><code>대기 신청</code> · <code>다른 강좌 보기</code></td></tr><tr><td><strong>자격 미달</strong></td><td>신청 자격에 해당하지 않습니다.</td><td><em>(기준 확정 시 표시)</em></td><td>다른 카드는 신청하실 수 있습니다.</td><td><code>다른 카드 보기</code></td></tr></tbody></table></div>
+<h3 class="subsection__title">6-1. 이 사전이 지킨 것</h3>
+<div class='tw'><table><thead><tr><th>규칙</th><th>어떻게</th></tr></thead><tbody><tr><td><strong>비난 금지</strong></td><td>전건 주어가 시스템·상황이다. <code>찾을 수 없습니다</code> / <code>완료되지 않았습니다</code> — <em>&quot;잘못 입력하셨습니다&quot;</em> 류 0건</td></tr><tr><td><strong>다음 행동 필수</strong></td><td>6종 전부 버튼 1개 이상. <code>331(와이어프레임설계)</code> 「막다른 화면 0」과 짝</td></tr><tr><td><strong>불안 해소</strong></td><td>결제 실패에 <strong>&quot;신청 내용은 그대로 있습니다&quot;</strong>, 세션 만료에 <strong>&quot;보시던 화면으로 돌아갑니다&quot;</strong> — 실패 시 가장 큰 걱정은 <em>&quot;내가 한 게 날아갔나&quot;</em> 다</td></tr><tr><td><strong>코드 노출 0</strong></td><td><code>Error</code>·상태코드·<code>null</code> 없음</td></tr></tbody></table></div>
+<h3 class="subsection__title">6-2. 빈 상태 3종</h3>
+<div class='tw'><table><thead><tr><th>상황</th><th>문구</th><th>행동</th></tr></thead><tbody><tr><td>검색 결과 없음</td><td><code>&#x27;{검색어}&#x27;에 대한 결과가 없습니다.</code> + <code>다른 지점에서 찾아볼 수 있습니다.</code></td><td><code>전체 지점에서 검색</code></td></tr><tr><td>지점 미제공 서비스</td><td><code>{지점명}에서는 제공하지 않는 서비스입니다.</code></td><td><code>다른 지점 보기</code></td></tr><tr><td>목록 비어 있음</td><td><code>아직 {항목}이 없습니다.</code></td><td>맥락별</td></tr></tbody></table></div>
+<p><code>{}</code> 는 치환 슬롯이다. <strong>슬롯 이름을 그대로 노출하지 않는다.</strong></p>
+<hr class="rule">
+<h2 class="section__title" id="s7">7. 플레이스홀더 → 실제 문구 대응</h2>
+<p><code>331(와이어프레임설계)</code>은 저충실도라 <code>지점카드</code> 같은 라벨로 그렸다. <strong>그게 실제로 무슨 문구가 되는지 여기서 잇는다</strong> — 안 그러면 <code>341(화면명세서작성)</code>·<code>423(UI개발퍼블리싱)</code>이 각자 지어낸다.</p>
+<div class='tw'><table><thead><tr><th>와이어프레임 라벨</th><th>실제 텍스트 구성</th><th>사전</th></tr></thead><tbody><tr><td><code>지점 선택</code></td><td>T1 <code>지점 선택</code> · 필터 <code>전체/더현대/백화점/아울렛</code></td><td>§5-2</td></tr><tr><td><code>선택 지점 표시 · 변경</code></td><td><code>지금 보는 점포</code> + 지점명 + <code>변경</code></td><td><strong>P-TERM-01</strong></td></tr><tr><td><code>지점카드</code></td><td>지점명 · 영업시간 <code>HH:MM ~ HH:MM</code> · <code>오시는길</code></td><td>§5-4</td></tr><tr><td><code>안내 배너</code></td><td>어드민 입력 — <strong>가이드 대상 아님</strong>(콘텐츠 운영)</td><td>—</td></tr><tr><td><code>잔여 정원</code></td><td><code>잔여 N명</code> 또는 <code>마감</code></td><td>§5-4</td></tr><tr><td><code>대기 상태 조회</code></td><td>T1 <code>대기 상태</code> · <code>대기 N번째</code></td><td>§5-4</td></tr><tr><td><code>나의 강좌</code></td><td><strong>P-TERM-05 정본</strong></td><td>§5-3</td></tr><tr><td><code>나의 차량 번호</code></td><td><strong>P-TERM-04 정본</strong></td><td>§5-3</td></tr><tr><td><code>결과 없음 — 범위 확장 제안</code></td><td>§6-2 빈 상태 1행</td><td>§6-2</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s8">8. 커버리지 점검</h2>
+<div class='tw'><table><thead><tr><th>점검</th><th>결과</th></tr></thead><tbody><tr><td><code>331(와이어프레임설계)</code> 주요화면 15개의 텍스트 슬롯이 규칙으로 커버되나</td><td><strong>미커버 0</strong> — 8종 유형이 전부 수용</td></tr><tr><td>예외 6종 문구 확정</td><td><strong>6/6</strong></td></tr><tr><td>빈 상태 문구 확정</td><td><strong>3/3</strong></td></tr><tr><td>P-TERM 9건 정본 확정</td><td><strong>8/9</strong> — P-TERM-08 띄어쓰기 미확정</td></tr><tr><td>브랜드 표기 정본 확정</td><td><strong>0/5</strong> — 전건 브랜드사 확인 필요</td></tr><tr><td>고지 문구</td><td><strong>대상 외</strong> (법정고지 17건은 개편 제외)</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s9">9. ⚠️ 범위 자가점검 — 컨텐츠 전략으로 넘어갔나</h2>
+<p>OSSP 332(컨텐츠가이드설계)는 <em>&quot;컨텐츠의 일관성을 보장하기 위한 것일 뿐, <strong>독자나 컨텐츠 특성을 반영한 컨텐츠 전략을 제시하지는 않습니다</strong>&quot;</em> 를 명시한다.</p>
+<div class='tw'><table><thead><tr><th>넘어갈 뻔한 것</th><th>판정</th></tr></thead><tbody><tr><td>§3-2에서 「행사·이벤트만 톤을 올린다」</td><td><strong>경계선.</strong> 맥락별 톤 변주는 332(컨텐츠가이드설계) 계약 항목(맥락별 톤 매트릭스)이므로 <strong>규칙</strong>이다. 다만 <em>&quot;어떤 행사를 어떻게 소구할까&quot;</em> 로 넘어가면 전략 — 넘지 않았다</td></tr><tr><td>§5-4 날짜·금액 표기</td><td><strong>규칙.</strong> 전략 아님</td></tr><tr><td>메인 화면에 무슨 콘텐츠를 놓을까</td><td><strong>다루지 않았다.</strong> <code>331(와이어프레임설계)</code> 보류 선택 2로 이관돼 있다</td></tr><tr><td>독자 세분·SEO·전환 카피</td><td><strong>다루지 않았다</strong></td></tr></tbody></table></div>
+<p><strong>범위 초과 0건.</strong></p>
+<hr class="rule">
+<h2 class="section__title" id="s10">10. [확인필요] · 미정의</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>확인 주체</th><th>시점</th><th>⛔</th></tr></thead><tbody><tr><td>1</td><td><strong>입점 브랜드 정식 명칭 5건</strong> — <code>PEER</code>·<code>BASH</code>·<code>LABELS</code>·<code>위마켓/위마캣</code>·<code>르쁠라H</code></td><td>고객사 → 브랜드사</td><td><code>341(화면명세서작성)</code> 전</td><td></td></tr><tr><td>2</td><td><strong><code>위마켓</code>/<code>위마캣</code> 오기 확인</strong> — 둘 중 하나가 틀렸다</td><td>고객사</td><td><strong>즉시</strong></td><td><strong>⛔</strong></td></tr><tr><td>3</td><td><strong>띄어쓰기 세부 규칙</strong> (P-TERM-08 · 212(정책요건분석) 공백 G1)</td><td>고객사(정책)</td><td>용어통일 수급</td><td></td></tr><tr><td>4</td><td><strong>날짜·금액 표기 규칙 원문</strong> — 현재 <code>[가정]</code></td><td>고객사</td><td>수급 시</td><td></td></tr><tr><td>5</td><td><strong>Voice 확정</strong> — §1-3은 관측 기반 추정</td><td>브랜드 담당 · 크리에이티브디렉터</td><td><strong><code>334(시안디자인)</code> 전</strong></td><td></td></tr><tr><td>6</td><td>결제 실패·자격 미달의 <strong>사유 문구 전달 가능 여부</strong></td><td>개발PL</td><td>요건 클로징</td><td></td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s11">11. 하류로 넘기는 것</h2>
+<div class='tw'><table><thead><tr><th>대상</th><th>내용</th></tr></thead><tbody><tr><td><strong>333(UI가이드정의)</strong></td><td>텍스트 요소 8종 ↔ 컴포넌트 매핑 · 빈 상태·오류 컴포넌트의 문구 슬롯</td></tr><tr><td><strong>334(시안디자인)</strong></td><td><strong>Voice 확정</strong>(§1-3) · 타이틀 4단의 시각 스케일</td></tr><tr><td><strong>341(화면명세서작성)</strong></td><td><strong>정본 표기 전건 적용</strong> · 화면별 문구 슬롯 · 브랜드 명칭 확정분 반영</td></tr><tr><td><strong>351(스타일가이드설계)</strong></td><td>타이틀 4단 ↔ 타이포 스케일</td></tr><tr><td><strong>423(UI개발퍼블리싱)</strong></td><td>메시지 사전 6종 · 빈 상태 3종을 <strong>그대로</strong> 사용</td></tr><tr><td><strong>112(고객자료수집요청)</strong></td><td><strong>브랜드 정식 명칭 목록 요청</strong> — 신규 요청 항목</td></tr></tbody></table></div>
+<h3 class="subsection__title">11-1. <code>112(고객자료수집요청)</code>로 되돌리는 항목</h3>
+<p><code>112(고객자료수집요청)</code>의 요청 목록에 <strong>없던 것</strong>이 여기서 나왔다.</p>
+<div class='tw'><table><thead><tr><th>항목</th><th>왜 필요한가</th></tr></thead><tbody><tr><td><strong>입점 브랜드 정식 명칭 목록</strong></td><td>5건이 채널마다 다르게 표기돼 있고 <strong>우리가 정할 수 없다</strong>(브랜드사 자산)</td></tr><tr><td><strong>날짜·금액 표기 규칙 원문</strong></td><td>P-TERM-09가 언급만 하고 세부가 없다</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body"><code>112(고객자료수집요청)</code> 산출물에 <strong>R1-15 · R1-16으로 추가 등재</strong>하고, 미수급 시 하류 영향(브랜드 표기 불일치가 오픈까지 남음)을 명시한다.</div></div>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 컨텐츠가이드 V1.0 · 2026.08.10
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
