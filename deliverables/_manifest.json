@@ -333,6 +333,51 @@
   "sections": 10
  },
  {
+  "task": "351",
+  "taskname": "스타일가이드설계",
+  "title": "스타일가이드",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "351_스타일가이드설계/스타일가이드.html",
+  "sections": 10
+ },
+ {
+  "task": "352",
+  "taskname": "인터랙션가이드설계",
+  "title": "인터랙션가이드",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "352_인터랙션가이드설계/인터랙션가이드.html",
+  "sections": 9
+ },
+ {
+  "task": "353",
+  "taskname": "UI개발가이드설계",
+  "title": "UI개발가이드",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "353_UI개발가이드설계/UI개발가이드.html",
+  "sections": 9
+ },
+ {
+  "task": "353",
+  "taskname": "UI개발가이드설계",
+  "title": "리다이렉트_매핑",
+  "kind": "원장",
+  "ver": "V1.0",
+  "path": "353_UI개발가이드설계/리다이렉트_매핑.html",
+  "sections": 3
+ },
+ {
+  "task": "354",
+  "taskname": "접근성가이드설계",
+  "title": "접근성가이드",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "354_접근성가이드설계/접근성가이드.html",
+  "sections": 7
+ },
+ {
   "task": "932",
   "taskname": "회의록",
   "title": "회의록 — 기능요건 확정 [타 프로젝트 파일럿]",

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>인터랙션가이드 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">인터랙션가이드</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>352 인터랙션가이드설계</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 인터랙션가이드 · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>1. 입력 어휘 — 342(UI상세설계) §1-2 승계·확정</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. 컴포넌트 상태 5종 — 전 인터랙티브 요소 공통</span></div><div class="toc__item"><span class="toc__num">03</span><span>3. 오버레이(T-07) 계약 — 공통 모듈 3종이 이 위에 선다</span></div><div class="toc__item"><span class="toc__num">04</span><span>4. 폼 · 검증 타이밍 — 342(UI상세설계) 밸리데이션 규칙의 시점 확정</span></div><div class="toc__item"><span class="toc__num">05</span><span>5. 화면 전환 · 모션 토큰</span></div><div class="toc__item"><span class="toc__num">06</span><span>6. 탭 vs 화면 이동 — 333(UI가이드정의) N-04·N-03 판정의 인터랙션 확정</span></div><div class="toc__item"><span class="toc__num">07</span><span>7. 미결 · 확인 필요</span></div><div class="toc__item"><span class="toc__num">08</span><span>8. 다음 단계 핸드오프</span></div><div class="toc__item"><span class="toc__num">09</span><span>9. 도출 인사이트</span></div></div>
+
+<div class='tw'><table><thead><tr><th>항목</th><th>값</th></tr></thead><tbody><tr><td>프로젝트</td><td>현대백화점 자사채널(PC·MWEB) 개선</td></tr><tr><td>문서</td><td>인터랙션가이드 v0.1</td></tr><tr><td>작성일</td><td>2026-08-10</td></tr><tr><td>작성자</td><td>인터랙션디자이너</td></tr><tr><td>상태</td><td>초안 — 규칙 확정 / 세부 모션 값은 <code>422(인터랙션디자인)</code>에서 조정</td></tr></tbody></table></div>
+<h3 class="subsection__title">개정이력</h3>
+<div class='tw'><table><thead><tr><th>버전</th><th>일자</th><th>변경 내역</th><th>작성자</th></tr></thead><tbody><tr><td>v0.1</td><td>2026-08-10</td><td>초안작성 — 입력 어휘 확정 · 상태 5종 · 오버레이 계약 · 모션 토큰</td><td>인터랙션디자이너</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">1. 입력 어휘 — <code>342(UI상세설계)</code> §1-2 승계·확정</h2>
+<p>원천 스토리보드 계보는 네이티브 앱이라 제스처 8종을 쓴다. <strong>이 프로젝트는 웹</strong>이므로 어휘를 채널별로 고정한다. 디스크립션·개발·QA가 같은 단어를 쓰기 위한 사전이다.</p>
+<div class='tw'><table><thead><tr><th>채널</th><th>허용</th><th>금지 · 이유</th></tr></thead><tbody><tr><td>PC</td><td><code>선택</code> · <code>Hover</code> · <code>입력</code> · <code>스크롤</code></td><td><code>우클릭 의존</code> — 브라우저 기본과 충돌</td></tr><tr><td>MWEB</td><td><code>Tap</code> · <code>스와이프</code>(배너·탭 한정) · <code>스크롤</code></td><td><code>Long Tap</code>·<code>Pinch</code> — 모바일 웹 신뢰 불가 · <code>가로 전체 스와이프</code> — 브라우저 뒤로가기와 충돌</td></tr><tr><td>공통</td><td><code>{조건} 충족 시</code> · <code>{값} 초과 시</code></td><td>—</td></tr></tbody></table></div>
+<p><strong>Hover 원칙</strong>: Hover는 <strong>가산적</strong>이다 — Hover가 없으면(터치) 접근 불가한 정보·기능 금지. GNB 2Depth 드롭다운은 Hover로 열리되 <strong>선택(클릭)으로도 열린다.</strong></p>
+<h2 class="section__title" id="s1">2. 컴포넌트 상태 5종 — 전 인터랙티브 요소 공통</h2>
+<div class='tw'><table><thead><tr><th>상태</th><th>시각</th><th>규칙</th></tr></thead><tbody><tr><td>Default</td><td><code>351(스타일가이드설계)</code> 컴포넌트 토큰</td><td></td></tr><tr><td>Hover (PC만)</td><td>배경 1단 변화</td><td>터치에서 미정의 — sticky hover 금지</td></tr><tr><td><strong>Focus</strong></td><td><code>--hd-focus</code> 2px 링</td><td><strong>전 요소 필수 · 제거 금지</strong> — <code>354(접근성가이드설계)</code> 1급</td></tr><tr><td>Active</td><td>눌림 표현</td><td>100ms 내 즉시</td></tr><tr><td>Disabled</td><td>명도 저하 + <code>cursor:default</code></td><td><strong>비활성 사유를 인접 텍스트로</strong> — 색만으로 전달 금지</td></tr></tbody></table></div>
+<p><strong>실행 버튼 계약</strong> (<code>342(UI상세설계)</code> 프로세스형 문형의 인터랙션 번역): <code>Default 비활성 → 필수값·유효성 충족 시 활성 → 선택 시 이중 제출 방지 잠금 + 진행 표시</code>.</p>
+<h2 class="section__title" id="s2">3. 오버레이(T-07) 계약 — 공통 모듈 3종이 이 위에 선다</h2>
+<p><code>343(설계리뷰및리팩토링)</code> §4가 정의한 본인인증·주소검색·약관 상세가 전부 이 계약을 상속한다.</p>
+<div class='tw'><table><thead><tr><th>항목</th><th>규칙</th></tr></thead><tbody><tr><td>열림</td><td>배경 딤 + 배경 조작 차단. <strong>배경 스크롤 잠금</strong></td></tr><tr><td>닫힘 3경로</td><td>닫기 버튼 · <code>ESC</code>(PC) · 딤 영역 선택. <strong>셋 다 제공</strong></td></tr><tr><td>닫힘 시 값</td><td><strong>명시적 완료(선택·동의·인증)만 반환</strong> — 닫기·ESC·딤은 반환 없음, 호출 화면 기존 값 유지</td></tr><tr><td>포커스</td><td>열림 시 오버레이 첫 요소로 이동 · <strong>포커스 트랩</strong> · 닫힘 시 <strong>호출 요소로 복귀</strong></td></tr><tr><td>중첩</td><td><strong>금지.</strong> 오버레이 안에서 오버레이가 필요하면 내부 전환(본인인증 수단 전환처럼)으로</td></tr><tr><td>이력</td><td>MWEB 뒤로가기 = 오버레이 닫기 (화면 이탈 아님)</td></tr></tbody></table></div>
+<h2 class="section__title" id="s3">4. 폼 · 검증 타이밍 — <code>342(UI상세설계)</code> 밸리데이션 규칙의 시점 확정</h2>
+<div class='tw'><table><thead><tr><th>시점</th><th>무엇</th></tr></thead><tbody><tr><td>입력 중</td><td>형식 제한만(자릿수 차단·문자종 필터). <strong>오류 문구는 아직 안 띄운다</strong> — 쓰는 중에 혼내지 않는다</td></tr><tr><td>필드 이탈(blur)</td><td>1차 검증 — 해당 필드 오류 문구 노출(<code>332(컨텐츠가이드설계)</code> §4-2 3요소 공식)</td></tr><tr><td>제출 선택</td><td>2차 전체 검증 — 첫 오류 필드로 <strong>포커스+스크롤 이동</strong></td></tr><tr><td>실패 응답</td><td><code>T-05</code> 예외 골격 — <strong>입력값 보존</strong>(<code>332(컨텐츠가이드설계)</code> &quot;신청 내용은 그대로 있습니다&quot;가 참이 되는 조건)</td></tr></tbody></table></div>
+<h2 class="section__title" id="s4">5. 화면 전환 · 모션 토큰</h2>
+<div class='tw'><table><thead><tr><th>토큰</th><th>값</th><th>용도</th></tr></thead><tbody><tr><td><code>--hd-dur-fast</code></td><td>120ms</td><td>상태 변화(hover·체크)</td></tr><tr><td><code>--hd-dur-base</code></td><td>200ms</td><td>오버레이·탭 전환</td></tr><tr><td><code>--hd-dur-slow</code></td><td>320ms</td><td>배너 슬라이드</td></tr><tr><td><code>--hd-ease</code></td><td><code>cubic-bezier(0.2, 0, 0, 1)</code></td><td>공통 감속 — 등속 금지</td></tr></tbody></table></div>
+<p><strong>규칙</strong>: ①모션은 상태 변화의 <strong>설명</strong>이다 — 장식 모션 금지(컨셉키워드 K2 반복 피로) ②<code>prefers-reduced-motion</code> 시 이동·확대 모션 제거, 불투명도 전환만 잔류 ③자동 롤링 배너(5초)는 <strong>일시정지 컨트롤 필수</strong>(<code>354(접근성가이드설계)</code> 연동).</p>
+<h2 class="section__title" id="s5">6. 탭 vs 화면 이동 — <code>333(UI가이드정의)</code> N-04·N-03 판정의 인터랙션 확정</h2>
+<div class='tw'><table><thead><tr><th></th><th>탭(N-04)</th><th>LNB·링크(N-03)</th></tr></thead><tbody><tr><td>결과</td><td>같은 화면 안 전환</td><td>다른 화면 이동</td></tr><tr><td>URL</td><td>해시·쿼리 갱신(공유 가능)</td><td>경로 변경</td></tr><tr><td>이력</td><td>뒤로가기로 <strong>탭 상태 복원</strong></td><td>화면 복귀</td></tr><tr><td>스크롤</td><td>유지</td><td>최상단</td></tr></tbody></table></div>
+<p><strong>목록 → 상세 → 복귀</strong>: 필터·스크롤 위치 <strong>보존</strong>(<code>342(UI상세설계)</code> HDP-BRD0103 desc 1). 보존 실패는 결함이다.</p>
+<h2 class="section__title" id="s6">7. 미결 · 확인 필요</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>대상</th></tr></thead><tbody><tr><td>1</td><td>세부 모션 값(스프링·오버슛 여부)</td><td><code>422(인터랙션디자인)</code> — 렌더는 사람</td></tr><tr><td>2</td><td>배너 자동 롤링 5초의 근거 — 운영 데이터 없음 <code>[가정]</code></td><td>고객사</td></tr><tr><td>3</td><td>MWEB 뒤로가기-오버레이 연동의 브라우저 지원 범위</td><td><code>353(UI개발가이드설계)</code></td></tr></tbody></table></div>
+<h2 class="section__title" id="s7">8. 다음 단계 핸드오프</h2>
+<div class='tw'><table><thead><tr><th>단계</th><th>받는 것</th></tr></thead><tbody><tr><td><code>353(UI개발가이드설계)</code></td><td>오버레이 계약(§3) · 이력 연동 · reduced-motion 구현 요건</td></tr><tr><td><code>422(인터랙션디자인)</code></td><td>모션 토큰(§5) — 값 조정은 허용, <strong>토큰 밖 개별 값 금지</strong></td></tr><tr><td><code>423(UI개발퍼블리싱)</code></td><td>상태 5종 CSS 계약 · 폼 검증 시점(§4)</td></tr></tbody></table></div>
+<h2 class="section__title" id="s8">9. 도출 인사이트</h2>
+<h3 class="subsection__title">관찰 46 — 인터랙션 가이드의 절반은 「하지 않을 것」 목록이다</h3>
+<p>허용 어휘보다 금지 목록(Long Tap · Pinch · 가로 전체 스와이프 · Hover 의존 · 오버레이 중첩 · 장식 모션)이 실무를 더 강하게 규율한다. 허용은 예시로 남지만 <strong>금지는 QA 체크리스트가 된다.</strong> <code>421(UI디자인검수)</code>에 이 금지 목록이 그대로 검수 항목으로 넘어간다.</p>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 인터랙션가이드 V1.0 · 2026.08.10
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
