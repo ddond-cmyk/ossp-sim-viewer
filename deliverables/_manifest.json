@@ -213,7 +213,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "322_정보구조설계/정보구조도.html",
-  "sections": 11
+  "sections": 12
  },
  {
   "task": "331",
@@ -250,6 +250,33 @@
   "ver": "V1.0",
   "path": "333_UI가이드정의/UI가이드.html",
   "sections": 9
+ },
+ {
+  "task": "334",
+  "taskname": "시안디자인",
+  "title": "시안 검토 루브릭",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "334_시안디자인/시안검토.html",
+  "sections": 6
+ },
+ {
+  "task": "334",
+  "taskname": "시안디자인",
+  "title": "시안 전략",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "334_시안디자인/시안전략.html",
+  "sections": 7
+ },
+ {
+  "task": "334",
+  "taskname": "시안디자인",
+  "title": "시안 화면 선별",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "334_시안디자인/시안화면선별.html",
+  "sections": 5
  },
  {
   "task": "932",

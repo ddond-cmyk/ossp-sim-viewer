@@ -27,7 +27,7 @@
 
   <div class="report__content">
     <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 정보구조도 (IA) · V1.0</div>
-    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>0. 핵심 판단 — 지점을 계층에 넣지 않는다</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. TO-BE 최상위 구조 — 양 채널 동일</span></div><div class="toc__item"><span class="toc__num">03</span><span>2-3. 뎁스 범례 — 각 계층이 어떤 내비게이션에 대응하는가</span></div><div class="toc__item"><span class="toc__num">04</span><span>2-4. 영역 코드 사전 — 채번 전에 먼저 확정한다</span></div><div class="toc__item"><span class="toc__num">05</span><span>3. 구조 노드 (74) — 계층·경로·변경 등급</span></div><div class="toc__item"><span class="toc__num">06</span><span>4. 변경분 대장  — 고객 검토·개발 인계는 이걸 본다</span></div><div class="toc__item"><span class="toc__num">07</span><span>5. 채널 통일 실적 (컨셉키워드 K1·K3)</span></div><div class="toc__item"><span class="toc__num">08</span><span>6. 계층 깊이 — AS-IS 대비</span></div><div class="toc__item"><span class="toc__num">09</span><span>8. 미정의사항 — 321(기능상세정의)에서 승계 + 신규</span></div><div class="toc__item"><span class="toc__num">10</span><span>9. 하류로 넘기는 것</span></div><div class="toc__item"><span class="toc__num">11</span><span>12. 재사용 자산 대조 — spec-harness 증류 규칙 27종</span></div></div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>0. 핵심 판단 — 지점을 계층에 넣지 않는다</span></div><div class="toc__item"><span class="toc__num">02</span><span>2. TO-BE 최상위 구조 — 양 채널 동일</span></div><div class="toc__item"><span class="toc__num">03</span><span>2-3. 뎁스 범례 — 각 계층이 어떤 내비게이션에 대응하는가</span></div><div class="toc__item"><span class="toc__num">04</span><span>2-4. 영역 코드 사전 — 채번 전에 먼저 확정한다</span></div><div class="toc__item"><span class="toc__num">05</span><span>2-5. 사이트맵형 메뉴맵 — 합의용 한 장</span></div><div class="toc__item"><span class="toc__num">06</span><span>3. 구조 노드 (74) — 계층·경로·변경 등급</span></div><div class="toc__item"><span class="toc__num">07</span><span>4. 변경분 대장  — 고객 검토·개발 인계는 이걸 본다</span></div><div class="toc__item"><span class="toc__num">08</span><span>5. 채널 통일 실적 (컨셉키워드 K1·K3)</span></div><div class="toc__item"><span class="toc__num">09</span><span>6. 계층 깊이 — AS-IS 대비</span></div><div class="toc__item"><span class="toc__num">10</span><span>8. 미정의사항 — 321(기능상세정의)에서 승계 + 신규</span></div><div class="toc__item"><span class="toc__num">11</span><span>9. 하류로 넘기는 것</span></div><div class="toc__item"><span class="toc__num">12</span><span>12. 재사용 자산 대조 — spec-harness 증류 규칙 27종</span></div></div>
 
 <div class="callout"><div class="callout__body">입력: <strong>321 기능정의서</strong>(기능 106·컨텐츠 24, 핸드오프 스키마) · <strong>122 AS-IS IA</strong>(PC 12영역/MWEB 15영역) · 312 유저플로우(7흐름) · 242 UX컨셉 컨셉키워드 K1~K4 · 215 요구 78 · 212(정책요건분석) 정책 · 240 결정 D-2·D-3·D-4<br>⚠️ <strong>가설 IA</strong> — 실사용자 카드소팅·트리테스트 미실시. 대신 정량 대체 검증 3종 실시(§7)<br>⚠️ <strong>331 와이어프레임·341 화면명세의 상류 SSOT.</strong> 구조가 바뀌면 하류가 상속한다</div></div>
 <hr class="rule">
@@ -57,7 +57,291 @@
 <p><strong>9영역.</strong> 채번 문법은 <code>{채널}-{영역코드}{2자리 그룹}{2자리 순번}</code> — 예: <code>HD-CRD0101</code>(카드 종류·혜택 본판) → <code>HD-CRD0102</code>(파생 레이어).</p>
 <p>⚠️ <strong>채번은 트리가 안정된 뒤 별도 이벤트로 일괄 수행한다.</strong> 지금 부여하면 331(와이어프레임설계)에서 구조가 흔들릴 때마다 ID가 바뀐다.</p>
 <hr class="rule">
-<h2 class="section__title" id="s4">3. 구조 노드 (74) — 계층·경로·변경 등급</h2>
+<h2 class="section__title" id="s4">2-5. 사이트맵형 메뉴맵 — <strong>합의용 한 장</strong></h2>
+<p><code>spec-harness</code> 규칙 ⑤-19·20: <em>&quot;사이트맵형(열=존, 행=하위 메뉴, <strong>합의용</strong>)과 원장형(화면ID·처분, <strong>관리용 SSOT</strong>)을 공존시킨다. <strong>원장형이 SSOT</strong>이고 사이트맵형은 그것을 렌더링한 프레젠테이션이다.&quot;</em></p>
+<p><strong>아래는 §3 원장형 74노드에서 렌더한 것이다.</strong> 원장이 바뀌면 이것도 다시 그린다 — 여기서 직접 고치지 않는다.</p>
+<div class="mm" style="overflow-x:auto"><svg viewBox="0 0 1351 458" width="1351" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,-apple-system,sans-serif"><rect x="1" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="80.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">지점</text>
+<rect x="1" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="42" x2="8" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="59" font-size="10.5" fill="#111111" font-weight="400">지점안내</text>
+<rect x="1" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="68" x2="8" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="85" font-size="10.5" fill="#111111" font-weight="400">층별안내</text>
+<rect x="1" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="94" x2="8" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="111" font-size="10.5" fill="#111111" font-weight="700">행사안내</text>
+<text x="154" y="111" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="1" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="19" y1="120" x2="19" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="30" y="137" font-size="10.5" fill="#111111" font-weight="400">행사 상세</text>
+<rect x="1" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="146" x2="8" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="163" font-size="10.5" fill="#111111" font-weight="400">오시는길·시설</text>
+<rect x="1" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="172" x2="8" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="189" font-size="10.5" fill="#111111" font-weight="700">지점 특성 모듈</text>
+<text x="154" y="189" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="19" y1="198" x2="19" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="30" y="215" font-size="10.5" fill="#111111" font-weight="700">Sounds Forest·ALT…</text>
+<text x="154" y="215" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="224" x2="8" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="241" font-size="10.5" fill="#111111" font-weight="700">U-PLEX</text>
+<text x="154" y="241" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="1" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="8" y1="250" x2="8" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="19" y="267" font-size="10.5" fill="#111111" font-weight="700">더현대 대구</text>
+<text x="154" y="267" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="171" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="250.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">브랜드·매장</text>
+<rect x="171" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="42" x2="178" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="59" font-size="10.5" fill="#111111" font-weight="400">브랜드·매장</text>
+<rect x="171" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="68" x2="178" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="85" font-size="10.5" fill="#111111" font-weight="400">브랜드 목록</text>
+<rect x="171" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="94" x2="178" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="111" font-size="10.5" fill="#111111" font-weight="400">브랜드 상세</text>
+<rect x="171" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="189" y1="120" x2="189" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="200" y="137" font-size="10.5" fill="#111111" font-weight="400">매장 위치·층</text>
+<rect x="171" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="146" x2="178" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="163" font-size="10.5" fill="#111111" font-weight="700">패션·뷰티 브랜드</text>
+<text x="324" y="163" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="171" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="172" x2="178" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="189" font-size="10.5" fill="#111111" font-weight="700">오프웍스</text>
+<text x="324" y="189" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="171" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="178" y1="198" x2="178" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="189" y="215" font-size="10.5" fill="#111111" font-weight="700">최근본·즐겨찾기</text>
+<text x="324" y="215" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="341" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="420.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">문화센터·공연·전시</text>
+<rect x="341" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="42" x2="348" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="59" font-size="10.5" fill="#111111" font-weight="400">CH 1985</text>
+<rect x="341" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="68" x2="359" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="85" font-size="10.5" fill="#111111" font-weight="400">지점 안내</text>
+<text x="494" y="85" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="341" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="94" x2="348" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="111" font-size="10.5" fill="#111111" font-weight="400">문화센터</text>
+<rect x="341" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="120" x2="348" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="137" font-size="10.5" fill="#111111" font-weight="700">문화센터 서브메인</text>
+<text x="494" y="137" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="341" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="146" x2="348" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="163" font-size="10.5" fill="#111111" font-weight="400">강좌 찾기</text>
+<rect x="341" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="172" x2="359" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="189" font-size="10.5" fill="#111111" font-weight="400">강좌 상세</text>
+<rect x="341" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="198" x2="348" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="215" font-size="10.5" fill="#111111" font-weight="400">수강신청 S1→S3</text>
+<rect x="341" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="224" x2="348" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="241" font-size="10.5" fill="#111111" font-weight="400">대기 신청</text>
+<rect x="341" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="250" x2="359" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="267" font-size="10.5" fill="#111111" font-weight="700">대기 상태 조회</text>
+<text x="494" y="267" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="341" y="276" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="276" x2="348" y2="302" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="293" font-size="10.5" fill="#111111" font-weight="400">지점 안내</text>
+<text x="494" y="293" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="341" y="302" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="302" x2="359" y2="328" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="319" font-size="10.5" fill="#111111" font-weight="400">강좌 취소·변경</text>
+<rect x="341" y="328" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="328" x2="359" y2="354" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="345" font-size="10.5" fill="#111111" font-weight="700">자주하는 질문</text>
+<text x="494" y="345" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="341" y="354" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="359" y1="354" x2="359" y2="380" stroke="#D8D8D8" stroke-width="1"/>
+<text x="370" y="371" font-size="10.5" fill="#111111" font-weight="400">온라인 강사지원</text>
+<rect x="341" y="380" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="380" x2="348" y2="406" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="397" font-size="10.5" fill="#111111" font-weight="400">공연·전시</text>
+<rect x="341" y="406" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="348" y1="406" x2="348" y2="432" stroke="#D8D8D8" stroke-width="1"/>
+<text x="359" y="423" font-size="10.5" fill="#111111" font-weight="700">공식 SNS 채널</text>
+<text x="494" y="423" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="511" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="590.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">카드·상품권·멤버십</text>
+<rect x="511" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="42" x2="518" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="59" font-size="10.5" fill="#111111" font-weight="700">카드·멤버십 허브</text>
+<text x="664" y="59" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="511" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="68" x2="518" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="85" font-size="10.5" fill="#111111" font-weight="400">현대백화점카드</text>
+<rect x="511" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="94" x2="529" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="111" font-size="10.5" fill="#111111" font-weight="400">카드 종류·혜택</text>
+<rect x="511" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="120" x2="529" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="137" font-size="10.5" fill="#111111" font-weight="400">카드 신청 S1→S3</text>
+<rect x="511" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="146" x2="529" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="163" font-size="10.5" fill="#111111" font-weight="700">신청 취소</text>
+<text x="664" y="163" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="511" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="172" x2="529" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="189" font-size="10.5" fill="#111111" font-weight="400">카드 이벤트</text>
+<rect x="511" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="198" x2="529" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="215" font-size="10.5" fill="#111111" font-weight="400">ARS 카드 상담</text>
+<rect x="511" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="224" x2="518" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="241" font-size="10.5" fill="#111111" font-weight="400">마이카드</text>
+<rect x="511" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="250" x2="518" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="267" font-size="10.5" fill="#111111" font-weight="400">상품권</text>
+<rect x="511" y="276" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="276" x2="518" y2="302" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="293" font-size="10.5" fill="#111111" font-weight="400">VIP프로그램</text>
+<text x="664" y="293" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="511" y="302" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="302" x2="529" y2="328" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="319" font-size="10.5" fill="#111111" font-weight="400">등급·혜택</text>
+<rect x="511" y="328" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="529" y1="328" x2="529" y2="354" stroke="#D8D8D8" stroke-width="1"/>
+<text x="540" y="345" font-size="10.5" fill="#111111" font-weight="400">마일리지</text>
+<rect x="511" y="354" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="354" x2="518" y2="380" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="371" font-size="10.5" fill="#111111" font-weight="400">포인트·마일리지 조회</text>
+<rect x="511" y="380" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="518" y1="380" x2="518" y2="406" stroke="#D8D8D8" stroke-width="1"/>
+<text x="529" y="397" font-size="10.5" fill="#111111" font-weight="700">더클럽웨딩</text>
+<text x="664" y="397" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="681" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="760.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">서비스·이벤트</text>
+<rect x="681" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="42" x2="688" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="59" font-size="10.5" fill="#111111" font-weight="400">서비스/이벤트</text>
+<text x="834" y="59" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="681" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="68" x2="688" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="85" font-size="10.5" fill="#111111" font-weight="700">이벤트</text>
+<text x="834" y="85" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="681" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="94" x2="688" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="111" font-size="10.5" fill="#111111" font-weight="700">공지사항</text>
+<text x="834" y="111" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="681" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="120" x2="688" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="137" font-size="10.5" fill="#111111" font-weight="400">배송조회</text>
+<rect x="681" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="146" x2="688" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="163" font-size="10.5" fill="#111111" font-weight="400">서비스제도</text>
+<rect x="681" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="172" x2="688" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="189" font-size="10.5" fill="#111111" font-weight="400">챗봇 상담</text>
+<rect x="681" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="198" x2="688" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="215" font-size="10.5" fill="#767676" font-weight="700" text-decoration="line-through">VOC 위원회</text>
+<text x="834" y="215" font-size="8" fill="#767676" text-anchor="end">제거</text>
+<rect x="681" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="688" y1="224" x2="688" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="699" y="241" font-size="10.5" fill="#767676" font-weight="700" text-decoration="line-through">콘텐츠·채널</text>
+<text x="834" y="241" font-size="8" fill="#767676" text-anchor="end">제거</text>
+<rect x="851" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="930.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">마이페이지</text>
+<rect x="851" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="42" x2="858" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="59" font-size="10.5" fill="#111111" font-weight="400">마이페이지</text>
+<rect x="851" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="68" x2="858" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="85" font-size="10.5" fill="#111111" font-weight="400">회원정보 변경</text>
+<rect x="851" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="94" x2="858" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="111" font-size="10.5" fill="#111111" font-weight="400">비밀번호 변경</text>
+<rect x="851" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="120" x2="858" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="137" font-size="10.5" fill="#111111" font-weight="400">나의 차량 번호</text>
+<text x="1004" y="137" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="851" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="146" x2="858" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="163" font-size="10.5" fill="#111111" font-weight="400">개인정보 관리</text>
+<rect x="851" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="172" x2="858" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="189" font-size="10.5" fill="#111111" font-weight="400">로그인 기록</text>
+<rect x="851" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="198" x2="858" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="215" font-size="10.5" fill="#111111" font-weight="400">회원탈퇴</text>
+<rect x="851" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="224" x2="858" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="241" font-size="10.5" fill="#111111" font-weight="400">H.Point 전환</text>
+<rect x="851" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="250" x2="858" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="267" font-size="10.5" fill="#111111" font-weight="400">나의 VIP 등급</text>
+<text x="1004" y="267" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="851" y="276" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="276" x2="858" y2="302" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="293" font-size="10.5" fill="#111111" font-weight="400">나의 강좌</text>
+<text x="1004" y="293" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="851" y="302" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="858" y1="302" x2="858" y2="328" stroke="#D8D8D8" stroke-width="1"/>
+<text x="869" y="319" font-size="10.5" fill="#111111" font-weight="400">카드 할인 쿠폰</text>
+<text x="1004" y="319" font-size="8" fill="#767676" text-anchor="end">개명</text>
+<rect x="1021" y="8" width="158" height="34" fill="#111111" stroke="#111111" stroke-width="1"/>
+<text x="1100.0" y="30" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">기업정보</text>
+<rect x="1021" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1028" y1="42" x2="1028" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1039" y="59" font-size="10.5" fill="#111111" font-weight="400">투자정보(IR)</text>
+<rect x="1021" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1028" y1="68" x2="1028" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1039" y="85" font-size="10.5" fill="#111111" font-weight="400">ESG 경영</text>
+<rect x="1021" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1039" y1="94" x2="1039" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1050" y="111" font-size="10.5" fill="#111111" font-weight="700">그린 경영활동</text>
+<text x="1174" y="111" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1191" y="8" width="158" height="34" fill="#EDEDED" stroke="#111111" stroke-width="1"/>
+<text x="1270.0" y="30" font-size="11.5" font-weight="700" fill="#111111" text-anchor="middle">전역 — 계층 밖</text>
+<rect x="1191" y="42" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="42" x2="1198" y2="68" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="59" font-size="10.5" fill="#111111" font-weight="700">지점 선택</text>
+<text x="1344" y="59" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1191" y="68" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="68" x2="1198" y2="94" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="85" font-size="10.5" fill="#111111" font-weight="700">통합검색</text>
+<text x="1344" y="85" font-size="8" fill="#767676" text-anchor="end">이동</text>
+<rect x="1191" y="94" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="94" x2="1198" y2="120" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="111" font-size="10.5" fill="#111111" font-weight="400">GNB·전체메뉴</text>
+<rect x="1191" y="120" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="120" x2="1198" y2="146" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="137" font-size="10.5" fill="#111111" font-weight="400">사이트맵</text>
+<rect x="1191" y="146" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="146" x2="1198" y2="172" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="163" font-size="10.5" fill="#111111" font-weight="700">고객센터</text>
+<text x="1344" y="163" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1191" y="172" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="172" x2="1198" y2="198" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="189" font-size="10.5" fill="#111111" font-weight="400">로그인</text>
+<rect x="1191" y="198" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="198" x2="1198" y2="224" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="215" font-size="10.5" fill="#111111" font-weight="700">예외·복구</text>
+<text x="1344" y="215" font-size="8" fill="#767676" text-anchor="end">신설</text>
+<rect x="1191" y="224" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="224" x2="1198" y2="250" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="241" font-size="10.5" fill="#111111" font-weight="400">Footer·약관</text>
+<rect x="1191" y="250" width="158" height="26" fill="#FFFFFF" stroke="#D8D8D8" stroke-width="1"/>
+<line x1="1198" y1="250" x2="1198" y2="276" stroke="#D8D8D8" stroke-width="1"/>
+<text x="1209" y="267" font-size="10.5" fill="#111111" font-weight="400">메인</text>
+<text x="1" y="449" font-size="9.5" fill="#767676">굵게 = 변경분 · 접미 배지: 신설 · 이동 · 개명 · 제거 · 들여쓰기 = 하위 계층</text></svg></div>
+<h3 class="subsection__title">2-5-1. 이 그림이 말하는 것</h3>
+<div class='tw'><table><thead><tr><th>읽히는 것</th><th>근거</th></tr></thead><tbody><tr><td><strong>L1이 7개</strong> — AS-IS PC 32 · MWEB 6에서 통일</td><td>열 개수</td></tr><tr><td><strong>전역이 계층 밖 별도 그룹</strong></td><td>마지막 회색 열 — <code>spec-harness</code> 규칙 ①-3</td></tr><tr><td><strong>변경분이 굵게 몰려 있는 곳</strong> = 작업 밀도</td><td>지점 · 문화센터 · 카드 · 전역</td></tr><tr><td><strong>기업정보 열이 가장 짧다</strong></td><td><code>컨셉키워드 K1</code> 축 밖 — 손대지 않는다</td></tr><tr><td><strong>제거는 서비스·이벤트에만 2건</strong></td><td>개편이 빼기가 아니라 재배치임을 시각으로 확인</td></tr></tbody></table></div>
+<div class="callout"><div class="callout__body">⚠️ <strong>이 그림은 SSOT가 아니다.</strong> 고객 합의·리뷰용이고, 화면ID·출처·검증 상태는 §3 원장형에만 있다. <strong>둘이 어긋나면 원장이 맞다.</strong></div></div>
+<hr class="rule">
+<h2 class="section__title" id="s5">3. 구조 노드 (74) — 계층·경로·변경 등급</h2>
 <p>표기: <code>유지</code> / <code>개명</code> / <strong><code>이동</code></strong> / <strong><code>신설</code></strong> / <code>제거</code> — <strong><code>이동</code>을 <code>제거+신설</code>로 쓰지 않는다</strong>(리다이렉트·콘텐츠 이관이 달라진다) <code>지점</code> 열: <strong>종속</strong> = 선택 지점에 따라 내용이 달라짐 · <strong>무관</strong> = 지점과 무관</p>
 <h3 class="subsection__title">G. 전역</h3>
 <div class='tw'><table><thead><tr><th>노드ID</th><th>경로</th><th>라벨</th><th>지점</th><th>유형</th><th>출처</th><th>등급</th><th>비고</th></tr></thead><tbody><tr><td><strong>IA-001</strong></td><td><code>전역</code></td><td>지점 선택</td><td>—</td><td>기능</td><td>FN-A01·A02·A04 · CT-01·CT-03</td><td><strong>신설</strong>(전역화)</td><td>AS-IS는 MWEB <code>MSS</code>만. <strong>분류 게이트 없음</strong>(REQ-SI-002)</td></tr><tr><td><strong>IA-002</strong></td><td><code>전역</code></td><td>통합검색</td><td>종속</td><td>기능</td><td>FN-C01·C02·C03 · CT-06</td><td><strong>이동</strong>(영역→전역)</td><td>결과가 선택 지점 반영</td></tr><tr><td>IA-003</td><td><code>전역</code></td><td>GNB·전체메뉴</td><td>—</td><td>기능</td><td>FN-A07 · CT-23</td><td>개선</td><td>MEGA GNB 어드민 관리 · <strong>LNB 제외</strong></td></tr><tr><td>IA-004</td><td><code>전역</code></td><td>사이트맵</td><td>—</td><td>컨텐츠</td><td>FN-A08</td><td>개선</td><td><strong>MWEB 신설</strong>(122(현시스템기초분석) A3)</td></tr><tr><td><strong>IA-005</strong></td><td><code>전역</code></td><td>고객센터</td><td>무관</td><td>공통</td><td>FN-H08·H09 · CT-22</td><td><strong>신설</strong></td><td>PC 4곳·MWEB 3곳 산재 → 단일 진입점</td></tr><tr><td>IA-006</td><td><code>전역</code></td><td>로그인</td><td>무관</td><td>기능</td><td>(B 인증진입 21)</td><td>유지</td><td><strong>개편 범위 밖</strong>(240 D-2)</td></tr><tr><td><strong>IA-007</strong></td><td><code>전역</code></td><td>예외·복구</td><td>—</td><td>공통</td><td>FN-H01~H07 · <strong>FN-A05·B08·D07·E04·E06 공통화</strong> · CT-21</td><td><strong>신설</strong></td><td>404·권한·세션·결제실패·정원초과·자격미달·복귀. <strong>개별 흐름의 예외가 여기로 수렴</strong></td></tr><tr><td>IA-008</td><td><code>전역</code></td><td>Footer·약관</td><td>무관</td><td>컨텐츠</td><td>FN-I03</td><td>유지</td><td><strong>A 법정고지 17과 경계 확인 필요</strong>(D3-4)</td></tr><tr><td>IA-009</td><td><code>전역</code></td><td>메인</td><td>종속</td><td>컨텐츠</td><td>FN-A03·A06 · FN-G09 · CT-16</td><td>개선</td><td>지점 정보 노출 · 안내 배너 최대 5 · 채널 소구</td></tr></tbody></table></div>
@@ -79,7 +363,7 @@
 <div class="callout"><div class="callout__body">컨셉키워드 K1: <em>&quot;지점과 무관한 정보(IR·ESG·기업)는 이 축 밖에 별도로 둔다 — <strong>억지로 지점에 걸지 않는다</strong>.&quot;</em> 설계함의 ④가 IA 표기를 요구했다.</div></div>
 <div class='tw'><table><thead><tr><th>노드ID</th><th>경로</th><th>라벨</th><th>유형</th><th>출처</th><th>등급</th><th>비고</th></tr></thead><tbody><tr><td>IA-095</td><td><code>기업정보 &gt; 투자정보</code></td><td>투자정보(IR)</td><td>컨텐츠</td><td>FN-I01 · CT-18</td><td>유지</td><td><strong>IR 미팅예약·기관투자자 가입은 외부</strong>(링크 유지)</td></tr><tr><td>IA-096</td><td><code>기업정보 &gt; ESG 경영</code></td><td>ESG 경영</td><td>컨텐츠</td><td>FN-I02 · CT-19</td><td>개선</td><td>HTML 1P 추가 보류 D2-5</td></tr><tr><td><strong>IA-097</strong></td><td><code>기업정보 &gt; ESG &gt; 그린 경영활동</code></td><td>그린 경영활동 상세</td><td>컨텐츠</td><td>REQ-ES-001</td><td><strong>신설</strong></td><td>PC</td></tr></tbody></table></div>
 <hr class="rule">
-<h2 class="section__title" id="s5">4. 변경분 대장  — <strong>고객 검토·개발 인계는 이걸 본다</strong></h2>
+<h2 class="section__title" id="s6">4. 변경분 대장  — <strong>고객 검토·개발 인계는 이걸 본다</strong></h2>
 <p>전체 트리가 아니라 <strong>무엇이 바뀌었는가</strong>가 개편 IA의 실사용 형태다.</p>
 <h3 class="subsection__title">4-1. 집계</h3>
 <div class='tw'><table><thead><tr><th>등급</th><th>노드</th><th>비율</th></tr></thead><tbody><tr><td>유지</td><td>24</td><td>32%</td></tr><tr><td>개선</td><td>20</td><td>27%</td></tr><tr><td><strong>개명</strong></td><td>8</td><td>11%</td></tr><tr><td><strong>이동</strong></td><td><strong>8</strong></td><td><strong>11%</strong></td></tr><tr><td><strong>신설</strong></td><td>14</td><td>19%</td></tr><tr><td><strong>계 (트리 노드)</strong></td><td><strong>74</strong></td><td></td></tr><tr><td><strong>제거</strong></td><td>5</td><td>트리 밖 — §4-3</td></tr></tbody></table></div>
@@ -93,18 +377,18 @@
 <div class='tw'><table><thead><tr><th>노드</th><th>라벨</th><th>근거</th></tr></thead><tbody><tr><td><code>IA-001</code></td><td>지점 선택 (전역)</td><td><strong>컨셉키워드 K1</strong> 실행 장치</td></tr><tr><td><code>IA-005</code></td><td>통합 고객센터</td><td>122(현시스템기초분석) <strong>H10</strong> 도움말 산재</td></tr><tr><td><code>IA-007</code></td><td>예외·복구</td><td>122(현시스템기초분석) <strong>H9</strong> 오류 화면 0건 · <strong>컨셉키워드 K4</strong></td></tr><tr><td><code>IA-015</code></td><td>지점 특성 모듈</td><td><strong>컨셉키워드 K2</strong> trade-off R-1</td></tr><tr><td><code>IA-016</code></td><td>Sounds Forest · ALT.1</td><td>REQ-SI-005</td></tr><tr><td><code>IA-018</code></td><td>더현대 대구</td><td>REQ-SI-006 · <strong>컨셉키워드 K2 검증 사례</strong></td></tr><tr><td><code>IA-023</code></td><td>패션/뷰티 브랜드</td><td>REQ-BR-001</td></tr><tr><td><strong><code>IA-026</code></strong></td><td><strong>최근본·즐겨찾기</strong></td><td>122(현시스템기초분석) H6 · 242(UX전략및컨셉수립) I-7 — <strong><code>[가정]</code> 요구 근거 없음</strong></td></tr><tr><td><code>IA-033</code></td><td>MWEB 문화센터 서브메인</td><td>REQ-CU-007</td></tr><tr><td><code>IA-038</code></td><td>대기 상태 조회</td><td>312(유저플로우설계) 신규발견 ②</td></tr><tr><td><code>IA-044</code></td><td>공식 SNS 채널</td><td>REQ-CU-003</td></tr><tr><td><code>IA-050</code></td><td>MWEB 카드 서브메인</td><td>REQ-CA-005·006</td></tr><tr><td><code>IA-054</code></td><td>카드 신청 취소</td><td>122(현시스템기초분석) <strong>H3</strong> · 241(분석종합) I-9</td></tr><tr><td><code>IA-097</code></td><td>그린 경영활동 상세</td><td>REQ-ES-001</td></tr></tbody></table></div>
 <p><strong>근거 없는 신설은 <code>IA-026</code> 최근본·즐겨찾기 1건뿐</strong>이고 <code>[가정]</code> 라벨 + 미정의 D1-3으로 등재돼 있다.</p>
 <hr class="rule">
-<h2 class="section__title" id="s6">5. 채널 통일 실적 (컨셉키워드 K1·K3)</h2>
+<h2 class="section__title" id="s7">5. 채널 통일 실적 (컨셉키워드 K1·K3)</h2>
 <div class='tw'><table><thead><tr><th>항목</th><th>AS-IS</th><th>TO-BE</th></tr></thead><tbody><tr><td>1st depth</td><td>PC <strong>32</strong> / MWEB <strong>6</strong></td><td><strong>양 채널 7 + 전역 8</strong></td></tr><tr><td>진입 모델</td><td>GNB 직행 ↔ 허브 경유</td><td><strong>동일</strong></td></tr><tr><td>지점 선택</td><td>MWEB만</td><td><strong>양 채널 전역</strong></td></tr><tr><td>검색 위치</td><td>영역 하위</td><td><strong>양 채널 전역</strong></td></tr><tr><td>사이트맵</td><td>PC만</td><td><strong>양 채널</strong></td></tr><tr><td>비밀번호 변경</td><td>PC만</td><td><strong>양 채널</strong></td></tr><tr><td>차량번호</td><td>MWEB만</td><td><strong>양 채널</strong></td></tr><tr><td>H.Point 전환</td><td>PC만</td><td><strong>양 채널</strong></td></tr><tr><td>VIP프로그램</td><td>PC 1P ↔ MWEB 1P</td><td><strong>양 채널 2Tab</strong> (D-3)</td></tr><tr><td>카드·문화센터 서브메인</td><td>PC만</td><td><strong>양 채널</strong></td></tr></tbody></table></div>
 <h3 class="subsection__title">5-1. 남는 채널 차이 <strong>2건 — 전부 명시적 결정</strong></h3>
 <div class='tw'><table><thead><tr><th>노드</th><th>차이</th><th>결정 근거</th><th>사유 기록</th></tr></thead><tbody><tr><td><code>IA-085</code> 로그인 기록</td><td><strong>PC 전용</strong></td><td>240 결정 D-4</td><td><strong>341 화면명세 의무</strong></td></tr><tr><td><code>IA-073</code> 배송조회</td><td><strong>PC 전용</strong></td><td>REQ-SC-007</td><td><strong>341 화면명세 의무</strong> ⚠️ 신규</td></tr></tbody></table></div>
 <div class="callout"><div class="callout__body"><strong>K3는 &quot;차이를 없애라&quot;가 아니라 &quot;다르게 두려면 사유를 적어라&quot;다.</strong> AS-IS의 채널 결손 9건(241(분석종합) I-3) 중 <strong>7건 해소 · 2건은 결정으로 유지</strong>. 방치와 결정을 구분한 것이 K3의 실행이다.<br>⚠️ <strong><code>IA-073</code> 배송조회는 240에서 판정한 적이 없다.</strong> REQ-SC-007이 &quot;PC만 진행&quot;이라 했을 뿐 컨셉키워드 K3 관점 검토를 거치지 않았다 → <strong>D3-5 신설</strong>(§8).</div></div>
 <hr class="rule">
-<h2 class="section__title" id="s7">6. 계층 깊이 — AS-IS 대비</h2>
+<h2 class="section__title" id="s8">6. 계층 깊이 — AS-IS 대비</h2>
 <div class='tw'><table><thead><tr><th>채널</th><th>AS-IS 평균 depth</th><th>AS-IS 최대</th><th>depth 7+</th><th><strong>TO-BE 최대</strong></th></tr></thead><tbody><tr><td>PC</td><td>5.17</td><td>9</td><td>67건 (11%)</td><td><strong>L4</strong></td></tr><tr><td>MWEB</td><td><strong>6.41</strong></td><td><strong>11</strong></td><td><strong>171건 (44%)</strong></td><td><strong>L4</strong></td></tr></tbody></table></div>
 <p>MWEB이 깊었던 구조적 원인은 <em>&quot;모든 경로가 <code>메인 &gt; 전체메뉴 &gt; …</code>를 거치기 때문&quot;</em>(122(현시스템기초분석) H7)이다. <strong>전역 진입점 8개를 계층 밖에 두면서 이 경유가 사라진다.</strong></p>
 <p>⚠️ <strong>단서</strong>: 위 AS-IS depth는 <strong>화면 경로 기준</strong>(1,003화면)이고 TO-BE는 <strong>구조 노드 기준</strong>(74노드)이다. <strong>구조 노드 ≠ 화면</strong>이므로 직접 비교가 아니다. 실제 화면 depth는 341(화면명세서작성)에서 확정된다.</p>
 <hr class="rule">
-<h2 class="section__title" id="s8">8. 미정의사항 — 321(기능상세정의)에서 승계 + 신규</h2>
+<h2 class="section__title" id="s9">8. 미정의사항 — 321(기능상세정의)에서 승계 + 신규</h2>
 <p><strong>321(기능상세정의) §7-1-1에서 배운 것을 적용했다</strong>: 상류 미결을 승계·닫힘·해당없음으로 <strong>명시 판정</strong>한다(관찰 7).</p>
 <h3 class="subsection__title">8-1. 321(기능상세정의) 미정의 34건 승계 점검</h3>
 <div class='tw'><table><thead><tr><th>판정</th><th>건수</th><th>내역</th></tr></thead><tbody><tr><td><strong>승계</strong>(IA에 그대로)</td><td>28</td><td>D1-1~16 대부분 · D2 6건 · D4 2건</td></tr><tr><td><strong>닫힘</strong></td><td><strong>2</strong></td><td><strong>D3-1 MWEB 사이트맵 → <code>IA-004</code>로 신설 확정</strong> · <strong>D3-3 통합 고객센터 범위 → <code>IA-005</code>로 확정</strong>(FAQ·챗봇·ARS 집약)</td></tr><tr><td>해당없음(구조 무관)</td><td>4</td><td>D1-14 띄어쓰기 · D1-15 폰트 폴백 · D2-6 흰디 · D1-5 결제 연동</td></tr></tbody></table></div>
@@ -113,19 +397,19 @@
 <div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>관련 노드</th><th>닫는 주체</th><th>시점</th><th>⛔</th></tr></thead><tbody><tr><td><strong>D3-5</strong></td><td><strong><code>IA-073</code> 배송조회 PC 전용 — 컨셉키워드 K3 관점 미검토</strong></td><td>IA-073</td><td>기획PL·고객</td><td>341 화면명세</td><td></td></tr><tr><td><strong>D3-6</strong></td><td><strong>트리테스트 대상 라벨 3건</strong> (<code>서비스/이벤트</code>·<code>지점 안내</code>·<code>기업정보</code>)</td><td>IA-070·039·L1-7</td><td>기획자 (실사용자 확보 시)</td><td><strong>미정 — 실검증 불가</strong></td><td></td></tr><tr><td><strong>D3-7</strong></td><td><strong><code>이동</code> 8건의 리다이렉트 처리 주체</strong></td><td>이동 8노드</td><td>개발PL·퍼블리싱PL</td><td>353 UI개발가이드</td><td></td></tr></tbody></table></div>
 <div class="callout"><div class="callout__body"><strong>D3-7은 표준의 미완성 항목이기도 하다</strong> — IA가 구 경로→신 경로를 남기는 것까지는 정했으나, <strong>실제 301 처리를 누가 하는지 경계가 없다.</strong></div></div>
 <hr class="rule">
-<h2 class="section__title" id="s9">9. 하류로 넘기는 것</h2>
+<h2 class="section__title" id="s10">9. 하류로 넘기는 것</h2>
 <div class='tw'><table><thead><tr><th>대상</th><th>내용</th></tr></thead><tbody><tr><td><strong>331 와이어프레임</strong></td><td>구조 노드 74 · <strong>전역 8을 먼저 설계</strong>(모든 화면이 상속) · <code>IA-015</code> 지점 특성 모듈 종류(D3-2)</td></tr><tr><td><strong>332 컨텐츠가이드</strong></td><td><code>IA-022</code> 브랜드 명칭 사전(CT-20) · <code>IA-007</code> 오류 메시지 사전(CT-21) · <strong>라벨 표기 규칙</strong></td></tr><tr><td><strong>341 화면명세</strong></td><td><strong>구조 노드 ≠ 화면</strong> — 노드당 화면 수 확정 · <code>IA-085</code>·<code>IA-073</code> <strong>PC 전용 사유 기록 의무</strong> · D3-4 Footer 경계</td></tr><tr><td><strong>353 UI개발가이드</strong></td><td><strong><code>이동</code> 8건 리다이렉트 매핑</strong>(D3-7)</td></tr><tr><td><strong>132</strong></td><td>⚠️ 여전히 못 닫음 — §9-1</td></tr></tbody></table></div>
 <h3 class="subsection__title">9-1. ⚠️ 132(수행계획수립) 재산정 — 3회째 이월</h3>
 <p>FG-H 예외 화면군 규모를 312(유저플로우설계) → 321(기능상세정의) → <strong>322(정보구조설계)에서도 확정하지 못했다.</strong></p>
 <p><code>IA-007</code> 예외·복구를 <strong>전역 노드 1개</strong>로 잡았지만, <strong>구조 노드 1개가 화면 1개가 아니다.</strong> 404·권한·세션·결제실패·정원초과·자격미달 6종을 공통 템플릿 1세트로 만들지 영역별 변형을 둘지는 <strong>331 와이어프레임의 판단</strong>이다.</p>
 <p>→ <strong>회신 시점 331(와이어프레임설계) 유지.</strong> 322(정보구조설계)에서 화면 수를 쓰면 수치 창작이다.</p>
 <hr class="rule">
-<h2 class="section__title" id="s10">12. 재사용 자산 대조 — <code>spec-harness</code> 증류 규칙 27종</h2>
+<h2 class="section__title" id="s11">12. 재사용 자산 대조 — <code>spec-harness</code> 증류 규칙 27종</h2>
 <p>완료 프로젝트 4건(신한카드 올댓 · mPOP · m.ALL · NCP-2025)에서 <strong>실측 근거와 함께 역추출된 IA 작성 규칙</strong>과 대조했다. 참조 경계는 <code>sim-project/_재사용자산-매핑.md</code> §3.</p>
 <h3 class="subsection__title">12-1. ✅ 이미 지킨 것 (5)</h3>
 <div class='tw'><table><thead><tr><th>규칙</th><th>이 문서의 대응</th></tr></thead><tbody><tr><td><strong>①-2</strong> To-Be IA는 <strong>업무 도메인 기준</strong>으로 재편성 (As-Is는 UI 존 기준)</td><td>L1 7개가 전부 업무 도메인. AS-IS의 UI 존(GNB 32 평면)을 그대로 쓰지 않았다</td></tr><tr><td><strong>①-3</strong> 유틸리티·공통 영역은 <strong>업무 트리와 분리된 별도 그룹</strong>으로</td><td><strong>전역 8개</strong> (§2-2). 실측 원천도 동일 — m.ALL은 GNB 밖 그룹, 올댓은 <code>Util.</code> 열</td></tr><tr><td><strong>②-8</strong> 탭·레이어·화면 내 하위항목은 <strong>IA 트리에 노출하지 않는다</strong></td><td>VIP 2Tab을 <code>IA-059</code> 속성으로. §2-3 범례에 명문화</td></tr><tr><td><strong>③-13</strong> 삭제 행도 <strong>지우지 않고 마킹만 하고 보존</strong></td><td>제거 5건을 §3 표에 취소선으로 남김 + §4-3 별표</td></tr><tr><td><strong>④-18</strong> 요건 1건 ≠ 화면 1개 · <strong>요건ID↔노드 다대다 연결 컬럼</strong></td><td><code>출처</code> 열이 FN·CT·REQ 다대다. V3 커버리지 검증의 기반</td></tr></tbody></table></div>
-<h3 class="subsection__title">12-2. ⚠️ 미적용 갭 (6) — 하류에서 닫는다</h3>
-<div class='tw'><table><thead><tr><th>#</th><th>규칙</th><th>왜 못 했나 / 어디서 닫나</th></tr></thead><tbody><tr><td><strong>①-4</strong></td><td><strong>분류 체계가 논점이면 대안을 병렬 검토 후 확정</strong> (mPOP <code>메뉴체계</code> 시트: As-Is 5분류 + To-Be 1안/2안 비교표)</td><td><strong>안 했다.</strong> 단일안으로 직행. §1-3에서 분할 축 ①(도메인)을 감수한 것과 같은 문제 — <strong>L1 재조직의 대안을 검토하지 않았다.</strong> Co-Creative 워크숍이 없어 비교표를 세울 자리도 없었다 → <strong>한계로 기록</strong></td></tr><tr><td><strong>③-10</strong></td><td>판정 전 <strong>As-Is 전량 원장 + 행마다 처분 플래그</strong> (mPOP 510행)</td><td>122(현시스템기초분석)가 규모 때문에 표본화(영역 집계). <strong>행 단위 처분 판정이 불가능하다</strong> → <strong>341 화면명세에서 965행 원장으로</strong></td></tr><tr><td><strong>③-11</strong></td><td>판정의 <strong>1차 근거는 이용 실측 데이터</strong> (mPOP <code>참고.메뉴순위</code> 조회수·사용비중)</td><td><strong>214 로그 부재</strong> — D4-1 확정. 이 규칙이 요구하는 근거가 원천적으로 없다</td></tr><tr><td><strong>③-12</strong></td><td>통합(N:1)은 신규 행의 <strong>「구메뉴 통합목록」 컬럼</strong>에 구화면명 나열</td><td><code>이동</code> 8건은 1:1 매핑만. <strong>N:1 통합 기록 컬럼 없음</strong> → 341(화면명세서작성)에서 신설</td></tr><tr><td><strong>⑤-19·20</strong></td><td><strong>사이트맵형 + 원장형 이원 표현</strong>, 원장형이 SSOT</td><td>원장형(§3 표)만 있다. <strong>합의용 사이트맵형 미작성</strong> → 331(와이어프레임설계)에서 메뉴맵 렌더</td></tr><tr><td><strong>⑥-23·24·25</strong></td><td><strong>영역 코드 사전 먼저 → <code>{채널}-{영역코드}{계층}</code> 채번 · ID는 화면에만</strong></td><td>§2-4에 사전은 만들었으나 <strong>채번 미적용</strong>(IA-NNN 평면, 분류 노드에도 부여). <strong>331(와이어프레임설계) 착수 전 일괄 재부여</strong></td></tr></tbody></table></div>
+<h3 class="subsection__title">12-2. ⚠️ 미적용 갭 (6 → <strong>5</strong>) — 하류에서 닫는다</h3>
+<div class='tw'><table><thead><tr><th>#</th><th>규칙</th><th>왜 못 했나 / 어디서 닫나</th></tr></thead><tbody><tr><td><strong>①-4</strong></td><td><strong>분류 체계가 논점이면 대안을 병렬 검토 후 확정</strong> (mPOP <code>메뉴체계</code> 시트: As-Is 5분류 + To-Be 1안/2안 비교표)</td><td><strong>안 했다.</strong> 단일안으로 직행. §1-3에서 분할 축 ①(도메인)을 감수한 것과 같은 문제 — <strong>L1 재조직의 대안을 검토하지 않았다.</strong> Co-Creative 워크숍이 없어 비교표를 세울 자리도 없었다 → <strong>한계로 기록</strong></td></tr><tr><td><strong>③-10</strong></td><td>판정 전 <strong>As-Is 전량 원장 + 행마다 처분 플래그</strong> (mPOP 510행)</td><td>122(현시스템기초분석)가 규모 때문에 표본화(영역 집계). <strong>행 단위 처분 판정이 불가능하다</strong> → <strong>341 화면명세에서 965행 원장으로</strong></td></tr><tr><td><strong>③-11</strong></td><td>판정의 <strong>1차 근거는 이용 실측 데이터</strong> (mPOP <code>참고.메뉴순위</code> 조회수·사용비중)</td><td><strong>214 로그 부재</strong> — D4-1 확정. 이 규칙이 요구하는 근거가 원천적으로 없다</td></tr><tr><td><strong>③-12</strong></td><td>통합(N:1)은 신규 행의 <strong>「구메뉴 통합목록」 컬럼</strong>에 구화면명 나열</td><td><code>이동</code> 8건은 1:1 매핑만. <strong>N:1 통합 기록 컬럼 없음</strong> → 341(화면명세서작성)에서 신설</td></tr><tr><td><del><strong>⑤-19·20</strong></del></td><td><del>사이트맵형 + 원장형 이원 표현</del></td><td><strong>✅ 해소(2026-08-07)</strong> — §2-5에 사이트맵형 메뉴맵 신설. 원장형(§3)이 SSOT이고 §2-5는 그것을 렌더한 프레젠테이션</td></tr><tr><td><strong>⑥-23·24·25</strong></td><td><strong>영역 코드 사전 먼저 → <code>{채널}-{영역코드}{계층}</code> 채번 · ID는 화면에만</strong></td><td>§2-4에 사전은 만들었으나 <strong>채번 미적용</strong>(IA-NNN 평면, 분류 노드에도 부여). <strong>331(와이어프레임설계) 착수 전 일괄 재부여</strong></td></tr></tbody></table></div>
 <h3 class="subsection__title">12-3. 🔍 발견 — 처분 어휘가 실측과 다르다</h3>
 <div class='tw'><table><thead><tr><th>계열</th><th>실측 열거값</th><th>쓰는 단계</th></tr></thead><tbody><tr><td><strong>설계 단계</strong></td><td>`신규 \</td><td>개선 \</td><td>유지 \</td><td>재활용` (mPOP 실측: 개선166·유지20·신규8·재활용2)</td><td>신규 구축·전면 개편</td></tr><tr><td><strong>운영·변경 단계</strong></td><td>`추가 \</td><td>삭제 \</td><td>이동` (올댓 실측: 추가152·삭제125(경영진인터뷰)·이동22)</td><td>운영 중 변경</td></tr><tr><td><strong>이 문서</strong></td><td>`유지 \</td><td>개명 \</td><td>이동 \</td><td>신설 \</td><td>제거`</td><td><strong>두 계열을 섞었다</strong></td></tr></tbody></table></div>
 <p><strong>섞은 것이 틀렸다고 보지 않는다</strong> — 이 프로젝트는 「전면 개편」이 아니라 <strong>채널 통일 중심 개편</strong>이라 설계 어휘(신규/개선)와 운영 어휘(이동/삭제)가 <strong>둘 다 필요</strong>하다. 다만 실측 관행과 다르므로 <strong>명시적 선택임을 기록</strong>한다.</p>
