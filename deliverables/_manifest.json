@@ -288,6 +288,15 @@
   "sections": 10
  },
  {
+  "task": "341",
+  "taskname": "화면명세서작성",
+  "title": "화면명세서_원장",
+  "kind": "원장",
+  "ver": "V1.0",
+  "path": "341_화면명세서작성/화면명세서_원장.html",
+  "sections": 3
+ },
+ {
   "task": "342",
   "taskname": "UI상세설계",
   "title": "UI상세설계서",
