@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신청정보입력 | 가족카드 추가신청 | 현대백화점</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+<a class="hd-skip" href="#main">본문 바로가기</a>
+<header class="hd-header"><div class="hd-wrap hd-header__in">
+  <span class="hd-header__logo">현대백화점</span>
+  <span class="hd-caption" style="margin-left:auto">가족카드 추가신청</span>
+</div></header>
+<main id="main" data-screen="HDP-CRD0150" class="hd-wrap" style="max-width:640px;padding-top:var(--hd-sp-5)">
+  <h1>신청정보입력</h1>
+  <ol class="hd-steps" style="margin:var(--hd-sp-4) 0 var(--hd-sp-6)" aria-label="신청 단계">
+    <li>본인회원인증</li>
+    <li aria-current="step">신청정보입력</li>
+    <li>배송지 확인</li>
+    <li>신청완료</li>
+  </ol>
+  <form novalidate>
+    <fieldset style="border:0">
+      <legend class="hd-caption" style="margin-bottom:var(--hd-sp-3)">신청인 정보 — 인증값 (읽기전용)</legend>
+      <div class="hd-field"><label for="name">성명</label>
+        <input id="name" value="김현대" readonly></div>
+    </fieldset>
+    <div class="hd-field">
+      <label for="addr">상세주소 <span class="hd-caption">(필수)</span></label>
+      <input id="addr" required maxlength="50" aria-describedby="addr-err" aria-invalid="false"
+             placeholder="상세주소를 입력해 주세요">
+      <p class="hd-error" id="addr-err" aria-live="polite">필수 입력 항목입니다.</p>
+    </div>
+    <div class="hd-field">
+      <label><input type="checkbox" required style="width:auto;min-height:0"> 필수 약관 동의</label>
+      <button type="button" class="hd-btn hd-btn--cancel" data-overlay-open="terms">약관 보기</button>
+    </div>
+    <div style="display:flex;gap:var(--hd-sp-3);margin-top:var(--hd-sp-6)">
+      <button type="button" class="hd-btn hd-btn--secondary">이전</button>
+      <button type="submit" class="hd-btn hd-btn--primary" data-submit disabled style="flex:1">다음</button>
+    </div>
+  </form>
+</main>
+<div class="hd-overlay" id="terms" hidden role="dialog" aria-modal="true" aria-labelledby="tTitle">
+  <div class="hd-overlay__dim"></div>
+  <div class="hd-overlay__panel">
+    <div class="hd-overlay__head"><h2 id="tTitle">가족카드 이용약관</h2>
+      <button class="hd-btn hd-btn--cancel" data-overlay-close>닫기</button></div>
+    <p class="hd-caption" style="max-height:40vh;overflow:auto">(Admin 등록 약관 전문 자리)</p>
+    <button class="hd-btn hd-btn--primary" data-overlay-close style="width:100%;margin-top:var(--hd-sp-4)">동의하고 닫기</button>
+  </div>
+</div>
+<script src="../js/pub.js"></script>
+</body>
+</html>

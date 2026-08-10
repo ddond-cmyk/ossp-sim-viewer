@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>더현대 서울 | 지점안내 | 현대백화점</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+<body class="hd-store">
+<a class="hd-skip" href="#main">본문 바로가기</a>
+<header class="hd-header">
+  <div class="hd-wrap hd-header__in">
+    <span class="hd-header__logo">현대백화점</span>
+    <nav aria-label="주 메뉴"><ul class="hd-gnb">
+      <li><a href="#" aria-current="page">지점안내</a></li><li><a href="#">브랜드</a></li>
+      <li><a href="#">문화센터</a></li><li><a href="#">카드·멤버십</a></li>
+      <li><a href="#">서비스</a></li><li><a href="#">ESG</a></li>
+    </ul></nav>
+  </div>
+</header>
+<div class="hd-ctxbar">
+  <div class="hd-wrap hd-ctxbar__in">
+    <span class="hd-caption">지금 보는 점포</span>
+    <span class="hd-ctxbar__store">더현대 서울</span>
+    <button class="hd-btn hd-btn--cancel" data-overlay-open="storeSelect">변경</button>
+  </div>
+</div>
+<main id="main" data-screen="HDP-STR0102" class="hd-wrap" style="padding-top:var(--hd-sp-5)">
+  <h1>더현대 서울</h1>
+  <p class="hd-caption">영업시간 10:30 ~ 20:00 · 금일 정상 영업</p>
+  <div role="tablist" class="hd-tabs" aria-label="지점 정보" style="margin-top:var(--hd-sp-5)">
+    <button role="tab" aria-selected="true" aria-controls="p-floor" id="t-floor">층별안내</button>
+    <button role="tab" aria-selected="false" aria-controls="p-food" id="t-food">식당가</button>
+    <button role="tab" aria-selected="false" aria-controls="p-way" id="t-way">오시는길</button>
+  </div>
+  <section id="p-floor" role="tabpanel" aria-labelledby="t-floor" style="padding:var(--hd-sp-5) 0">
+    <h2>층별안내</h2>
+    <div class="hd-grid" style="margin-top:var(--hd-sp-4)">
+      <article class="hd-card" style="grid-column:span 4"><p class="hd-card__title">6F 문화·식당</p><p class="hd-caption">CH 1985 · 전문식당가</p></article>
+      <article class="hd-card" style="grid-column:span 4"><p class="hd-card__title">1F 패션·뷰티</p><p class="hd-caption">해외패션 · 화장품</p></article>
+      <article class="hd-card" style="grid-column:span 4"><p class="hd-card__title">B1 식품관</p><p class="hd-caption">테이스티 서울</p></article>
+    </div>
+  </section>
+  <section id="p-food" role="tabpanel" aria-labelledby="t-food" hidden style="padding:var(--hd-sp-5) 0">
+    <h2>식당가</h2><p class="hd-caption">전문식당가 · 푸드코트 · 카페</p>
+  </section>
+  <section id="p-way" role="tabpanel" aria-labelledby="t-way" hidden style="padding:var(--hd-sp-5) 0">
+    <h2>오시는길</h2><p class="hd-caption">서울 영등포구 여의대로 108</p>
+  </section>
+</main>
+<div class="hd-overlay" id="storeSelect" hidden role="dialog" aria-modal="true" aria-labelledby="ssTitle">
+  <div class="hd-overlay__dim"></div>
+  <div class="hd-overlay__panel">
+    <div class="hd-overlay__head">
+      <h2 id="ssTitle">지점 선택</h2>
+      <button class="hd-btn hd-btn--cancel" data-overlay-close>닫기</button>
+    </div>
+    <ul class="hd-chips" role="radiogroup" aria-label="지점 유형">
+      <li><button role="radio" aria-checked="true">전체</button></li>
+      <li><button role="radio" aria-checked="false">더현대</button></li>
+      <li><button role="radio" aria-checked="false">백화점</button></li>
+      <li><button role="radio" aria-checked="false">아울렛</button></li>
+    </ul>
+    <div class="hd-grid" style="grid-template-columns:1fr 1fr;margin-top:var(--hd-sp-4)">
+      <article class="hd-card"><p class="hd-card__title">더현대 서울</p><p class="hd-caption">10:30 ~ 20:00 · <a href="#">오시는길</a></p></article>
+      <article class="hd-card"><p class="hd-card__title">압구정본점</p><p class="hd-caption">10:30 ~ 20:00 · <a href="#">오시는길</a></p></article>
+    </div>
+  </div>
+</div>
+<footer style="border-top:1px solid var(--hd-line);margin-top:var(--hd-sp-8)">
+  <div class="hd-wrap" style="padding:var(--hd-sp-5) 0">
+    <p class="hd-caption"><a href="#">사이트맵</a> · <a href="#">웹접근성안내</a> · <a href="#">개인정보처리방침</a></p>
+  </div>
+</footer>
+<script src="../js/pub.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* base.css — 리셋 · 타이포 · 그리드 · 접근성 기반 (353 §2·§5) */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--hd-font);font-size:var(--hd-t-body);line-height:1.6;
+  color:var(--hd-ink);background:var(--hd-bg)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--hd-focus);outline-offset:2px}  /* 제거 금지 — 354 */
+.hd-skip{position:absolute;left:-999px;top:0;background:var(--hd-ink);color:var(--hd-bg);
+  padding:var(--hd-sp-2) var(--hd-sp-4);z-index:100}
+.hd-skip:focus{left:0}
+.hd-wrap{max-width:1200px;margin:0 auto;padding:0 var(--hd-sp-4)}
+.hd-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--hd-sp-4)}
+h1{font-size:var(--hd-t-title);font-weight:700}
+h2{font-size:var(--hd-t-section);font-weight:700}
+.hd-caption{font-size:var(--hd-t-caption);color:var(--hd-ink-muted)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:1ms!important;animation-duration:1ms!important}
+}

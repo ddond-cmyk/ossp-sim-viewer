@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>인터랙션 명세 — 현대백화점 자사채널(홈페이지) 개선</title>
+<link rel="stylesheet" href="../_assets/styles.css">
+<link rel="stylesheet" href="../_assets/deliverable.css">
+</head>
+<body>
+<div class="report">
+
+  <div class="report__cover">
+    <div class="cover__container">
+      <div class="cover__symbol" aria-hidden="true"><img src="../_assets/assets/symbol-white.png" alt=""></div>
+      <h1 class="cover__title">인터랙션 명세</h1>
+      <p class="cover__subtitle">현대백화점 자사채널(홈페이지) 개선</p>
+      <div class="cover__meta">
+        <span class="cover__meta-item"><span class="cover__meta-label">작업</span><span>422 인터랙션디자인</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">구분</span><span>산출물</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">프로젝트</span><span>C2202500</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">버전</span><span>V1.0</span></span>
+        <span class="cover__meta-item"><span class="cover__meta-label">작성</span><span>2026.08.10 · VinylC</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="report__content">
+    <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · 인터랙션 명세 · V1.0</div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>0. 지위 — 렌더는 사람, 스펙은 여기</span></div><div class="toc__item"><span class="toc__num">02</span><span>1. 모션 스펙 시트 — 구현 대상 8종</span></div><div class="toc__item"><span class="toc__num">03</span><span>2. 미결</span></div><div class="toc__item"><span class="toc__num">04</span><span>3. 도출 인사이트</span></div></div>
+
+<div class='tw'><table><thead><tr><th>항목</th><th>값</th></tr></thead><tbody><tr><td>프로젝트</td><td>현대백화점 자사채널(PC·MWEB) 개선</td></tr><tr><td>문서</td><td>인터랙션 명세 v0.1</td></tr><tr><td>작성일</td><td>2026-08-10</td></tr><tr><td>작성자</td><td>인터랙션디자이너 (렌더·합성 원본은 사람 작업)</td></tr><tr><td>상태</td><td>초안</td></tr></tbody></table></div>
+<h3 class="subsection__title">개정이력</h3>
+<div class='tw'><table><thead><tr><th>버전</th><th>일자</th><th>변경 내역</th><th>작성자</th></tr></thead><tbody><tr><td>v0.1</td><td>2026-08-10</td><td>초안작성 — 컴포넌트 8종 모션 스펙</td><td>인터랙션디자이너</td></tr></tbody></table></div>
+<hr class="rule">
+<h2 class="section__title" id="s0">0. 지위 — 렌더는 사람, 스펙은 여기</h2>
+<p>모션 시연 영상·프로토타입 렌더는 사람 작업이다(PDP 수정 판정). 이 문서는 <code>352(인터랙션가이드설계)</code> 토큰을 <strong>컴포넌트별 트리거·속성·값으로 전개한 스펙 시트</strong>다 — 423(UI개발퍼블리싱)이 CSS 트랜지션으로 직접 구현 가능한 수준까지.</p>
+<h2 class="section__title" id="s1">1. 모션 스펙 시트 — 구현 대상 8종</h2>
+<div class='tw'><table><thead><tr><th>컴포넌트</th><th>트리거</th><th>속성</th><th>지속·이징</th><th>비고</th></tr></thead><tbody><tr><td>C-01 버튼</td><td>hover/active</td><td>background · transform(눌림 1px)</td><td><code>fast</code> · <code>--hd-ease</code></td><td>disabled 무모션</td></tr><tr><td>T-07 오버레이</td><td>열림/닫힘</td><td>opacity + translateY(8px)</td><td><code>base</code></td><td>딤은 opacity만 · <strong>트랩은 352(인터랙션가이드설계) §3</strong></td></tr><tr><td>N-04 탭</td><td>선택</td><td>인디케이터 translateX</td><td><code>base</code></td><td>콘텐츠는 무모션 교체</td></tr><tr><td>T-03 배너</td><td>자동 5초/스와이프</td><td>translateX</td><td><code>slow</code></td><td>일시정지 필수 · reduced-motion 시 정지</td></tr><tr><td>C-04 입력 오류</td><td>blur 검증 실패</td><td>오류 문구 opacity</td><td><code>fast</code></td><td><strong>흔들림(shake) 금지</strong> — 장식 모션</td></tr><tr><td>N-05 단계바</td><td>단계 전환</td><td>width</td><td><code>base</code></td><td></td></tr><tr><td>T-04/T-05 빈·예외</td><td>노출</td><td>opacity</td><td><code>fast</code></td><td>진입 강조 모션 금지 — K4는 조용히</td></tr><tr><td>목록 갱신(C-02 필터)</td><td>선택</td><td>없음 — 즉시 교체</td><td>—</td><td>로딩 300ms 초과 시에만 스피너</td></tr></tbody></table></div>
+<p><strong>공통</strong>: <code>prefers-reduced-motion</code> 시 transform 계열 전부 제거, opacity만 잔류(<code>352(인터랙션가이드설계)</code> §5).</p>
+<h2 class="section__title" id="s2">2. 미결</h2>
+<div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>대상</th></tr></thead><tbody><tr><td>1</td><td>시연 렌더(영상·프로토타입) 제작</td><td>사람</td></tr><tr><td>2</td><td>스피너 300ms 임계 근거 — 운영 데이터 없음 <code>[가정]</code></td><td>QA 측정 후 조정</td></tr></tbody></table></div>
+<h2 class="section__title" id="s3">3. 도출 인사이트</h2>
+<h3 class="subsection__title">관찰 51 — 모션 스펙의 결정 대부분이 「모션 없음」이었다</h3>
+<p>8종 중 3종(콘텐츠 교체·목록 갱신·예외 노출)의 답이 무모션·즉시다. 컨셉키워드 K2(반복 피로)·K4(실패는 조용히)가 모션 어휘를 깎았다 — <strong>컨셉이 모션의 상한을 정한다.</strong></p>
+    <div class="report__footer">
+      VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · 인터랙션 명세 V1.0 · 2026.08.10
+      <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

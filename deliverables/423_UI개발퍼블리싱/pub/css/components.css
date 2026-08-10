@@ -1,0 +1,69 @@
+/* components.css — 343 매핑표의 컴포넌트. 원시 hex/px 직접 사용 금지(간격은 토큰). */
+/* N-01 전역 헤더 */
+.hd-header{border-bottom:1px solid var(--hd-line);background:var(--hd-bg)}
+.hd-header__in{display:flex;align-items:center;gap:var(--hd-sp-5);padding:var(--hd-sp-3) 0}
+.hd-header__logo{font-weight:700;font-size:var(--hd-t-section)}
+.hd-gnb{display:flex;gap:var(--hd-sp-4);list-style:none}
+.hd-gnb a{text-decoration:none;padding:var(--hd-sp-2)}
+.hd-gnb a[aria-current=page]{border-bottom:2px solid var(--hd-ink);font-weight:700}
+/* N-02 지점 컨텍스트 바 — --hd-store-accent 유일 사용처 */
+.hd-ctxbar{background:var(--hd-bg-alt);border-bottom:1px solid var(--hd-line)}
+.hd-ctxbar__in{display:flex;align-items:center;gap:var(--hd-sp-3);padding:var(--hd-sp-2) 0}
+.hd-ctxbar__store{font-weight:700;border-left:3px solid var(--hd-store-accent);
+  padding-left:var(--hd-sp-2)}
+/* N-04 탭 */
+.hd-tabs{display:flex;gap:var(--hd-sp-2);border-bottom:1px solid var(--hd-line);list-style:none}
+.hd-tabs [role=tab]{background:none;border:0;padding:var(--hd-sp-3) var(--hd-sp-4);
+  border-bottom:2px solid transparent;transition:border-color var(--hd-dur-base) var(--hd-ease)}
+.hd-tabs [role=tab][aria-selected=true]{border-bottom-color:var(--hd-ink);font-weight:700}
+/* N-05 단계바 */
+.hd-steps{display:flex;gap:var(--hd-sp-2);list-style:none;font-size:var(--hd-t-caption)}
+.hd-steps li{flex:1;border-top:4px solid var(--hd-line);padding-top:var(--hd-sp-2);
+  color:var(--hd-ink-muted)}
+.hd-steps li[aria-current=step]{border-top-color:var(--hd-ink);color:var(--hd-ink);font-weight:700}
+/* C-01 버튼 3종 */
+.hd-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:0 var(--hd-sp-5);border-radius:var(--hd-card-radius);border:1px solid transparent;
+  transition:background var(--hd-dur-fast) var(--hd-ease)}
+.hd-btn--primary{background:var(--hd-btn-primary-bg);color:var(--hd-btn-primary-ink)}
+.hd-btn--primary:disabled{background:var(--hd-line-strong);cursor:default}
+.hd-btn--secondary{background:var(--hd-bg);border-color:var(--hd-btn-secondary-line)}
+.hd-btn--cancel{background:none;color:var(--hd-btn-cancel-ink);text-decoration:underline}
+/* C-02 필터 칩 */
+.hd-chips{display:flex;gap:var(--hd-sp-2);flex-wrap:wrap;list-style:none}
+.hd-chips [role=radio]{border:1px solid var(--hd-line-strong);border-radius:999px;
+  background:var(--hd-bg);padding:var(--hd-sp-2) var(--hd-sp-4)}
+.hd-chips [role=radio][aria-checked=true]{background:var(--hd-ink);color:var(--hd-bg);
+  border-color:var(--hd-ink)}
+/* C-04 입력 필드 + 오류 */
+.hd-field{margin-bottom:var(--hd-sp-4)}
+.hd-field label{display:block;font-weight:700;margin-bottom:var(--hd-sp-1)}
+.hd-field input,.hd-field select{width:100%;min-height:44px;padding:0 var(--hd-sp-3);
+  border:1px solid var(--hd-line-strong);border-radius:var(--hd-card-radius);font:inherit}
+.hd-field input[aria-invalid=true]{border-color:var(--hd-state-error)}
+.hd-field .hd-error{display:none;color:var(--hd-state-error);font-size:var(--hd-t-caption);
+  margin-top:var(--hd-sp-1);opacity:0;transition:opacity var(--hd-dur-fast) var(--hd-ease)}
+.hd-field input[aria-invalid=true]~.hd-error{display:block;opacity:1}
+/* T-01 카드 */
+.hd-card{border:1px solid var(--hd-line);border-radius:var(--hd-card-radius);
+  padding:var(--hd-sp-4);background:var(--hd-bg)}
+.hd-card__title{font-weight:700;margin-bottom:var(--hd-sp-1)}
+/* T-04 빈 상태 / T-05 예외 안내 — 문구는 332 사전값, 색은 351 */
+.hd-empty,.hd-except{text-align:center;padding:var(--hd-sp-7) var(--hd-sp-4)}
+.hd-except__title{font-size:var(--hd-t-section);font-weight:700;margin-bottom:var(--hd-sp-2)}
+.hd-except__body{color:var(--hd-ink-muted);margin-bottom:var(--hd-sp-5)}
+.hd-except__actions{display:flex;gap:var(--hd-sp-3);justify-content:center}
+/* T-07 오버레이 — 352 §3 계약 */
+.hd-overlay[hidden]{display:none}
+.hd-overlay{position:fixed;inset:0;z-index:50}
+.hd-overlay__dim{position:absolute;inset:0;background:rgba(0,0,0,.5)}
+.hd-overlay__panel{position:relative;max-width:480px;margin:10vh auto 0;background:var(--hd-bg);
+  border-radius:var(--hd-card-radius);padding:var(--hd-sp-5);
+  transition:opacity var(--hd-dur-base) var(--hd-ease),transform var(--hd-dur-base) var(--hd-ease)}
+.hd-overlay__head{display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:var(--hd-sp-4)}
+/* 반응형 — 353 §3: 같은 마크업, 다른 배치 */
+@media(max-width:1023px){
+  .hd-grid{grid-template-columns:repeat(4,1fr)}
+  .hd-gnb{display:none}   /* MWEB 내비는 전체메뉴 화면(원장 채널 분기) */
+}

@@ -1,0 +1,27 @@
+/* tokens.css — 351(스타일가이드) v0.1의 유일한 값 자리.
+   시안 게이트 후 이 파일만 교체한다 (351 §1 「값 교체 1파일 원칙」).
+   ⛔ --hd-brand 는 팔레트 미확보 [가정값] — 1순위 교체 대상. */
+:root{
+  /* 의미 토큰 — 색 */
+  --hd-ink:#1A1A1A; --hd-ink-muted:#767676;          /* muted = 대비 4.5:1 하한 */
+  --hd-bg:#FFFFFF;  --hd-bg-alt:#F7F7F7;
+  --hd-line:#E4E4E4; --hd-line-strong:#C8C8C8;
+  --hd-brand:#0B4A3C;                                 /* [가정값] */
+  --hd-state-error:#B3261E; --hd-state-success:#1A7F37; --hd-state-info:#1A5FB4;
+  --hd-focus:#1A5FB4;
+  /* 타이포 — 해피니스 산스(P-BRD-01). 웹폰트 라이선스 확인 전 시스템 폴백 */
+  --hd-font:"Happiness Sans","Pretendard",-apple-system,sans-serif;
+  --hd-t-display:2rem; --hd-t-title:1.5rem; --hd-t-section:1.17rem;
+  --hd-t-body:1rem; --hd-t-caption:.875rem;
+  /* 간격 — 4px 배수 단일 축 */
+  --hd-sp-1:4px; --hd-sp-2:8px; --hd-sp-3:12px; --hd-sp-4:16px;
+  --hd-sp-5:24px; --hd-sp-6:32px; --hd-sp-7:48px; --hd-sp-8:64px;
+  /* 모션 — 352 */
+  --hd-dur-fast:120ms; --hd-dur-base:200ms; --hd-dur-slow:320ms;
+  --hd-ease:cubic-bezier(.2,0,0,1);
+  /* 컴포넌트 토큰 — 의미 토큰만 참조(원시값 금지) */
+  --hd-btn-primary-bg:var(--hd-ink); --hd-btn-primary-ink:var(--hd-bg);
+  --hd-btn-secondary-line:var(--hd-ink); --hd-btn-cancel-ink:var(--hd-ink-muted);
+  --hd-card-radius:6px;
+}
+.hd-store{ --hd-store-accent:var(--hd-brand); }  /* 지점 accent — Admin이 지점당 1값 주입(351 §6) */

@@ -378,6 +378,42 @@
   "sections": 7
  },
  {
+  "task": "411",
+  "taskname": "작업계획수립",
+  "title": "작업계획서",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "411_작업계획수립/작업계획서.html",
+  "sections": 8
+ },
+ {
+  "task": "421",
+  "taskname": "UI디자인검수",
+  "title": "UI디자인 검수·인계 기준서",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "421_UI디자인검수/UI디자인_검수·인계기준.html",
+  "sections": 5
+ },
+ {
+  "task": "422",
+  "taskname": "인터랙션디자인",
+  "title": "인터랙션 명세",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "422_인터랙션디자인/인터랙션명세.html",
+  "sections": 4
+ },
+ {
+  "task": "423",
+  "taskname": "UI개발퍼블리싱",
+  "title": "퍼블리싱 결과서",
+  "kind": "산출물",
+  "ver": "V1.0",
+  "path": "423_UI개발퍼블리싱/퍼블리싱_결과서.html",
+  "sections": 5
+ },
+ {
   "task": "932",
   "taskname": "회의록",
   "title": "회의록 — 기능요건 확정 [타 프로젝트 파일럿]",
