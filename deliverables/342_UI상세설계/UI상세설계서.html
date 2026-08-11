@@ -27,7 +27,7 @@
 
   <div class="report__content">
     <div class="runhead">현대백화점 자사채널(홈페이지) 개선 · UI상세설계서 · V1.0</div>
-    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>0. 개정이력</span></div><div class="toc__item"><span class="toc__num">02</span><span>1. 왜 1,014건을 다 그리지 않는가</span></div><div class="toc__item"><span class="toc__num">03</span><span>2. 허브·서브메인형 — 대표 HDP-COM0106</span></div><div class="toc__item"><span class="toc__num">04</span><span>3. 목록형 — 대표 HDP-COM0114</span></div><div class="toc__item"><span class="toc__num">05</span><span>4. 정보·안내형 — 대표 HDP-STR0102</span></div><div class="toc__item"><span class="toc__num">06</span><span>5. 콘텐츠 상세형 — 대표 HDP-BRD0103</span></div><div class="toc__item"><span class="toc__num">07</span><span>6. 프로세스형 — 대표 HDP-CRD0150</span></div><div class="toc__item"><span class="toc__num">08</span><span>7. 조회·결과형 — 대표 HDP-CUL0186</span></div><div class="toc__item"><span class="toc__num">09</span><span>8. 예외·안내형 — 대표 HDP-COM0121</span></div><div class="toc__item"><span class="toc__num">10</span><span>9. 커버리지 점검</span></div><div class="toc__item"><span class="toc__num">11</span><span>10. 검수 리포트</span></div><div class="toc__item"><span class="toc__num">12</span><span>11. 미결 · 확인 필요</span></div><div class="toc__item"><span class="toc__num">13</span><span>12. 다음 단계 핸드오프</span></div><div class="toc__item"><span class="toc__num">14</span><span>13. 도출 인사이트</span></div></div>
+    <div class="toc mb-lg"><div class="toc__item"><span class="toc__num">01</span><span>0. 개정이력</span></div><div class="toc__item"><span class="toc__num">02</span><span>1. 왜 1,014건을 다 그리지 않는가</span></div><div class="toc__item"><span class="toc__num">03</span><span>2. 허브·서브메인형 — 대표 HDP-COM0106</span></div><div class="toc__item"><span class="toc__num">04</span><span>3. 목록형 — 대표 HDP-COM0114</span></div><div class="toc__item"><span class="toc__num">05</span><span>4. 정보·안내형 — 대표 HDP-STR0102</span></div><div class="toc__item"><span class="toc__num">06</span><span>5. 콘텐츠 상세형 — 대표 HDP-BRD0103</span></div><div class="toc__item"><span class="toc__num">07</span><span>6. 프로세스형 — 대표 HDP-CRD0150</span></div><div class="toc__item"><span class="toc__num">08</span><span>7. 조회·결과형 — 대표 HDP-CUL0186</span></div><div class="toc__item"><span class="toc__num">09</span><span>8. 예외·안내형 — 대표 HDP-COM0121</span></div><div class="toc__item"><span class="toc__num">10</span><span>9. 커버리지 점검</span></div><div class="toc__item"><span class="toc__num">11</span><span>10. 검수 리포트</span></div><div class="toc__item"><span class="toc__num">12</span><span>11. 미결 · 확인 필요</span></div><div class="toc__item"><span class="toc__num">13</span><span>12. 다음 단계 핸드오프</span></div></div>
 
 <div class='tw'><table><thead><tr><th>항목</th><th>값</th></tr></thead><tbody><tr><td>프로젝트</td><td>현대백화점 자사채널(PC·MWEB) 개선</td></tr><tr><td>문서</td><td>UI상세설계서 v0.1</td></tr><tr><td>대상</td><td><code>341(화면명세서작성)</code> 원장 In-Scope 1,014행 (본화면 577)</td></tr><tr><td>작성 범위</td><td><strong>유형 7종 대표 화면 7건 상세설계 + 유형별 골격 계약</strong></td></tr><tr><td>선행</td><td><code>화면유형사전.md</code> (같은 폴더)</td></tr></tbody></table></div>
 <div class="callout"><div class="callout__body"><strong>이 문서의 성격</strong> — <code>341(화면명세서작성)</code>이 표지·목록이고 이 문서가 내지다. OSSP가 못 박은 범위 규율을 지킨다: <strong>컨텐츠·데이터·기능 명세에 중점</strong>을 두고, <strong>색·타이포·여백·모션은 확정하지 않는다</strong>(<code>421(UI디자인)</code>에서 바뀔 수 있으므로).</div></div>
@@ -38,7 +38,7 @@
 <hr class="rule">
 <h2 class="section__title" id="s1">1. 왜 1,014건을 다 그리지 않는가</h2>
 <p>원장이 1,014행이다. 한 화면에 슬라이드 1장이면 1,014장이고, 그건 <strong>읽히지 않는 문서</strong>다.</p>
-<p><code>spec-harness/patterns/05-디스크립션.md</code> D절이 이 문제의 답을 갖고 있다.</p>
+<p>사내 설계 표준` D절이 이 문제의 답을 갖고 있다.</p>
 <div class="callout"><div class="callout__body"><em>&quot;화면 유형에 따라 일관된 레이아웃 구성, <strong>공통 요소는 공통화면/모듈로 관리해 중복 생산 방지</strong>&quot;</em> — 규칙 21 (mPOP GeneralGuide 1.1 설계 원칙)</div></div>
 <p>그래서 <strong>유형별 골격을 계약으로 확정하고, 유형마다 대표 화면 1건을 끝까지 명세한다.</strong> 나머지 화면은 골격을 상속하고 차이만 기술한다.</p>
 <div class='tw'><table><thead><tr><th>유형</th><th>담당 화면 수 (본화면 / 전체)</th><th>대표 화면</th><th>331 원형</th></tr></thead><tbody><tr><td>정보·안내형</td><td>196 / 410</td><td><code>HDP-STR0102</code> 더현대 서울</td><td><code>W-04</code> 지점 템플릿</td></tr><tr><td>프로세스형</td><td>167 / 278</td><td><code>HDP-CRD0150</code> 신청정보입력(S2)</td><td><code>W-09</code> 거래 S2</td></tr><tr><td>콘텐츠 상세형</td><td>122(현시스템기초분석) / 191</td><td><code>HDP-BRD0103</code> 톰그레이하운드</td><td><code>W-06</code> 상세형 원형</td></tr><tr><td>조회·결과형</td><td>54 / 70</td><td><code>HDP-CUL0186</code> 대기 상태 조회</td><td><code>W-07</code> 파생</td></tr><tr><td>목록형</td><td>18 / 24</td><td><code>HDP-COM0114</code> 지점 선택</td><td><code>W-01</code> 지점 선택</td></tr><tr><td>허브·서브메인형</td><td>16 / 18</td><td><code>HDP-COM0106</code> 현대백화점 메인</td><td><code>W-02</code> 메인</td></tr><tr><td>예외·안내형</td><td>4 / 23</td><td><code>HDP-COM0121</code> 결제 실패</td><td><code>W-14</code> 예외</td></tr><tr><td><strong>계</strong></td><td><strong>577 / 1,014</strong></td><td><strong>7건</strong></td><td>—</td></tr></tbody></table></div>
@@ -320,42 +320,11 @@
 <hr class="rule">
 <h2 class="section__title" id="s11">11. 미결 · 확인 필요</h2>
 <div class='tw'><table><thead><tr><th>#</th><th>항목</th><th>대상</th><th>시점</th></tr></thead><tbody><tr><td>1</td><td>PG 연동 사양 · 실패 사유 코드 매핑표</td><td>고객사·개발PL</td><td><code>343(설계리뷰및리팩토링)</code> 전</td></tr><tr><td>2</td><td>대기 → 등록 전환 알림 채널</td><td>고객사</td><td><code>343(설계리뷰및리팩토링)</code> 전</td></tr><tr><td>3</td><td>지점 특성 모듈 종류 확정</td><td>기획PL</td><td><code>343(설계리뷰및리팩토링)</code> — <code>333(UI가이드정의)</code> 미결 4번과 동일</td></tr><tr><td>4</td><td>관련 브랜드 추천 로직</td><td>개발PL</td><td><code>343(설계리뷰및리팩토링)</code></td></tr><tr><td>5</td><td>세션·쿠키 보존 정책</td><td>개발PL</td><td><code>213(시스템요건분석)</code> 대사</td></tr><tr><td>6</td><td>VIP등급별 모듈 차이</td><td>고객사</td><td><code>343(설계리뷰및리팩토링)</code></td></tr><tr><td>7</td><td>유형 검토 플래그 13건 확정</td><td>기획PL</td><td><code>343(설계리뷰및리팩토링)</code></td></tr><tr><td>8</td><td>공통 모듈 3종 정의(본인인증·주소검색·약관동의)</td><td>기획PL</td><td><strong><code>343(설계리뷰및리팩토링)</code> 본체</strong></td></tr><tr><td>9</td><td><strong>PPT 서식 마스터 미확보</strong></td><td>고객사</td><td>이관 시점</td></tr></tbody></table></div>
-<div class="callout"><div class="callout__body"><strong>9번은 이 문서 형식 자체의 문제다.</strong> OSSP는 <code>342(UI상세설계)</code>를 PPT로 규정하는데 서식 마스터가 없다. <code>spec-harness</code> H절(규칙 35~37)의 <strong>HTML 매핑</strong>으로 대체했다 — 3분할 골격·마커 앵커·이어서 병합이 전부 HTML로 정의돼 있어 서식 없이도 낼 수 있었다. <strong>PPT로 옮길 때 슬라이드 경계는 <code>slide-break</code>가 보존한다.</strong></div></div>
+<div class="callout"><div class="callout__body"><strong>9번은 이 문서 형식 자체의 문제다.</strong> OSSP는 <code>342(UI상세설계)</code>를 PPT로 규정하는데 서식 마스터가 없다. 사내 설계 표준 H절(규칙 35~37)의 <strong>HTML 매핑</strong>으로 대체했다 — 3분할 골격·마커 앵커·이어서 병합이 전부 HTML로 정의돼 있어 서식 없이도 낼 수 있었다. <strong>PPT로 옮길 때 슬라이드 경계는 <code>slide-break</code>가 보존한다.</strong></div></div>
 <hr class="rule">
 <h2 class="section__title" id="s12">12. 다음 단계 핸드오프</h2>
 <div class='tw'><table><thead><tr><th>단계</th><th>받는 것</th></tr></thead><tbody><tr><td><strong><code>343(설계리뷰및리팩토링)</code></strong></td><td>①<strong>공통 모듈 3종 정의</strong> ②고아 컴포넌트 14종 판정 ③유형 검토 플래그 13건 확정 ④<code>HDP-BRD0119</code> 계층 오류 검증 ⑤대표 화면 7건 → 전 화면 골격 전개 정합성</td></tr><tr><td><strong><code>351(스타일가이드설계)</code></strong></td><td>유형 7종별 수직 구조 — 시각 토큰을 얹을 골격</td></tr><tr><td><strong><code>352(인터랙션가이드설계)</code></strong></td><td>제스처·입력 어휘(§1-2) · 탭 전환 vs 화면 이동 구분 · 레이어 호출·닫힘</td></tr><tr><td><strong><code>354(접근성가이드설계)</code></strong></td><td>필수 입력 표기 · 오류 문구 연결 · 탭 순서 · 비활성 버튼 안내</td></tr><tr><td><strong><code>421(UI디자인)</code></strong></td><td>대표 화면 7건 골격 + 확정 문구 — <strong>시각 확정은 여기서</strong></td></tr><tr><td><strong><code>423(UI개발퍼블리싱)</code></strong></td><td>밸리데이션 규칙 · 상태별 문구 · 이동 화면ID</td></tr></tbody></table></div>
 <hr class="rule">
-<h2 class="section__title" id="s13">13. 도출 인사이트</h2>
-<h3 class="subsection__title">13-1. 유형 사전이 없으면 화면마다 골격을 발명한다</h3>
-<p><code>spec-harness</code>가 3개 실프로젝트에서 뽑은 유형 7종이 있었는데 <strong>그대로 쓸 수 없었다</strong> — 증권 특화로 확정된 목록이었다. 대신 그 문서가 남겨 둔 <strong>메타 규칙</strong>을 썼다: 「화면을 그리기 전에 도메인별 레이아웃 패턴을 판별·적용한다」.</p>
-<p>표본 1,014건을 군집화해 <strong>백화점 도메인 유형 7종 + modifier 2축</strong>을 도출했다. 이게 없으면 1,014개 화면이 1,014개 골격이 된다.</p>
-<div class="callout"><div class="callout__body"><strong>재사용한 것은 목록이 아니라 절차다.</strong> 목록은 도메인에서 죽고 절차는 도메인을 건너간다. 「유형 사전을 도출한다」는 절차 자체를 <code>342(UI상세설계)</code> 스킬에 넣었다.</div></div>
-<h3 class="subsection__title">13-2. AS-IS만 보고 유형을 뽑으면 신설 화면의 유형이 빠진다</h3>
-<p><strong>예외·안내형 23건 중 22건이 신설</strong>이다. AS-IS에 있던 것은 1건뿐이다.</p>
-<p><code>331(와이어프레임설계)</code>이 <code>W-14</code> 예외 원형을 만들고, <code>332(컨텐츠가이드설계)</code>가 6종 문구를 확정하고, <code>132(수행계획수립)</code> 재산정이 규모를 닫았다. <strong>세 산출물이 같은 대상을 가리키고 있었는데 AS-IS 표본에는 없었다.</strong></p>
-<div class="callout"><div class="callout__body">개편형에서 AS-IS는 <strong>있는 것만</strong> 보여 준다. 유형 사전의 표본은 <strong>AS-IS + 상류 설계 산출물</strong> 둘 다여야 한다.</div></div>
-<h3 class="subsection__title">13-3. 빈 경로 하나가 분류를 통째로 뒤집었다</h3>
-<p>신설 51건은 AS-IS 경로가 없다(<code>341(화면명세서작성)</code>이 빈칸으로 남긴다). 구조 판정이 부모 경로를 키로 쓰는데, <strong>빈 경로가 하나의 키로 묶여 신설 51건이 전부 「한 부모의 형제」가 됐다.</strong> 결과 — 예외 레이어 12건이 「허브·서브메인형」으로 분류됐다.</p>
-<p><strong>증상은 「허브가 34건」이었고 원인은 「빈 문자열이 유효한 키가 됐다」였다.</strong> 고친 뒤 허브가 16건이 됐다.</p>
-<div class="callout"><div class="callout__body"><code>관찰 27</code>(데이터 형식을 모르면 규칙이 0건으로 작동한다)의 반대 방향이다. 거기서는 규칙이 <strong>안 걸렸고</strong> 여기서는 <strong>너무 걸렸다.</strong> 둘 다 원인이 같다 — <strong>규칙이 기대한 데이터 형태와 실제가 달랐다.</strong></div></div>
-<h3 class="subsection__title">13-4. 신설 화면의 유형은 발명이 아니라 상속이다</h3>
-<p>신설 18건이 어휘·구조 모두에서 미결로 남았다. 유형을 지어낼 수도 있었지만, <strong><code>331(와이어프레임설계)</code>이 이미 원형에서 골격을 정해 뒀다.</strong> 그 매핑을 명시적으로 적어 넣었다(<code>NEW_TYPE</code> 13항목).</p>
-<div class="callout"><div class="callout__body">「발명 금지」 규칙이 성립하려면 <strong>원천이 있어야 한다</strong>(<code>관찰 15</code>, 3연속). 여기서는 원천이 있었다 — <strong>상류가 이미 답을 갖고 있는데 하류가 그걸 조회할 통로가 없었던 것</strong>이다.</div></div>
-<h3 class="subsection__title">13-5. 문구가 화면 유형을 결정한 사례가 한 번 더 나왔다</h3>
-<p><code>132(수행계획수립)</code> 4회 이월을 닫을 때 결정적이었던 게 <em>&quot;신청 내용은 그대로 있습니다&quot;</em> 였다. 이번에 그 화면(<code>HDP-COM0121</code> 결제 실패)을 실제로 명세하면서 <strong>그 논리를 디스크립션에 명문으로 박았다</strong> — <code>pre</code> 행에 「본화면 전환 금지 — 입력값이 소실되면 안내 문구가 거짓이 된다」.</p>
-<div class="callout"><div class="callout__body"><strong>문구가 제약이 되는 순간이 있다.</strong> 보통은 설계가 문구를 정하는데, 여기서는 확정된 문구가 설계를 정했다. <code>332(컨텐츠가이드설계)</code>를 <code>331(와이어프레임설계)</code> 다음에 둔 순서가 이걸 가능하게 했다.</div></div>
-<h3 class="subsection__title">13-6. 검토 플래그 13건(1.3%)을 남긴 게 정직한 부분이다</h3>
-<p>규칙을 8개 더 넣으면 미결이 0이 된다. 안 넣었다 — <strong>이 577건에만 맞는 규칙</strong>이 되어 다음 프로젝트에서 안 먹힌다.</p>
-<p>13건 중 10건은 <strong>임계에 한두 표 모자란 것</strong>이고(형제 3+ / 자식 3+), 임계를 낮추면 다른 곳이 오분류된다. 나머지 3건은 성격이 다르다 — <code>HDP-BRD0119</code>는 <strong>AS-IS 계층 오류 의심</strong>, <code>HDP-CUL0103</code> e-카달로그는 <strong>8번째 유형 후보</strong>(표본 1건이라 승격 안 함).</p>
-<div class="callout"><div class="callout__body">1건으로 유형을 만들면 유형 사전이 화면 목록이 된다.</div></div>
-<h3 class="subsection__title">13-7. 유형 수와 문구 사전 수가 안 맞는 게 정상이다</h3>
-<p>예외·안내형이 <strong>23건</strong>인데 <code>132(수행계획수립)</code> 재산정은 <strong>12건</strong>(본화면 2 + 레이어 10)이다. 숫자를 맞추려 하지 않았다.</p>
-<p><strong>세는 대상이 다르다</strong> — <code>132(수행계획수립)</code>는 「<code>332(컨텐츠가이드설계)</code> 예외 6종 문구가 적용되는 화면」을 셌고, 유형 사전은 「<strong>골격이 같은 화면</strong>」을 센다. 빈 상태 3종·지점 미선택·배송 불가·H.Point 전환이 골격 기준에서는 같은 유형이다.</p>
-<div class="callout"><div class="callout__body"><strong>정량 대조에서 숫자가 다르면 먼저 「무엇을 세는가」를 확인해야 한다.</strong> 다른 걸 세고 있으면 일치가 오히려 오류다.</div></div>
-<h3 class="subsection__title">13-8. 서식이 없어서 못 낸다고 했던 산출물을 냈다</h3>
-<p><code>342(UI상세설계)</code>는 PPT라 <strong>HTML로 낼 수 없다</strong>고 3세션 전에 기록해 둔 항목이었다. <code>spec-harness</code> H절이 그 공백을 이미 메워 뒀다 — 규칙 35~37이 PPT 슬라이드 → HTML 매핑을 확정해 놨다.</p>
-<p>3분할 CSS Grid · 마커↔행 앵커 · 「이어서」 병합 · 인쇄용 <code>@page</code> 1280×720까지 정의돼 있어 <strong>서식 마스터 없이 냈다.</strong></p>
-<div class="callout"><div class="callout__body"><strong>「서식이 없어서 못 한다」가 3세션 동안 유효한 차단 사유였는데, 사내에 이미 답이 있었다.</strong> 자산 목록을 먼저 훑는 절차가 없으면 있는 것을 못 쓴다. <code>_재사용자산-매핑.md</code>가 그 목적으로 만들어졌는데 <strong><code>342(UI상세설계)</code> 항목이 비어 있었다</strong> — 이번에 채웠다.</div></div>
     <div class="report__footer">
       VinylC · 현대백화점 자사채널(홈페이지) 개선 (C2202500) · UI상세설계서 V1.0 · 2026.08.11
       <span class="ai-mark">AI 생성 — OSSP 시뮬레이션 산출물</span>

@@ -64,9 +64,9 @@
 <p><code>322(정보구조설계)</code>의 <strong>노드 74개</strong>가 어떻게 <strong>화면 1,054행</strong>이 됐나.</p>
 <div class='tw'><table><thead><tr><th>전개 유형</th><th>규칙</th><th>이 프로젝트 사례</th></tr></thead><tbody><tr><td><strong>1 : 1</strong></td><td>그대로 1화면</td><td><code>IA-095</code> 투자정보</td></tr><tr><td><strong>1 : N 인스턴스</strong></td><td>데이터 건수만큼</td><td>지점 템플릿 → 지점별</td></tr><tr><td><strong>1 : N 스텝</strong></td><td>거래 단계만큼</td><td><code>IA-036</code> 수강신청 → S1·S2·S3</td></tr><tr><td><strong>1 : N 종속</strong></td><td>본화면 + 레이어·탭·팝업</td><td>목록 → 목록 + 필터 레이어</td></tr><tr><td><strong>N : 1 통합</strong></td><td>여러 노드가 한 화면으로</td><td>산재 도움말 → <code>IA-005</code> 통합 고객센터</td></tr><tr><td><strong>1 : 0</strong></td><td>화면이 아님</td><td><code>FG-J</code> 어드민 · <code>FG-K</code> 전역 규칙</td></tr></tbody></table></div>
 <h3 class="subsection__title">3-1. ⛔ AS-IS 명세의 <strong>결정 컬럼을 읽지 않았다</strong></h3>
-<p>AS-IS 명세서에는 수행사가 이미 판정한 컬럼 4종(<code>업무범위</code>·<code>업무 중요도</code>·<code>범위확인</code>·<code>업무 수용여부</code>)이 붙어 있다. <strong>읽으면 우리 판정이 아니라 남의 판정을 베끼는 것</strong>이다.</p>
+<p>AS-IS 명세서에는 수행사가 이미 판정한 컬럼 4종(<code>업무범위</code>·<code>업무 중요도</code>·<code>범위확인</code>·<code>업무 수용여부</code>)이 붙어 있다. <strong>읽으면 당사 판정이 아니라 남의 판정을 베끼는 것</strong>이다.</p>
 <div class='tw'><table><thead><tr><th>읽었다</th><th>읽지 않았다</th></tr></thead><tbody><tr><td>화면ID · 1st~10th Depth 경로 · Admin/CMS</td><td><strong>업무범위 · 중요도 · 범위확인 · 수용여부</strong></td></tr></tbody></table></div>
-<p><strong>변경 등급은 <code>322(정보구조설계)</code>·<code>331(와이어프레임설계)</code>의 우리 판정에서만 왔다.</strong> <code>122(현시스템기초분석)</code>가 정한 경계를 그대로 지켰다.</p>
+<p><strong>변경 등급은 <code>322(정보구조설계)</code>·<code>331(와이어프레임설계)</code>의 당사 판정에서만 왔다.</strong> <code>122(현시스템기초분석)</code>가 정한 경계를 그대로 지켰다.</p>
 <h3 class="subsection__title">3-2. 계단식 표기를 폈다</h3>
 <p>원장형 명세서는 <strong>상위 메뉴명을 서브트리 첫 행에만</strong> 쓰고 이하를 비운다. 그대로 읽으면 대부분 행의 경로가 말단 하나뿐이라 <strong>키워드 판정이 불가능</strong>하다.</p>
 <p>깊이별로 값을 <strong>이월(forward-fill)</strong> 해 전체 경로를 복원했다. 이 처리 전후로 <code>이동</code> 판정이 <strong>0건 → 38건</strong>이 됐다.</p>

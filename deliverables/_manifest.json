@@ -6,7 +6,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "112_고객자료수집요청/자료수집요청서.html",
-  "sections": 6
+  "sections": 5
  },
  {
   "task": "114",
@@ -195,7 +195,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "312_유저플로우설계/유저플로우.html",
-  "sections": 12
+  "sections": 13
  },
  {
   "task": "321",
@@ -204,7 +204,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "321_기능상세정의/기능정의서.html",
-  "sections": 7
+  "sections": 8
  },
  {
   "task": "322",
@@ -222,7 +222,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "331_와이어프레임설계/와이어프레임.html",
-  "sections": 7
+  "sections": 8
  },
  {
   "task": "331",
@@ -231,7 +231,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "331_와이어프레임설계/와이어프레임_v0.2_유형원형.html",
-  "sections": 7
+  "sections": 6
  },
  {
   "task": "331",
@@ -312,7 +312,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "342_UI상세설계/UI상세설계서.html",
-  "sections": 14
+  "sections": 13
  },
  {
   "task": "342",
@@ -321,7 +321,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "342_UI상세설계/검수리포트.html",
-  "sections": 5
+  "sections": 4
  },
  {
   "task": "342",
@@ -330,7 +330,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "342_UI상세설계/화면유형사전.html",
-  "sections": 8
+  "sections": 7
  },
  {
   "task": "343",
@@ -339,7 +339,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "343_설계리뷰및리팩토링/설계리뷰보고서.html",
-  "sections": 10
+  "sections": 9
  },
  {
   "task": "351",
@@ -348,7 +348,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "351_스타일가이드설계/스타일가이드.html",
-  "sections": 10
+  "sections": 9
  },
  {
   "task": "352",
@@ -357,7 +357,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "352_인터랙션가이드설계/인터랙션가이드.html",
-  "sections": 9
+  "sections": 8
  },
  {
   "task": "353",
@@ -366,7 +366,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "353_UI개발가이드설계/UI개발가이드.html",
-  "sections": 9
+  "sections": 8
  },
  {
   "task": "353",
@@ -384,7 +384,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "354_접근성가이드설계/접근성가이드.html",
-  "sections": 7
+  "sections": 6
  },
  {
   "task": "411",
@@ -393,7 +393,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "411_작업계획수립/작업계획서.html",
-  "sections": 8
+  "sections": 7
  },
  {
   "task": "421",
@@ -402,7 +402,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "421_UI디자인검수/UI디자인_검수·인계기준.html",
-  "sections": 5
+  "sections": 4
  },
  {
   "task": "422",
@@ -411,7 +411,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "422_인터랙션디자인/인터랙션명세.html",
-  "sections": 4
+  "sections": 3
  },
  {
   "task": "423",
@@ -420,7 +420,7 @@
   "kind": "산출물",
   "ver": "V1.0",
   "path": "423_UI개발퍼블리싱/퍼블리싱_결과서.html",
-  "sections": 5
+  "sections": 4
  },
  {
   "task": "932",
